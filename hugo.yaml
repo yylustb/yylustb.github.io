@@ -38,6 +38,9 @@ languages: # 启用了 Hugo 多语言支持
     # 定义导航菜单（显示在网页顶部）
     menu:
       main:
+        - name: Publications
+          url: publications
+          weight: 1
         - name: Archive
           url: archives
           weight: 5
