@@ -1,0 +1,90 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Yongliang Yang's Blog
+paginate: 5
+theme: ["PaperMod"]
+
+# 允许在普通 Markdown 语法块里直接使用 Shortcodes
+enableInlineShortcodes: true   
+# 让 Hugo 自动生成 public/robots.txt，用于 SEO（搜索引擎优化），告诉搜索引擎 哪些页面可以被索引哪些不行
+enableRobotsTXT: true
+# 代表 Hugo 不会生成草稿文章
+buildDrafts: false
+# 是否构建未来发布日期的文章，如果 Markdown 文章的 date: 2025-12-01 在未来，默认不会生成。
+buildFuture: false
+# 是否构建已过期文章。如果 buildExpired: false，过期的文章不会被构建。如果 buildExpired: true，即使过期了也继续显示。
+buildExpired: false
+# 允许你在 Markdown 中直接使用 :emoji_name: 方式插入 Emoji。
+enableEmoji: true
+# 让 Hugo 代码高亮使用 CSS 类
+pygmentsUseClasses: true
+# 文章默认来源于 content/posts/ 和 content/papermod/ 目录。
+mainsections: ["posts", "papermod"]
+
+# 禁止压缩 XML 文件，Hugo 会生成更易读的格式，方便调试 XML 内容
+minify:
+  disableXML: true
+
+languages: # 启用了 Hugo 多语言支持
+  en:
+    languageName: "English" 
+    # 语言的优先级（数值越小，排序越高）
+    weight: 1    
+    # Taxonomies（分类系统） 用于 管理文章的分类、标签等
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    # 定义导航菜单（显示在网页顶部）
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: WiKi
+          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+  zh:
+      languageName: "中文"
+      weight: 2
+      menu:
+        main:
+          - name: 归档
+            url: /zh/archives/
+            weight: 5
+          - name: 搜索
+            url: /zh/search/
+            weight: 10
+          - name: 标签
+            url: /zh/tags/
+            weight: 10
+
+# 默认支持首页 HTML 页面、RSS 订阅、JSON（搜索），可以满足大多数 Hugo 博客需求。
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+
+
+
+
+
+
+
+
+
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
