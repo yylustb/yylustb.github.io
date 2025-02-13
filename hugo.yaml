@@ -132,7 +132,7 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    Title: "My Academic Blog"
     Content: >
       👋 Welcome to the page of Yongliang Yang's Group!
 
