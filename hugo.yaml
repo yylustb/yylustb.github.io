@@ -1,6 +1,6 @@
 baseURL: https://yylustb.github.io/
 languageCode: en-us
-title: Yongliang Yang's Academic Blog
+title: Yongliang Yang's Blog
 paginate: 5
 theme: ["PaperMod"]
 
@@ -132,7 +132,7 @@ params:
         url: tags
 
   homeInfoParams:
-    # Title: "Yongliang Yang's Group"
+     Title: "Yongliang Yang's Academic Blog"
     Content: >
       👋 Welcome to the page of Yongliang Yang's Group!
 
@@ -192,8 +192,6 @@ params:
   #     threshold: 0.4
   #     minMatchCharLength: 0
   #     keys: ["title", "permalink", "summary", "content"]
-
-
 
 
 
