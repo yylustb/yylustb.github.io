@@ -1,6 +1,6 @@
-baseURL: https://example.org/
+baseURL: https://yylustb.github.io/
 languageCode: en-us
-title: Yongliang Yang's Blog
+title: Yongliang Yang's Academic Blog
 paginate: 5
 theme: ["PaperMod"]
 
@@ -79,25 +79,43 @@ outputs:
 
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  # 启用 Google Analytics、Open Graph、Twitter Cards 以及结构化数据（schema）等功能，以便在生产环境中进行 SEO 和数据分析。
+  env: production 
+  # 指定网站或主题的描述信息，用于 SEO、社交分享卡片等地方显示简介。
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" 
+  # 指定网站或文章的作者名称，一般会在网站元数据或文章元数据中展示。
+  author: Yongliang Yang
   # author: ["Me", "You"] # multiple authors
 
-  defaultTheme: auto
-  # disableThemeToggle: true
+  # PaperMod 主题支持深色模式（Dark Mode）和浅色模式（Light Mode）切换，auto 表示跟随用户浏览器/系统的主题偏好自动切换。
+  defaultTheme: auto 
+  # 下面注释掉表示默认情况，会显示主题切换开关（深浅色模式切换按钮），如果取消注释并将其设为 true，则会隐藏
+  # disableThemeToggle: true 
+  # 是否在文章页面显示社交分享按钮（如 Twitter、Facebook 等）
   ShowShareButtons: true
+  # 在文章页面中显示预估阅读时长，例如“阅读时长：3分钟”。
   ShowReadingTime: true
+  # PaperMod 会将首页或列表页的第一篇文章以特殊样式进行展示。如果取消下面的注释并设为 true，则关闭这个特殊展示效果
   # disableSpecial1stPost: true
+  # 开启多语言功能，显示完整的语言名称（如 “English (United States)”）还是显示缩写（如 “en-US”）
   displayFullLangName: true
+  # 在文章页面底部显示前一篇、后一篇文章的导航链接
   ShowPostNavLinks: true
+  # 在页面顶部显示当前位置面包屑导航（如 Home / Category / Post Title）
   ShowBreadCrumbs: true
+  # 当页面里有代码块时，显示“复制代码”按钮
   ShowCodeCopyButtons: true
+  # 在分类/标签页（Section 或 Term 列表页），显示 RSS 订阅按钮
   ShowRssButtonInSectionTermList: true
+  # 在归档页面中显示所有文章（不分页面），true: 一次性显示全部文章列表，false: 只显示部分文章分页形式
   ShowAllPagesInArchive: true
+  # 在底部分页导航处是否显示页面编号（例如“上一页”“下一页”旁边的数字页码）
   ShowPageNums: true
+  # 在文章页面显示自动生成的目录
   ShowToc: true
-  # comments: false
+  # 如果取消下面注释并设为 true，可禁用所有文章的评论功能。默认情况下 PaperMod 不会内置评论功能，需要自行配置 Disqus 或其他评论服务。
+  # comments: false 
+  # 设置默认的社交分享封面图或 OG（Open Graph）图片链接
   images: ["images/papermod-cover.png"]
 
   profileMode:
@@ -114,13 +132,13 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    # Title: "Yongliang Yang's Group"
     Content: >
-      👋 Welcome to demo page of Hugo's theme PaperMod!
+      👋 Welcome to the page of Yongliang Yang's Group!
 
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+      - We focus on theoretical analysis of Reinforcement Learning.
 
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+      - We focus on implementation of Reinforcement Learning.
 
       - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
 
