@@ -1,15 +1,13 @@
 ---
 author: Hugo Authors
-title: Math Typesetting
+title: Math using KaTex
 date: 2019-03-08
 description: A brief guide to setup KaTeX
 math: true
 ShowBreadCrumbs: false
 ---
 
-Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
 
-<!--more-->
 
 In this example we will be using [KaTeX](https://katex.org/)
 
@@ -41,15 +39,16 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 ### Examples
 
-{{< math.inline >}}
 
+<!-- 行内公式开始 -->
+{{< math.inline >}}
 <p>
 Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
 </p>
 {{</ math.inline >}}
+<!-- 行内公式结束 -->
 
 Block math:
-
 $$
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$
