@@ -4,6 +4,11 @@
     <title>Publications on Yongliang Yang&#39;s Blog</title>
     <link>http://localhost:1313/publications/</link>
     <description>Recent content in Publications on Yongliang Yang&#39;s Blog</description>
+    <image>
+      <title>Yongliang Yang&#39;s Blog</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

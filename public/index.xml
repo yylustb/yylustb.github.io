@@ -4,15 +4,41 @@
     <title>Yongliang Yang&#39;s Blog</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on Yongliang Yang&#39;s Blog</description>
+    <image>
+      <title>Yongliang Yang&#39;s Blog</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>强化学习系列：Policy Gradient</title>
+      <link>http://localhost:1313/posts/reinforcement_learning/pg/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reinforcement_learning/pg/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
+      <title>Python标准库中argparse的用法</title>
+      <link>http://localhost:1313/posts/python/2025-02-13/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python/2025-02-13/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
+      <title>强化学习系列：DQN</title>
+      <link>http://localhost:1313/posts/reinforcement_learning/dqn/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reinforcement_learning/dqn/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
       <title>Hugo搭建个人网页</title>
-      <link>http://localhost:1313/posts/papermod/2025-02-11/</link>
+      <link>http://localhost:1313/posts/hugo/2025-02-11/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/papermod/2025-02-11/</guid>
+      <guid>http://localhost:1313/posts/hugo/2025-02-11/</guid>
       <description>Read aboout Install and Update instructions and sampled configuration templates</description>
     </item>
     <item>
@@ -51,7 +77,7 @@
       <description>A brief description of Hugo Shortcodes</description>
     </item>
     <item>
-      <title>Math Typesetting</title>
+      <title>Math using KaTex</title>
       <link>http://localhost:1313/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/math-typesetting/</guid>

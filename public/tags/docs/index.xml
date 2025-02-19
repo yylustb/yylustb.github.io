@@ -4,15 +4,27 @@
     <title>Docs on Yongliang Yang&#39;s Blog</title>
     <link>http://localhost:1313/tags/docs/</link>
     <description>Recent content in Docs on Yongliang Yang&#39;s Blog</description>
+    <image>
+      <title>Yongliang Yang&#39;s Blog</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Python标准库中argparse的用法</title>
+      <link>http://localhost:1313/posts/python/2025-02-13/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python/2025-02-13/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
       <title>Hugo搭建个人网页</title>
-      <link>http://localhost:1313/posts/2025-02-11.cn/</link>
+      <link>http://localhost:1313/posts/hugo/2025-02-11/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-02-11.cn/</guid>
+      <guid>http://localhost:1313/posts/hugo/2025-02-11/</guid>
       <description>Read aboout Install and Update instructions and sampled configuration templates</description>
     </item>
     <item>

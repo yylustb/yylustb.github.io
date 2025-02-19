@@ -4,6 +4,11 @@
     <title>Categories on Yongliang Yang&#39;s Blog</title>
     <link>http://localhost:1313/zh/categories/</link>
     <description>Recent content in Categories on Yongliang Yang&#39;s Blog</description>
+    <image>
+      <title>Yongliang Yang&#39;s Blog</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>zh</language>
     <atom:link href="http://localhost:1313/zh/categories/index.xml" rel="self" type="application/rss+xml" />

@@ -4,6 +4,11 @@
     <title>PaperMod on Yongliang Yang&#39;s Blog</title>
     <link>http://localhost:1313/posts/papermod/</link>
     <description>Recent content in PaperMod on Yongliang Yang&#39;s Blog</description>
+    <image>
+      <title>Yongliang Yang&#39;s Blog</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
