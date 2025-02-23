@@ -1,5 +1,5 @@
 ---
-title: "Python系列：1.argparse"
+title: "Python系列1. argparse"
 # 文章摘要，通常用于 列表页面 或 SEO 描述
 summary: Python argparse
 # 文章的发布日期，未来时间不会发布
@@ -10,7 +10,7 @@ weight: 1
 # 旧的 URL 映射到这个页面，防止 404 错误（适用于 URL 变更）。
 aliases: ["/python-argparse"]
 # 文章的标签（关键词），用于 Hugo 的 标签分类（类似于博客的 tag）
-tags: ["Pyhton", "Docs"]
+tags: ["Pyhton", "argparse"]
 author: ["Yongliang Yang", "杨永亮"]
 cover:
   # 图片路径

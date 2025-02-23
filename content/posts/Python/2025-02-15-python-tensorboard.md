@@ -1,5 +1,5 @@
 ---
-title: "Python系列：2.tensorboard"
+title: "Python系列2. tensorboard"
 # 文章摘要，通常用于 列表页面 或 SEO 描述
 summary: Python tensorboard
 # 文章的发布日期，未来时间不会发布

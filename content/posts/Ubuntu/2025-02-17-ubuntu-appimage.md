@@ -1,5 +1,5 @@
 ---
-title: "Ubuntu系列: 1.安装AppImage应用"
+title: "Ubuntu系列1. 安装AppImage应用"
 # 文章摘要，通常用于 列表页面 或 SEO 描述
 summary: Read aboout Install and Update instructions and sampled configuration templates
 # 文章的发布日期，未来时间不会发布
