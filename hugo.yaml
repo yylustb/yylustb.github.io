@@ -201,4 +201,5 @@ markup:
     renderer:
       unsafe: true
   highlight:
+    lineNos: true        # 是否显示行号
     noClasses: false
