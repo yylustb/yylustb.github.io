@@ -1,5 +1,5 @@
 ---
-title: "Python标准库中argparse的用法"
+title: "Python系列：1.argparse"
 # 文章摘要，通常用于 列表页面 或 SEO 描述
 summary: Python argparse
 # 文章的发布日期，未来时间不会发布

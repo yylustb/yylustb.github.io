@@ -197,9 +197,11 @@ params:
 
 
 markup:
-  goldmark:
+  goldmark:              # Hugo 默认使用的 Markdown 渲染引擎
     renderer:
-      unsafe: true
+      # 在 Markdown 文件中编写的原生 HTML（例如 <script>, <iframe> 或者其他 HTML 标签），
+      # 在最终生成的页面中会被原样保留并渲染
+      unsafe: true       # 控制是否允许在 Markdown 中渲染 “不安全（raw）” 的 HTML 标签
   highlight:
-    lineNos: true        # 是否显示行号
-    noClasses: false
+    lineNos: true        # 是否在代码高亮时显示行号
+    noClasses: false     # 不要禁用 class

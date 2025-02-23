@@ -1,9 +1,9 @@
 ---
-title: "tensorboard用法"
+title: "Python系列：2.tensorboard"
 # 文章摘要，通常用于 列表页面 或 SEO 描述
 summary: Python tensorboard
 # 文章的发布日期，未来时间不会发布
-date: 2025-02-13
+date: 2025-02-15
 # 文章所属的 系列，可以用 series 在 Hugo 的主题（如 PaperMod）中生成一个系列的导航
 series: ["Python"]
 weight: 1
