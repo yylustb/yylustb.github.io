@@ -1,5 +1,5 @@
 ---
-title: "Git 系列 - 1. 安装 Git 与配置 Github"
+title: "Git 学习系列 - 1. 安装 Git 与配置 Github"
 summary: Learn About Git & GitHub
 date: 2025-02-23
 weight: 1
