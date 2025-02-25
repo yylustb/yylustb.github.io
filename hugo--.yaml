@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/" # 末尾一定加 /
+baseURL: "https://yylustb.github.io/" # 末尾一定加 /
 title: ExampleSite                  # 站点标题
 paginate: 5                         # 列表页显示文章数
 theme: PaperMod                     # Hugo 主题
