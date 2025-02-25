@@ -1,13 +1,14 @@
 ---
-title: "Git 系列2. Matlab同步Git"
-summary: Read aboout Install and Update instructions and sampled configuration templates
+title: "Git 系列 - 2. Matlab 同步 Git"
+summary: Learn About Git & Matlab
 date: 2025-02-23
 weight: 1
 aliases: ["/git-matlab"]
-tags: ["Git"]
-author: ["Yongliang Yang", "杨永亮"]
+tags: ["Git", "matlab"]
+categories: ["Git"]
+author: ["Yongliang Yang"]
 cover:
-  image: images/papermod-cover.png  
+  image: images/git.png
 ---
 
 

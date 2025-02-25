@@ -4,7 +4,8 @@ summary: Learn About All Features in PaperMod
 date: 2025-02-23
 weight: 1
 aliases: ["/git-texstudio"]
-tags: ["Git"]
+tags: ["Git", "Texstudio"]
+categories: ["Git"]
 author: ["Yongliang Yang"]
 cover:
   image: images/git.png
