@@ -1,0 +1,209 @@
+baseURL: "/"
+languageCode: en-us
+title: Yongliang Yang's Blog
+paginate: 5
+theme: PaperMod
+
+# 允许在普通 Markdown 语法块里直接使用 Shortcodes
+enableInlineShortcodes: true   
+# 让 Hugo 自动生成 public/robots.txt，用于 SEO（搜索引擎优化），告诉搜索引擎 哪些页面可以被索引哪些不行
+enableRobotsTXT: true
+# 代表 Hugo 不会生成草稿文章
+buildDrafts: false
+# 是否构建未来发布日期的文章，如果 Markdown 文章的 date: 2025-12-01 在未来，默认不会生成。
+buildFuture: false
+# 是否构建已过期文章。如果 buildExpired: false，过期的文章不会被构建。如果 buildExpired: true，即使过期了也继续显示。
+buildExpired: false
+# 允许你在 Markdown 中直接使用 :emoji_name: 方式插入 Emoji。
+enableEmoji: true
+# 让 Hugo 代码高亮使用 CSS 类
+pygmentsUseClasses: true
+# 文章默认来源于 content/posts/ 和 content/papermod/ 目录。
+mainsections: ["posts", "papermod"]
+
+# 禁止压缩 XML 文件，Hugo 会生成更易读的格式，方便调试 XML 内容
+minify:
+  disableXML: true
+
+languages: # 启用了 Hugo 多语言支持
+  en:
+    languageName: "English" 
+    # 语言的优先级（数值越小，排序越高）
+    weight: 1    
+    # Taxonomies（分类系统） 用于 管理文章的分类、标签等
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    # 定义导航菜单（显示在网页顶部）
+    menu:
+      main:
+        - name: Publications
+          url: publications
+          weight: 1
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: WiKi
+          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+  zh:
+      languageName: "中文"
+      weight: 2
+      menu:
+        main:
+          - name: 归档
+            url: /zh/archives/
+            weight: 5
+          - name: 搜索
+            url: /zh/search/
+            weight: 10
+          - name: 标签
+            url: /zh/tags/
+            weight: 10
+
+# 默认支持首页 HTML 页面、RSS 订阅、JSON（搜索），可以满足大多数 Hugo 博客需求。
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+
+
+
+
+params:
+  # 启用 Google Analytics、Open Graph、Twitter Cards 以及结构化数据（schema）等功能，以便在生产环境中进行 SEO 和数据分析。
+  env: production 
+  # 指定网站或主题的描述信息，用于 SEO、社交分享卡片等地方显示简介。
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" 
+  # 指定网站或文章的作者名称，一般会在网站元数据或文章元数据中展示。
+  author: Yongliang Yang
+  # author: ["Me", "You"] # multiple authors
+
+  # PaperMod 主题支持深色模式（Dark Mode）和浅色模式（Light Mode）切换，auto 表示跟随用户浏览器/系统的主题偏好自动切换。
+  defaultTheme: auto 
+  # 下面注释掉表示默认情况，会显示主题切换开关（深浅色模式切换按钮），如果取消注释并将其设为 true，则会隐藏
+  # disableThemeToggle: true 
+  # 是否在文章页面显示社交分享按钮（如 Twitter、Facebook 等）
+  ShowShareButtons: true
+  # 在文章页面中显示预估阅读时长，例如“阅读时长：3分钟”。
+  ShowReadingTime: true
+  # PaperMod 会将首页或列表页的第一篇文章以特殊样式进行展示。如果取消下面的注释并设为 true，则关闭这个特殊展示效果
+  # disableSpecial1stPost: true
+  # 开启多语言功能，显示完整的语言名称（如 “English (United States)”）还是显示缩写（如 “en-US”）
+  displayFullLangName: true
+  # 在文章页面底部显示前一篇、后一篇文章的导航链接
+  ShowPostNavLinks: true
+  # 在页面顶部显示当前位置面包屑导航（如 Home / Category / Post Title）
+  ShowBreadCrumbs: true
+  # 当页面里有代码块时，显示“复制代码”按钮
+  ShowCodeCopyButtons: true
+  # 在分类/标签页（Section 或 Term 列表页），显示 RSS 订阅按钮
+  ShowRssButtonInSectionTermList: true
+  # 在归档页面中显示所有文章（不分页面），true: 一次性显示全部文章列表，false: 只显示部分文章分页形式
+  ShowAllPagesInArchive: true
+  # 在底部分页导航处是否显示页面编号（例如“上一页”“下一页”旁边的数字页码）
+  ShowPageNums: true
+  # 在文章页面显示自动生成的目录
+  ShowToc: true
+  # 如果取消下面注释并设为 true，可禁用所有文章的评论功能。默认情况下 PaperMod 不会内置评论功能，需要自行配置 Disqus 或其他评论服务。
+  # comments: false 
+  # 设置默认的社交分享封面图或 OG（Open Graph）图片链接
+  images: ["images/papermod-cover.png"]
+
+  profileMode:
+    enabled: false
+    title: PaperMod
+    imageUrl: "#"
+    imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: "My Academic Blog"
+    Content: >
+      👋 Welcome to the page of Yongliang Yang's Group!
+
+      - We focus on theoretical analysis of Reinforcement Learning.
+
+      - We focus on implementation of Reinforcement Learning.
+
+      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+
+  socialIcons:
+    - name: github
+      title: View Source on Github
+      url: "https://github.com/adityatelange/hugo-PaperMod"
+    - name: Discord
+      title: Join discord community
+      url: "https://discord.gg/ahpmTvhVmp"
+    - name: X
+      title: Share PaperMod on X/Twitter
+      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+    - name: KoFi
+      title: Buy me a Ko-Fi :)
+      url: "https://ko-fi.com/adityatelange"
+
+  editPost:
+    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # label:
+  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+  # text: "Home"
+  # icon: icon.png
+  # iconHeight: 35
+
+  # analytics:
+  #     google:
+  #         SiteVerificationTag: "XYZabc"
+
+  assets:
+    disableHLJS: true
+  #     favicon: "<link / abs url>"
+  #     favicon16x16: "<link / abs url>"
+  #     favicon32x32: "<link / abs url>"
+  #     apple_touch_icon: "<link / abs url>"
+  #     safari_pinned_tab: "<link / abs url>"
+
+  # cover:
+  #     hidden: true # hide everywhere but not in structured data
+  #     hiddenInList: true # hide on list pages and home
+  #     hiddenInSingle: true # hide on single page
+
+  # fuseOpts:
+  #     isCaseSensitive: false
+  #     shouldSort: true
+  #     location: 0
+  #     distance: 1000
+  #     threshold: 0.4
+  #     minMatchCharLength: 0
+  #     keys: ["title", "permalink", "summary", "content"]
+
+
+
+
+markup:
+  goldmark:              # Hugo 默认使用的 Markdown 渲染引擎
+    renderer:
+      unsafe: true       # 控制是否允许在 Markdown 中渲染 “不安全（raw）” 的 HTML 标签
+      # 在 Markdown 文件中编写的原生 HTML（例如 <script>, <iframe> 或者其他 HTML 标签），
+      # 在最终生成的页面中会被原样保留并渲染
+  highlight:
+    lineNos: true        # 是否在代码高亮时显示行号
+    noClasses: false     # 不要禁用 class
+    codeFences: true     # 启用 Markdown 代码块语法（```）
+    style: "monokai"

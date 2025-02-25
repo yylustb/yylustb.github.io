@@ -1,0 +1,153 @@
+baseURL: "https://examplesite.com/" # 末尾一定加 /
+title: ExampleSite                  # 站点标题
+paginate: 5                         # 列表页显示文章数
+theme: PaperMod                     # Hugo 主题
+
+enableRobotsTXT: true               # 生成robots.txt, 允许搜索引擎索引
+buildDrafts: false                  # 不构建 draft=true 状态的文章
+buildFuture: false                  # 不构建未来发布日期的文章
+buildExpired: false                 # 不构建已过期的文章
+
+minify:
+  disableXML: true                  # 不压缩 XML 文件，方便阅读
+  minifyOutput: true                # 压缩 HTML、CSS、JS 等输出，提高加载速度
+
+params:
+  env: production 
+  title: ExampleSite                                                # 站点的标题
+  description: "ExampleSite description"                            # 站点的描述信息
+  keywords: [Blog, Portfolio, PaperMod]                             # 站点的关键词，有助于 SEO
+  author: Me                                                        # 站点的作者
+  # author: ["Me", "You"]                                           # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]  # 用于社交分享时的默认封面图片
+  DateFormat: "January 2, 2006"                                     # 文章日期的显示格式
+  defaultTheme: auto # dark, light                                  # 站点默认主题模式（自动适应用户偏好）
+  disableThemeToggle: false                                         # 是否禁用深色/浅色模式切换
+
+  ShowReadingTime: true                                             # 显示阅读时间
+  ShowShareButtons: true                                            # 显示社交分享按钮
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true                              # 在分类/标签页显示 RSS 订阅按钮
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false                                                # 是否隐藏文章摘要
+  showtoc: false                                                    # 是否显示文章目录
+  tocopen: false                                                    # 是否默认展开目录
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:                     # 主页信息模式（如果启用，会在主页显示欢迎信息）
+    Title: "Hi there \U0001F44B"      # 主页欢迎信息标题
+    Content: Welcome to my blog       # 主页欢迎信息内容
+
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+    - name: stackoverflow
+      url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    # hidden: true # 隐藏封面图片
+    # hiddenInList: true # 列表页隐藏封面图哦
+    # hiddenInSingle: true # 文章页面隐藏封面图片
+
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 #                                         # 最大返回搜索结果数
+    keys: ["title", "permalink", "summary", "content"]  # 参与搜索的字段
+menu:                             # 定义导航菜单
+  main:                           # Hugo 主题 PaperMod 默认的主菜单（可以有多个菜单）
+    - identifier: categories      # 菜单的唯一标识符，用于 Hugo 内部管理这个菜单项
+      name: categories            # 分类菜单项的显示名称
+      url: /categories/           # 分类页面的 URL （/categories/ Hugo 的分类页面（taxonomy page））
+      weight: 10                  # 菜单的权重（值越小越靠前）
+    - identifier: tags            
+      name: tags                  # 标签菜单项
+      url: /tags/                 # 标签页面的 URL
+      weight: 20
+    - identifier: example 
+      name: example.org           # 自定义菜单项
+      url: https://example.org    # 自定义菜单的链接
+      weight: 30                  # 自定义菜单的权重
+    - identifier: archive  
+      name: Archive
+      url: archives
+      weight: 5
+    - identifier: search
+      name: Search
+      url: search/
+      weight: 10
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+
+# 默认支持首页 HTML 页面、RSS 订阅、JSON（搜索），可以满足大多数 Hugo 博客需求。
+outputs:
+  home:      # 主页输出
+    - HTML
+    - RSS
+    - JSON

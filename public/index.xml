@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <image>
+      <title>My New Hugo Site</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.143.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Feb 2025 17:10:47 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTex系列1. LaTex编译器</title>
+      <link>http://localhost:1313/posts/latex/2025-02-24-latex/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/latex/2025-02-24-latex/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>Git 系列 - 3. Texstudio 同步 Git</title>
+      <link>http://localhost:1313/posts/git/2025-02-23-git-texstudio/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git/2025-02-23-git-texstudio/</guid>
+      <description>Learn About All Features in PaperMod</description>
+    </item>
+    <item>
+      <title>Git 系列1. 安装 Git 链接 Github</title>
+      <link>http://localhost:1313/posts/git/2025-02-23-git-install/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git/2025-02-23-git-install/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>Git 系列2. Matlab同步Git</title>
+      <link>http://localhost:1313/posts/git/2025-02-23-git-matlab/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git/2025-02-23-git-matlab/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>Ubuntu系列2. bash shell, terminal 和 ~/.bashrc</title>
+      <link>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>强化学习系列2. Policy Gradient</title>
+      <link>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
+      <title>Ubuntu系列1. 安装AppImage应用</title>
+      <link>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>强化学习系1. DQN</title>
+      <link>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
+      <title>Python系列2. tensorboard</title>
+      <link>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</guid>
+      <description>Python tensorboard</description>
+    </item>
+    <item>
+      <title>ROS1系列1. 一键安装 ROS Neotic</title>
+      <link>http://localhost:1313/posts/ros/2025-02-14-ros-install/</link>
+      <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ros/2025-02-14-ros-install/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>Python系列1. argparse</title>
+      <link>http://localhost:1313/posts/python/2025-02-13-python-argparse/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python/2025-02-13-python-argparse/</guid>
+      <description>Python argparse</description>
+    </item>
+    <item>
+      <title>Hugo:1. 搭建个人网页</title>
+      <link>http://localhost:1313/posts/hugo/2025-02-11-hugo/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo/2025-02-11-hugo/</guid>
+      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+    </item>
+    <item>
+      <title>Hello</title>
+      <link>http://localhost:1313/posts/hello/</link>
+      <pubDate>Tue, 25 Feb 2025 17:10:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Math Typesetting</title>
+      <link>http://localhost:1313/posts/papermod/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/papermod/math-typesetting/</guid>
+      <description>A brief guide to setup KaTeX</description>
+    </item>
+  </channel>
+</rss>
