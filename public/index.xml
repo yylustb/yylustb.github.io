@@ -11,14 +11,28 @@
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Feb 2025 17:10:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>LaTex系列1. LaTex编译器</title>
+      <title>LaTex 系列 - 1. LaTex 编译器介绍</title>
       <link>http://localhost:1313/posts/latex/2025-02-24-latex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/latex/2025-02-24-latex/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+      <description>Learn About LaTex</description>
+    </item>
+    <item>
+      <title>Git 系列 - 1. 安装 Git 与配置 Github</title>
+      <link>http://localhost:1313/posts/git/2025-02-23-git-install/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git/2025-02-23-git-install/</guid>
+      <description>Learn About Git &amp;amp; GitHub</description>
+    </item>
+    <item>
+      <title>Git 系列 - 2. Matlab 同步 Git</title>
+      <link>http://localhost:1313/posts/git/2025-02-23-git-matlab/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git/2025-02-23-git-matlab/</guid>
+      <description>Learn About Git &amp;amp; Matlab</description>
     </item>
     <item>
       <title>Git 系列 - 3. Texstudio 同步 Git</title>
@@ -28,81 +42,60 @@
       <description>Learn About All Features in PaperMod</description>
     </item>
     <item>
-      <title>Git 系列1. 安装 Git 链接 Github</title>
-      <link>http://localhost:1313/posts/git/2025-02-23-git-install/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/git/2025-02-23-git-install/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
-    </item>
-    <item>
-      <title>Git 系列2. Matlab同步Git</title>
-      <link>http://localhost:1313/posts/git/2025-02-23-git-matlab/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/git/2025-02-23-git-matlab/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
-    </item>
-    <item>
-      <title>Ubuntu系列2. bash shell, terminal 和 ~/.bashrc</title>
-      <link>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
-    </item>
-    <item>
-      <title>强化学习系列2. Policy Gradient</title>
+      <title>强化学习系列 - 2. Stochastic Policy Gradient</title>
       <link>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</guid>
-      <description>Python argparse</description>
+      <description>Learn About DQN in Stochastic Policy Gradient</description>
     </item>
     <item>
-      <title>Ubuntu系列1. 安装AppImage应用</title>
+      <title>Ubuntu系列 - 1. 安装AppImage应用</title>
       <link>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+      <description>Learn About Ubuntu</description>
     </item>
     <item>
-      <title>强化学习系1. DQN</title>
+      <title>Ubuntu系列 - 2. bash shell, terminal 和 ~/.bashrc</title>
+      <link>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</guid>
+      <description>Learn About Ubuntu</description>
+    </item>
+    <item>
+      <title>强化学习系列 - 1. DQN</title>
       <link>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</guid>
-      <description>Python argparse</description>
+      <description>Learn About DQN in RL</description>
     </item>
     <item>
-      <title>Python系列2. tensorboard</title>
+      <title>Python 系列 - 2. tensorboard</title>
       <link>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</link>
       <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</guid>
-      <description>Python tensorboard</description>
+      <description>Learn About argparse in Python</description>
     </item>
     <item>
-      <title>ROS1系列1. 一键安装 ROS Neotic</title>
+      <title>ROS1系列 - 1. 一键安装 ROS Neotic</title>
       <link>http://localhost:1313/posts/ros/2025-02-14-ros-install/</link>
       <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ros/2025-02-14-ros-install/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+      <description>Learn About ROS1</description>
     </item>
     <item>
-      <title>Python系列1. argparse</title>
+      <title>Python 系列 - 1. 命令行解析器 argparse</title>
       <link>http://localhost:1313/posts/python/2025-02-13-python-argparse/</link>
       <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/python/2025-02-13-python-argparse/</guid>
-      <description>Python argparse</description>
+      <description>Learn About argparse in Python</description>
     </item>
     <item>
-      <title>Hugo:1. 搭建个人网页</title>
+      <title>Hugo 系列 - 1. 搭建 Hugo 网站并部署到 Github Pages</title>
       <link>http://localhost:1313/posts/hugo/2025-02-11-hugo/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hugo/2025-02-11-hugo/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
-    </item>
-    <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
-      <pubDate>Tue, 25 Feb 2025 17:10:47 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello/</guid>
-      <description></description>
+      <description>Learn About Hugo &amp;amp; GitHub Pages</description>
     </item>
     <item>
       <title>Math Typesetting</title>

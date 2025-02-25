@@ -21,10 +21,24 @@
       <description></description>
     </item>
     <item>
-      <title>Bash</title>
-      <link>http://localhost:1313/tags/bash/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bash/</guid>
+      <title>Lualatex</title>
+      <link>http://localhost:1313/tags/lualatex/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lualatex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pdflatex</title>
+      <link>http://localhost:1313/tags/pdflatex/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pdflatex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xulatex</title>
+      <link>http://localhost:1313/tags/xulatex/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/xulatex/</guid>
       <description></description>
     </item>
     <item>
@@ -35,31 +49,31 @@
       <description></description>
     </item>
     <item>
-      <title>Shell</title>
-      <link>http://localhost:1313/tags/shell/</link>
+      <title>Github</title>
+      <link>http://localhost:1313/tags/github/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/shell/</guid>
+      <guid>http://localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
-      <title>Ubuntu</title>
-      <link>http://localhost:1313/tags/ubuntu/</link>
+      <title>Matlab</title>
+      <link>http://localhost:1313/tags/matlab/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ubuntu/</guid>
+      <guid>http://localhost:1313/tags/matlab/</guid>
       <description></description>
     </item>
     <item>
-      <title>Policy Gradient</title>
-      <link>http://localhost:1313/tags/policy-gradient/</link>
-      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/policy-gradient/</guid>
+      <title>Texstudio</title>
+      <link>http://localhost:1313/tags/texstudio/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/texstudio/</guid>
       <description></description>
     </item>
     <item>
-      <title>RL</title>
-      <link>http://localhost:1313/tags/rl/</link>
+      <title>SPG</title>
+      <link>http://localhost:1313/tags/spg/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rl/</guid>
+      <guid>http://localhost:1313/tags/spg/</guid>
       <description></description>
     </item>
     <item>
@@ -70,17 +84,24 @@
       <description></description>
     </item>
     <item>
+      <title>Bash</title>
+      <link>http://localhost:1313/tags/bash/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>http://localhost:1313/tags/terminal/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/terminal/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>DQN</title>
       <link>http://localhost:1313/tags/dqn/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/dqn/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pyhton</title>
-      <link>http://localhost:1313/tags/pyhton/</link>
-      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pyhton/</guid>
       <description></description>
     </item>
     <item>
@@ -105,10 +126,10 @@
       <description></description>
     </item>
     <item>
-      <title>Docs</title>
-      <link>http://localhost:1313/tags/docs/</link>
+      <title>Github Pages</title>
+      <link>http://localhost:1313/tags/github-pages/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/docs/</guid>
+      <guid>http://localhost:1313/tags/github-pages/</guid>
       <description></description>
     </item>
     <item>

@@ -19,6 +19,7 @@ markup:
       # 在最终生成的页面中会被原样保留并渲染
   highlight:
     lineNos: true        # 是否在代码高亮时显示行号
+    lineNumbersInTable: true
     noClasses: false     # 不要禁用 class
     codeFences: true     # 启用 Markdown 代码块语法（```）
     style: "monokai"
@@ -34,6 +35,7 @@ params:
   DateFormat: "January 2, 2006"                                     # 文章日期的显示格式
   defaultTheme: auto # dark, light                                  # 站点默认主题模式（自动适应用户偏好）
   disableThemeToggle: false                                         # 是否禁用深色/浅色模式切换
+  math: true
 
   ShowReadingTime: true                                             # 显示阅读时间
   ShowShareButtons: true                                            # 显示社交分享按钮
@@ -105,10 +107,10 @@ params:
     # hiddenInList: true # 列表页隐藏封面图哦
     # hiddenInSingle: true # 文章页面隐藏封面图片
 
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+  # editPost:
+  #   URL: "https://github.com/yylustb.github.io.git/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
 
   # 搜索设置
   fuseOpts:

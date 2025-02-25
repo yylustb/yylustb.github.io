@@ -14,11 +14,11 @@
     <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/appimage/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ubuntu系列1. 安装AppImage应用</title>
+      <title>Ubuntu系列 - 1. 安装AppImage应用</title>
       <link>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+      <description>Learn About Ubuntu</description>
     </item>
   </channel>
 </rss>

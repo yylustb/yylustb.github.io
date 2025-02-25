@@ -14,11 +14,11 @@
     <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/tensorboard/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python系列2. tensorboard</title>
+      <title>Python 系列 - 2. tensorboard</title>
       <link>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</link>
       <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</guid>
-      <description>Python tensorboard</description>
+      <description>Learn About argparse in Python</description>
     </item>
   </channel>
 </rss>

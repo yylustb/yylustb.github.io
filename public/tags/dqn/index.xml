@@ -14,11 +14,11 @@
     <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/dqn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>强化学习系1. DQN</title>
+      <title>强化学习系列 - 1. DQN</title>
       <link>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</guid>
-      <description>Python argparse</description>
+      <description>Learn About DQN in RL</description>
     </item>
   </channel>
 </rss>

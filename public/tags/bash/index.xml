@@ -11,14 +11,14 @@
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ubuntu系列2. bash shell, terminal 和 ~/.bashrc</title>
+      <title>Ubuntu系列 - 2. bash shell, terminal 和 ~/.bashrc</title>
       <link>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</guid>
-      <description>Read aboout Install and Update instructions and sampled configuration templates</description>
+      <description>Learn About Ubuntu</description>
     </item>
   </channel>
 </rss>
