@@ -8,7 +8,7 @@ tags: ["terminal", "bash"]
 categories: ["Ubuntu"]
 author: ["Yongliang Yang"]
 cover:
-  image: images/papermod-cover.png
+  image: images/ubuntu.png
 ---
 
 

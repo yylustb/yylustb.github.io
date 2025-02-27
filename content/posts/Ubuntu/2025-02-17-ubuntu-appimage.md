@@ -8,7 +8,7 @@ tags: ["AppImage"]
 categories: ["Ubuntu"]
 author: ["Yongliang Yang"]
 cover:
-  image: images/papermod-cover.png
+  image: images/ubuntu.png
 ---
 
 AppImage 是一种便携式软件包格式，允许你在 Linux 上运行应用程序 无需安装。以下是下载、运行和管理 AppImage 文件的方法
