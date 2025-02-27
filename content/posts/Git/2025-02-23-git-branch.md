@@ -1,5 +1,5 @@
 ---
-title: "Git 系列 - 2. Git 分支管理"
+title: "Git 系列 - 4. Git 分支管理"
 summary: Learn About Git & branch
 date: 2025-02-23
 weight: 1
@@ -11,7 +11,7 @@ cover:
   image: images/git.png
 ---
 
-## 分支的本地操作
+## 1. 分支的本地操作
 
 ### 新建分支
 
@@ -37,6 +37,16 @@ git checkout -b branch_B
 git branch
 ```
 
+查看远程分支
+```bash
+git branch -r
+```
+
+查看所有分支
+```bash
+git branch -a
+```
+
 ### 合并分支
 
 合并分支 branch_B 到分支 branch_A: 先切换到分支 branch_A，再执行 git merge
@@ -55,19 +65,7 @@ git branch -D branch_B # 强制删除
 
 
 
-## 分支的远程操作
-
-### 查看本地仓库关联的远程分支
-
-查看远程分支
-```bash
-git branch -r
-```
-
-查看所有分支
-```bash
-git branch -a
-```
+## 2. 分支的远程操作
 
 ## 推送本地分支到远程仓库
 
@@ -91,3 +89,5 @@ git push origin branch_A
 git push origin --delete branch_C
 ```
 注意，远程不一定叫origin，可以是其他名字。
+
+3. 
