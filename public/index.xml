@@ -2,106 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
+    <link>https://yylustb.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <image>
       <title>My New Hugo Site</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yylustb.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VS code设置：右击文件夹出现“在这里打开 VS code”选项</title>
+      <link>https://yylustb.github.io/posts/other/2025-02-27/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yylustb.github.io/posts/other/2025-02-27/</guid>
+      <description>VS code设置</description>
+    </item>
     <item>
       <title>LaTex 系列 - 1. LaTex 编译器介绍</title>
-      <link>http://localhost:1313/posts/latex/2025-02-24-latex/</link>
+      <link>https://yylustb.github.io/posts/latex/2025-02-24-latex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/latex/2025-02-24-latex/</guid>
+      <guid>https://yylustb.github.io/posts/latex/2025-02-24-latex/</guid>
       <description>Learn About LaTex</description>
     </item>
     <item>
       <title>Git 系列 - 1. 安装 Git 与配置 Github</title>
-      <link>http://localhost:1313/posts/git/2025-02-23-git-install/</link>
+      <link>https://yylustb.github.io/posts/git/2025-02-23-git-install/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/git/2025-02-23-git-install/</guid>
+      <guid>https://yylustb.github.io/posts/git/2025-02-23-git-install/</guid>
       <description>Learn About Git &amp;amp; GitHub</description>
     </item>
     <item>
       <title>Git 系列 - 2. Matlab 同步 Git</title>
-      <link>http://localhost:1313/posts/git/2025-02-23-git-matlab/</link>
+      <link>https://yylustb.github.io/posts/git/2025-02-23-git-matlab/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/git/2025-02-23-git-matlab/</guid>
+      <guid>https://yylustb.github.io/posts/git/2025-02-23-git-matlab/</guid>
       <description>Learn About Git &amp;amp; Matlab</description>
     </item>
     <item>
       <title>Git 系列 - 3. Texstudio 同步 Git</title>
-      <link>http://localhost:1313/posts/git/2025-02-23-git-texstudio/</link>
+      <link>https://yylustb.github.io/posts/git/2025-02-23-git-texstudio/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/git/2025-02-23-git-texstudio/</guid>
+      <guid>https://yylustb.github.io/posts/git/2025-02-23-git-texstudio/</guid>
       <description>Learn About All Features in PaperMod</description>
     </item>
     <item>
+      <title>Git 系列 - 4. Git 分支管理</title>
+      <link>https://yylustb.github.io/posts/git/2025-02-23-git-branch/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yylustb.github.io/posts/git/2025-02-23-git-branch/</guid>
+      <description>Learn About Git &amp;amp; branch</description>
+    </item>
+    <item>
       <title>强化学习系列 - 2. Stochastic Policy Gradient</title>
-      <link>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</link>
+      <link>https://yylustb.github.io/posts/reinforcement_learning/2025-02-20-rl-pg/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</guid>
+      <guid>https://yylustb.github.io/posts/reinforcement_learning/2025-02-20-rl-pg/</guid>
       <description>Learn About DQN in Stochastic Policy Gradient</description>
     </item>
     <item>
       <title>Ubuntu系列 - 1. 安装AppImage应用</title>
-      <link>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</link>
+      <link>https://yylustb.github.io/posts/ubuntu/2025-02-17-ubuntu-appimage/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</guid>
+      <guid>https://yylustb.github.io/posts/ubuntu/2025-02-17-ubuntu-appimage/</guid>
       <description>Learn About Ubuntu</description>
     </item>
     <item>
       <title>Ubuntu系列 - 2. bash shell, terminal 和 ~/.bashrc</title>
-      <link>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</link>
+      <link>https://yylustb.github.io/posts/ubuntu/2025-02-23-ubuntu-shell/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</guid>
+      <guid>https://yylustb.github.io/posts/ubuntu/2025-02-23-ubuntu-shell/</guid>
       <description>Learn About Ubuntu</description>
     </item>
     <item>
       <title>强化学习系列 - 1. DQN</title>
-      <link>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</link>
+      <link>https://yylustb.github.io/posts/reinforcement_learning/2025-02-16-rl-dqn/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</guid>
+      <guid>https://yylustb.github.io/posts/reinforcement_learning/2025-02-16-rl-dqn/</guid>
       <description>Learn About DQN in RL</description>
     </item>
     <item>
       <title>Python 系列 - 2. tensorboard</title>
-      <link>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</link>
+      <link>https://yylustb.github.io/posts/python/2025-02-15-python-tensorboard/</link>
       <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</guid>
+      <guid>https://yylustb.github.io/posts/python/2025-02-15-python-tensorboard/</guid>
       <description>Learn About argparse in Python</description>
     </item>
     <item>
       <title>ROS1系列 - 1. 一键安装 ROS Neotic</title>
-      <link>http://localhost:1313/posts/ros/2025-02-14-ros-install/</link>
+      <link>https://yylustb.github.io/posts/ros/2025-02-14-ros-install/</link>
       <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ros/2025-02-14-ros-install/</guid>
+      <guid>https://yylustb.github.io/posts/ros/2025-02-14-ros-install/</guid>
       <description>Learn About ROS1</description>
     </item>
     <item>
       <title>Python 系列 - 1. 命令行解析器 argparse</title>
-      <link>http://localhost:1313/posts/python/2025-02-13-python-argparse/</link>
+      <link>https://yylustb.github.io/posts/python/2025-02-13-python-argparse/</link>
       <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/python/2025-02-13-python-argparse/</guid>
+      <guid>https://yylustb.github.io/posts/python/2025-02-13-python-argparse/</guid>
       <description>Learn About argparse in Python</description>
     </item>
     <item>
       <title>Hugo 系列 - 1. 搭建 Hugo 网站并部署到 Github Pages</title>
-      <link>http://localhost:1313/posts/hugo/2025-02-11-hugo/</link>
+      <link>https://yylustb.github.io/posts/hugo/2025-02-11-hugo/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-02-11-hugo/</guid>
+      <guid>https://yylustb.github.io/posts/hugo/2025-02-11-hugo/</guid>
       <description>Learn About Hugo &amp;amp; GitHub Pages</description>
     </item>
     <item>
       <title>Math Typesetting</title>
-      <link>http://localhost:1313/posts/papermod/math-typesetting/</link>
+      <link>https://yylustb.github.io/posts/papermod/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/papermod/math-typesetting/</guid>
+      <guid>https://yylustb.github.io/posts/papermod/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
     </item>
   </channel>

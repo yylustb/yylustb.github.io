@@ -2,7 +2,10 @@ baseURL: https://yylustb.github.io/
 languageCode: en-us
 title: My New Hugo Site
 theme: ["PaperMod"]
-paginate: 5                         # 列表页显示文章数
+
+pagination:
+  pagerSize: 10
+
 
 # 默认支持首页 HTML 页面、RSS 订阅、JSON（搜索），可以满足大多数 Hugo 博客需求。
 outputs:

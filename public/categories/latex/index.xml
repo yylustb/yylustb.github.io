@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>LaTex on My New Hugo Site</title>
-    <link>http://localhost:1313/categories/latex/</link>
+    <link>https://yylustb.github.io/categories/latex/</link>
     <description>Recent content in LaTex on My New Hugo Site</description>
     <image>
       <title>My New Hugo Site</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/latex/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yylustb.github.io/categories/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LaTex 系列 - 1. LaTex 编译器介绍</title>
-      <link>http://localhost:1313/posts/latex/2025-02-24-latex/</link>
+      <link>https://yylustb.github.io/posts/latex/2025-02-24-latex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/latex/2025-02-24-latex/</guid>
+      <guid>https://yylustb.github.io/posts/latex/2025-02-24-latex/</guid>
       <description>Learn About LaTex</description>
     </item>
   </channel>
