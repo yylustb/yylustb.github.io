@@ -38,6 +38,12 @@ params:
   disableThemeToggle: false                                         # 是否禁用深色/浅色模式切换
   math: true
 
+  hugoVersion:
+    extended: true # 是否启用 Hugo 的扩展版本
+
+  features:
+    enableCodeCopy: true  # 启用代码复制按钮
+
   ShowReadingTime: true                                             # 显示阅读时间
   ShowShareButtons: true                                            # 显示社交分享按钮
   ShowPostNavLinks: true
@@ -55,8 +61,8 @@ params:
   tocopen: false                                                    # 是否默认展开目录
 
   assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
+    disableHLJS: true # to disable highlight.js
+    disableFingerprinting: true
     favicon: "<link / abs url>"
     favicon16x16: "<link / abs url>"
     favicon32x32: "<link / abs url>"
