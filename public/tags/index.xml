@@ -2,155 +2,155 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on My New Hugo Site</title>
-    <link>https://yylustb.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on My New Hugo Site</description>
     <image>
       <title>My New Hugo Site</title>
-      <url>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yylustb.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VS Code</title>
-      <link>https://yylustb.github.io/tags/vs-code/</link>
+      <link>http://localhost:1313/tags/vs-code/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/vs-code/</guid>
+      <guid>http://localhost:1313/tags/vs-code/</guid>
       <description></description>
     </item>
     <item>
       <title>LaTex</title>
-      <link>https://yylustb.github.io/tags/latex/</link>
+      <link>http://localhost:1313/tags/latex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/latex/</guid>
+      <guid>http://localhost:1313/tags/latex/</guid>
       <description></description>
     </item>
     <item>
       <title>Lualatex</title>
-      <link>https://yylustb.github.io/tags/lualatex/</link>
+      <link>http://localhost:1313/tags/lualatex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/lualatex/</guid>
+      <guid>http://localhost:1313/tags/lualatex/</guid>
       <description></description>
     </item>
     <item>
       <title>Pdflatex</title>
-      <link>https://yylustb.github.io/tags/pdflatex/</link>
+      <link>http://localhost:1313/tags/pdflatex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/pdflatex/</guid>
+      <guid>http://localhost:1313/tags/pdflatex/</guid>
       <description></description>
     </item>
     <item>
       <title>Xulatex</title>
-      <link>https://yylustb.github.io/tags/xulatex/</link>
+      <link>http://localhost:1313/tags/xulatex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/xulatex/</guid>
+      <guid>http://localhost:1313/tags/xulatex/</guid>
       <description></description>
     </item>
     <item>
       <title>Branch</title>
-      <link>https://yylustb.github.io/tags/branch/</link>
+      <link>http://localhost:1313/tags/branch/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/branch/</guid>
+      <guid>http://localhost:1313/tags/branch/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://yylustb.github.io/tags/git/</link>
+      <link>http://localhost:1313/tags/git/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/git/</guid>
+      <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Github</title>
-      <link>https://yylustb.github.io/tags/github/</link>
+      <link>http://localhost:1313/tags/github/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/github/</guid>
+      <guid>http://localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Matlab</title>
-      <link>https://yylustb.github.io/tags/matlab/</link>
+      <link>http://localhost:1313/tags/matlab/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/matlab/</guid>
+      <guid>http://localhost:1313/tags/matlab/</guid>
       <description></description>
     </item>
     <item>
       <title>Texstudio</title>
-      <link>https://yylustb.github.io/tags/texstudio/</link>
+      <link>http://localhost:1313/tags/texstudio/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/texstudio/</guid>
+      <guid>http://localhost:1313/tags/texstudio/</guid>
       <description></description>
     </item>
     <item>
       <title>SPG</title>
-      <link>https://yylustb.github.io/tags/spg/</link>
+      <link>http://localhost:1313/tags/spg/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/spg/</guid>
+      <guid>http://localhost:1313/tags/spg/</guid>
       <description></description>
     </item>
     <item>
       <title>AppImage</title>
-      <link>https://yylustb.github.io/tags/appimage/</link>
+      <link>http://localhost:1313/tags/appimage/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/appimage/</guid>
+      <guid>http://localhost:1313/tags/appimage/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>https://yylustb.github.io/tags/bash/</link>
+      <link>http://localhost:1313/tags/bash/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/bash/</guid>
+      <guid>http://localhost:1313/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Terminal</title>
-      <link>https://yylustb.github.io/tags/terminal/</link>
+      <link>http://localhost:1313/tags/terminal/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/terminal/</guid>
+      <guid>http://localhost:1313/tags/terminal/</guid>
       <description></description>
     </item>
     <item>
       <title>DQN</title>
-      <link>https://yylustb.github.io/tags/dqn/</link>
+      <link>http://localhost:1313/tags/dqn/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/dqn/</guid>
+      <guid>http://localhost:1313/tags/dqn/</guid>
       <description></description>
     </item>
     <item>
       <title>Tensorboard</title>
-      <link>https://yylustb.github.io/tags/tensorboard/</link>
+      <link>http://localhost:1313/tags/tensorboard/</link>
       <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/tensorboard/</guid>
+      <guid>http://localhost:1313/tags/tensorboard/</guid>
       <description></description>
     </item>
     <item>
       <title>ROS1</title>
-      <link>https://yylustb.github.io/tags/ros1/</link>
+      <link>http://localhost:1313/tags/ros1/</link>
       <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/ros1/</guid>
+      <guid>http://localhost:1313/tags/ros1/</guid>
       <description></description>
     </item>
     <item>
       <title>Argparse</title>
-      <link>https://yylustb.github.io/tags/argparse/</link>
+      <link>http://localhost:1313/tags/argparse/</link>
       <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/argparse/</guid>
+      <guid>http://localhost:1313/tags/argparse/</guid>
       <description></description>
     </item>
     <item>
       <title>Github Pages</title>
-      <link>https://yylustb.github.io/tags/github-pages/</link>
+      <link>http://localhost:1313/tags/github-pages/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/github-pages/</guid>
+      <guid>http://localhost:1313/tags/github-pages/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://yylustb.github.io/tags/hugo/</link>
+      <link>http://localhost:1313/tags/hugo/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/tags/hugo/</guid>
+      <guid>http://localhost:1313/tags/hugo/</guid>
       <description></description>
     </item>
   </channel>

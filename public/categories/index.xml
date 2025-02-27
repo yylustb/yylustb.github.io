@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on My New Hugo Site</title>
-    <link>https://yylustb.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on My New Hugo Site</description>
     <image>
       <title>My New Hugo Site</title>
-      <url>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yylustb.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.143.1</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yylustb.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VS Code</title>
-      <link>https://yylustb.github.io/categories/vs-code/</link>
+      <link>http://localhost:1313/categories/vs-code/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/vs-code/</guid>
+      <guid>http://localhost:1313/categories/vs-code/</guid>
       <description></description>
     </item>
     <item>
       <title>LaTex</title>
-      <link>https://yylustb.github.io/categories/latex/</link>
+      <link>http://localhost:1313/categories/latex/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/latex/</guid>
+      <guid>http://localhost:1313/categories/latex/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://yylustb.github.io/categories/git/</link>
+      <link>http://localhost:1313/categories/git/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/git/</guid>
+      <guid>http://localhost:1313/categories/git/</guid>
       <description></description>
     </item>
     <item>
       <title>RL</title>
-      <link>https://yylustb.github.io/categories/rl/</link>
+      <link>http://localhost:1313/categories/rl/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/rl/</guid>
+      <guid>http://localhost:1313/categories/rl/</guid>
       <description></description>
     </item>
     <item>
       <title>Ubuntu</title>
-      <link>https://yylustb.github.io/categories/ubuntu/</link>
+      <link>http://localhost:1313/categories/ubuntu/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/ubuntu/</guid>
+      <guid>http://localhost:1313/categories/ubuntu/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://yylustb.github.io/categories/python/</link>
+      <link>http://localhost:1313/categories/python/</link>
       <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/python/</guid>
+      <guid>http://localhost:1313/categories/python/</guid>
       <description></description>
     </item>
     <item>
       <title>ROS</title>
-      <link>https://yylustb.github.io/categories/ros/</link>
+      <link>http://localhost:1313/categories/ros/</link>
       <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/ros/</guid>
+      <guid>http://localhost:1313/categories/ros/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://yylustb.github.io/categories/hugo/</link>
+      <link>http://localhost:1313/categories/hugo/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yylustb.github.io/categories/hugo/</guid>
+      <guid>http://localhost:1313/categories/hugo/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,152 +2,152 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yylustb.github.io/posts/other/2025-02-27/</loc>
+    <loc>http://localhost:1313/posts/other/2025-02-27/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/latex/2025-02-24-latex/</loc>
+    <loc>http://localhost:1313/posts/latex/2025-02-24-latex/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/git/2025-02-23-git-install/</loc>
+    <loc>http://localhost:1313/posts/git/2025-02-23-git-install/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/git/2025-02-23-git-matlab/</loc>
+    <loc>http://localhost:1313/posts/git/2025-02-23-git-matlab/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/git/2025-02-23-git-texstudio/</loc>
+    <loc>http://localhost:1313/posts/git/2025-02-23-git-texstudio/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/git/2025-02-23-git-branch/</loc>
+    <loc>http://localhost:1313/posts/git/2025-02-23-git-branch/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/reinforcement_learning/2025-02-20-rl-pg/</loc>
+    <loc>http://localhost:1313/posts/reinforcement_learning/2025-02-20-rl-pg/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/ubuntu/2025-02-17-ubuntu-appimage/</loc>
+    <loc>http://localhost:1313/posts/ubuntu/2025-02-17-ubuntu-appimage/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/ubuntu/2025-02-23-ubuntu-shell/</loc>
+    <loc>http://localhost:1313/posts/ubuntu/2025-02-23-ubuntu-shell/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/reinforcement_learning/2025-02-16-rl-dqn/</loc>
+    <loc>http://localhost:1313/posts/reinforcement_learning/2025-02-16-rl-dqn/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/python/2025-02-15-python-tensorboard/</loc>
+    <loc>http://localhost:1313/posts/python/2025-02-15-python-tensorboard/</loc>
     <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/ros/2025-02-14-ros-install/</loc>
+    <loc>http://localhost:1313/posts/ros/2025-02-14-ros-install/</loc>
     <lastmod>2025-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/python/2025-02-13-python-argparse/</loc>
+    <loc>http://localhost:1313/posts/python/2025-02-13-python-argparse/</loc>
     <lastmod>2025-02-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/hugo/2025-02-11-hugo/</loc>
+    <loc>http://localhost:1313/posts/hugo/2025-02-11-hugo/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/vs-code/</loc>
+    <loc>http://localhost:1313/tags/vs-code/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/vs-code/</loc>
+    <loc>http://localhost:1313/categories/vs-code/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/latex/</loc>
+    <loc>http://localhost:1313/tags/latex/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/latex/</loc>
+    <loc>http://localhost:1313/categories/latex/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/lualatex/</loc>
+    <loc>http://localhost:1313/tags/lualatex/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/pdflatex/</loc>
+    <loc>http://localhost:1313/tags/pdflatex/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/xulatex/</loc>
+    <loc>http://localhost:1313/tags/xulatex/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/branch/</loc>
+    <loc>http://localhost:1313/tags/branch/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/git/</loc>
+    <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/git/</loc>
+    <loc>http://localhost:1313/categories/git/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/github/</loc>
+    <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/matlab/</loc>
+    <loc>http://localhost:1313/tags/matlab/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/texstudio/</loc>
+    <loc>http://localhost:1313/tags/texstudio/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/rl/</loc>
+    <loc>http://localhost:1313/categories/rl/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/spg/</loc>
+    <loc>http://localhost:1313/tags/spg/</loc>
     <lastmod>2025-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/appimage/</loc>
+    <loc>http://localhost:1313/tags/appimage/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/bash/</loc>
+    <loc>http://localhost:1313/tags/bash/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/terminal/</loc>
+    <loc>http://localhost:1313/tags/terminal/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/ubuntu/</loc>
+    <loc>http://localhost:1313/categories/ubuntu/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/dqn/</loc>
+    <loc>http://localhost:1313/tags/dqn/</loc>
     <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/python/</loc>
+    <loc>http://localhost:1313/categories/python/</loc>
     <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/tensorboard/</loc>
+    <loc>http://localhost:1313/tags/tensorboard/</loc>
     <lastmod>2025-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/ros/</loc>
+    <loc>http://localhost:1313/categories/ros/</loc>
     <lastmod>2025-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/ros1/</loc>
+    <loc>http://localhost:1313/tags/ros1/</loc>
     <lastmod>2025-02-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/argparse/</loc>
+    <loc>http://localhost:1313/tags/argparse/</loc>
     <lastmod>2025-02-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/github-pages/</loc>
+    <loc>http://localhost:1313/tags/github-pages/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/categories/hugo/</loc>
+    <loc>http://localhost:1313/categories/hugo/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/publications/</loc>
+    <loc>http://localhost:1313/publications/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/posts/papermod/math-typesetting/</loc>
+    <loc>http://localhost:1313/posts/papermod/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yylustb.github.io/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
   </url><url>
-    <loc>https://yylustb.github.io/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
