@@ -1,6 +1,6 @@
 baseURL: https://yylustb.github.io/
 languageCode: en-us
-title: My New Hugo Site
+title: Yongliang Yang's Blog
 theme: ["PaperMod"]
 
 pagination:
@@ -93,8 +93,8 @@ params:
         url: tags
 
   homeInfoParams:                     # 主页信息模式（如果启用，会在主页显示欢迎信息）
-    Title: "Hi there \U0001F44B"      # 主页欢迎信息标题
-    Content: Welcome to my blog       # 主页欢迎信息内容
+    Title: "Yongliang Yang's Blog"      # 主页欢迎信息标题
+    Content: \U0001F44B Welcome to my blog       # 主页欢迎信息内容
 
   socialIcons:
     - name: x
