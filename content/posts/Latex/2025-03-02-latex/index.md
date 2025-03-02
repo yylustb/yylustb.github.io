@@ -1,5 +1,5 @@
 ---
-title: "LaTex 系列 - 2. LaTex 项目文件包含问题"
+title: "LaTex 系列 - 3. LaTex 项目文件包含问题"
 summary: Learn About LaTex
 date: 2025-03-02
 weight: 1
