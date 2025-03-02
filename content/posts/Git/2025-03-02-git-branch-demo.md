@@ -117,7 +117,7 @@ git commit -m "main 的第三次修改"
 git push 
 ```
 
-## 8. 接下来，A 在本地仓库的 main 分支进行工作，B 在本地的 fth 分支进行工作（A 每次工作前要和工作后同步到 Github 的所有分支, A 每次工作前要和工作后同步到 Github 的所有分支）
+## 8. 接下来，A 在本地仓库的 main 分支进行工作，B 在本地的 fth 分支进行工作（A 每次工作前和工作后同步到 Github 的所有分支, A 每次工作前和工作后同步到 Github 的所有分支）
 
 
 ### 8.1 对于 A 每次工作的要求（先处理冲突）
@@ -204,7 +204,7 @@ git switch fth
 git pull origin fth
 ```
 
-然后再本地，进行 main 和 fth 互相之间的 merge
+然后在本地，进行 main 和 fth 互相之间的 merge
 ```bash
 git switch main
 git merge fth
