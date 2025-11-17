@@ -726,8 +726,8 @@
   
   <entry>
     <title>深度学习 - 1. test</title>
-    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
-    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
+    <link href="/2020/11/15/ai/dl/DeepLearning_1/"/>
+    <url>/2020/11/15/ai/dl/DeepLearning_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -736,7 +736,7 @@
       
       <category>ai</category>
       
-      <category>nn</category>
+      <category>dl</category>
       
     </categories>
     
@@ -745,7 +745,7 @@
       
       <tag>ai</tag>
       
-      <tag>nn</tag>
+      <tag>dl</tag>
       
     </tags>
     
@@ -754,7 +754,7 @@
   
   
   <entry>
-    <title>深度学习 - 1. test</title>
+    <title>机器学习 - 1. test</title>
     <link href="/2020/11/15/ai/ml/MachineLearning_1/"/>
     <url>/2020/11/15/ai/ml/MachineLearning_1/</url>
     
@@ -783,9 +783,9 @@
   
   
   <entry>
-    <title>深度学习 - 1. test</title>
-    <link href="/2020/11/15/ai/dl/DeepLearning_1/"/>
-    <url>/2020/11/15/ai/dl/DeepLearning_1/</url>
+    <title>神经网络 - 1. test</title>
+    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
+    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -794,7 +794,7 @@
       
       <category>ai</category>
       
-      <category>dl</category>
+      <category>nn</category>
       
     </categories>
     
@@ -803,7 +803,7 @@
       
       <tag>ai</tag>
       
-      <tag>dl</tag>
+      <tag>nn</tag>
       
     </tags>
     
@@ -841,35 +841,6 @@
   
   
   <entry>
-    <title>线性代数 - 1. test</title>
-    <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
-    <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>LinAlgebra</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>LinAlgebra</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>李群与李代数 - 1. test</title>
     <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
     <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
@@ -891,6 +862,35 @@
       <tag>math</tag>
       
       <tag>LieAlgebra</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>线性代数 - 1. test</title>
+    <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
+    <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>LinAlgebra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>LinAlgebra</tag>
       
     </tags>
     
@@ -1073,35 +1073,6 @@
   
   
   <entry>
-    <title>凸优化系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_cvx/opt_cvx_1/"/>
-    <url>/2020/11/15/opt/opt_cvx/opt_cvx_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>opt-cvx</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>convex optimization</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>最优控制系列 - 1. test</title>
     <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
     <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
@@ -1123,6 +1094,35 @@
       <tag>opt</tag>
       
       <tag>optimal control</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>凸优化系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_cvx/opt_cvx_1/"/>
+    <url>/2020/11/15/opt/opt_cvx/opt_cvx_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>opt-cvx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>convex optimization</tag>
       
     </tags>
     
