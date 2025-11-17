@@ -19,21 +19,23 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. Github 建立仓库 git_test（会产生默认分支 main），同时确保A和B都有 Github 仓库的权限 2. A 和 B 两个人分别在本地建立文件夹 git_test 3. A 进入本地文件夹 git_test  初始化A的本地仓库（会产生默认分支 master）， 修改 master 分支为 main  12git initgit branch -m master">
+    <meta name="description" content="1. Github 建立仓库 git_test（会产生默认分支 main），同时确保A和B都有 Github 仓库的权限 2. A 和 B 两个人分别在本地建立文件夹 git_test 3. A 进入本地文件夹 git_test  初始化A的本地仓库（会产生默认分支 master）， 修改 master 分支为 main  12git initgit branch -m ma">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 系列 - 5. Git 分支协作案例">
 <meta property="og:url" content="http://yylustb.github.io/2025/02/25/Git/git_5-branch_demo-2025-02-25/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="1. Github 建立仓库 git_test（会产生默认分支 main），同时确保A和B都有 Github 仓库的权限 2. A 和 B 两个人分别在本地建立文件夹 git_test 3. A 进入本地文件夹 git_test  初始化A的本地仓库（会产生默认分支 master）， 修改 master 分支为 main  12git initgit branch -m master">
+<meta property="og:description" content="1. Github 建立仓库 git_test（会产生默认分支 main），同时确保A和B都有 Github 仓库的权限 2. A 和 B 两个人分别在本地建立文件夹 git_test 3. A 进入本地文件夹 git_test  初始化A的本地仓库（会产生默认分支 master）， 修改 master 分支为 main  12git initgit branch -m ma">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/git.png">
 <meta property="article:published_time" content="2025-02-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-16T17:52:35.000Z">
+<meta property="article:modified_time" content="2025-11-16T17:52:35.695Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://yylustb.github.io/img/index/git.png">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Git 系列 - 5. Git 分支协作案例 - 远大前程</title>
@@ -346,66 +348,108 @@
             
               <div class="markdown-body">
                 
-                <h2 id="github-建立仓库-git_test会产生默认分支-main同时确保a和b都有-github-仓库的权限">1. Github 建立仓库 <code>git_test</code>（会产生默认分支 <code>main</code>），同时确保A和B都有 Github 仓库的权限</h2>
-<h2 id="a-和-b-两个人分别在本地建立文件夹-git_test">2. A 和 B 两个人分别在本地建立文件夹 <code>git_test</code></h2>
-<h2 id="a-进入本地文件夹-git_test">3. A 进入本地文件夹 <code>git_test</code></h2>
+                <h2
+id="github-建立仓库-git_test会产生默认分支-main同时确保a和b都有-github-仓库的权限">1.
+Github 建立仓库 <code>git_test</code>（会产生默认分支
+<code>main</code>），同时确保A和B都有 Github 仓库的权限</h2>
+<h2 id="a-和-b-两个人分别在本地建立文件夹-git_test">2. A 和 B
+两个人分别在本地建立文件夹 <code>git_test</code></h2>
+<h2 id="a-进入本地文件夹-git_test">3. A 进入本地文件夹
+<code>git_test</code></h2>
 <ul>
 <li>初始化A的本地仓库（会产生默认分支 <code>master</code>），</li>
 <li>修改 <code>master</code> 分支为 <code>main</code></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git branch -m master main<br></code></pre></td></tr></table></figure>
-<h2 id="a-在本地仓库创建文件并同步至-github">4. A 在本地仓库创建文件并同步至 Github</h2>
+<h2 id="a-在本地仓库创建文件并同步至-github">4. A
+在本地仓库创建文件并同步至 Github</h2>
 <ul>
-<li><p>新建文件 test.txt，并添加内容 <code>main 的第一次修改</code></p></li>
+<li><p>新建文件 test.txt，并添加内容
+<code>main 的第一次修改</code></p></li>
 <li><p>并提交至本地仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第一次修改&quot;</span><br></code></pre></td></tr></table></figure></p></li>
-<li><p>然后同步至 Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin git@github.com:yylustb/git_test.git<br>git push -u origin main<br></code></pre></td></tr></table></figure> 接下来检查github，可以看到 Github 仓库的 main 分支已经同步成功</p></li>
+<li><p>然后同步至 Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin git@github.com:yylustb/git_test.git<br>git push -u origin main<br></code></pre></td></tr></table></figure>
+接下来检查github，可以看到 Github 仓库的 main 分支已经同步成功</p></li>
 </ul>
-<h2 id="b-初次链接-github-仓库并初次同步">5. B 初次链接 Github 仓库，并初次同步</h2>
+<h2 id="b-初次链接-github-仓库并初次同步">5. B 初次链接 Github
+仓库，并初次同步</h2>
 <ul>
 <li>初始化 git 仓库（会产生默认分支 <code>master</code>），</li>
 <li>修改 <code>master</code> 分支为 <code>main</code></li>
 <li>链接Github 仓库</li>
-<li>从 Github 仓库同步至本地仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git branch -m master main<br>git remote add origin git@github.com:yylustb/git_test.git<br>git pull origin main<br></code></pre></td></tr></table></figure> 接下来检查B的本地仓库，可以看到 Github 仓库的 main 分支已经同步成功</li>
+<li>从 Github 仓库同步至本地仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git branch -m master main<br>git remote add origin git@github.com:yylustb/git_test.git<br>git pull origin main<br></code></pre></td></tr></table></figure>
+接下来检查B的本地仓库，可以看到 Github 仓库的 main 分支已经同步成功</li>
 </ul>
-<h2 id="在三个仓库githuba本地和b本地添加fth分支并将-a-和-b-的-fth-分支与-github-的-fth-分支同步">6. 在三个仓库（Github，A本地，和B本地）添加fth分支，并将 A 和 B 的 fth 分支与 Github 的 fth 分支同步</h2>
+<h2
+id="在三个仓库githuba本地和b本地添加fth分支并将-a-和-b-的-fth-分支与-github-的-fth-分支同步">6.
+在三个仓库（Github，A本地，和B本地）添加fth分支，并将 A 和 B 的 fth
+分支与 Github 的 fth 分支同步</h2>
 <ul>
 <li>在 <code>Github</code> 添加 fth 分支 (网页操作)</li>
 <li>在 <code>A本地</code> 添加 fth 分支 (命令行操作) <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch fth<br>git checkout fth<br>git pull origin fth<br></code></pre></td></tr></table></figure></li>
 <li>在 <code>B本地</code> 添加 fth 分支 (命令行操作) <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch fth<br>git checkout fth<br>git pull origin fth<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="接下来a在本地仓库的main分支进行工作b在本地的fth分支进行工作a每次工作完要同步到github的mainb每次工作完要同步到github的fth">7. 接下来，A在本地仓库的main分支进行工作，B在本地的fth分支进行工作（A每次工作完要同步到Github的main，B每次工作完要同步到Github的fth）</h2>
-<h3 id="a在本地仓库的main分支进行工作">7.1 A在本地仓库的main分支进行工作</h3>
-<p>A 切换回 main 分支，修改test.txt文件，添加内容 <code>main 的第二次修改</code>，提交至本地仓库的 main 分支，并同步至 Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第二次修改&quot;</span><br>git push -u origin main<br></code></pre></td></tr></table></figure></p>
-<p>A 继续修改test.txt文件，添加内容 <code>main 的第三次修改</code>，提交至本地仓库的 main 分支，并同步至 Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第三次修改&quot;</span><br>git push <br></code></pre></td></tr></table></figure></p>
+<h2
+id="接下来a在本地仓库的main分支进行工作b在本地的fth分支进行工作a每次工作完要同步到github的mainb每次工作完要同步到github的fth">7.
+接下来，A在本地仓库的main分支进行工作，B在本地的fth分支进行工作（A每次工作完要同步到Github的main，B每次工作完要同步到Github的fth）</h2>
+<h3 id="a在本地仓库的main分支进行工作">7.1
+A在本地仓库的main分支进行工作</h3>
+<p>A 切换回 main 分支，修改test.txt文件，添加内容
+<code>main 的第二次修改</code>，提交至本地仓库的 main 分支，并同步至
+Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第二次修改&quot;</span><br>git push -u origin main<br></code></pre></td></tr></table></figure></p>
+<p>A 继续修改test.txt文件，添加内容
+<code>main 的第三次修改</code>，提交至本地仓库的 main 分支，并同步至
+Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第三次修改&quot;</span><br>git push <br></code></pre></td></tr></table></figure></p>
 <p>可以看到，本地仓库和Github仓库的main分支都已经同步成功（都包含main的三次修改记录）</p>
 <h3 id="b在本地的fth分支进行工作">7.2 B在本地的fth分支进行工作</h3>
-<p>B 切换回 fth 分支，修改test.txt文件，添加内容 <code>fth 的第一次修改</code>，提交至本地仓库的 fth 分支，并同步至 Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;fth 的第一次修改&quot;</span><br>git push -u origin fth<br></code></pre></td></tr></table></figure></p>
-<p>B 继续修改 test.txt 文件，添加内容 <code>fth 的第二次修改</code>，提交至本地仓库的 fth 分支，并同步至 Github 仓库的 fth 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -am <span class="hljs-string">&quot;main 的第二次修改&quot;</span><br>git push <br></code></pre></td></tr></table></figure></p>
-<p>B 新建 paper/paper.txt 文件，添加内容 <code>111 \n 222 \n 333 \n</code>，提交至本地仓库的 fth 分支，并同步至 Github 仓库的 fth 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第三次修改&quot;</span><br>git push <br></code></pre></td></tr></table></figure></p>
-<h2 id="接下来a-在本地仓库的-main-分支进行工作b-在本地的-fth-分支进行工作a-每次工作前和工作后同步到-github-的所有分支-a-每次工作前和工作后同步到-github-的所有分支">8. 接下来，A 在本地仓库的 main 分支进行工作，B 在本地的 fth 分支进行工作（A 每次工作前和工作后同步到 Github 的所有分支, A 每次工作前和工作后同步到 Github 的所有分支）</h2>
-<h3 id="对于-a-每次工作的要求先处理冲突">8.1 对于 A 每次工作的要求（先处理冲突）</h3>
-<p>A 工作前，在 main 分支和 fth 分支分别同步 Github 仓库的 main 分支和 fth 分支</p>
+<p>B 切换回 fth 分支，修改test.txt文件，添加内容
+<code>fth 的第一次修改</code>，提交至本地仓库的 fth 分支，并同步至
+Github 仓库的 main 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;fth 的第一次修改&quot;</span><br>git push -u origin fth<br></code></pre></td></tr></table></figure></p>
+<p>B 继续修改 test.txt 文件，添加内容
+<code>fth 的第二次修改</code>，提交至本地仓库的 fth 分支，并同步至
+Github 仓库的 fth 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -am <span class="hljs-string">&quot;main 的第二次修改&quot;</span><br>git push <br></code></pre></td></tr></table></figure></p>
+<p>B 新建 paper/paper.txt 文件，添加内容
+<code>111 \n 222 \n 333 \n</code>，提交至本地仓库的 fth 分支，并同步至
+Github 仓库的 fth 分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;main 的第三次修改&quot;</span><br>git push <br></code></pre></td></tr></table></figure></p>
+<h2
+id="接下来a-在本地仓库的-main-分支进行工作b-在本地的-fth-分支进行工作a-每次工作前和工作后同步到-github-的所有分支-a-每次工作前和工作后同步到-github-的所有分支">8.
+接下来，A 在本地仓库的 main 分支进行工作，B 在本地的 fth 分支进行工作（A
+每次工作前和工作后同步到 Github 的所有分支, A 每次工作前和工作后同步到
+Github 的所有分支）</h2>
+<h3 id="对于-a-每次工作的要求先处理冲突">8.1 对于 A
+每次工作的要求（先处理冲突）</h3>
+<p>A 工作前，在 main 分支和 fth 分支分别同步 Github 仓库的 main 分支和
+fth 分支</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git switch main<br>git pull <br>git switch fth<br>git pull origin fth<br></code></pre></td></tr></table></figure>
 <p>然后再本地，进行 main 和 fth 的 merge <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git switch main<br>git merge fth<br></code></pre></td></tr></table></figure></p>
-<p>如没有冲突，继续工作。如有冲突，解决冲突。例如如下冲突（就在 test.txt 文档中）：</p>
+<p>如没有冲突，继续工作。如有冲突，解决冲突。例如如下冲突（就在 test.txt
+文档中）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">main 的第一次修改<br><br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; <span class="hljs-string">HEAD</span><br><span class="hljs-string">main 的第二次修改</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br><span class="hljs-string">main 的第三次修改：asdasdasdasdas</span><br><span class="hljs-string">=======</span><br><span class="hljs-string"></span><br><span class="hljs-string">fth 的第一次修改</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br><span class="hljs-string">fth 的第二次修改：acsc</span><br><span class="hljs-string">&gt;&gt;&gt;&gt;&gt;&gt;&gt; fth</span><br><span class="hljs-string"></span><br></code></pre></td></tr></table></figure>
-<p>在 test.txt 这个文档中，手动选择保留哪一部分，处理完冲突后删除 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; fth</code> 这三行，最后保存 test.txt 文档。</p>
-<p>处理完冲突后，提交到本地仓库的 main 分支，同时将 main 分支 merge 到 fth 分支。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add.<br>git commit -am <span class="hljs-string">&quot;main 和 fth 的 merge&quot;</span><br>git switch fth<br>git merge main<br></code></pre></td></tr></table></figure></p>
-<p>至此，main 和 fth 的冲突在本地解决完毕，接下来，需要A将本地的没有冲突的 main 分支和 fth 分支推送到 github</p>
+<p>在 test.txt 这个文档中，手动选择保留哪一部分，处理完冲突后删除
+<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>,
+<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; fth</code> 这三行，最后保存 test.txt
+文档。</p>
+<p>处理完冲突后，提交到本地仓库的 main 分支，同时将 main 分支 merge 到
+fth 分支。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add.<br>git commit -am <span class="hljs-string">&quot;main 和 fth 的 merge&quot;</span><br>git switch fth<br>git merge main<br></code></pre></td></tr></table></figure></p>
+<p>至此，main 和 fth
+的冲突在本地解决完毕，接下来，需要A将本地的没有冲突的 main 分支和 fth
+分支推送到 github</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git switch main<br>git push<br>git switch fth<br>git push origin fth<br></code></pre></td></tr></table></figure>
 <h3 id="a-处理完冲突后的工作">8.2 A 处理完冲突后的工作</h3>
 <p>接下来，A 在本地的 main 分支进行工作</p>
 <p>修改 paper/paper.txt</p>
 <p>修改后提交到本地，同步至github</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add.<br>git commit -am <span class="hljs-string">&quot;main 对 paper.txt 的修改&quot;</span><br>git push<br></code></pre></td></tr></table></figure>
-<h3 id="对于-b-每次工作的要求先处理冲突">8.3 对于 B 每次工作的要求（先处理冲突）</h3>
-<p>B 工作前，在 main 分支和 fth 分支分别同步 Github 仓库的 main 分支和 fth 分支</p>
+<h3 id="对于-b-每次工作的要求先处理冲突">8.3 对于 B
+每次工作的要求（先处理冲突）</h3>
+<p>B 工作前，在 main 分支和 fth 分支分别同步 Github 仓库的 main 分支和
+fth 分支</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git switch main<br>git pull <br>git switch fth<br>git pull origin fth<br></code></pre></td></tr></table></figure>
 <p>然后在本地，进行 main 和 fth 互相之间的 merge <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git switch main<br>git merge fth<br>git switch fth<br>git merge main<br></code></pre></td></tr></table></figure></p>
 <p>如没有冲突，继续工作。如有冲突，解决冲突 (仿照 8.1 中A的做法)。</p>
 <h3 id="section">8.4</h3>
 <p>接下来，B 在本地的 fth 分支进行工作，</p>
-<p>工作结束后，提交本地的 fth 分支到本地仓库、且同步至 Github 仓库的 fth 分支</p>
+<p>工作结束后，提交本地的 fth 分支到本地仓库、且同步至 Github 仓库的 fth
+分支</p>
 <p>如果B没改动main分支，不需要对main分支进行任何操作，如果B改动了main分支，需要将改动同步到Github的main分支</p>
 
                 
@@ -615,6 +659,32 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
   
 </div>
 
@@ -759,6 +829,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

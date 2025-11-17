@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="不同的 LaTeX 项目需要不同的编译器，例如 (英文需要 pdflatex, 中文需要 xelatex). 以下是两种设置方案 方案1：手动切换编译器 Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands -&gt; Default Compiler: 选择 pdflatex 或者 xelatex Options">
+    <meta name="description" content="不同的 LaTeX 项目需要不同的编译器，例如 (英文需要 pdflatex, 中文需要 xelatex). 以下是两种设置方案 方案1：手动切换编译器 Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands -&gt; Default Compiler: 选择 pdflatex 或者 xelatex Optio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTex 系列 - 2. LaTex 编译器设置">
 <meta property="og:url" content="http://yylustb.github.io/2025/02/02/Latex/latex_2-compile-2025-02-02/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="不同的 LaTeX 项目需要不同的编译器，例如 (英文需要 pdflatex, 中文需要 xelatex). 以下是两种设置方案 方案1：手动切换编译器 Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands -&gt; Default Compiler: 选择 pdflatex 或者 xelatex Options">
+<meta property="og:description" content="不同的 LaTeX 项目需要不同的编译器，例如 (英文需要 pdflatex, 中文需要 xelatex). 以下是两种设置方案 方案1：手动切换编译器 Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands -&gt; Default Compiler: 选择 pdflatex 或者 xelatex Optio">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/latex.png">
 <meta property="article:published_time" content="2025-02-02T08:30:00.000Z">
-<meta property="article:modified_time" content="2025-11-16T18:00:21.000Z">
+<meta property="article:modified_time" content="2025-11-16T18:00:21.162Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="LaTex">
 <meta property="article:tag" content="lualatex">
@@ -37,6 +37,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://yylustb.github.io/img/index/latex.png">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>LaTex 系列 - 2. LaTex 编译器设置 - 远大前程</title>
@@ -349,16 +351,23 @@
             
               <div class="markdown-body">
                 
-                <p>不同的 LaTeX 项目需要不同的编译器，例如 (英文需要 pdflatex, 中文需要 xelatex). 以下是两种设置方案</p>
+                <p>不同的 LaTeX 项目需要不同的编译器，例如 (英文需要 pdflatex, 中文需要
+xelatex). 以下是两种设置方案</p>
 <h2 id="方案1手动切换编译器">方案1：手动切换编译器</h2>
-<p>Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands -&gt; Default Compiler: 选择 pdflatex 或者 xelatex</p>
-<p>Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands -&gt; Default Bibliography Tool: 选择 Bibtex 或者 Biber</p>
+<p>Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands
+-&gt; Default Compiler: 选择 pdflatex 或者 xelatex</p>
+<p>Options -&gt; Configure TeXstudio -&gt; Build -&gt; Meta Commands
+-&gt; Default Bibliography Tool: 选择 Bibtex 或者 Biber</p>
 <h2 id="方案2文件自动选择编译器">方案2：文件自动选择编译器</h2>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-meta">% !TeX program = xelatex</span><br><span class="hljs-meta">% !TeX TS-program = xelatex</span><br><span class="hljs-meta">% !TeX bibtexProgram = biber</span><br></code></pre></td></tr></table></figure>
 <ul>
-<li>第一行: 指定当前 .tex 文件的 主编译器 为 XeLaTeX, 等效于手动执行： <code>xelatex mydocument.tex</code> (针对 VS Code/TeXstudio)</li>
-<li>第二行: 指定当前 .tex 文件的 主编译器 为 XeLaTeX, 等效于手动执行： <code>xelatex mydocument.tex</code> (针对 TeXShop、TeXworks、TeXmaker)</li>
-<li>第三行: 指定当前.tex 文件的 文献管理工具 为 Biber, 等效于手动执行： <code>biber mydocument.bcf</code></li>
+<li>第一行: 指定当前 .tex 文件的 主编译器 为 XeLaTeX, 等效于手动执行：
+<code>xelatex mydocument.tex</code> (针对 VS Code/TeXstudio)</li>
+<li>第二行: 指定当前 .tex 文件的 主编译器 为 XeLaTeX, 等效于手动执行：
+<code>xelatex mydocument.tex</code> (针对
+TeXShop、TeXworks、TeXmaker)</li>
+<li>第三行: 指定当前.tex 文件的 文献管理工具 为 Biber, 等效于手动执行：
+<code>biber mydocument.bcf</code></li>
 </ul>
 
                 
@@ -574,6 +583,32 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
   
 </div>
 
@@ -718,6 +753,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
