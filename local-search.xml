@@ -725,35 +725,6 @@
   
   
   <entry>
-    <title>自适应控制系列 - 1. test</title>
-    <link href="/2020/11/15/note/adapt_ctrl/adap_ctrl_1/"/>
-    <url>/2020/11/15/note/adapt_ctrl/adap_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>note</category>
-      
-      <category>adapt-ctrl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>note</tag>
-      
-      <tag>adaptive control</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数值计算系列 - 1. test</title>
     <link href="/2020/11/15/note/numeric/numeric_1/"/>
     <url>/2020/11/15/note/numeric/numeric_1/</url>
@@ -783,35 +754,6 @@
   
   
   <entry>
-    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
-    <link href="/2020/11/15/note/adp/adp_1/"/>
-    <url>/2020/11/15/note/adp/adp_1/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>note</category>
-      
-      <category>adp</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>note</tag>
-      
-      <tag>ADP</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>优化基础系列 - 1. test</title>
     <link href="/2020/11/15/note/opt_basics/opt_basics_1/"/>
     <url>/2020/11/15/note/opt_basics/opt_basics_1/</url>
@@ -833,6 +775,35 @@
       <tag>note</tag>
       
       <tag>optimization basics</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自适应控制系列 - 1. test</title>
+    <link href="/2020/11/15/note/adapt_ctrl/adap_ctrl_1/"/>
+    <url>/2020/11/15/note/adapt_ctrl/adap_ctrl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>note</category>
+      
+      <category>adapt-ctrl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>note</tag>
+      
+      <tag>adaptive control</tag>
       
     </tags>
     
@@ -949,6 +920,35 @@
       <tag>note</tag>
       
       <tag>stochastic</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
+    <link href="/2020/11/15/note/adp/adp_1/"/>
+    <url>/2020/11/15/note/adp/adp_1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>note</category>
+      
+      <category>adp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>note</tag>
+      
+      <tag>ADP</tag>
       
     </tags>
     
