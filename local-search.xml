@@ -725,9 +725,96 @@
   
   
   <entry>
-    <title>数值计算系列 - 1. test</title>
-    <link href="/2020/11/15/math/numeric/numeric_1/"/>
-    <url>/2020/11/15/math/numeric/numeric_1/</url>
+    <title>深度学习 - 1. test</title>
+    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
+    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ai</category>
+      
+      <category>nn</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+      <tag>nn</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>深度学习 - 1. test</title>
+    <link href="/2020/11/15/ai/ml/MachineLearning_1/"/>
+    <url>/2020/11/15/ai/ml/MachineLearning_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ai</category>
+      
+      <category>ml</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+      <tag>ml</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>深度学习 - 1. test</title>
+    <link href="/2020/11/15/ai/dl/DeepLearning_1/"/>
+    <url>/2020/11/15/ai/dl/DeepLearning_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ai</category>
+      
+      <category>dl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+      <tag>dl</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>微分方程 - 1. test</title>
+    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
+    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -736,7 +823,7 @@
       
       <category>math</category>
       
-      <category>numeric</category>
+      <category>DiffEqn</category>
       
     </categories>
     
@@ -745,7 +832,123 @@
       
       <tag>math</tag>
       
-      <tag>numeric</tag>
+      <tag>DiffEqn</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>线性代数 - 1. test</title>
+    <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
+    <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>LinAlgebra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>LinAlgebra</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>李群与李代数 - 1. test</title>
+    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
+    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>LieAlgebra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>LieAlgebra</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数值计算系列 - 1. test</title>
+    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
+    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>Numeric</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Numeric</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>随机分析系列 - 1. test</title>
+    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
+    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>Stochastic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Stochastic</tag>
       
     </tags>
     
@@ -775,35 +978,6 @@
       <tag>ctrl</tag>
       
       <tag>adaptive control</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>随机分析系列 - 1. test</title>
-    <link href="/2020/11/15/math/stochastic/stochastic_1/"/>
-    <url>/2020/11/15/math/stochastic/stochastic_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>stochastic</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>stochastic</tag>
       
     </tags>
     
