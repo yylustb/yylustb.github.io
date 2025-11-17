@@ -1,0 +1,1492 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="yylustb">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1. 安装 Node.js  前往 Node.js 官网下载安装包，根据提示安装即可。 安装 Node.js 之后，npm 会一起安装好。两者关系可以简单理解成：  Node.js &#x3D; 运行环境（让你能在本机运行 JavaScript 的“引擎”） npm &#x3D; 包管理器（用来安装 &#x2F; 更新 &#x2F; 管理 各种 JavaScript &#x2F; Node 的第三方库） 就像：Python（解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 系列 - 1. 安装">
+<meta property="og:url" content="http://yylustb.github.io/2025/11/14/code/HEXO/hexo_1/index.html">
+<meta property="og:site_name" content="远大前程">
+<meta property="og:description" content="1. 安装 Node.js  前往 Node.js 官网下载安装包，根据提示安装即可。 安装 Node.js 之后，npm 会一起安装好。两者关系可以简单理解成：  Node.js &#x3D; 运行环境（让你能在本机运行 JavaScript 的“引擎”） npm &#x3D; 包管理器（用来安装 &#x2F; 更新 &#x2F; 管理 各种 JavaScript &#x2F; Node 的第三方库） 就像：Python（解">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yylustb.github.io/img/index/hexo.png">
+<meta property="article:published_time" content="2025-11-14T23:30:00.000Z">
+<meta property="article:modified_time" content="2025-11-17T17:15:32.958Z">
+<meta property="article:author" content="yylustb">
+<meta property="article:tag" content="Fluid">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yylustb.github.io/img/index/hexo.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Hexo 系列 - 1. 安装 - 远大前程</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yylustb.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>远大前程</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>note</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/numeric/" target="_self">
+                    
+                    <span>数值计算</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/opt-basics/" target="_self">
+                    
+                    <span>优化基础</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/opt-cvx/" target="_self">
+                    
+                    <span>凸优化</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/adapt-ctrl/" target="_self">
+                    
+                    <span>自适应控制</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/opt-ctrl/" target="_self">
+                    
+                    <span>最优控制</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/adp/" target="_self">
+                    
+                    <span>自适应动态规划</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/stochastic/" target="_self">
+                    
+                    <span>随机分析</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/note/rl/" target="_self">
+                    
+                    <span>强化学习</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>编程</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/cpp/" target="_self">
+                    
+                    <span>C++</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/python/" target="_self">
+                    
+                    <span>Python</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/windows/" target="_self">
+                    
+                    <span>Windows</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/ubuntu/" target="_self">
+                    
+                    <span>Ubuntu</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/git/" target="_self">
+                    
+                    <span>Git</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/gpu/" target="_self">
+                    
+                    <span>GPU</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/latex/" target="_self">
+                    
+                    <span>LaTex</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/pytorch/" target="_self">
+                    
+                    <span>Pytorch</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/tensorflow/" target="_self">
+                    
+                    <span>TensorFlow</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/vs-code/" target="_self">
+                    
+                    <span>VS Code</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/hexo/" target="_self">
+                    
+                    <span>Hexo Fluid</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg-sky.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Hexo 系列 - 1. 安装"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-11-14 23:30" pubdate>
+          2025年11月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          483 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="code"
+        id="heading-c13367945d5d4c91047b3b50234aa7ab" role="tab" data-toggle="collapse" href="#collapse-c13367945d5d4c91047b3b50234aa7ab"
+        aria-expanded="true"
+      >
+        code
+        <span class="list-group-count">(24)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-c13367945d5d4c91047b3b50234aa7ab"
+           role="tabpanel" aria-labelledby="heading-c13367945d5d4c91047b3b50234aa7ab">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Cpp"
+        id="heading-db4a39bf594c9fbcf318dd39ea19fed3" role="tab" data-toggle="collapse" href="#collapse-db4a39bf594c9fbcf318dd39ea19fed3"
+        aria-expanded="false"
+      >
+        Cpp
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-db4a39bf594c9fbcf318dd39ea19fed3"
+           role="tabpanel" aria-labelledby="heading-db4a39bf594c9fbcf318dd39ea19fed3">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" title="C++ 系列 - 1. 介绍"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">C++ 系列 - 1. 介绍</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="GPU"
+        id="heading-52f9ec21735243ad9917cda3ca077d32" role="tab" data-toggle="collapse" href="#collapse-52f9ec21735243ad9917cda3ca077d32"
+        aria-expanded="false"
+      >
+        GPU
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-52f9ec21735243ad9917cda3ca077d32"
+           role="tabpanel" aria-labelledby="heading-52f9ec21735243ad9917cda3ca077d32">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/10/code/GPU/gpu_pytorch_1/" title="GPU 系列 - 1. GPU 的两种同步方式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">GPU 系列 - 1. GPU 的两种同步方式</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Git"
+        id="heading-0bcc70105ad279503e31fe7b3f47b665" role="tab" data-toggle="collapse" href="#collapse-0bcc70105ad279503e31fe7b3f47b665"
+        aria-expanded="false"
+      >
+        Git
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-0bcc70105ad279503e31fe7b3f47b665"
+           role="tabpanel" aria-labelledby="heading-0bcc70105ad279503e31fe7b3f47b665">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/02/21/code/Git/git_1-install-2025-02-21/" title="Git 系列 - 1. 安装 Git 与配置 Github"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git 系列 - 1. 安装 Git 与配置 Github</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/02/22/code/Git/git_2-matlab-2025-02-22/" title="Git 系列 - 2. Matlab 同步 Git"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git 系列 - 2. Matlab 同步 Git</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/02/23/code/Git/git_3-textstudio-2025-02-23/" title="Git 系列 - 3. Texstudio 同步 Git"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git 系列 - 3. Texstudio 同步 Git</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/02/24/code/Git/git_4-branch-2025-02-24/" title="Git 系列 - 4. Git 分支管理"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git 系列 - 4. Git 分支管理</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/02/25/code/Git/git_5-branch_demo-2025-02-25/" title="Git 系列 - 5. Git 分支协作案例"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git 系列 - 5. Git 分支协作案例</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Hexo"
+        id="heading-c00d1eb68b529768ba98c975c76a9b66" role="tab" data-toggle="collapse" href="#collapse-c00d1eb68b529768ba98c975c76a9b66"
+        aria-expanded="true"
+      >
+        Hexo
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-c00d1eb68b529768ba98c975c76a9b66"
+           role="tabpanel" aria-labelledby="heading-c00d1eb68b529768ba98c975c76a9b66">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/14/code/HEXO/hexo_1/" title="Hexo 系列 - 1. 安装"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Hexo 系列 - 1. 安装</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/15/code/HEXO/hexo_2/" title="Hexo 系列 - 2. 搭建网站并安装 Fluid 主题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Hexo 系列 - 2. 搭建网站并安装 Fluid 主题</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/15/code/HEXO/hexo_3/" title="Hexo 系列 - 3. 使用 pandoc + MathJax 渲染公式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Hexo 系列 - 3. 使用 pandoc + MathJax 渲染公式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/15/code/HEXO/hexo_4/" title="Hexo 系列 - 4. LaTex 公式测试 （Pandoc + MathJax 渲染效果）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Hexo 系列 - 4. LaTex 公式测试 （Pandoc + MathJax 渲染效果）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="LaTex"
+        id="heading-7c2c714003d57577afe788b89364e741" role="tab" data-toggle="collapse" href="#collapse-7c2c714003d57577afe788b89364e741"
+        aria-expanded="false"
+      >
+        LaTex
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-7c2c714003d57577afe788b89364e741"
+           role="tabpanel" aria-labelledby="heading-7c2c714003d57577afe788b89364e741">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/02/01/code/Latex/latex_1-intro-2025-02-01/" title="LaTex 系列 - 1. LaTex 编译器介绍"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LaTex 系列 - 1. LaTex 编译器介绍</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/02/02/code/Latex/latex_2-compile-2025-02-02/" title="LaTex 系列 - 2. LaTex 编译器设置"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LaTex 系列 - 2. LaTex 编译器设置</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/02/03/code/Latex/latex_3-input-2025-02-03/" title="LaTex 系列 - 3. LaTex 项目文件包含问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LaTex 系列 - 3. LaTex 项目文件包含问题</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/14/code/Latex/latex_4-Tikz-2025-11-14/" title="LaTex 系列 - 4. TikZ 绘图"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LaTex 系列 - 4. TikZ 绘图</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Python"
+        id="heading-a7f5f35426b927411fc9231b56382173" role="tab" data-toggle="collapse" href="#collapse-a7f5f35426b927411fc9231b56382173"
+        aria-expanded="false"
+      >
+        Python
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a7f5f35426b927411fc9231b56382173"
+           role="tabpanel" aria-labelledby="heading-a7f5f35426b927411fc9231b56382173">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/02/13/code/Python/python_1-argparse-2025_02_13/" title="Python 系列 - 1. 命令行解析器 argparse"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 系列 - 1. 命令行解析器 argparse</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Pytorch"
+        id="heading-edf7dd0dd9dbc3b022a1ef1fdb134ea1" role="tab" data-toggle="collapse" href="#collapse-edf7dd0dd9dbc3b022a1ef1fdb134ea1"
+        aria-expanded="false"
+      >
+        Pytorch
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-edf7dd0dd9dbc3b022a1ef1fdb134ea1"
+           role="tabpanel" aria-labelledby="heading-edf7dd0dd9dbc3b022a1ef1fdb134ea1">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/10/code/Pytorch/pytorch_1-regression-2025_11_10/" title="Pytorch 系列 - 1. 曲线拟合"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Pytorch 系列 - 1. 曲线拟合</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/13/code/Pytorch/pytorch_2-GD-2025_11_13/" title="Pytorch 系列 - 2. 梯度下降"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Pytorch 系列 - 2. 梯度下降</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/14/code/Pytorch/pytorch_3-MINIST-2025_11_14/" title="Pytorch 系列 - 3. MINIST 数据"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Pytorch 系列 - 3. MINIST 数据</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="TensorFlow"
+        id="heading-074dd699710da0ec1eb45f13b31788e3" role="tab" data-toggle="collapse" href="#collapse-074dd699710da0ec1eb45f13b31788e3"
+        aria-expanded="false"
+      >
+        TensorFlow
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-074dd699710da0ec1eb45f13b31788e3"
+           role="tabpanel" aria-labelledby="heading-074dd699710da0ec1eb45f13b31788e3">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/17/code/TensorFlow/tf_1-intro-2025-11-17/" title="TensorFlow 系列 - 1. 介绍"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">TensorFlow 系列 - 1. 介绍</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Ubuntu"
+        id="heading-3d945423f8e9496c429a5d8c65b4604f" role="tab" data-toggle="collapse" href="#collapse-3d945423f8e9496c429a5d8c65b4604f"
+        aria-expanded="false"
+      >
+        Ubuntu
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3d945423f8e9496c429a5d8c65b4604f"
+           role="tabpanel" aria-labelledby="heading-3d945423f8e9496c429a5d8c65b4604f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/01/01/code/Ubuntu/ubuntu_1-install-2025_01_01/" title="Ubuntu系列 - 1. 安装AppImage应用"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu系列 - 1. 安装AppImage应用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/01/02/code/Ubuntu/ubuntu_2-shell-2025_01_02/" title="Ubuntu系列 - 2. bash shell, terminal 和 ~/.bashrc"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu系列 - 2. bash shell, terminal 和 ~/.bashrc</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="VS-Code"
+        id="heading-60406647e55a98711ff72650e6736fc7" role="tab" data-toggle="collapse" href="#collapse-60406647e55a98711ff72650e6736fc7"
+        aria-expanded="false"
+      >
+        VS-Code
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-60406647e55a98711ff72650e6736fc7"
+           role="tabpanel" aria-labelledby="heading-60406647e55a98711ff72650e6736fc7">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/17/code/vscode/vscode_math/" title="VSCode 系列 - LaTex 公式渲染配置"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">VSCode 系列 - LaTex 公式渲染配置</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Windows"
+        id="heading-aea23489ce3aa9b6406ebb28e0cda430" role="tab" data-toggle="collapse" href="#collapse-aea23489ce3aa9b6406ebb28e0cda430"
+        aria-expanded="false"
+      >
+        Windows
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-aea23489ce3aa9b6406ebb28e0cda430"
+           role="tabpanel" aria-labelledby="heading-aea23489ce3aa9b6406ebb28e0cda430">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/17/code/Windows/windows_1-pblm-2025-11-17/" title="Windows 系列 - 1. 介绍"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Windows 系列 - 1. 介绍</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Hexo 系列 - 1. 安装</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="安装-node.js">1. 安装 <code>Node.js</code></h1>
+<ul>
+<li>前往 <code>Node.js</code> 官网下载安装包，根据提示安装即可。</li>
+<li>安装 <code>Node.js</code> 之后，<code>npm</code>
+会一起安装好。两者关系可以简单理解成：
+<ul>
+<li><code>Node.js</code> = 运行环境（让你能在本机运行 JavaScript
+的“引擎”）</li>
+<li><code>npm</code> = 包管理器（用来安装 / 更新 / 管理 各种 JavaScript
+/ Node 的第三方库）</li>
+<li>就像：Python（解释器） + pip（包管理器）</li>
+</ul></li>
+<li>安装后，检查版本号： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">node -v<br>npm -v<br></code></pre></td></tr></table></figure> 命令行输出版本号说明安装成功</li>
+<li>上名指令之所以会在命令行成功执行，是因为
+<ul>
+<li><code>PATH</code> 里添加了 <code>Node</code> 的安装目录：
+<code>C:\Program Files\nodejs\</code></li>
+<li><code>PATH</code> 里添加了 <code>npm</code>
+的安装目录：<code>%APPDATA%\npm</code> =
+<code>C:\Users\XXX\AppData\Roaming\npm</code></li>
+</ul></li>
+</ul>
+<h1 id="安装-git">2. 安装 git</h1>
+<p>安装 git 这里不再赘述，安装完 git 后，检查版本号： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git --version<br></code></pre></td></tr></table></figure>
+命令行输出版本号说明安装成功</p>
+<p>接下来需要让 npm 识别 git： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-deployer-git<br></code></pre></td></tr></table></figure>
+命令行无报错说明安装成功</p>
+<h1 id="利用-npm-安装-hexo">3. 利用 <code>npm</code> 安装
+<code>Hexo</code></h1>
+<p>注意以下两种安装方式的区别</p>
+<p>🔍 全局安装 <code>npm install -g hexo-cli</code></p>
+<ul>
+<li><p><code>-g</code>：全局安装（global）</p></li>
+<li><p>安装的包：<code>hexo-cli</code>，也就是 <code>hexo</code>
+的“命令行工具”</p></li>
+<li><p>作用：在系统里安装一个全局的 <code>hexo</code>
+命令，之后<strong>在任意目录</strong>都可以在命令行执行：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init<br>hexo new<br>hexo g<br>hexo s<br></code></pre></td></tr></table></figure></p>
+<p>这相当于装了一个“Hexo 启动器”。</p></li>
+</ul>
+<p>🔍 本地安装 <code>npm install hexo</code></p>
+<ul>
+<li><p>没有 <code>-g</code>：本地安装（只装在当前目录的 node_modules
+下）</p></li>
+<li><p>安装的包：<code>hexo</code> 核心引擎（生成博客的真正库）</p></li>
+<li><p>作用：给当前博客项目目录 <code>myblog</code> 安装 Hexo
+作为依赖。接下来，只能在博客项目目录 <code>myblog</code> 运行：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo<br></code></pre></td></tr></table></figure> 博客项目目录 <code>myblog</code> 会有：</p>
+<ul>
+<li><code>node_modules/hexo</code> 文件夹</li>
+<li><code>package.json</code> 文件</li>
+</ul>
+<p>博客项目目录 <code>myblog</code> 的 <code>hexo</code>
+优先级会高于全局的 hexo-cli 。</p></li>
+</ul>
+<p>✅ 搭建博客时 - 全局安装
+hexo-cli：<code>npm install -g hexo-cli</code> - 后面使用
+<code>hexo</code> 初始化博客项目目录 <code>myblog</code>
+时，也会在博客项目目录 <code>myblog</code> 下创建 -
+<code>node_modules/hexo</code> 文件夹 - <code>package.json</code>
+文件</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/code/" class="category-chain-item">code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/code/Hexo/" class="category-chain-item">Hexo</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/Fluid/" class="print-no-link">#Fluid</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Hexo 系列 - 1. 安装</div>
+      <div>http://yylustb.github.io/2025/11/14/code/HEXO/hexo_1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>yylustb</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年11月14日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/11/15/code/HEXO/hexo_2/" title="Hexo 系列 - 2. 搭建网站并安装 Fluid 主题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hexo 系列 - 2. 搭建网站并安装 Fluid 主题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/11/14/code/Latex/latex_4-Tikz-2025-11-14/" title="LaTex 系列 - 4. TikZ 绘图">
+                        <span class="hidden-mobile">LaTex 系列 - 4. TikZ 绘图</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
