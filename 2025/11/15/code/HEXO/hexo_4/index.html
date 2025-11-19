@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本页用于测试 pandoc + MathJax 在 Hexo&#x2F;Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E &#x3D; mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} &#x3D; (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公">
+    <meta name="description" content="本页用于测试 pandoc + MathJax 在 Hexo&#x2F;Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E &#x3D; mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} &#x3D; (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公式 +">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 系列 - 4. LaTex 公式测试 （Pandoc + MathJax 渲染效果）">
 <meta property="og:url" content="http://yylustb.github.io/2025/11/15/code/HEXO/hexo_4/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="本页用于测试 pandoc + MathJax 在 Hexo&#x2F;Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E &#x3D; mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} &#x3D; (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公">
+<meta property="og:description" content="本页用于测试 pandoc + MathJax 在 Hexo&#x2F;Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E &#x3D; mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} &#x3D; (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公式 +">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/hexo.png">
 <meta property="article:published_time" content="2025-11-15T00:01:39.000Z">
-<meta property="article:modified_time" content="2025-11-17T17:15:46.120Z">
+<meta property="article:modified_time" content="2025-11-17T17:15:46.000Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="Fluid">
 <meta property="article:tag" content="Hexo">
@@ -522,7 +522,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          629 字
+          619 字
         
       </span>
     
@@ -1062,15 +1062,11 @@
             
               <div class="markdown-body">
                 
-                <p>本页用于测试 <strong>pandoc + MathJax</strong> 在 Hexo/Fluid
-中的渲染效果。</p>
+                <p>本页用于测试 <strong>pandoc + MathJax</strong> 在 Hexo/Fluid 中的渲染效果。</p>
 <h2 id="行内公式">1. 行内公式</h2>
-<p>这是一个行内公式：<span class="math inline">\(E =
-mc^2\)</span>，<br />
-再来一个：<span class="math inline">\(\alpha, \beta, \gamma \in
-\mathbb{R}\)</span>，<br />
-以及一个简单的向量：<span class="math inline">\(\boldsymbol{x} = (x_1,
-x_2, \dots, x_n)^\top\)</span>。</p>
+<p>这是一个行内公式：<span class="math inline">\(E = mc^2\)</span>，<br />
+再来一个：<span class="math inline">\(\alpha, \beta, \gamma \in \mathbb{R}\)</span>，<br />
+以及一个简单的向量：<span class="math inline">\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)</span>。</p>
 <h2 id="单行行间公式">2. 单行行间公式 + + </h2>
 <p>下面是一个带编号的行间公式，我们给它加上 <code>\label</code>：</p>
 <p><span class="math display">\[
@@ -1079,12 +1075,9 @@ E = mc^2
 \label{eq:einstein}
 \end{equation}
 \]</span></p>
-<p>现在在正文中引用它：式 <span
-class="math inline">\(\eqref{eq:einstein}\)</span>
-是著名的质能方程。</p>
+<p>现在在正文中引用它：式 <span class="math inline">\(\eqref{eq:einstein}\)</span> 是著名的质能方程。</p>
 <h2 id="多行-align-环境">3. 多行 align 环境 + + </h2>
-<p>测试多行对齐的推导过程，并且对其中一行添加 <code>\tag</code>： <span
-id="eq:J"></span> <span class="math display">\[
+<p>测试多行对齐的推导过程，并且对其中一行添加 <code>\tag</code>： <span id="eq:J"></span> <span class="math display">\[
 \begin{align}
 J(\theta)
   &amp;= \mathbb{E}_{s \sim d^\pi,\, a \sim \pi_\theta}
@@ -1094,28 +1087,20 @@ J(\theta)
      \Bigl[ \nabla_\theta \log \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]
      \label{eq:pg-basic} \\[4pt]
   &amp;= \mathbb{E}_{s \sim d^\pi}
-     \Bigl[ \sum_a \nabla_\theta \pi_\theta(a \mid s)\, Q^\pi(s,a)
-\Bigr]
+     \Bigl[ \sum_a \nabla_\theta \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]
      \tag{PG*} \label{eq:pg-tag}
 \end{align}
 \]</span></p>
 <p>上面我们给了三个公式编号：</p>
 <ul>
-<li>目标函数：式 <span
-class="math inline">\(\eqref{eq:obj}\)</span>；</li>
-<li>基本形式的策略梯度：式 <span
-class="math inline">\(\eqref{eq:pg-basic}\)</span>；</li>
-<li>带自定义标签的那一行：式 <span
-class="math inline">\(\eqref{eq:pg-tag}\)</span>，其显式编号为
-<code>(PG*)</code>。见公式 <a href="#eq:J">(2)</a>。</li>
+<li>目标函数：式 <span class="math inline">\(\eqref{eq:obj}\)</span>；</li>
+<li>基本形式的策略梯度：式 <span class="math inline">\(\eqref{eq:pg-basic}\)</span>；</li>
+<li>带自定义标签的那一行：式 <span class="math inline">\(\eqref{eq:pg-tag}\)</span>，其显式编号为 <code>(PG*)</code>。见公式 <a href="#eq:J">(2)</a>。</li>
 </ul>
 <h2 id="更复杂的符号与矩阵">4. 更复杂的符号与矩阵</h2>
 <p>再测试希腊字母、集合、矩阵等：</p>
-<p>行内测试：<span class="math inline">\(\forall \epsilon &gt; 0,\
-\exists \delta &gt; 0\)</span>，<br />
-使得当 <span class="math inline">\(0 &lt; \lVert x - x^\ast \rVert &lt;
-\delta\)</span> 时，有 <span class="math inline">\(\lVert f(x) -
-f(x^\ast) \rVert &lt; \epsilon\)</span>。</p>
+<p>行内测试：<span class="math inline">\(\forall \epsilon &gt; 0,\ \exists \delta &gt; 0\)</span>，<br />
+使得当 <span class="math inline">\(0 &lt; \lVert x - x^\ast \rVert &lt; \delta\)</span> 时，有 <span class="math inline">\(\lVert f(x) - f(x^\ast) \rVert &lt; \epsilon\)</span>。</p>
 <p>行间矩阵：</p>
 <p><span class="math display">\[
 \begin{equation}
@@ -1133,9 +1118,7 @@ A =
 \label{eq:matrix}
 \end{equation}
 \]</span></p>
-<p>矩阵 <span class="math inline">\(A\)</span> 和向量 <span
-class="math inline">\(\boldsymbol{b}\)</span> 的定义如式 <span
-class="math inline">\(\eqref{eq:matrix}\)</span> 所示。</p>
+<p>矩阵 <span class="math inline">\(A\)</span> 和向量 <span class="math inline">\(\boldsymbol{b}\)</span> 的定义如式  所示。</p>
 <h2 id="分段函数与条件概率">5. 分段函数与条件概率</h2>
 <p>最后测试分段函数和概率符号：</p>
 <p><span class="math display">\[
@@ -1157,23 +1140,18 @@ p(x) =
 \label{eq:cond-prob}
 \end{equation}
 \]</span></p>
-<p>在正文中再次引用式 <span
-class="math inline">\(\eqref{eq:exp}\)</span> 和式 <span
-class="math inline">\(\eqref{eq:cond-prob}\)</span>，确认交叉引用是否正常工作。</p>
+<p>在正文中再次引用式  和式 ，确认交叉引用是否正常工作。</p>
 <h2 id="section">6.</h2>
 <ul>
-<li><p>用 <code>Markdown</code> / <code>HTML</code>
-做个锚点，伪装成可引用公式 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;eq:newton&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>$$<br>F = ma \tag&#123;1&#125;<br>$$<br><br>在文中这样写：见公式 [<span class="hljs-string">(1)</span>](<span class="hljs-link">#eq:newton</span>)。<br><br></code></pre></td></tr></table></figure></p>
+<li><p>用 <code>Markdown</code> / <code>HTML</code> 做个锚点，伪装成可引用公式 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;eq:newton&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>$$<br>F = ma \tag&#123;1&#125;<br>$$<br><br>在文中这样写：见公式 [<span class="hljs-string">(1)</span>](<span class="hljs-link">#eq:newton</span>)。<br><br></code></pre></td></tr></table></figure></p>
 <p>渲染效果如下</p>
 <p><span id="eq:newton"></span> <span class="math display">\[
 F = ma \tag{1}
 \]</span> 在文中这样写：见公式 <a href="#eq:newton">(1)</a>。</p></li>
 </ul>
 <hr />
-<p>如果本页所有公式（行内、行间、多行 align、、自定义 +
-）都正常显示，<br />
-说明你的 <strong>pandoc + MathJax + Fluid 配置已经完全 OK</strong>
-了。</p>
+<p>如果本页所有公式（行内、行间、多行 align、、自定义 + ）都正常显示，<br />
+说明你的 <strong>pandoc + MathJax + Fluid 配置已经完全 OK</strong> 了。</p>
 
                 
               </div>
@@ -1218,9 +1196,9 @@ F = ma \tag{1}
       
         <a href="/tags/Fluid/" class="print-no-link">#Fluid</a>
       
-        <a href="/tags/pandoc/" class="print-no-link">#pandoc</a>
-      
         <a href="/tags/MathJax/" class="print-no-link">#MathJax</a>
+      
+        <a href="/tags/pandoc/" class="print-no-link">#pandoc</a>
       
     </div>
   

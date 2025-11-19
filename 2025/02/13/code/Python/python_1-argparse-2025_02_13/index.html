@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.什么是 argparse argparse 是一个强大的命令行参数解析工具，用于构建命令行脚本或程序时，可以非常方便地对传入的参数进行解释和处理。 在编写命令行工具或脚本时，往往需要接收来自命令行的参数或选项，以实现配置。 argparse 则能让你以更高层次、更结构化的方式来定义程序期望的参数形式，以及如何处理这些参数，从而自动生成帮助信息、错误信息等。 2.基本用法 1234">
+    <meta name="description" content="1.什么是 argparse argparse 是一个强大的命令行参数解析工具，用于构建命令行脚本或程序时，可以非常方便地对传入的参数进行解释和处理。 在编写命令行工具或脚本时，往往需要接收来自命令行的参数或选项，以实现配置。 argparse 则能让你以更高层次、更结构化的方式来定义程序期望的参数形式，以及如何处理这些参数，从而自动生成帮助信息、错误信息等。 2.基本用法 123456">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 系列 - 1. 命令行解析器 argparse">
 <meta property="og:url" content="http://yylustb.github.io/2025/02/13/code/Python/python_1-argparse-2025_02_13/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="1.什么是 argparse argparse 是一个强大的命令行参数解析工具，用于构建命令行脚本或程序时，可以非常方便地对传入的参数进行解释和处理。 在编写命令行工具或脚本时，往往需要接收来自命令行的参数或选项，以实现配置。 argparse 则能让你以更高层次、更结构化的方式来定义程序期望的参数形式，以及如何处理这些参数，从而自动生成帮助信息、错误信息等。 2.基本用法 1234">
+<meta property="og:description" content="1.什么是 argparse argparse 是一个强大的命令行参数解析工具，用于构建命令行脚本或程序时，可以非常方便地对传入的参数进行解释和处理。 在编写命令行工具或脚本时，往往需要接收来自命令行的参数或选项，以实现配置。 argparse 则能让你以更高层次、更结构化的方式来定义程序期望的参数形式，以及如何处理这些参数，从而自动生成帮助信息、错误信息等。 2.基本用法 123456">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/python.png">
 <meta property="article:published_time" content="2025-02-13T08:30:00.000Z">
-<meta property="article:modified_time" content="2025-11-17T17:05:39.909Z">
+<meta property="article:modified_time" content="2025-11-17T17:05:39.000Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="argparse">
@@ -1061,31 +1061,22 @@
               <div class="markdown-body">
                 
                 <h2 id="什么是-argparse">1.什么是 argparse</h2>
-<p><code>argparse</code>
-是一个强大的命令行参数解析工具，用于构建命令行脚本或程序时，可以非常方便地对传入的参数进行解释和处理。</p>
+<p><code>argparse</code> 是一个强大的命令行参数解析工具，用于构建命令行脚本或程序时，可以非常方便地对传入的参数进行解释和处理。</p>
 <p>在编写命令行工具或脚本时，往往需要接收来自命令行的参数或选项，以实现配置。</p>
-<p><code>argparse</code>
-则能让你以更高层次、更结构化的方式来定义程序期望的参数形式，以及如何处理这些参数，从而自动生成帮助信息、错误信息等。</p>
+<p><code>argparse</code> 则能让你以更高层次、更结构化的方式来定义程序期望的参数形式，以及如何处理这些参数，从而自动生成帮助信息、错误信息等。</p>
 <h2 id="基本用法">2.基本用法</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> argparse<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;第一步：创建一个解析器对象，可以给出程序的简单描述&#x27;&#x27;&#x27;</span><br>    parser = argparse.ArgumentParser(description=<span class="hljs-string">&quot;这是一个示例命令行工具&quot;</span>)<br><br>    <span class="hljs-string">&#x27;&#x27;&#x27;第二步：添加命令行参数和选项&#x27;&#x27;&#x27;</span><br>    <span class="hljs-comment"># 添加必选参数: 在命令中不需要特意写 -x 或者 --xx ，是脚本必须要获取的数据。</span><br>    parser.add_argument(<span class="hljs-string">&quot;filename&quot;</span>, <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;输入文件的路径&quot;</span>)<br>    <span class="hljs-comment"># 添加可选参数1：一般以短选项（如 -v）或长选项（如 --verbose）的形式出现。</span><br>    parser.add_argument(<span class="hljs-string">&quot;-v&quot;</span>, <span class="hljs-string">&quot;--verbose&quot;</span>, <br>                        action=<span class="hljs-string">&quot;store_true&quot;</span>, <br>                        <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;是否输出详细信息（布尔开关）&quot;</span><br>                        )<br>    <span class="hljs-comment"># 添加可选参数2：一般以短选项（如 -v）或长选项（如 --verbose）的形式出现。</span><br>    parser.add_argument(<span class="hljs-string">&quot;-n&quot;</span>, <span class="hljs-string">&quot;--number&quot;</span>,<br>                        <span class="hljs-built_in">type</span>=<span class="hljs-built_in">int</span>,<br>                        default=<span class="hljs-number">1</span>,<br>                        <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;重复操作次数，默认为 1&quot;</span><br>                        )<br>    <span class="hljs-comment"># 添加可选参数3：接收某个范围或集合中的值</span><br>    parser.add_argument(<span class="hljs-string">&quot;--mode&quot;</span>, <br>                        choices=[<span class="hljs-string">&quot;train&quot;</span>, <span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;eval&quot;</span>], <br>                        <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;模式选择&quot;</span><br>                        )<br>    <span class="hljs-comment"># 添加可选参数4：指定参数的别名</span><br>    parser.add_argument(<span class="hljs-string">&quot;-m&quot;</span>, <span class="hljs-string">&quot;--mode&quot;</span>, <br>                        choices=[<span class="hljs-string">&quot;train&quot;</span>, <span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;eval&quot;</span>]<br>                        )<br><br><br><br><br>    <span class="hljs-string">&#x27;&#x27;&#x27;第三步：解析命令行参数&#x27;&#x27;&#x27;</span><br>    <span class="hljs-comment"># args 就是一个包含解析后参数的命名空间对象, 属性名即为参数名。</span><br>    args = parser.parse_args()<br>    <span class="hljs-comment"># 通过 args.filename 访问参数 filename</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;文件名：&quot;</span>, args.filename)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;是否详细输出：&quot;</span>, args.verbose)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;操作次数：&quot;</span>, args.number)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    main()<br></code></pre></td></tr></table></figure>
 <ul>
 <li>必选参数：
 <ul>
-<li><code>help="输入文件的路径"</code>: 在 <code>--help</code>
-命令中显示的参数说明</li>
-<li>当执行脚本时，需要紧随其后提供必选参数
-filename，否则会报错。例如（下面指令中的 <code>input.txt</code> 就是参数
-“filename”） <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python script.py input.txt<br></code></pre></td></tr></table></figure></li>
+<li><code>help="输入文件的路径"</code>: 在 <code>--help</code> 命令中显示的参数说明</li>
+<li>当执行脚本时，需要紧随其后提供必选参数 filename，否则会报错。例如（下面指令中的 <code>input.txt</code> 就是参数 “filename”） <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python script.py input.txt<br></code></pre></td></tr></table></figure></li>
 </ul></li>
 <li>可选参数1：
 <ul>
-<li><code>-v</code> 和 <code>--verbose</code>:
-代表同一个可选参数，用户可以使用任一形式。</li>
-<li><code>action="store_true"</code>:
-当这个选项被使用时，将在解析结果中把 <code>verbose</code> 设置为
-<code>True</code>（不使用则为 <code>False</code>）。</li>
-<li><code>help="是否输出详细信息（布尔开关）"</code>: help 中的内容会在
-<code>--help</code> 命令中显示。</li>
+<li><code>-v</code> 和 <code>--verbose</code>: 代表同一个可选参数，用户可以使用任一形式。</li>
+<li><code>action="store_true"</code>: 当这个选项被使用时，将在解析结果中把 <code>verbose</code> 设置为 <code>True</code>（不使用则为 <code>False</code>）。</li>
+<li><code>help="是否输出详细信息（布尔开关）"</code>: help 中的内容会在 <code>--help</code> 命令中显示。</li>
 </ul></li>
 <li>可选参数2：
 <ul>

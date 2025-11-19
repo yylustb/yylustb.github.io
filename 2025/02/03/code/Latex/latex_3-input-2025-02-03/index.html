@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在 LaTeX 复杂项目中，出现文件包含情况，例如 main.tex 文档包含多个章节，我们可以不同章节设置单独 tex 文档 (例如 chap_1.tex)，那么在 main.tex 文档中使用如下命令进行文件包含： 1\input&#123;chap_1.tex&#125; 然后每次修改 chap_1.tex 文档，都需要重新编译 main.tex 文档，这样会比较麻烦。 为了解决">
+    <meta name="description" content="在 LaTeX 复杂项目中，出现文件包含情况，例如 main.tex 文档包含多个章节，我们可以不同章节设置单独 tex 文档 (例如 chap_1.tex)，那么在 main.tex 文档中使用如下命令进行文件包含： 1\input&#123;chap_1.tex&#125; 然后每次修改 chap_1.tex 文档，都需要重新编译 main.tex 文档，这样会比较麻烦。 为了解决这个问">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTex 系列 - 3. LaTex 项目文件包含问题">
 <meta property="og:url" content="http://yylustb.github.io/2025/02/03/code/Latex/latex_3-input-2025-02-03/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="在 LaTeX 复杂项目中，出现文件包含情况，例如 main.tex 文档包含多个章节，我们可以不同章节设置单独 tex 文档 (例如 chap_1.tex)，那么在 main.tex 文档中使用如下命令进行文件包含： 1\input&#123;chap_1.tex&#125; 然后每次修改 chap_1.tex 文档，都需要重新编译 main.tex 文档，这样会比较麻烦。 为了解决">
+<meta property="og:description" content="在 LaTeX 复杂项目中，出现文件包含情况，例如 main.tex 文档包含多个章节，我们可以不同章节设置单独 tex 文档 (例如 chap_1.tex)，那么在 main.tex 文档中使用如下命令进行文件包含： 1\input&#123;chap_1.tex&#125; 然后每次修改 chap_1.tex 文档，都需要重新编译 main.tex 文档，这样会比较麻烦。 为了解决这个问">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/latex.png">
 <meta property="article:published_time" content="2025-02-03T08:30:00.000Z">
-<meta property="article:modified_time" content="2025-11-17T17:01:42.736Z">
+<meta property="article:modified_time" content="2025-11-17T17:01:42.000Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="LaTex">
 <meta name="twitter:card" content="summary_large_image">
@@ -1059,30 +1059,21 @@
             
               <div class="markdown-body">
                 
-                <p>在 LaTeX 复杂项目中，出现文件包含情况，例如 main.tex
-文档包含多个章节，我们可以不同章节设置单独 tex 文档 (例如
-chap_1.tex)，那么在 main.tex 文档中使用如下命令进行文件包含：</p>
+                <p>在 LaTeX 复杂项目中，出现文件包含情况，例如 main.tex 文档包含多个章节，我们可以不同章节设置单独 tex 文档 (例如 chap_1.tex)，那么在 main.tex 文档中使用如下命令进行文件包含：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\input</span>&#123;chap<span class="hljs-built_in">_</span>1.tex&#125;<br></code></pre></td></tr></table></figure>
-<p>然后每次修改 <code>chap_1.tex</code> 文档，都需要重新编译
-<code>main.tex</code> 文档，这样会比较麻烦。</p>
-<p>为了解决这个问题，我们可以通过以下设置，简化操作 (即修改
-<code>chap_1.tex</code> 后，点击编译按钮，实现编译
-<code>main.tex</code>)：</p>
+<p>然后每次修改 <code>chap_1.tex</code> 文档，都需要重新编译 <code>main.tex</code> 文档，这样会比较麻烦。</p>
+<p>为了解决这个问题，我们可以通过以下设置，简化操作 (即修改 <code>chap_1.tex</code> 后，点击编译按钮，实现编译 <code>main.tex</code>)：</p>
 <ul>
 <li>确保当前打开的文件是 main.tex</li>
 <li><code>Options</code> -&gt; <code>Root Document</code></li>
 <li>然后选择以下两个选项均可（可能只会有第二个选项）
 <ul>
 <li><code>Explicit: main.tex</code></li>
-<li><code>Set Current Document As Explicit Root</code>
-做好上面设置后，<code>main.tex</code> 就被设置为项目的
-<code>根文件</code>，每次修改 <code>chap_1.tex</code>
-后，点击编译按钮，就会自动编译 <code>main.tex</code> 文档。</li>
+<li><code>Set Current Document As Explicit Root</code> 做好上面设置后，<code>main.tex</code> 就被设置为项目的 <code>根文件</code>，每次修改 <code>chap_1.tex</code> 后，点击编译按钮，就会自动编译 <code>main.tex</code> 文档。</li>
 </ul></li>
 </ul>
 <figure>
-<img src="2025-02-03-latex_input.png" srcset="/img/loading.gif" lazyload alt="regular" />
-<figcaption aria-hidden="true">regular</figcaption>
+<img src="2025-02-03-latex_input.png" srcset="/img/loading.gif" lazyload alt="regular" /><figcaption aria-hidden="true">regular</figcaption>
 </figure>
 
                 

@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Pytorch 系列 - 3. 利用 CNN 搭建 MNIST 手写数字识别系统 引言 手写数字识别是深度学习领域的 “Hello World” 项目，也是计算机视觉入门的最佳实践。本文将详细解析一个完整的MNIST手写数字识别项目，从数据加载、模型构建、训练优化到性能评估，全面掌握CNN图像分类的核心技术。 目录  MNIST数据集详解 数据预处理与增强 CNN网络架构设计">
+    <meta name="description" content="Pytorch 系列 - 3. 利用 CNN 搭建 MNIST 手写数字识别系统 引言 手写数字识别是深度学习领域的 “Hello World” 项目，也是计算机视觉入门的最佳实践。本文将详细解析一个完整的MNIST手写数字识别项目，从数据加载、模型构建、训练优化到性能评估，全面掌握CNN图像分类的核心技术。 目录  MNIST数据集详解 数据预处理与增强 CNN网络架构设计 训练">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pytorch 系列 - 3. MINIST 数据">
 <meta property="og:url" content="http://yylustb.github.io/2025/11/14/code/Pytorch/pytorch_3-MINIST-2025_11_14/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="Pytorch 系列 - 3. 利用 CNN 搭建 MNIST 手写数字识别系统 引言 手写数字识别是深度学习领域的 “Hello World” 项目，也是计算机视觉入门的最佳实践。本文将详细解析一个完整的MNIST手写数字识别项目，从数据加载、模型构建、训练优化到性能评估，全面掌握CNN图像分类的核心技术。 目录  MNIST数据集详解 数据预处理与增强 CNN网络架构设计">
+<meta property="og:description" content="Pytorch 系列 - 3. 利用 CNN 搭建 MNIST 手写数字识别系统 引言 手写数字识别是深度学习领域的 “Hello World” 项目，也是计算机视觉入门的最佳实践。本文将详细解析一个完整的MNIST手写数字识别项目，从数据加载、模型构建、训练优化到性能评估，全面掌握CNN图像分类的核心技术。 目录  MNIST数据集详解 数据预处理与增强 CNN网络架构设计 训练">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/pytorch.jpg">
 <meta property="article:published_time" content="2025-11-14T08:30:00.000Z">
-<meta property="article:modified_time" content="2025-11-17T17:07:05.129Z">
+<meta property="article:modified_time" content="2025-11-17T17:07:05.000Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="CNN">
 <meta property="article:tag" content="MINIST">
@@ -1061,11 +1061,9 @@
             
               <div class="markdown-body">
                 
-                <h1 id="pytorch-系列---3.-利用-cnn-搭建-mnist-手写数字识别系统">Pytorch
-系列 - 3. 利用 CNN 搭建 MNIST 手写数字识别系统</h1>
+                <h1 id="pytorch-系列---3.-利用-cnn-搭建-mnist-手写数字识别系统">Pytorch 系列 - 3. 利用 CNN 搭建 MNIST 手写数字识别系统</h1>
 <h2 id="引言">引言</h2>
-<p>手写数字识别是深度学习领域的 “Hello World”
-项目，也是计算机视觉入门的最佳实践。本文将详细解析一个完整的MNIST手写数字识别项目，从数据加载、模型构建、训练优化到性能评估，全面掌握CNN图像分类的核心技术。</p>
+<p>手写数字识别是深度学习领域的 “Hello World” 项目，也是计算机视觉入门的最佳实践。本文将详细解析一个完整的MNIST手写数字识别项目，从数据加载、模型构建、训练优化到性能评估，全面掌握CNN图像分类的核心技术。</p>
 <h2 id="目录">目录</h2>
 <ol type="1">
 <li>MNIST数据集详解</li>
@@ -1078,10 +1076,9 @@
 <hr />
 <h2 id="一mnist数据集详解">一、MNIST数据集详解</h2>
 <h3 id="什么是mnist">1.1 什么是MNIST？</h3>
-<p>MNIST（Modified National Institute of Standards and
-Technology）是机器学习领域最著名的数据集之一，包含70,000张手写数字图像：</p>
+<p>MNIST（Modified National Institute of Standards and Technology）是机器学习领域最著名的数据集之一，包含70,000张手写数字图像：</p>
 <p><span class="math display">\[
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 \]</span></p>
 <ul>
 <li><strong>训练集</strong>：60,000张图像</li>
@@ -1090,8 +1087,7 @@ Technology）是机器学习领域最著名的数据集之一，包含70,000张�
 <li><strong>类别数量</strong>：10类（数字0-9）</li>
 </ul>
 <figure>
-<img src="MINIST.png" srcset="/img/loading.gif" lazyload alt="regular" />
-<figcaption aria-hidden="true">regular</figcaption>
+<img src="MINIST.png" srcset="/img/loading.gif" lazyload alt="regular" /><figcaption aria-hidden="true">regular</figcaption>
 </figure>
 <h3 id="使用torchvision加载数据">1.2 使用torchvision加载数据</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> torchvision <span class="hljs-keyword">import</span> datasets, transforms<br><br><span class="hljs-comment"># 下载并加载MNIST数据集</span><br>mnist_train = datasets.MNIST(<br>    root=<span class="hljs-string">&quot;./dataset&quot;</span>,<br>    train=<span class="hljs-literal">True</span>,<br>    download=<span class="hljs-literal">True</span>,<br>    transform=transforms.ToTensor()<br>)<br></code></pre></td></tr></table></figure>
@@ -1103,8 +1099,7 @@ Technology）是机器学习领域最著名的数据集之一，包含70,000张�
 <li><code>transform</code>：数据转换操作，这里将PIL图像转为Tensor</li>
 </ul>
 <p><strong>数据存储结构</strong>： <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nix">.<span class="hljs-operator">/</span>dataset<span class="hljs-symbol">/</span><br>└── MNIST<span class="hljs-symbol">/</span><br>    ├── raw<span class="hljs-symbol">/</span>          <span class="hljs-comment"># 原始.gz压缩文件</span><br>    └── processed<span class="hljs-symbol">/</span>    <span class="hljs-comment"># 处理后的.pt缓存文件</span><br></code></pre></td></tr></table></figure></p>
-<h3 id="dataloader高效的数据加载器">1.3
-DataLoader：高效的数据加载器</h3>
+<h3 id="dataloader高效的数据加载器">1.3 DataLoader：高效的数据加载器</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader<br><br>train_loader = DataLoader(<br>    dataset=train_dataset,<br>    batch_size=<span class="hljs-number">64</span>,<br>    shuffle=<span class="hljs-literal">True</span>,<br>    num_workers=<span class="hljs-number">0</span><br>)<br></code></pre></td></tr></table></figure>
 <p><strong>DataLoader的作用</strong>：</p>
 <ol type="1">
@@ -1112,11 +1107,7 @@ DataLoader：高效的数据加载器</h3>
 <li><strong>打乱</strong>（Shuffling）：随机化训练顺序，避免模型记忆样本顺序</li>
 <li><strong>并行加载</strong>（Multi-processing）：通过num_workers加速数据读取</li>
 </ol>
-<p><strong>最佳实践</strong>： -
-训练集：<code>shuffle=True</code>，打破样本相关性 -
-测试集：<code>shuffle=False</code>，保持评估一致性 -
-<code>batch_size</code>：根据显存调整，常用32/64/128 -
-<code>num_workers</code>：Windows建议0，Linux/Mac可设为4-8</p>
+<p><strong>最佳实践</strong>： - 训练集：<code>shuffle=True</code>，打破样本相关性 - 测试集：<code>shuffle=False</code>，保持评估一致性 - <code>batch_size</code>：根据显存调整，常用32/64/128 - <code>num_workers</code>：Windows建议0，Linux/Mac可设为4-8</p>
 <hr />
 <h2 id="二数据预处理与标准化">二、数据预处理与标准化</h2>
 <h3 id="为什么需要数据预处理">2.1 为什么需要数据预处理？</h3>
@@ -1128,22 +1119,14 @@ DataLoader：高效的数据加载器</h3>
 </ol>
 <h3 id="标准化流程">2.2 标准化流程</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">transform = transforms.Compose([<br>    transforms.ToTensor(),                              <span class="hljs-comment"># 步骤1</span><br>    transforms.Normalize(mean=(<span class="hljs-number">0.1307</span>,), std=(<span class="hljs-number">0.3081</span>,)) <span class="hljs-comment"># 步骤2</span><br>])<br></code></pre></td></tr></table></figure>
-<p><strong>步骤1：ToTensor()</strong> -
-将PIL图像/NumPy数组转为PyTorch张量 - 形状变换：[H, W, C] → [C, H, W] -
-像素归一化：[0, 255] → [0, 1]</p>
-<p><strong>步骤2：Normalize()</strong> -
-公式：<code>output = (input - mean) / std</code> - MNIST的全局统计值： -
-均值（mean）= 0.1307 - 标准差（std）= 0.3081 -
-结果：数据分布近似标准正态分布N(0, 1)</p>
+<p><strong>步骤1：ToTensor()</strong> - 将PIL图像/NumPy数组转为PyTorch张量 - 形状变换：[H, W, C] → [C, H, W] - 像素归一化：[0, 255] → [0, 1]</p>
+<p><strong>步骤2：Normalize()</strong> - 公式：<code>output = (input - mean) / std</code> - MNIST的全局统计值： - 均值（mean）= 0.1307 - 标准差（std）= 0.3081 - 结果：数据分布近似标准正态分布N(0, 1)</p>
 <h3 id="标准化的数学原理">2.3 标准化的数学原理</h3>
-<p>对于每个像素值 <span
-class="math inline">\(x\)</span>，标准化操作为：</p>
+<p>对于每个像素值 <span class="math inline">\(x\)</span>，标准化操作为：</p>
 <p><span class="math display">\[
 x_{normalized} = \frac{x - \mu}{\sigma}
 \]</span></p>
-<p>其中 <span class="math inline">\(\mu\)</span> 是均值，<span
-class="math inline">\(\sigma\)</span> 是标准差。标准化后的数据具有： -
-均值为0 - 标准差为1 - 消除量纲影响</p>
+<p>其中 <span class="math inline">\(\mu\)</span> 是均值，<span class="math inline">\(\sigma\)</span> 是标准差。标准化后的数据具有： - 均值为0 - 标准差为1 - 消除量纲影响</p>
 <p><strong>为什么使用0.1307和0.3081？</strong></p>
 <p>这两个值是通过计算整个MNIST训练集的全局均值和标准差得到的：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 计算MNIST训练集的全局统计值</span><br>mean = train_data.mean() / <span class="hljs-number">255.0</span>  <span class="hljs-comment"># ≈ 0.1307</span><br>std = train_data.std() / <span class="hljs-number">255.0</span>    <span class="hljs-comment"># ≈ 0.3081</span><br></code></pre></td></tr></table></figure>
@@ -1161,49 +1144,24 @@ class="math inline">\(\sigma\)</span> 是标准差。标准化后的数据具有
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MNIST_CNN</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>(MNIST_CNN, <span class="hljs-variable language_">self</span>).__init__()<br>        <br>        <span class="hljs-comment"># 第一卷积模块</span><br>        <span class="hljs-variable language_">self</span>.conv1 = nn.Sequential(<br>            nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, kernel_size=<span class="hljs-number">5</span>),<br>            nn.ReLU(),<br>            nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>)<br>        )<br>        <br>        <span class="hljs-comment"># 第二卷积模块</span><br>        <span class="hljs-variable language_">self</span>.conv2 = nn.Sequential(<br>            nn.Conv2d(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, kernel_size=<span class="hljs-number">5</span>),<br>            nn.ReLU(),<br>            nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>)<br>        )<br>        <br>        <span class="hljs-comment"># 全连接模块</span><br>        <span class="hljs-variable language_">self</span>.fc = nn.Sequential(<br>            nn.Flatten(),<br>            nn.Linear(<span class="hljs-number">320</span>, <span class="hljs-number">50</span>),<br>            nn.Linear(<span class="hljs-number">50</span>, <span class="hljs-number">10</span>)<br>        )<br></code></pre></td></tr></table></figure>
 <h3 id="特征图尺寸计算">3.3 特征图尺寸计算</h3>
 <p><strong>输入层</strong>：<code>[batch_size, 1, 28, 28]</code></p>
-<p><strong>第一卷积模块</strong>： - Conv2d(1→10,
-5×5)：<code>[B, 1, 28, 28]</code> → <code>[B, 10, 24, 24]</code> -
-计算公式：<span class="math inline">\(H_{out} = H_{in} - kernel\_size +
-1 = 28 - 5 + 1 = 24\)</span> -
-MaxPool2d(2×2)：<code>[B, 10, 24, 24]</code> →
-<code>[B, 10, 12, 12]</code> - 每个维度缩小一半：<span
-class="math inline">\(24 \div 2 = 12\)</span></p>
-<p><strong>第二卷积模块</strong>： - Conv2d(10→20,
-5×5)：<code>[B, 10, 12, 12]</code> → <code>[B, 20, 8, 8]</code> - <span
-class="math inline">\(H_{out} = 12 - 5 + 1 = 8\)</span> -
-MaxPool2d(2×2)：<code>[B, 20, 8, 8]</code> → <code>[B, 20, 4, 4]</code>
-- <span class="math inline">\(8 \div 2 = 4\)</span></p>
-<p><strong>全连接层</strong>： - Flatten：<code>[B, 20, 4, 4]</code> →
-<code>[B, 320]</code> - <span class="math inline">\(20 \times 4 \times 4
-= 320\)</span> - Linear(320→50)：<code>[B, 320]</code> →
-<code>[B, 50]</code> - Linear(50→10)：<code>[B, 50]</code> →
-<code>[B, 10]</code></p>
+<p><strong>第一卷积模块</strong>： - Conv2d(1→10, 5×5)：<code>[B, 1, 28, 28]</code> → <code>[B, 10, 24, 24]</code> - 计算公式：<span class="math inline">\(H_{out} = H_{in} - kernel\_size + 1 = 28 - 5 + 1 = 24\)</span> - MaxPool2d(2×2)：<code>[B, 10, 24, 24]</code> → <code>[B, 10, 12, 12]</code> - 每个维度缩小一半：<span class="math inline">\(24 \div 2 = 12\)</span></p>
+<p><strong>第二卷积模块</strong>： - Conv2d(10→20, 5×5)：<code>[B, 10, 12, 12]</code> → <code>[B, 20, 8, 8]</code> - <span class="math inline">\(H_{out} = 12 - 5 + 1 = 8\)</span> - MaxPool2d(2×2)：<code>[B, 20, 8, 8]</code> → <code>[B, 20, 4, 4]</code> - <span class="math inline">\(8 \div 2 = 4\)</span></p>
+<p><strong>全连接层</strong>： - Flatten：<code>[B, 20, 4, 4]</code> → <code>[B, 320]</code> - <span class="math inline">\(20 \times 4 \times 4 = 320\)</span> - Linear(320→50)：<code>[B, 320]</code> → <code>[B, 50]</code> - Linear(50→10)：<code>[B, 50]</code> → <code>[B, 10]</code></p>
 <p><strong>输出层</strong>：<code>[batch_size, 10]</code>，10个logits对应10个类别</p>
 <h3 id="关键层详解">3.4 关键层详解</h3>
 <h4 id="卷积层conv2d">卷积层（Conv2d）</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">nn.Conv2d(in_channels, out_channels, kernel_size)<br></code></pre></td></tr></table></figure>
 <p><strong>作用</strong>：通过卷积核滑动提取局部特征</p>
-<p><strong>参数</strong>： -
-<code>in_channels</code>：输入通道数（灰度图=1，RGB=3） -
-<code>out_channels</code>：输出通道数（特征图数量） -
-<code>kernel_size</code>：卷积核大小（常用3×3, 5×5）</p>
-<p><strong>特点</strong>： - 局部连接：只关注局部区域 -
-权重共享：同一卷积核扫描整个图像 - 参数量：<span
-class="math inline">\(kernel\_size^2 \times in\_channels \times
-out\_channels\)</span></p>
+<p><strong>参数</strong>： - <code>in_channels</code>：输入通道数（灰度图=1，RGB=3） - <code>out_channels</code>：输出通道数（特征图数量） - <code>kernel_size</code>：卷积核大小（常用3×3, 5×5）</p>
+<p><strong>特点</strong>： - 局部连接：只关注局部区域 - 权重共享：同一卷积核扫描整个图像 - 参数量：<span class="math inline">\(kernel\_size^2 \times in\_channels \times out\_channels\)</span></p>
 <h4 id="激活函数relu">激活函数（ReLU）</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">nn.ReLU()<br></code></pre></td></tr></table></figure>
-<p><strong>公式</strong>：<span class="math inline">\(ReLU(x) = max(0,
-x)\)</span></p>
-<p><strong>优点</strong>： - 计算简单，训练速度快 - 缓解梯度消失问题 -
-引入非线性，增强模型表达能力</p>
+<p><strong>公式</strong>：<span class="math inline">\(ReLU(x) = max(0, x)\)</span></p>
+<p><strong>优点</strong>： - 计算简单，训练速度快 - 缓解梯度消失问题 - 引入非线性，增强模型表达能力</p>
 <h4 id="池化层maxpool2d">池化层（MaxPool2d）</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
-<p><strong>作用</strong>： - 降低特征图空间维度 - 减少参数量和计算量 -
-提供平移不变性</p>
-<p><strong>MaxPooling vs AvgPooling</strong>： -
-MaxPooling：取区域最大值，保留显著特征 -
-AvgPooling：取区域平均值，保留整体信息</p>
+<p><strong>作用</strong>： - 降低特征图空间维度 - 减少参数量和计算量 - 提供平移不变性</p>
+<p><strong>MaxPooling vs AvgPooling</strong>： - MaxPooling：取区域最大值，保留显著特征 - AvgPooling：取区域平均值，保留整体信息</p>
 <hr />
 <h2 id="四训练流程与优化策略">四、训练流程与优化策略</h2>
 <h3 id="完整训练流程">4.1 完整训练流程</h3>
@@ -1226,26 +1184,20 @@ AvgPooling：取区域平均值，保留整体信息</p>
 <p><span class="math display">\[
 Loss = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
 \]</span></p>
-<p>其中： - <span
-class="math inline">\(y_i\)</span>：真实标签的one-hot编码 - <span
-class="math inline">\(\hat{y}_i\)</span>：经过softmax的预测概率</p>
-<p><strong>内部实现</strong>： 1. 对logits应用softmax：<span
-class="math inline">\(\hat{y}_i = \frac{e^{z_i}}{\sum_{j=1}^{C}
-e^{z_j}}\)</span> 2. 计算负对数似然损失</p>
+<p>其中： - <span class="math inline">\(y_i\)</span>：真实标签的one-hot编码 - <span class="math inline">\(\hat{y}_i\)</span>：经过softmax的预测概率</p>
+<p><strong>内部实现</strong>： 1. 对logits应用softmax：<span class="math inline">\(\hat{y}_i = \frac{e^{z_i}}{\sum_{j=1}^{C} e^{z_j}}\)</span> 2. 计算负对数似然损失</p>
 <h4 id="步骤5-6反向传播与参数更新">步骤5-6：反向传播与参数更新</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">loss.backward()    <span class="hljs-comment"># 反向传播：计算梯度</span><br>optimizer.step()   <span class="hljs-comment"># 参数更新：应用梯度</span><br></code></pre></td></tr></table></figure>
 <p><strong>反向传播原理</strong>：</p>
 <p>通过链式法则计算损失对每个参数的偏导数：</p>
 <p><span class="math display">\[
-\frac{\partial L}{\partial w} = \frac{\partial L}{\partial y} \cdot
-\frac{\partial y}{\partial w}
+\frac{\partial L}{\partial w} = \frac{\partial L}{\partial y} \cdot \frac{\partial y}{\partial w}
 \]</span></p>
 <p><strong>参数更新（SGD）</strong>：</p>
 <p><span class="math display">\[
 w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}
 \]</span></p>
-<p>其中 <span class="math inline">\(\eta\)</span> 是学习率（learning
-rate）</p>
+<p>其中 <span class="math inline">\(\eta\)</span> 是学习率（learning rate）</p>
 <h3 id="优化器选择">4.3 优化器选择</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">optimizer = optim.SGD(<br>    model.parameters(),<br>    lr=<span class="hljs-number">0.01</span>,<br>    momentum=<span class="hljs-number">0.9</span><br>)<br></code></pre></td></tr></table></figure>
 <h4 id="sgd-with-momentum">SGD with Momentum</h4>
@@ -1257,34 +1209,33 @@ v_{t+1} = \beta \cdot v_t + g_t
 \]</span> <span class="math display">\[
 w_{t+1} = w_t - \eta \cdot v_{t+1}
 \]</span></p>
-<p><strong>优点</strong>： - 加速收敛：借助历史梯度的”惯性” -
-减少震荡：平滑梯度更新方向 - 跳出局部最优：动量帮助越过小的”山谷”</p>
+<p><strong>优点</strong>： - 加速收敛：借助历史梯度的“惯性” - 减少震荡：平滑梯度更新方向 - 跳出局部最优：动量帮助越过小的“山谷”</p>
 <h4 id="其他常用优化器">其他常用优化器</h4>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>优化器</th>
 <th>特点</th>
 <th>适用场景</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>SGD</td>
 <td>简单稳定</td>
 <td>计算机视觉任务</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Adam</td>
 <td>自适应学习率</td>
 <td>大多数深度学习任务</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>AdamW</td>
 <td>Adam + 权重衰减</td>
 <td>Transformer模型</td>
 </tr>
-<tr>
+<tr class="even">
 <td>RMSprop</td>
 <td>自适应学习率</td>
 <td>RNN任务</td>
@@ -1292,8 +1243,7 @@ w_{t+1} = w_t - \eta \cdot v_{t+1}
 </tbody>
 </table>
 <h3 id="学习率调度">4.4 学习率调度</h3>
-<p>固定学习率可能导致： - 初期：学习率过小，收敛慢 -
-后期：学习率过大，无法收敛</p>
+<p>固定学习率可能导致： - 初期：学习率过小，收敛慢 - 后期：学习率过大，无法收敛</p>
 <p><strong>常用策略</strong>：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 1. 阶梯式衰减</span><br>scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=<span class="hljs-number">30</span>, gamma=<span class="hljs-number">0.1</span>)<br><br><span class="hljs-comment"># 2. 余弦退火</span><br>scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=<span class="hljs-number">100</span>)<br><br><span class="hljs-comment"># 3. 自适应调整</span><br>scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, patience=<span class="hljs-number">10</span>)<br></code></pre></td></tr></table></figure>
 <hr />
@@ -1303,8 +1253,7 @@ w_{t+1} = w_t - \eta \cdot v_{t+1}
 <p><span class="math display">\[
 Accuracy = \frac{正确预测数}{总样本数}
 \]</span></p>
-<p><strong>优点</strong>：直观易懂
-<strong>缺点</strong>：类别不平衡时会误导</p>
+<p><strong>优点</strong>：直观易懂 <strong>缺点</strong>：类别不平衡时会误导</p>
 <h4 id="精确率precision">精确率（Precision）</h4>
 <p><span class="math display">\[
 Precision = \frac{TP}{TP + FP}
@@ -1333,32 +1282,31 @@ F1 = 2 \cdot \frac{Precision \times Recall}{Precision + Recall}
 <li>行和：每个类别的真实数量</li>
 <li>列和：每个类别的预测数量</li>
 </ul>
-<p><strong>常见误分类分析</strong>： - 数字1和7容易混淆 -
-数字4和9容易混淆 - 数字3和8容易混淆</p>
+<p><strong>常见误分类分析</strong>： - 数字1和7容易混淆 - 数字4和9容易混淆 - 数字3和8容易混淆</p>
 <h3 id="模型预测流程">5.4 模型预测流程</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">model.<span class="hljs-built_in">eval</span>()  <span class="hljs-comment"># 评估模式</span><br><span class="hljs-keyword">with</span> torch.no_grad():  <span class="hljs-comment"># 不计算梯度</span><br>    outputs = model(inputs)<br>    preds = outputs.argmax(dim=<span class="hljs-number">1</span>)  <span class="hljs-comment"># 取最大概率的类别</span><br></code></pre></td></tr></table></figure>
 <p><strong>为什么需要model.eval()？</strong></p>
 <p>训练模式和评估模式的区别：</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>层类型</th>
 <th>训练模式</th>
 <th>评估模式</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Dropout</td>
 <td>随机丢弃神经元</td>
 <td>保留所有神经元</td>
 </tr>
-<tr>
+<tr class="even">
 <td>BatchNorm</td>
 <td>使用批次统计</td>
 <td>使用全局统计</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>梯度计算</td>
 <td>开启</td>
 <td>关闭（配合no_grad）</td>
@@ -1378,11 +1326,9 @@ F1 = 2 \cdot \frac{Precision \times Recall}{Precision + Recall}
 <h4 id="数据增强">1. 数据增强</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">transform_train = transforms.Compose([<br>    transforms.RandomRotation(<span class="hljs-number">10</span>),           <span class="hljs-comment"># 随机旋转±10度</span><br>    transforms.RandomAffine(<span class="hljs-number">0</span>, translate=(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>)),  <span class="hljs-comment"># 随机平移</span><br>    transforms.ToTensor(),<br>    transforms.Normalize((<span class="hljs-number">0.1307</span>,), (<span class="hljs-number">0.3081</span>,))<br>])<br></code></pre></td></tr></table></figure>
 <p><strong>效果</strong>：增加训练样本多样性，提升泛化能力</p>
-<h4 id="批标准化batch-normalization">2. 批标准化（Batch
-Normalization）</h4>
+<h4 id="批标准化batch-normalization">2. 批标准化（Batch Normalization）</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-variable language_">self</span>.conv1 = nn.Sequential(<br>    nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, kernel_size=<span class="hljs-number">5</span>),<br>    nn.BatchNorm2d(<span class="hljs-number">10</span>),  <span class="hljs-comment"># 添加BN层</span><br>    nn.ReLU(),<br>    nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>)<br>)<br></code></pre></td></tr></table></figure>
-<p><strong>优点</strong>： - 加速训练 - 允许更大学习率 -
-减少对初始化的依赖</p>
+<p><strong>优点</strong>： - 加速训练 - 允许更大学习率 - 减少对初始化的依赖</p>
 <h4 id="残差连接resnet思想">3. 残差连接（ResNet思想）</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ResBlock</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, channels</span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br>        <span class="hljs-variable language_">self</span>.conv = nn.Sequential(<br>            nn.Conv2d(channels, channels, <span class="hljs-number">3</span>, padding=<span class="hljs-number">1</span>),<br>            nn.BatchNorm2d(channels),<br>            nn.ReLU(),<br>            nn.Conv2d(channels, channels, <span class="hljs-number">3</span>, padding=<span class="hljs-number">1</span>),<br>            nn.BatchNorm2d(channels)<br>        )<br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x</span>):<br>        <span class="hljs-keyword">return</span> F.relu(<span class="hljs-variable language_">self</span>.conv(x) + x)  <span class="hljs-comment"># 残差连接</span><br></code></pre></td></tr></table></figure>
 <h4 id="混合精度训练">4. 混合精度训练</h4>
@@ -1391,29 +1337,29 @@ Normalization）</h4>
 <h3 id="超参数调优建议">6.3 超参数调优建议</h3>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>超参数</th>
 <th>推荐范围</th>
 <th>调优策略</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>学习率</td>
 <td>1e-4 ~ 1e-1</td>
 <td>网格搜索/学习率查找器</td>
 </tr>
-<tr>
+<tr class="even">
 <td>batch_size</td>
 <td>32 ~ 256</td>
 <td>根据显存调整</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>卷积核大小</td>
 <td>3×3, 5×5</td>
 <td>小卷积核更常用</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Dropout率</td>
 <td>0.3 ~ 0.5</td>
 <td>防止过拟合</td>
@@ -1438,38 +1384,28 @@ Normalization）</h4>
 <hr />
 <h2 id="八总结">八、总结</h2>
 <p>本文详细介绍了使用PyTorch构建MNIST手写数字识别系统的完整流程，涵盖了：</p>
-<p><strong>核心技术点</strong>： - 数据加载与预处理 - CNN网络架构设计 -
-训练流程与优化 - 模型评估与可视化</p>
-<p><strong>关键要点</strong>： 1. 数据标准化是提升模型性能的基础 2.
-CNN通过卷积和池化提取图像特征 3. 合理的优化器和学习率调度至关重要 4.
-多维度评估指标全面了解模型性能</p>
-<p><strong>优化方向</strong>： - 数据增强提升泛化能力 - Batch
-Normalization加速训练 - Dropout防止过拟合 - 混合精度训练提升效率</p>
-<p><strong>实践建议</strong>： - 从简单模型开始，逐步增加复杂度 -
-重视数据质量和预处理 - 定期保存模型和可视化训练过程 -
-使用TensorBoard监控训练指标</p>
+<p><strong>核心技术点</strong>： - 数据加载与预处理 - CNN网络架构设计 - 训练流程与优化 - 模型评估与可视化</p>
+<p><strong>关键要点</strong>： 1. 数据标准化是提升模型性能的基础 2. CNN通过卷积和池化提取图像特征 3. 合理的优化器和学习率调度至关重要 4. 多维度评估指标全面了解模型性能</p>
+<p><strong>优化方向</strong>： - 数据增强提升泛化能力 - Batch Normalization加速训练 - Dropout防止过拟合 - 混合精度训练提升效率</p>
+<p><strong>实践建议</strong>： - 从简单模型开始，逐步增加复杂度 - 重视数据质量和预处理 - 定期保存模型和可视化训练过程 - 使用TensorBoard监控训练指标</p>
 <hr />
 <h2 id="参考资源">参考资源</h2>
 <h3 id="官方文档">官方文档</h3>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/">PyTorch官方文档</a></li>
-<li><a
-target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/index.html">torchvision文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://pytorch.org/vision/stable/index.html">torchvision文档</a></li>
 <li><a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/mnist/">MNIST数据集</a></li>
 </ul>
 <h3 id="进阶阅读">进阶阅读</h3>
 <ul>
 <li>《深度学习》（Ian Goodfellow）</li>
 <li>《动手学深度学习》（李沐）</li>
-<li><a target="_blank" rel="noopener" href="http://cs231n.stanford.edu/">CS231n: Convolutional Neural
-Networks</a></li>
+<li><a target="_blank" rel="noopener" href="http://cs231n.stanford.edu/">CS231n: Convolutional Neural Networks</a></li>
 </ul>
 <h3 id="代码仓库">代码仓库</h3>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/pytorch/examples">PyTorch
-Examples</a></li>
-<li><a target="_blank" rel="noopener" href="https://paperswithcode.com/dataset/mnist">Papers with Code
-- MNIST</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/pytorch/examples">PyTorch Examples</a></li>
+<li><a target="_blank" rel="noopener" href="https://paperswithcode.com/dataset/mnist">Papers with Code - MNIST</a></li>
 </ul>
 <hr />
 <h2 id="附录完整代码清单">附录：完整代码清单</h2>
@@ -1484,8 +1420,7 @@ Examples</a></li>
 <strong>日期</strong>：2024年<br />
 <strong>版本</strong>：1.0</p>
 <blockquote>
-<p>本文所有代码均已在PyTorch
-2.0+环境下测试通过。如有问题欢迎交流讨论！</p>
+<p>本文所有代码均已在PyTorch 2.0+环境下测试通过。如有问题欢迎交流讨论！</p>
 </blockquote>
 
                 
