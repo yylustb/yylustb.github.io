@@ -812,27 +812,27 @@
   
   
   <entry>
-    <title>鲁棒控制系列 - 1. test</title>
-    <link href="/2020/11/15/note/robust_ctrl/robust_ctrl_1/"/>
-    <url>/2020/11/15/note/robust_ctrl/robust_ctrl_1/</url>
+    <title>微分方程 - 1. test</title>
+    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
+    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>ctrl</category>
+      <category>math</category>
       
-      <category>robust-ctrl</category>
+      <category>DiffEqn</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>ctrl</tag>
+      <tag>math</tag>
       
-      <tag>robust control</tag>
+      <tag>DiffEqn</tag>
       
     </tags>
     
@@ -870,35 +870,6 @@
   
   
   <entry>
-    <title>自适应控制系列 - 1. test</title>
-    <link href="/2020/11/15/note/adapt_ctrl/adap_ctrl_1/"/>
-    <url>/2020/11/15/note/adapt_ctrl/adap_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ctrl</category>
-      
-      <category>adapt-ctrl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ctrl</tag>
-      
-      <tag>adaptive control</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>线性代数 - 1. test</title>
     <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
     <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
@@ -928,27 +899,27 @@
   
   
   <entry>
-    <title>微分方程 - 1. test</title>
-    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
-    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
+    <title>自适应控制系列 - 1. test</title>
+    <link href="/2020/11/15/note/adapt_ctrl/adap_ctrl_1/"/>
+    <url>/2020/11/15/note/adapt_ctrl/adap_ctrl_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>math</category>
+      <category>ctrl</category>
       
-      <category>DiffEqn</category>
+      <category>adapt-ctrl</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>math</tag>
+      <tag>ctrl</tag>
       
-      <tag>DiffEqn</tag>
+      <tag>adaptive control</tag>
       
     </tags>
     
@@ -957,27 +928,56 @@
   
   
   <entry>
-    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
-    <link href="/2020/11/15/opt/adp/adp_1/"/>
-    <url>/2020/11/15/opt/adp/adp_1/</url>
+    <title>数值计算系列 - 1. test</title>
+    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
+    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>opt</category>
+      <category>math</category>
       
-      <category>adp</category>
+      <category>NumAnalysis</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>opt</tag>
+      <tag>math</tag>
       
-      <tag>ADP</tag>
+      <tag>Numeric Analysis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>随机分析系列 - 1. test</title>
+    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
+    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>StoAnalysis</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Stochastic Analysis</tag>
       
     </tags>
     
@@ -1015,47 +1015,18 @@
   
   
   <entry>
-    <title>随机分析系列 - 1. test</title>
-    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
-    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
+    <link href="/2020/11/15/opt/adp/adp_1/"/>
+    <url>/2020/11/15/opt/adp/adp_1/</url>
     
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>Stochastic</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>Stochastic</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>强化学习系列 - 1. test</title>
-    <link href="/2020/11/15/opt/rl/rl_1/"/>
-    <url>/2020/11/15/opt/rl/rl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
       <category>opt</category>
       
-      <category>rl</category>
+      <category>adp</category>
       
     </categories>
     
@@ -1064,7 +1035,7 @@
       
       <tag>opt</tag>
       
-      <tag>Reinforcement Learning</tag>
+      <tag>ADP</tag>
       
     </tags>
     
@@ -1131,27 +1102,56 @@
   
   
   <entry>
-    <title>数值计算系列 - 1. test</title>
-    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
-    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
+    <title>鲁棒控制系列 - 1. test</title>
+    <link href="/2020/11/15/note/robust_ctrl/robust_ctrl_1/"/>
+    <url>/2020/11/15/note/robust_ctrl/robust_ctrl_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>math</category>
+      <category>ctrl</category>
       
-      <category>NumericAnalysis</category>
+      <category>robust-ctrl</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>math</tag>
+      <tag>ctrl</tag>
       
-      <tag>NumericAnalysis</tag>
+      <tag>robust control</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>强化学习系列 - 1. test</title>
+    <link href="/2020/11/15/opt/rl/rl_1/"/>
+    <url>/2020/11/15/opt/rl/rl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>rl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>Reinforcement Learning</tag>
       
     </tags>
     
