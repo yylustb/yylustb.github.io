@@ -109,11 +109,11 @@
     
     <tags>
       
+      <tag>MathJax</tag>
+      
       <tag>VS Code</tag>
       
       <tag>KaTex</tag>
-      
-      <tag>MathJax</tag>
       
     </tags>
     
@@ -144,9 +144,9 @@
       
       <tag>Fluid</tag>
       
-      <tag>MathJax</tag>
-      
       <tag>pandoc</tag>
+      
+      <tag>MathJax</tag>
       
     </tags>
     
@@ -177,9 +177,9 @@
       
       <tag>Fluid</tag>
       
-      <tag>MathJax</tag>
-      
       <tag>pandoc</tag>
+      
+      <tag>MathJax</tag>
       
     </tags>
     
@@ -725,35 +725,6 @@
   
   
   <entry>
-    <title>神经网络 - 1. test</title>
-    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
-    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ai</category>
-      
-      <category>nn</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ai</tag>
-      
-      <tag>nn</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>机器学习 - 1. test</title>
     <link href="/2020/11/15/ai/ml/MachineLearning_1/"/>
     <url>/2020/11/15/ai/ml/MachineLearning_1/</url>
@@ -812,85 +783,27 @@
   
   
   <entry>
-    <title>微分方程 - 1. test</title>
-    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
-    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
+    <title>神经网络 - 1. test</title>
+    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
+    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>math</category>
+      <category>ai</category>
       
-      <category>DiffEqn</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>DiffEqn</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>自适应控制系列 - 1. test</title>
-    <link href="/2020/11/15/note/adapt_ctrl/adap_ctrl_1/"/>
-    <url>/2020/11/15/note/adapt_ctrl/adap_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ctrl</category>
-      
-      <category>adapt-ctrl</category>
+      <category>nn</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>ctrl</tag>
+      <tag>ai</tag>
       
-      <tag>adaptive control</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>随机分析系列 - 1. test</title>
-    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
-    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>Stochastic</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>Stochastic</tag>
+      <tag>nn</tag>
       
     </tags>
     
@@ -928,6 +841,64 @@
   
   
   <entry>
+    <title>李群与李代数 - 1. test</title>
+    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
+    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>LieAlgebra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>LieAlgebra</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自适应控制系列 - 1. test</title>
+    <link href="/2020/11/15/note/adapt_ctrl/adap_ctrl_1/"/>
+    <url>/2020/11/15/note/adapt_ctrl/adap_ctrl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ctrl</category>
+      
+      <category>adapt-ctrl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ctrl</tag>
+      
+      <tag>adaptive control</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>线性代数 - 1. test</title>
     <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
     <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
@@ -957,9 +928,9 @@
   
   
   <entry>
-    <title>数值计算系列 - 1. test</title>
-    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
-    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
+    <title>微分方程 - 1. test</title>
+    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
+    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -968,7 +939,7 @@
       
       <category>math</category>
       
-      <category>Numeric</category>
+      <category>DiffEqn</category>
       
     </categories>
     
@@ -977,7 +948,7 @@
       
       <tag>math</tag>
       
-      <tag>Numeric</tag>
+      <tag>DiffEqn</tag>
       
     </tags>
     
@@ -1044,6 +1015,35 @@
   
   
   <entry>
+    <title>随机分析系列 - 1. test</title>
+    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
+    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>Stochastic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Stochastic</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>强化学习系列 - 1. test</title>
     <link href="/2020/11/15/opt/rl/rl_1/"/>
     <url>/2020/11/15/opt/rl/rl_1/</url>
@@ -1065,35 +1065,6 @@
       <tag>opt</tag>
       
       <tag>Reinforcement Learning</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>最优控制系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
-    <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>opt-ctrl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>optimal control</tag>
       
     </tags>
     
@@ -1131,9 +1102,38 @@
   
   
   <entry>
-    <title>李群与李代数 - 1. test</title>
-    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
-    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
+    <title>最优控制系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
+    <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>opt-ctrl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>optimal control</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数值计算系列 - 1. test</title>
+    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
+    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -1142,7 +1142,7 @@
       
       <category>math</category>
       
-      <category>LieAlgebra</category>
+      <category>NumericAnalysis</category>
       
     </categories>
     
@@ -1151,7 +1151,7 @@
       
       <tag>math</tag>
       
-      <tag>LieAlgebra</tag>
+      <tag>NumericAnalysis</tag>
       
     </tags>
     
