@@ -126,7 +126,7 @@
     <link href="/2025/11/15/code/HEXO/hexo_4/"/>
     <url>/2025/11/15/code/HEXO/hexo_4/</url>
     
-    <content type="html"><![CDATA[<p>本页用于测试 <strong>pandoc + MathJax</strong> 在 Hexo/Fluid 中的渲染效果。</p><h2 id="行内公式">1. 行内公式</h2><p>这是一个行内公式：<span class="math inline">\(E = mc^2\)</span>，<br />再来一个：<span class="math inline">\(\alpha, \beta, \gamma \in \mathbb{R}\)</span>，<br />以及一个简单的向量：<span class="math inline">\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)</span>。</p><h2 id="单行行间公式">2. 单行行间公式 + + </h2><p>下面是一个带编号的行间公式，我们给它加上 <code>\label</code>：</p><p><span class="math display">\[\begin{equation}E = mc^2\label{eq:einstein}\end{equation}\]</span></p><p>现在在正文中引用它：式 <span class="math inline">\(\eqref{eq:einstein}\)</span> 是著名的质能方程。</p><h2 id="多行-align-环境">3. 多行 align 环境 + + </h2><p>测试多行对齐的推导过程，并且对其中一行添加 <code>\tag</code>： <span id="eq:J"></span> <span class="math display">\[\begin{align}J(\theta)  &amp;= \mathbb{E}_{s \sim d^\pi,\, a \sim \pi_\theta}     \bigl[ r(s,a) \bigr] \label{eq:obj} \\[4pt]\nabla_\theta J(\theta)  &amp;= \mathbb{E}_{s \sim d^\pi,\, a \sim \pi_\theta}     \Bigl[ \nabla_\theta \log \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]     \label{eq:pg-basic} \\[4pt]  &amp;= \mathbb{E}_{s \sim d^\pi}     \Bigl[ \sum_a \nabla_\theta \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]     \tag{PG*} \label{eq:pg-tag}\end{align}\]</span></p><p>上面我们给了三个公式编号：</p><ul><li>目标函数：式 <span class="math inline">\(\eqref{eq:obj}\)</span>；</li><li>基本形式的策略梯度：式 <span class="math inline">\(\eqref{eq:pg-basic}\)</span>；</li><li>带自定义标签的那一行：式 <span class="math inline">\(\eqref{eq:pg-tag}\)</span>，其显式编号为 <code>(PG*)</code>。见公式 <a href="#eq:J">(2)</a>。</li></ul><h2 id="更复杂的符号与矩阵">4. 更复杂的符号与矩阵</h2><p>再测试希腊字母、集合、矩阵等：</p><p>行内测试：<span class="math inline">\(\forall \epsilon &gt; 0,\ \exists \delta &gt; 0\)</span>，<br />使得当 <span class="math inline">\(0 &lt; \lVert x - x^\ast \rVert &lt; \delta\)</span> 时，有 <span class="math inline">\(\lVert f(x) - f(x^\ast) \rVert &lt; \epsilon\)</span>。</p><p>行间矩阵：</p><p><span class="math display">\[\begin{equation}A =\begin{bmatrix}  1      &amp; 0      &amp; \cdots &amp; 0 \\  0      &amp; 1      &amp; \cdots &amp; 0 \\  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\  0      &amp; 0      &amp; \cdots &amp; 1\end{bmatrix}, \quad\boldsymbol{b} =\begin{bmatrix}  b_1 \\ b_2 \\ \vdots \\ b_n\end{bmatrix}.\label{eq:matrix}\end{equation}\]</span></p><p>矩阵 <span class="math inline">\(A\)</span> 和向量 <span class="math inline">\(\boldsymbol{b}\)</span> 的定义如式  所示。</p><h2 id="分段函数与条件概率">5. 分段函数与条件概率</h2><p>最后测试分段函数和概率符号：</p><p><span class="math display">\[\begin{equation}p(x) =\begin{cases}\lambda e^{-\lambda x}, &amp; x \ge 0, \\0,                       &amp; x &lt; 0,\end{cases}\quad \lambda &gt; 0.\label{eq:exp}\end{equation}\]</span></p><p>条件概率示例：</p><p><span class="math display">\[\begin{equation}\mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)},\qquad \mathbb{P}(B) &gt; 0.\label{eq:cond-prob}\end{equation}\]</span></p><p>在正文中再次引用式  和式 ，确认交叉引用是否正常工作。</p><h2 id="section">6.</h2><ul><li><p>用 <code>Markdown</code> / <code>HTML</code> 做个锚点，伪装成可引用公式 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;eq:newton&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>$$<br>F = ma \tag&#123;1&#125;<br>$$<br><br>在文中这样写：见公式 [<span class="hljs-string">(1)</span>](<span class="hljs-link">#eq:newton</span>)。<br><br></code></pre></td></tr></table></figure></p><p>渲染效果如下</p><p><span id="eq:newton"></span> <span class="math display">\[F = ma \tag{1}\]</span> 在文中这样写：见公式 <a href="#eq:newton">(1)</a>。</p></li></ul><hr /><p>如果本页所有公式（行内、行间、多行 align、、自定义 + ）都正常显示，<br />说明你的 <strong>pandoc + MathJax + Fluid 配置已经完全 OK</strong> 了。</p>]]></content>
+    <content type="html"><![CDATA[<p>本页用于测试 <strong>pandoc + MathJax</strong> 在 Hexo/Fluid 中的渲染效果。</p><h2 id="行内公式">1. 行内公式</h2><p>这是一个行内公式：<span class="math inline">\(E = mc^2\)</span>，<br />再来一个：<span class="math inline">\(\alpha, \beta, \gamma \in \mathbb{R}\)</span>，<br />以及一个简单的向量：<span class="math inline">\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)</span>。</p><h2 id="单行行间公式-label-eqref">2. 单行行间公式 + <code>\label</code> + <code>\eqref</code></h2><p>下面是一个带编号的行间公式，我们给它加上 <code>\label</code>：</p><p><span class="math display">\[\begin{equation}E = mc^2\label{eq:einstein}\end{equation}\]</span></p><p>现在在正文中引用它：式 <span class="math inline">\(\eqref{eq:einstein}\)</span> 是著名的质能方程。</p><h2 id="多行-align-环境-tag-label">3. 多行 align 环境 + <code>\tag</code> + <code>\label</code></h2><p>测试多行对齐的推导过程，并且对其中一行添加 <code>\tag</code>： <span id="eq:J"></span></p><p><span class="math display">\[\begin{align}J(\theta)  &amp;= \mathbb{E}_{s \sim d^\pi,\, a \sim \pi_\theta}     \bigl[ r(s,a) \bigr] \label{eq:obj} \\[4pt]\nabla_\theta J(\theta)  &amp;= \mathbb{E}_{s \sim d^\pi,\, a \sim \pi_\theta}     \Bigl[ \nabla_\theta \log \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]     \label{eq:pg-basic} \\[4pt]  &amp;= \mathbb{E}_{s \sim d^\pi}     \Bigl[ \sum_a \nabla_\theta \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]     \tag{PG*} \label{eq:pg-tag}\end{align}\]</span></p><p>上面我们给了三个公式编号：</p><ul><li>目标函数：式 <span class="math inline">\(\eqref{eq:obj}\)</span>；</li><li>基本形式的策略梯度：式 <span class="math inline">\(\eqref{eq:pg-basic}\)</span>；</li><li>带自定义标签的那一行：式 <span class="math inline">\(\eqref{eq:pg-tag}\)</span>，其显式编号为 <code>(PG*)</code>。见公式 <a href="#eq:J">(2)</a>。</li></ul><h2 id="更复杂的符号与矩阵">4. 更复杂的符号与矩阵</h2><p>再测试希腊字母、集合、矩阵等：</p><p>行内测试：<span class="math inline">\(\forall \epsilon &gt; 0,\ \exists \delta &gt; 0\)</span>，<br />使得当 <span class="math inline">\(0 &lt; \lVert x - x^\ast \rVert &lt; \delta\)</span> 时，有 <span class="math inline">\(\lVert f(x) - f(x^\ast) \rVert &lt; \epsilon\)</span>。</p><p>行间矩阵：</p><p><span class="math display">\[\begin{equation}A =\begin{bmatrix}  1      &amp; 0      &amp; \cdots &amp; 0 \\  0      &amp; 1      &amp; \cdots &amp; 0 \\  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\  0      &amp; 0      &amp; \cdots &amp; 1\end{bmatrix}, \quad\boldsymbol{b} =\begin{bmatrix}  b_1 \\ b_2 \\ \vdots \\ b_n\end{bmatrix}.\label{eq:matrix}\end{equation}\]</span></p><p>矩阵 <span class="math inline">\(A\)</span> 和向量 <span class="math inline">\(\boldsymbol{b}\)</span> 的定义如式  所示。</p><h2 id="分段函数与条件概率">5. 分段函数与条件概率</h2><p>最后测试分段函数和概率符号：</p><p><span class="math display">\[\begin{equation}p(x) =\begin{cases}\lambda e^{-\lambda x}, &amp; x \ge 0, \\0,                       &amp; x &lt; 0,\end{cases}\quad \lambda &gt; 0.\label{eq:exp}\end{equation}\]</span></p><p>条件概率示例：</p><p><span class="math display">\[\begin{equation}\mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)},\qquad \mathbb{P}(B) &gt; 0.\label{eq:cond-prob}\end{equation}\]</span></p><p>在正文中再次引用式  和式 ，确认交叉引用是否正常工作。</p><h2 id="section">6.</h2><ul><li><p>用 <code>Markdown</code> / <code>HTML</code> 做个锚点，伪装成可引用公式 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;eq:newton&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><br>$$<br>F = ma \tag&#123;1&#125;<br>$$<br><br>在文中这样写：见公式 [<span class="hljs-string">(1)</span>](<span class="hljs-link">#eq:newton</span>)。<br><br></code></pre></td></tr></table></figure></p><p>渲染效果如下</p><p><span id="eq:newton"></span> <span class="math display">\[F = ma \tag{1}\]</span> 在文中这样写：见公式 <a href="#eq:newton">(1)</a>。</p></li></ul><hr /><p>如果本页所有公式（行内、行间、多行 align、、自定义 + ）都正常显示，<br />说明你的 <strong>pandoc + MathJax + Fluid 配置已经完全 OK</strong> 了。</p>]]></content>
     
     
     <categories>
@@ -725,241 +725,9 @@
   
   
   <entry>
-    <title>深度学习 - 1. test</title>
-    <link href="/2020/11/15/ai/dl/DeepLearning_1/"/>
-    <url>/2020/11/15/ai/dl/DeepLearning_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ai</category>
-      
-      <category>dl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ai</tag>
-      
-      <tag>dl</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>神经网络 - 1. test</title>
-    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
-    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ai</category>
-      
-      <category>nn</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ai</tag>
-      
-      <tag>nn</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>机器学习 - 1. test</title>
-    <link href="/2020/11/15/ai/ml/MachineLearning_1/"/>
-    <url>/2020/11/15/ai/ml/MachineLearning_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ai</category>
-      
-      <category>ml</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ai</tag>
-      
-      <tag>ml</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
-    <link href="/2020/11/15/opt/adp/adp_1/"/>
-    <url>/2020/11/15/opt/adp/adp_1/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>adp</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>ADP</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>凸优化系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_cvx/opt_cvx_1/"/>
-    <url>/2020/11/15/opt/opt_cvx/opt_cvx_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>opt-cvx</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>convex optimization</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>优化基础系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_basics/opt_basics_1/"/>
-    <url>/2020/11/15/opt/opt_basics/opt_basics_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>opt-basics</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>optimization basics</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>最优控制系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
-    <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>opt-ctrl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>optimal control</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>强化学习系列 - 1. test</title>
-    <link href="/2020/11/15/opt/rl/rl_1/"/>
-    <url>/2020/11/15/opt/rl/rl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>rl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>Reinforcement Learning</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>数值计算系列 - 1. 测试</title>
-    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
-    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
+    <title>微分方程 - 1. test</title>
+    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
+    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -968,7 +736,7 @@
       
       <category>math</category>
       
-      <category>NumAnalysis</category>
+      <category>DiffEqn</category>
       
     </categories>
     
@@ -977,7 +745,7 @@
       
       <tag>math</tag>
       
-      <tag>Numeric Analysis</tag>
+      <tag>DiffEqn</tag>
       
     </tags>
     
@@ -1044,9 +812,38 @@
   
   
   <entry>
-    <title>微分方程 - 1. test</title>
-    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
-    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
+    <title>深度学习 - 1. test</title>
+    <link href="/2020/11/15/ai/dl/DeepLearning_1/"/>
+    <url>/2020/11/15/ai/dl/DeepLearning_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ai</category>
+      
+      <category>dl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+      <tag>dl</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数值计算系列 - 1. 测试</title>
+    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
+    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -1055,7 +852,7 @@
       
       <category>math</category>
       
-      <category>DiffEqn</category>
+      <category>NumAnalysis</category>
       
     </categories>
     
@@ -1064,7 +861,7 @@
       
       <tag>math</tag>
       
-      <tag>DiffEqn</tag>
+      <tag>Numeric Analysis</tag>
       
     </tags>
     
@@ -1094,6 +891,64 @@
       <tag>math</tag>
       
       <tag>Stochastic Analysis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>机器学习 - 1. test</title>
+    <link href="/2020/11/15/ai/ml/MachineLearning_1/"/>
+    <url>/2020/11/15/ai/ml/MachineLearning_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ai</category>
+      
+      <category>ml</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+      <tag>ml</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>神经网络 - 1. test</title>
+    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
+    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ai</category>
+      
+      <category>nn</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ai</tag>
+      
+      <tag>nn</tag>
       
     </tags>
     
@@ -1152,6 +1007,151 @@
       <tag>ctrl</tag>
       
       <tag>adaptive control</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
+    <link href="/2020/11/15/opt/adp/adp_1/"/>
+    <url>/2020/11/15/opt/adp/adp_1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>adp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>ADP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>优化基础系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_basics/opt_basics_1/"/>
+    <url>/2020/11/15/opt/opt_basics/opt_basics_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>opt-basics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>optimization basics</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>凸优化系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_cvx/opt_cvx_1/"/>
+    <url>/2020/11/15/opt/opt_cvx/opt_cvx_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>opt-cvx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>convex optimization</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>最优控制系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
+    <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>opt-ctrl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>optimal control</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>强化学习系列 - 1. test</title>
+    <link href="/2020/11/15/opt/rl/rl_1/"/>
+    <url>/2020/11/15/opt/rl/rl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>rl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>Reinforcement Learning</tag>
       
     </tags>
     

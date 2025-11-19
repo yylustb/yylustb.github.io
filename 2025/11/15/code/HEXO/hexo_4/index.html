@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/hexo.png">
 <meta property="article:published_time" content="2025-11-15T00:01:39.000Z">
-<meta property="article:modified_time" content="2025-11-17T17:15:46.000Z">
+<meta property="article:modified_time" content="2025-11-19T02:19:40.368Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="Fluid">
 <meta property="article:tag" content="Hexo">
@@ -522,7 +522,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          619 字
+          623 字
         
       </span>
     
@@ -1067,7 +1067,7 @@
 <p>这是一个行内公式：<span class="math inline">\(E = mc^2\)</span>，<br />
 再来一个：<span class="math inline">\(\alpha, \beta, \gamma \in \mathbb{R}\)</span>，<br />
 以及一个简单的向量：<span class="math inline">\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)</span>。</p>
-<h2 id="单行行间公式">2. 单行行间公式 + + </h2>
+<h2 id="单行行间公式-label-eqref">2. 单行行间公式 + <code>\label</code> + <code>\eqref</code></h2>
 <p>下面是一个带编号的行间公式，我们给它加上 <code>\label</code>：</p>
 <p><span class="math display">\[
 \begin{equation}
@@ -1076,9 +1076,9 @@ E = mc^2
 \end{equation}
 \]</span></p>
 <p>现在在正文中引用它：式 <span class="math inline">\(\eqref{eq:einstein}\)</span> 是著名的质能方程。</p>
-<h2 id="多行-align-环境">3. 多行 align 环境 + + </h2>
-<p>测试多行对齐的推导过程，并且对其中一行添加 <code>\tag</code>： <span id="eq:J"></span> <span class="math display">\[
-\begin{align}
+<h2 id="多行-align-环境-tag-label">3. 多行 align 环境 + <code>\tag</code> + <code>\label</code></h2>
+<p>测试多行对齐的推导过程，并且对其中一行添加 <code>\tag</code>： <span id="eq:J"></span></p>
+<p><span class="math display">\[\begin{align}
 J(\theta)
   &amp;= \mathbb{E}_{s \sim d^\pi,\, a \sim \pi_\theta}
      \bigl[ r(s,a) \bigr] \label{eq:obj} \\[4pt]
@@ -1089,8 +1089,7 @@ J(\theta)
   &amp;= \mathbb{E}_{s \sim d^\pi}
      \Bigl[ \sum_a \nabla_\theta \pi_\theta(a \mid s)\, Q^\pi(s,a) \Bigr]
      \tag{PG*} \label{eq:pg-tag}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>上面我们给了三个公式编号：</p>
 <ul>
 <li>目标函数：式 <span class="math inline">\(\eqref{eq:obj}\)</span>；</li>
@@ -1589,21 +1588,7 @@ F = ma \tag{1}
               }
             }
           };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
+        } 
       </script>
     
 
