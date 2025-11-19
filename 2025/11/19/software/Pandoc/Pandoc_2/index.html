@@ -1,0 +1,1275 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="yylustb">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献引用               【问题描述】tex 文件使用 bibtex格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\bibliography&#123;bibfile&#125;     % bib文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案">
+<meta property="og:url" content="http://yylustb.github.io/2025/11/19/software/Pandoc/Pandoc_2/index.html">
+<meta property="og:site_name" content="远大前程">
+<meta property="og:description" content="在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献引用               【问题描述】tex 文件使用 bibtex格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\bibliography&#123;bibfile&#125;     % bib文">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yylustb.github.io/img/index/Pandoc.png">
+<meta property="article:published_time" content="2025-11-19T09:54:00.000Z">
+<meta property="article:modified_time" content="2025-11-19T22:14:02.553Z">
+<meta property="article:author" content="yylustb">
+<meta property="article:tag" content="Pandoc">
+<meta property="article:tag" content="software">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yylustb.github.io/img/index/Pandoc.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案 - 远大前程</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yylustb.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>远大前程</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>数学基础</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/NumAnalysis/" target="_self">
+                    
+                    <span>数值计算</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/StoAnalysis/" target="_self">
+                    
+                    <span>随机分析</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/DiffEqn/" target="_self">
+                    
+                    <span>微分方程</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/LinAlgebra/" target="_self">
+                    
+                    <span>线性代数</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/LieAlgebra/" target="_self">
+                    
+                    <span>李群与李代数</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>优化方法</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/opt-basics/" target="_self">
+                    
+                    <span>优化基础</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/opt-cvx/" target="_self">
+                    
+                    <span>凸优化</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/adp/" target="_self">
+                    
+                    <span>自适应动态规划</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/opt-ctrl/" target="_self">
+                    
+                    <span>最优控制</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>控制理论</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ctrl/adapt-ctrl/" target="_self">
+                    
+                    <span>自适应控制</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ctrl/robust-ctrl/" target="_self">
+                    
+                    <span>鲁棒控制</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>操作系统</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/os/Windows/" target="_self">
+                    
+                    <span>Windows</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/os/Ubuntu/" target="_self">
+                    
+                    <span>Ubuntu</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>编程语言</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Cpp/" target="_self">
+                    
+                    <span>C++</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Python/" target="_self">
+                    
+                    <span>Python</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/GPU/" target="_self">
+                    
+                    <span>GPU</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/LaTex/" target="_self">
+                    
+                    <span>LaTex</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Pytorch/" target="_self">
+                    
+                    <span>Pytorch</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/TensorFlow/" target="_self">
+                    
+                    <span>TensorFlow</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/VS-Code/" target="_self">
+                    
+                    <span>VS Code</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Git/" target="_self">
+                    
+                    <span>Git</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Hexo/" target="_self">
+                    
+                    <span>Hexo Fluid</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>人工智能</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/ml/" target="_self">
+                    
+                    <span>机器学习</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/nn/" target="_self">
+                    
+                    <span>神经网络</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/dl/" target="_self">
+                    
+                    <span>深度学习</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/rl/" target="_self">
+                    
+                    <span>强化学习</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>实用软件</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/software/Pandoc/" target="_self">
+                    
+                    <span>Pandoc</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg-sky.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-11-19 09:54" pubdate>
+          2025年11月19日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="software"
+        id="heading-f9fa10ba956cacf91d7878861139efb9" role="tab" data-toggle="collapse" href="#collapse-f9fa10ba956cacf91d7878861139efb9"
+        aria-expanded="true"
+      >
+        software
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-f9fa10ba956cacf91d7878861139efb9"
+           role="tabpanel" aria-labelledby="heading-f9fa10ba956cacf91d7878861139efb9">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Pandoc"
+        id="heading-61279f747c1d029ac111f19e72958822" role="tab" data-toggle="collapse" href="#collapse-61279f747c1d029ac111f19e72958822"
+        aria-expanded="true"
+      >
+        Pandoc
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-61279f747c1d029ac111f19e72958822"
+           role="tabpanel" aria-labelledby="heading-61279f747c1d029ac111f19e72958822">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/19/software/Pandoc/Pandoc_1/" title="Pandoc系列 - 1. 安装和基本语法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Pandoc系列 - 1. 安装和基本语法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/11/19/software/Pandoc/Pandoc_2/" title="Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。</p>
+<p>下面是对于一些情况的讨论以及解决方案。</p>
+<h2 id="文献引用">1. 文献引用</h2>
+<!-- info 可以换成：
+primary
+success
+warning
+danger
+info -->
+<div class="note note-primary">
+            <p>【问题描述】<code>tex</code> 文件使用 <code>bibtex</code>格式引用文献： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\bibliographystyle</span>&#123;plain&#125;  <span class="hljs-comment">% 参考文献格式</span><br><span class="hljs-keyword">\bibliography</span>&#123;bibfile&#125;     <span class="hljs-comment">% bib文件名</span><br></code></pre></td></tr></table></figure> 执行以下指令进行 <code>tex</code> →<code>docx</code> 转换： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s output.docx -o  input.tex<br></code></pre></td></tr></table></figure> 生成的 word文档中，既没有参考文献列表，正文中的引用 也没有显示</p>
+          </div>
+<div class="note note-info">
+            <p>【解决方案】进行 <code>tex</code> → <code>docx</code>转换时添加以下指令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s template.tex --citeproc --bibliography=template.bib -o template.docx<br></code></pre></td></tr></table></figure></p>
+          </div>
+<p>说明：</p>
+<ul>
+<li><code>--citeproc</code>：让 Pandoc 内置的 “citation processor”
+工作：
+<ul>
+<li>识别文中的引用（比如 <span class="citation"
+data-cites="Smith2020">[@Smith2020]</span> 这种 pandoc-style 引用）</li>
+<li>按照引用样式把它们排版成真正的引文格式</li>
+<li>自动生成文末参考文献列表（bibliography）</li>
+</ul></li>
+<li><code>--bibliography=template.bib</code>：指定参考文献数据库文件。
+<ul>
+<li>citeproc 会从这个 .bib 里按键值（key）查文献条目。</li>
+<li>文献格式和引用格式还有问题，还需进一步调整</li>
+</ul></li>
+</ul>
+<h2 id="字体问题">2. 字体问题</h2>
+<div class="note note-primary">
+            <p>【问题描述】LaTex 公式中的正体 <code>${\rm d}$</code>无法处理，Pandoc 会报错</p>
+          </div>
+<div class="note note-info">
+            <p>【解决方案】<code>${\rm d}$</code> → <code>$\mathrm{d}x$</code></p>
+          </div>
+<h2 id="编号问题">3. 编号问题</h2>
+<h2 id="没有编号">3.1 没有编号</h2>
+<div class="note note-primary">
+            【问题描述】章节、公式都没有编号 -和<p>等章节编号，在word中不显示 - eqnarray公式没有自动编号</p>
+          </div>
+<div class="note note-info">
+            <p>【解决方案】</p><ol type="1"><li><p><code>conda</code> 创建 <code>python</code> 环境<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n pandoc_py310 python=3.10<br></code></pre></td></tr></table></figure></p></li><li><p>激活环境 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate pandoc_py310<br></code></pre></td></tr></table></figure> 接下来的操作都在 <code>pandoc_py310</code>环境下进行。</p></li><li><p><code>pip</code> 安装 <code>pandoc-tex-numbering</code> 插件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pandoc-tex-numbering<br></code></pre></td></tr></table></figure></p></li><li><p>进行 <code>tex</code> → <code>docx</code> 转换时使用以下指令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex --citeproc --bibliography=template.bib -F pandoc-tex-numbering -o tempalte.docx<br></code></pre></td></tr></table></figure></p></li></ol>
+          </div>
+<p>说明：</p>
+<ul>
+<li>只改命令行参数是解决不了“自动编号”的问题的</li>
+<li>必须加一个专门的 pandoc 过滤器，在 LaTeX→Word 的转换过程中，把
+eqnarray 等环境里的编号“补”出来。</li>
+<li><code>pandoc-tex-numbering</code>：这个过滤器就是处理从 LaTeX 转成
+docx 时【自动编号】的问题。</li>
+<li><code>--filter</code> / <code>-F</code>
+(二者等价)：调用外部可执行程序作为过滤器（这里是
+<code>pandoc-tex-numbering</code>，所以可以推测：<code>pip</code> 安装
+<code>pandoc-tex-numbering</code> 插件后，提供了一个可执行程序）</li>
+</ul>
+<h2 id="eqnarray-环境慎用">3.3 <code>eqnarray</code> 环境慎用</h2>
+<div class="note note-primary">
+            <p>【问题描述】<code>Pandoc</code> 进行 <code>tex</code> →<code>docx</code> 转换时，直接使用<code>eqnarray</code>环境会出问题，需要替换或者额外处理！</p>
+          </div>
+<p>主要有两个问题：</p>
+<ul>
+<li>Pandoc 会将 <code>eqnarray</code>
+环境中的公式整块处理，不能实现在最后一行添加自动编号</li>
+<li><code>eqnarray</code> 环境中的 <code>\nonumber</code> 指令在
+<code>Pandoc</code> 中失效，具体见下图</li>
+</ul>
+<figure>
+<img src="Pandoc_2-2.png" srcset="/img/loading.gif" lazyload
+alt="eqnarray 环境中 \nonumber 指令不能正常工作" />
+<figcaption aria-hidden="true">eqnarray 环境中 <code>\nonumber</code>
+指令不能正常工作</figcaption>
+</figure>
+<p>根本原因：</p>
+<ul>
+<li><code>pandoc-tex-numbering</code>
+只在<code>multiline-environments</code> 环境，才会识别
+<code>\nonumber</code>。</li>
+<li><code>multiline-environments</code> 环境包括
+<ul>
+<li>cases</li>
+<li>align</li>
+<li>aligned</li>
+<li>gather</li>
+<li>gathered</li>
+<li>multline</li>
+<li>flalign</li>
+</ul></li>
+<li><code>multiline-environments</code> 环境不包括 <code>eqnarray</code>
+环境。</li>
+</ul>
+<div class="note note-info">
+            <p>【解决方案1】 Latex中 <code>eqnarray</code> 环境都替换为<code>align</code> 环境，这样 <code>\nonumber</code>指令才可以正常工作</p>
+          </div>
+<div class="note note-info">
+            <p>【解决方案2】☆推荐这种方案 把 <code>eqnarray</code> 环境加入<code>multiline-environments</code>，具体操作有两种途径（以下方案二选一即可）</p><ul><li><p>直接命令行添加 <code>-M</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>-M multiline-environments=<span class="hljs-string">&quot;cases,align,aligned,gather,gathered,multline,flalign,eqnarray&quot;</span> \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li><li><p>用 meta.yaml：<code>tex</code> 文件同目录新建一个<code>meta.yaml</code>： <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">multiline-environments:</span> <span class="hljs-string">&quot;cases,align,aligned,gather,gathered,multline,flalign,eqnarray&quot;</span><br></code></pre></td></tr></table></figure> 然后执行以下指令进行转换：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
+          </div>
+<ul>
+<li><p>配置好以后，<code>eqnarray</code> 就会像 <code>align</code>
+一样按行处理，这一行末尾有 <code>\nonumber</code> 就不会编号。</p></li>
+<li><p>如果想整个 <code>eqnarray</code> 都不要编号，那就给每一行都加上
+<code>\nonumber</code>（包括最后一行）。</p></li>
+<li><p>如果只想让中间几步不编号，就只在这些行后面写
+<code>\nonumber</code></p></li>
+<li><p>进行上述操作后，<code>eqnarray</code> 环境中
+<code>\nonumber</code> 指令就可以正常工作了，见下图。</p></li>
+</ul>
+<figure>
+<img src="Pandoc_2-3.png" srcset="/img/loading.gif" lazyload
+alt="eqnarray 环境中 \nonumber 指令正常工作" />
+<figcaption aria-hidden="true">eqnarray 环境中 <code>\nonumber</code>
+指令正常工作</figcaption>
+</figure>
+<h2 id="和-...-这些环境也会编号">3.4 <code>$$...$$</code> 和
+<code>\[...\]</code> 这些环境也会编号</h2>
+<ul>
+<li>Pandoc 就是会为 <code>$$...$$</code> 和 <code>\[...\]</code>
+这些环境中的公式添加编号。</li>
+<li>Pandoc 没有办法彻底取消 <code>$$...$$</code> 和 <code>\[...\]</code>
+这些环境中的编号</li>
+</ul>
+<div class="note note-info">
+            <p>【解决方案】</p><ul><li><p>Latex中 <code>$$...$$</code> 和 <code>\[...\]</code> 环境都替换为<code>align</code> 环境（或者 <code>eqnarray</code> 环境，但是需要进行3.3 节中的【解决方案2】操作）</p></li><li><p>然后添加 <code>\nonumber</code> 指令，即可取消编号。</p></li></ul>
+          </div>
+<h2
+id="pandoc-进行-tex-docx-转换时支持用户自定义指令前提是用户自定义指令需要合法">3.5
+<code>Pandoc</code> 进行 <code>tex</code> → <code>docx</code>
+转换时，支持用户自定义指令，前提是用户自定义指令需要合法！</h2>
+<p>下面这种自定义指令是可以的 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\rmd</span>&#125;&#123;&#123;<span class="hljs-keyword">\mathrm</span>&#123;d&#125;&#125;&#125;<br></code></pre></td></tr></table></figure>
+下面这种自定义指令不可以（不可以的原因是因为<code>\rm</code>而不是因为自定义）
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\rmd</span>&#125;&#123;&#123;<span class="hljs-keyword">\rm</span>&#123;d&#125;&#125;&#125;<br></code></pre></td></tr></table></figure></p>
+<h2 id="公式编号含有章节编号">3.6 公式编号含有章节编号</h2>
+<div class="note note-primary">
+            <p>【问题描述】<code>pandoc-tex-numbering</code>可以为章节和公式添加编号，但是公式编号包含章节编号，但是我们希望全文公式统一编号，不附带章节信息</p>
+          </div>
+<p>上述问题具体见下图 <img src="Pandoc_2-1.png" srcset="/img/loading.gif" lazyload
+alt="公式编号含有章节编号" /></p>
+<div class="note note-info">
+            <p>【解决方案】</p><ul><li><p><code>pandoc-tex-numbering</code> 里有个总的参数<code>number-reset-level</code>，意思是<code>在哪一级 section 时把计数器归零</code>：</p></li><li><p>默认<code>number-reset-level: 1</code>：在每个一级标题（section/chapter）处重置，所以会得到(6.1)、(6.2) 这种风格；</p></li><li><p>如果想“永远不重置”，可以设成 <code>0</code>或一个非常大的数。</p></li><li><p>具体操作：新建一个 meta.yaml，内容如下 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">number-reset-level:</span> <span class="hljs-number">0</span>        <span class="hljs-comment"># 不随 section 重置</span><br><span class="hljs-attr">equation-src-format:</span> <span class="hljs-string">&quot;\\qquad(&#123;this_num&#125;)&quot;</span><br><span class="hljs-attr">equation-ref-format:</span> <span class="hljs-string">&quot;&#123;this_num&#125;&quot;</span><br><span class="hljs-attr">equation-cref-format:</span> <span class="hljs-string">&quot;(&#123;this_num&#125;)&quot;</span><br></code></pre></td></tr></table></figure>然后命令行： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
+          </div>
+<p>上述方案效果如下 <img src="Pandoc_2-4.png" srcset="/img/loading.gif" lazyload
+alt="公式编号不包含章节编号" /></p>
+<h2 id="公式引用问题">3.7 公式引用问题</h2>
+<div class="note note-primary">
+            <p>【问题描述】<code>eqnarray</code> 环境中添加 <code>\label</code>后，其他位置引用公式时用 <code>\eqref</code>指令，虽然引用标号可以正确显示，但是引用不会自动添加括号</p>
+          </div>
+<p>上述问题具体见下图 =<img src="Pandoc_2-5.png" srcset="/img/loading.gif" lazyload
+alt="eqnarray 环境中添加label" /></p>
+<p>原因分析：这是 pandoc-tex-numbering 的“特性”：</p>
+<ul>
+<li><p>过滤器里不能区分 <code>\ref</code> 和
+<code>\eqref</code>，二者都当成 <code>\ref</code> 来处理；</p></li>
+<li><p>这个 <code>\ref</code> 格式的默认值是 “{num}”，所以只会输出数字
+10，不会自动加括号——跟 LaTeX 里的 行为不一样。 GitHub</p></li>
+<li><p>要想在 Word 里也得到 (10) 这种效果，需要告诉过滤器：</p>
+<ul>
+<li>“对 equation 的引用(ref)格式，用 ({num})。”</li>
+</ul></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/software/" class="category-chain-item">software</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/software/Pandoc/" class="category-chain-item">Pandoc</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/software/" class="print-no-link">#software</a>
+      
+        <a href="/tags/Pandoc/" class="print-no-link">#Pandoc</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Pandoc系列 - 2. tex-&gt;docx 常见问题与解决方案</div>
+      <div>http://yylustb.github.io/2025/11/19/software/Pandoc/Pandoc_2/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>yylustb</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年11月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/11/19/software/Pandoc/Pandoc_1/" title="Pandoc系列 - 1. 安装和基本语法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Pandoc系列 - 1. 安装和基本语法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" title="C++ 系列 - 1. 介绍">
+                        <span class="hidden-mobile">C++ 系列 - 1. 介绍</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      <div class="footer-info" style="line-height:1.6; text-align:center;">
+  <div>
+    <strong>© 2025–2026</strong> · <strong>远大前程</strong> · <strong>个人学习笔记</strong>
+  </div>
+  <div>
+    站点已稳定运行
+    <span id="timeDate">0 天</span>
+    <span id="times">00 小时 00 分 00 秒</span>
+  </div>
+  <div>
+    Powered by
+    <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+    &amp;
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">Fluid</a>
+  </div>
+  <script src="/js/duration.js"></script>
+</div>
+
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        站点累计浏览 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        累计服务访客 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
