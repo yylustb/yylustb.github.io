@@ -91,9 +91,9 @@
   
   
   <entry>
-    <title>TensorFlow 系列 - 1. 介绍</title>
-    <link href="/2025/11/17/code/TensorFlow/tf_1-intro-2025-11-17/"/>
-    <url>/2025/11/17/code/TensorFlow/tf_1-intro-2025-11-17/</url>
+    <title>C++ 系列 - 1. 介绍</title>
+    <link href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/"/>
+    <url>/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -102,7 +102,7 @@
       
       <category>code</category>
       
-      <category>TensorFlow</category>
+      <category>Cpp</category>
       
     </categories>
     
@@ -120,9 +120,9 @@
   
   
   <entry>
-    <title>C++ 系列 - 1. 介绍</title>
-    <link href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/"/>
-    <url>/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/</url>
+    <title>TensorFlow 系列 - 1. 介绍</title>
+    <link href="/2025/11/17/code/TensorFlow/tf_1-intro-2025-11-17/"/>
+    <url>/2025/11/17/code/TensorFlow/tf_1-intro-2025-11-17/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -131,7 +131,7 @@
       
       <category>code</category>
       
-      <category>Cpp</category>
+      <category>TensorFlow</category>
       
     </categories>
     
@@ -187,7 +187,7 @@
     
     <categories>
       
-      <category>code</category>
+      <category>software</category>
       
       <category>VS-Code</category>
       
@@ -899,35 +899,6 @@
   
   
   <entry>
-    <title>鲁棒控制系列 - 1. test</title>
-    <link href="/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/"/>
-    <url>/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ctrl</category>
-      
-      <category>robust-ctrl</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ctrl</tag>
-      
-      <tag>robust control</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>机器学习 - 1. test</title>
     <link href="/2020/11/15/ai/ml/MachineLearning_1/"/>
     <url>/2020/11/15/ai/ml/MachineLearning_1/</url>
@@ -949,6 +920,35 @@
       <tag>ai</tag>
       
       <tag>Machine Learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>鲁棒控制系列 - 1. test</title>
+    <link href="/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/"/>
+    <url>/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ctrl</category>
+      
+      <category>robust-ctrl</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ctrl</tag>
+      
+      <tag>robust control</tag>
       
     </tags>
     
@@ -986,154 +986,9 @@
   
   
   <entry>
-    <title>李群与李代数 - 1. test</title>
-    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
-    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>LieAlgebra</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>LieAlgebra</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>数值计算系列 - 1. 测试</title>
-    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
-    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>NumAnalysis</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>Numeric Analysis</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>随机分析系列 - 1. 测试</title>
-    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
-    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>StoAnalysis</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>Stochastic Analysis</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>线性代数 - 1. test</title>
-    <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
-    <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>LinAlgebra</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>LinAlgebra</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>微分方程 - 1. test</title>
-    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
-    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>math</category>
-      
-      <category>DiffEqn</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>math</tag>
-      
-      <tag>DiffEqn</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>优化基础系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_basics/opt_basics_1/"/>
-    <url>/2020/11/15/opt/opt_basics/opt_basics_1/</url>
+    <title>最优控制系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
+    <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -1142,7 +997,7 @@
       
       <category>opt</category>
       
-      <category>opt-basics</category>
+      <category>opt-ctrl</category>
       
     </categories>
     
@@ -1151,36 +1006,7 @@
       
       <tag>opt</tag>
       
-      <tag>optimization basics</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
-    <link href="/2020/11/15/opt/adp/adp_1/"/>
-    <url>/2020/11/15/opt/adp/adp_1/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>opt</category>
-      
-      <category>adp</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>opt</tag>
-      
-      <tag>ADP</tag>
+      <tag>optimal control</tag>
       
     </tags>
     
@@ -1247,18 +1073,18 @@
   
   
   <entry>
-    <title>最优控制系列 - 1. test</title>
-    <link href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/"/>
-    <url>/2020/11/15/opt/opt_ctrl/opt_ctrl_1/</url>
+    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
+    <link href="/2020/11/15/opt/adp/adp_1/"/>
+    <url>/2020/11/15/opt/adp/adp_1/</url>
     
-    <content type="html"><![CDATA[<p>test</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
       <category>opt</category>
       
-      <category>opt-ctrl</category>
+      <category>adp</category>
       
     </categories>
     
@@ -1267,7 +1093,181 @@
       
       <tag>opt</tag>
       
-      <tag>optimal control</tag>
+      <tag>ADP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>优化基础系列 - 1. test</title>
+    <link href="/2020/11/15/opt/opt_basics/opt_basics_1/"/>
+    <url>/2020/11/15/opt/opt_basics/opt_basics_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>opt</category>
+      
+      <category>opt-basics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opt</tag>
+      
+      <tag>optimization basics</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>随机分析系列 - 1. 测试</title>
+    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
+    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>StoAnalysis</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Stochastic Analysis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>微分方程 - 1. test</title>
+    <link href="/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/"/>
+    <url>/2020/11/15/math/DifferentialEquation/DifferentialEquation_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>DiffEqn</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>DiffEqn</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>李群与李代数 - 1. test</title>
+    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
+    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>LieAlgebra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>LieAlgebra</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数值计算系列 - 1. 测试</title>
+    <link href="/2020/11/15/math/Numeric/Numeric_1/"/>
+    <url>/2020/11/15/math/Numeric/Numeric_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>NumAnalysis</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Numeric Analysis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>线性代数 - 1. test</title>
+    <link href="/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/"/>
+    <url>/2020/11/15/math/LinearAlgebra/LinearAlgebra_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>LinAlgebra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>LinAlgebra</tag>
       
     </tags>
     
