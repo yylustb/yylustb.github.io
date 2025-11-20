@@ -1,0 +1,19 @@
+#navbar .navbar-nav .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navbar .navbar-nav .nav-link i {
+  margin-bottom: 2px;
+}
+
+#navbar .navbar-nav .nav-link span {
+  display: inline-block;
+  width: 3em;            /* 控制一行能放两个汉字 */
+  white-space: normal;
+  word-break: break-all;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 0.9rem;
+}

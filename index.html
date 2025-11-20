@@ -59,6 +59,10 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/nav-wrap.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -381,14 +385,6 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/categories/code/VS-Code/" target="_self">
-                    
-                    <span>VS Code</span>
-                  </a>
-                
-                  
-                  
-                  
                   <a class="dropdown-item" href="/categories/code/Git/" target="_self">
                     
                     <span>Git</span>
@@ -474,6 +470,38 @@
                     <span>Pandoc</span>
                   </a>
                 
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/software/VS-Code/" target="_self">
+                    
+                    <span>VS Code</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>工程应用</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/application/DistriNet/" target="_self">
+                    
+                    <span>配电网</span>
+                  </a>
+                
               </div>
             </li>
           
@@ -543,6 +571,82 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/11/20/code/Latex/latex_5-thm_number-2025-11-20/" target="_self">
+          <img src="/img/index/latex.png" srcset="/img/loading.gif" lazyload alt="LaTex 系列 - 5. `amsthm` 定理环境编号">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/11/20/code/Latex/latex_5-thm_number-2025-11-20/" target="_self">
+          LaTex 系列 - 5. `amsthm` 定理环境编号
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/11/20/code/Latex/latex_5-thm_number-2025-11-20/" target="_self">
+        <div>
+          1. 美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 – amsthm amsthm 是 美国数学学会 AMS 提供的 LaTeX 宏包，专门用来处理：  定理 / 引理 / 命题 / 推论等 “定理类环境” 的定义和编号 proof（证明环境）的排版 不同风格的定理格式（斜体/正常体/备注型） 可以理解成：“让定理环境更好用、更好看”的官方标准包。  2. 定理环
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-11-20 15:30" pubdate>
+              2025-11-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/code/" class="category-chain-item">code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/code/LaTex/" class="category-chain-item">LaTex</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/LaTex/">#LaTex</a>
+            
+              <a href="/tags/amsthm/">#amsthm</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2025/11/19/software/Pandoc/Pandoc_2/" target="_self">
           <img src="/img/index/Pandoc.png" srcset="/img/loading.gif" lazyload alt="Pandoc系列 - 2. tex → docx 常见问题与解决方案">
         </a>
@@ -559,7 +663,7 @@
       
       <a class="index-excerpt " href="/2025/11/19/software/Pandoc/Pandoc_2/" target="_self">
         <div>
-          在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献问题  1.1 生成参考文献 --citeproc 和 --bibliography              【问题描述】tex 文件使用 bibtex格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\b
+          在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献问题  1.1 生成参考文献 --citeproc 和 --bibliography              【问题描述】tex 文件使用 bibtex 格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\bi
         </div>
       </a>
 
@@ -635,7 +739,7 @@
       
       <a class="index-excerpt " href="/2025/11/19/software/Pandoc/Pandoc_1/" target="_self">
         <div>
-          1. windows 系统安装 Pandoc  下载地址：Pandoc 下载 安装步骤：  双击下载的安装包，按照提示进行安装。 安装完成后，打开命令提示符（CMD）或 PowerShell，输入 pandoc -v 查看安装是否成功。   2 命令行使用 Pandoc  基本命令：  pandoc -s input.md -o output.pdf：将 input
+          1. windows 系统安装 Pandoc  下载地址：Pandoc 下载 安装步骤：  双击下载的安装包，按照提示进行安装。 安装完成后，打开命令提示符（CMD）或 PowerShell，输入 pandoc -v 查看安装是否成功。   2 命令行使用 Pandoc  基本命令：  pandoc -s input.md -o output.pdf：将 input.md
         </div>
       </a>
 
@@ -695,82 +799,6 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" target="_self">
-          <img src="/img/index/cpp.jpg" srcset="/img/loading.gif" lazyload alt="C++ 系列 - 1. 介绍">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" target="_self">
-          C++ 系列 - 1. 介绍
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" target="_self">
-        <div>
-          test
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-11-17 17:24" pubdate>
-              2025-11-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/code/" class="category-chain-item">code</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/code/Cpp/" class="category-chain-item">Cpp</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-              <a href="/tags/argparse/">#argparse</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2025/11/17/code/TensorFlow/tf_1-intro-2025-11-17/" target="_self">
           <img src="/img/index/tensorflow.jpg" srcset="/img/loading.gif" lazyload alt="TensorFlow 系列 - 1. 介绍">
         </a>
@@ -817,6 +845,82 @@
     <span>></span>
     
   <a href="/categories/code/TensorFlow/" class="category-chain-item">TensorFlow</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Python/">#Python</a>
+            
+              <a href="/tags/argparse/">#argparse</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" target="_self">
+          <img src="/img/index/cpp.jpg" srcset="/img/loading.gif" lazyload alt="C++ 系列 - 1. 介绍">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" target="_self">
+          C++ 系列 - 1. 介绍
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/11/17/code/Cpp/cpp_1-intro-2025-11-17/" target="_self">
+        <div>
+          test
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-11-17 17:24" pubdate>
+              2025-11-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/code/" class="category-chain-item">code</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/code/Cpp/" class="category-chain-item">Cpp</a>
   
   
 
@@ -923,7 +1027,7 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2025/11/17/code/vscode/vscode_math/" target="_self">
+        <a href="/2025/11/17/software/vscode/vscode_math/" target="_self">
           <img src="/img/index/vscode.png" srcset="/img/loading.gif" lazyload alt="VSCode 系列 - LaTex 公式渲染配置">
         </a>
       </div>
@@ -931,15 +1035,15 @@
     <article class="col-12 col-md-8 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2025/11/17/code/vscode/vscode_math/" target="_self">
+        <a href="/2025/11/17/software/vscode/vscode_math/" target="_self">
           VSCode 系列 - LaTex 公式渲染配置
         </a>
       </h2>
 
       
-      <a class="index-excerpt " href="/2025/11/17/code/vscode/vscode_math/" target="_self">
+      <a class="index-excerpt " href="/2025/11/17/software/vscode/vscode_math/" target="_self">
         <div>
-          VSCode 系列 - LaTex 公式渲染配置 数学引擎介绍  MathJax / KaTeX 都是浏览器端的 LaTeX 数学公式渲染库 MathJax / KaTeX 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统 简单说：MathJax 更像 LaTeX，KaTeX 更快、更轻。 如果最关心 LaTe
+          VSCode 系列 - LaTex 公式渲染配置 数学引擎介绍  MathJax / KaTeX 都是浏览器端的 LaTeX 数学公式渲染库 MathJax / KaTeX 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统 简单说：MathJax 更像 LaTeX，KaTeX 更快、更轻。 如果最关心 LaTeX 语法兼
         </div>
       </a>
 
@@ -1017,7 +1121,7 @@
       
       <a class="index-excerpt " href="/2025/11/15/code/HEXO/hexo_4/" target="_self">
         <div>
-          本页用于测试 pandoc + MathJax 在 Hexo/Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E = mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公
+          本页用于测试 pandoc + MathJax 在 Hexo/Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E = mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公式 +
         </div>
       </a>
 
@@ -1097,7 +1201,7 @@
       
       <a class="index-excerpt " href="/2025/11/15/code/HEXO/hexo_3/" target="_self">
         <div>
-          本页用于测试 pandoc + MathJax 在 Hexo/Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E = mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公
+          本页用于测试 pandoc + MathJax 在 Hexo/Fluid 中的渲染效果。 1. 行内公式 这是一个行内公式：\(E = mc^2\)， 再来一个：\(\alpha, \beta, \gamma \in \mathbb{R}\)， 以及一个简单的向量：\(\boldsymbol{x} = (x_1, x_2, \dots, x_n)^\top\)。 2. 单行行间公式 +
         </div>
       </a>
 
@@ -1187,82 +1291,6 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2025-11-15 00:00" pubdate>
               2025-11-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/code/" class="category-chain-item">code</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/code/Hexo/" class="category-chain-item">Hexo</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Hexo/">#Hexo</a>
-            
-              <a href="/tags/Fluid/">#Fluid</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2025/11/14/code/HEXO/hexo_1/" target="_self">
-          <img src="/img/index/hexo.png" srcset="/img/loading.gif" lazyload alt="Hexo 系列 - 1. 安装">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/11/14/code/HEXO/hexo_1/" target="_self">
-          Hexo 系列 - 1. 安装
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt " href="/2025/11/14/code/HEXO/hexo_1/" target="_self">
-        <div>
-          1. 安装 Node.js  前往 Node.js 官网下载安装包，根据提示安装即可。 安装 Node.js 之后，npm 会一起安装好。两者关系可以简单理解成：  Node.js = 运行环境（让你能在本机运行 JavaScript 的“引擎”） npm = 包管理器（用来安装 / 更新 / 管理 各种 JavaScript / Node 的第三方库） 就像：Python（解
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-11-14 23:30" pubdate>
-              2025-11-14
             </time>
           </div>
         
