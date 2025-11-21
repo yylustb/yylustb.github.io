@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献问题  1.1 生成参考文献 --citeproc 和 --bibliography              【问题描述】tex 文件使用 bibtex 格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\bi">
+    <meta name="description" content="在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献问题  1.1 生成参考文献 --citeproc 和 --bibliography              【问题描述】tex 文件使用 bibtex格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandoc系列 - 2. tex → docx 常见问题与解决方案">
 <meta property="og:url" content="http://yylustb.github.io/2025/11/19/software/Pandoc/Pandoc_2/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献问题  1.1 生成参考文献 --citeproc 和 --bibliography              【问题描述】tex 文件使用 bibtex 格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\bi">
+<meta property="og:description" content="在处理 tex 文件转换为 docx 文件时，可能会遇到一些问题。 下面是对于一些情况的讨论以及解决方案。 1. 文献问题  1.1 生成参考文献 --citeproc 和 --bibliography              【问题描述】tex 文件使用 bibtex格式引用文献： 12\bibliographystyle&#123;plain&#125;  % 参考文献格式\b">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/Pandoc.png">
 <meta property="article:published_time" content="2025-11-19T22:54:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T13:51:13.525Z">
+<meta property="article:modified_time" content="2025-11-20T13:51:13.000Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="Pandoc">
 <meta property="article:tag" content="software">
@@ -633,7 +633,7 @@
         aria-expanded="true"
       >
         software
-        <span class="list-group-count">(3)</span>
+        <span class="list-group-count">(4)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -687,6 +687,43 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">Pandoc系列 - 2. tex → docx 常见问题与解决方案</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Poppler"
+        id="heading-06a89c39299dff9d22594da6d6896348" role="tab" data-toggle="collapse" href="#collapse-06a89c39299dff9d22594da6d6896348"
+        aria-expanded="false"
+      >
+        Poppler
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-06a89c39299dff9d22594da6d6896348"
+           role="tabpanel" aria-labelledby="heading-06a89c39299dff9d22594da6d6896348">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/11/19/software/Poppler/Poppler_1/" title="Poppler - 1. 安装和基本语法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Poppler - 1. 安装和基本语法</span>
         </a>
       
     
@@ -763,18 +800,21 @@ success
 warning
 danger
 info -->
-<h3 id="生成参考文献---citeproc-和---bibliography">1.1 生成参考文献 <code>--citeproc</code> 和 <code>--bibliography</code></h3>
+<h3 id="生成参考文献---citeproc-和---bibliography">1.1 生成参考文献
+<code>--citeproc</code> 和 <code>--bibliography</code></h3>
 <div class="note note-danger">
-            <p>【问题描述】<code>tex</code> 文件使用 <code>bibtex</code> 格式引用文献： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\bibliographystyle</span>&#123;plain&#125;  <span class="hljs-comment">% 参考文献格式</span><br><span class="hljs-keyword">\bibliography</span>&#123;bibfile&#125;     <span class="hljs-comment">% bib文件名</span><br></code></pre></td></tr></table></figure> 执行以下指令进行 <code>tex</code> → <code>docx</code> 转换： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s input.tex -o output.docx<br></code></pre></td></tr></table></figure> 生成的 word 文档中，既没有参考文献列表，正文中的引用 <code>\cite{XXX}</code> 也没有显示</p>
+            <p>【问题描述】<code>tex</code> 文件使用 <code>bibtex</code>格式引用文献： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\bibliographystyle</span>&#123;plain&#125;  <span class="hljs-comment">% 参考文献格式</span><br><span class="hljs-keyword">\bibliography</span>&#123;bibfile&#125;     <span class="hljs-comment">% bib文件名</span><br></code></pre></td></tr></table></figure> 执行以下指令进行 <code>tex</code> →<code>docx</code> 转换： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s input.tex -o output.docx<br></code></pre></td></tr></table></figure> 生成的 word文档中，既没有参考文献列表，正文中的引用 <code>\cite{XXX}</code>也没有显示</p>
           </div>
 <div class="note note-info">
-            <p>【解决方案】进行 <code>tex</code> → <code>docx</code> 转换时添加以下指令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s template.tex --citeproc --bibliography=template.bib -o template.docx<br></code></pre></td></tr></table></figure></p>
+            <p>【解决方案】进行 <code>tex</code> → <code>docx</code>转换时添加以下指令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s template.tex --citeproc --bibliography=template.bib -o template.docx<br></code></pre></td></tr></table></figure></p>
           </div>
 <p>说明：</p>
 <ul>
-<li><code>--citeproc</code>：让 Pandoc 内置的 “citation processor” 工作：
+<li><code>--citeproc</code>：让 Pandoc 内置的 “citation processor”
+工作：
 <ul>
-<li>识别文中的引用（比如 <span class="citation" data-cites="Smith2020">[@Smith2020]</span> 这种 pandoc-style 引用）</li>
+<li>识别文中的引用（比如 <span class="citation"
+data-cites="Smith2020">[@Smith2020]</span> 这种 pandoc-style 引用）</li>
 <li>按照引用样式把它们排版成真正的引文格式</li>
 <li>自动生成文末参考文献列表（bibliography）</li>
 </ul></li>
@@ -786,66 +826,102 @@ info -->
 </ul>
 <h3 id="调整文献格式---csl">1.2 调整文献格式 <code>--csl</code></h3>
 <ul>
-<li>不做任何设置的前提下，<code>Pandoc</code> 会使用默认的参考文献格式 <code>Chicago author-date</code>。如下图所示</li>
+<li>不做任何设置的前提下，<code>Pandoc</code> 会使用默认的参考文献格式
+<code>Chicago author-date</code>。如下图所示</li>
 </ul>
 <figure>
-<img src="Pandoc_cite.png" srcset="/img/loading.gif" lazyload alt="Chicago author-date 参考文献格式" /><figcaption aria-hidden="true">Chicago author-date 参考文献格式</figcaption>
+<img src="Pandoc_cite.png" srcset="/img/loading.gif" lazyload alt="Chicago author-date 参考文献格式" />
+<figcaption aria-hidden="true">Chicago author-date
+参考文献格式</figcaption>
 </figure>
 <ul>
-<li>在使用 <code>Pandoc</code> 进行 <code>tex</code> → <code>docx</code> 转换时，可以任意指定 <code>docx</code> 的参考文献格式，并且 <strong><code>docx</code> 的参考文献格式不需要和 <code>tex</code> 中的参考文献格式相同</strong>。</li>
+<li>在使用 <code>Pandoc</code> 进行 <code>tex</code> → <code>docx</code>
+转换时，可以任意指定 <code>docx</code> 的参考文献格式，并且
+<strong><code>docx</code> 的参考文献格式不需要和 <code>tex</code>
+中的参考文献格式相同</strong>。</li>
 </ul>
 <p>步骤如下</p>
 <ul>
-<li>去 Zotero Style Repository 下载一个数字型样式：在浏览器访问以下网址 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">https://www.zotero.org/styles<br></code></pre></td></tr></table></figure> 搜索 numeric 或 ieee 或 7714 之类，点进去后点击 “Download Style”，保存为本地文件，这里我们将 7714 存为 china.csl。</li>
+<li>去 Zotero Style Repository 下载一个数字型样式：在浏览器访问以下网址
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">https://www.zotero.org/styles<br></code></pre></td></tr></table></figure> 搜索 numeric 或 ieee 或 7714 之类，点进去后点击
+“Download Style”，保存为本地文件，这里我们将 7714 存为 china.csl。</li>
 </ul>
 <figure>
-<img src="Pandoc_zotero.png" srcset="/img/loading.gif" lazyload alt="zotero 下载 GB/T7714 样式" /><figcaption aria-hidden="true"><code>zotero</code> 下载 <code>GB/T7714</code> 样式</figcaption>
+<img src="Pandoc_zotero.png" srcset="/img/loading.gif" lazyload alt="zotero 下载 GB/T7714 样式" />
+<figcaption aria-hidden="true"><code>zotero</code> 下载
+<code>GB/T7714</code> 样式</figcaption>
 </figure>
 <ul>
 <li><p>在 <code>meta.yaml</code> 添加 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">bibliography:</span> template.bib<br><span class="hljs-symbol">csl:</span> numeric.csl     <span class="hljs-meta"># 或你下载的那个 csl 文件名</span><br></code></pre></td></tr></table></figure></p></li>
-<li><p>执行以下指令进行 <code>tex</code> → <code>docx</code> 转换： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s template.tex --citeproc --metadata-file=meta.yaml -o template.docx<br></code></pre></td></tr></table></figure> 注意，这里指令不再需要</p>
+<li><p>执行以下指令进行 <code>tex</code> → <code>docx</code> 转换：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc -s template.tex --citeproc --metadata-file=meta.yaml -o template.docx<br></code></pre></td></tr></table></figure> 注意，这里指令不再需要</p>
 <ul>
 <li><code>--bibliography=template.bib</code></li>
 <li><code>--csl=china.csl</code></li>
 </ul>
-<p>因为已经在 <code>meta.yaml</code> 中指定了。最后参考文献列表和文章中 <code>\cite</code> 引用效果如下</p></li>
+<p>因为已经在 <code>meta.yaml</code> 中指定了。最后参考文献列表和文章中
+<code>\cite</code> 引用效果如下</p></li>
 </ul>
-<p><img src="Pandoc_cite_good_1.png" srcset="/img/loading.gif" lazyload alt="docx 中 GB/T7714 样式的参考文献" /> <img src="Pandoc_cite_good_2.png" srcset="/img/loading.gif" lazyload alt="docx 中 \cite 引用样式" /></p>
+<p><img src="Pandoc_cite_good_1.png" srcset="/img/loading.gif" lazyload
+alt="docx 中 GB/T7714 样式的参考文献" /> <img
+src="Pandoc_cite_good_2.png" srcset="/img/loading.gif" lazyload alt="docx 中 \cite 引用样式" /></p>
 <h2 id="字体问题">2. 字体问题</h2>
 <p>数学字体</p>
 <ul>
-<li>❌：<span class="math inline">\({\rm d}\)</span> <code>$&#123;\rm d&#125;$</code> 无法处理，Pandoc 会报错</li>
-<li>✅：<span class="math inline">\(\mathrm{d}\)</span> <code>$\mathrm&#123;d&#125;$</code> 可以处理，Pandoc 不报错</li>
+<li>❌：<span class="math inline">\({\rm d}\)</span>
+<code>$&#123;\rm d&#125;$</code> 无法处理，Pandoc 会报错</li>
+<li>✅：<span class="math inline">\(\mathrm{d}\)</span>
+<code>$\mathrm&#123;d&#125;$</code> 可以处理，Pandoc 不报错</li>
 </ul>
 <p>latex 公式</p>
 <ul>
-<li>❌：<span class="math inline">\(\mathop {\lim }\limits_{t \to \infty } \dot V(e,\tilde \theta )\)</span> （<code>$\mathop &#123;\lim &#125;\limits_&#123;t \to \infty &#125; \dot V(e,\tilde \theta )$</code>）</li>
-<li>✅：<span class="math inline">\(\lim_{t\to\infty} \dot V(e,\tilde\theta)\)</span> （<code>$\lim_&#123;t\to\infty&#125; \dot V(e,\tilde\theta)$</code>）</li>
+<li>❌：<span class="math inline">\(\mathop {\lim }\limits_{t \to \infty
+} \dot V(e,\tilde \theta )\)</span>
+（<code>$\mathop &#123;\lim &#125;\limits_&#123;t \to \infty &#125; \dot V(e,\tilde \theta )$</code>）</li>
+<li>✅：<span class="math inline">\(\lim_{t\to\infty} \dot
+V(e,\tilde\theta)\)</span>
+（<code>$\lim_&#123;t\to\infty&#125; \dot V(e,\tilde\theta)$</code>）</li>
 </ul>
 <h2 id="公式问题">3. 公式问题</h2>
-<h3 id="安装-pandoc-tex-numbering-滤波器">3.1 安装 <code>pandoc-tex-numbering</code> 滤波器</h3>
+<h3 id="安装-pandoc-tex-numbering-滤波器">3.1 安装
+<code>pandoc-tex-numbering</code> 滤波器</h3>
 <div class="note note-danger">
-            <p>【问题描述】章节、公式都没有编号</p><ul><li><code>\section{XXX}</code> 和 <code>\subsection{XXX}</code> 等章节编号，在 <code>word</code> 中不显示</li><li><code>eqnarray</code> 环境中的公式没有自动编号</li></ul>
+            <p>【问题描述】章节、公式都没有编号</p><ul><li><code>\section{XXX}</code> 和 <code>\subsection{XXX}</code>等章节编号，在 <code>word</code> 中不显示</li><li><code>eqnarray</code> 环境中的公式没有自动编号</li></ul>
           </div>
 <div class="note note-info">
-            <p>【解决方案】安装 <code>pandoc-tex-numbering</code> 滤波器</p><ol type="1"><li><p><code>conda</code> 创建 <code>python</code> 环境 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n pandoc_py310 python=3.10<br></code></pre></td></tr></table></figure></p></li><li><p>激活环境 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate pandoc_py310<br></code></pre></td></tr></table></figure> 接下来的操作都在 <code>pandoc_py310</code> 环境下进行。</p></li><li><p><code>pip</code> 安装 <code>pandoc-tex-numbering</code> 插件 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pandoc-tex-numbering<br></code></pre></td></tr></table></figure></p></li><li><p>进行 <code>tex</code> → <code>docx</code> 转换时使用以下指令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex --citeproc --bibliography=template.bib -F pandoc-tex-numbering -o tempalte.docx<br></code></pre></td></tr></table></figure></p></li></ol>
+            <p>【解决方案】安装 <code>pandoc-tex-numbering</code> 滤波器</p><ol type="1"><li><p><code>conda</code> 创建 <code>python</code> 环境<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n pandoc_py310 python=3.10<br></code></pre></td></tr></table></figure></p></li><li><p>激活环境 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate pandoc_py310<br></code></pre></td></tr></table></figure> 接下来的操作都在 <code>pandoc_py310</code>环境下进行。</p></li><li><p><code>pip</code> 安装 <code>pandoc-tex-numbering</code> 插件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pandoc-tex-numbering<br></code></pre></td></tr></table></figure></p></li><li><p>进行 <code>tex</code> → <code>docx</code> 转换时使用以下指令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex --citeproc --bibliography=template.bib -F pandoc-tex-numbering -o tempalte.docx<br></code></pre></td></tr></table></figure></p></li></ol>
           </div>
 <p>说明：</p>
 <ul>
 <li>只改命令行参数是解决不了“自动编号”的问题的</li>
-<li>必须加一个专门的 pandoc 过滤器，在 LaTeX→Word 的转换过程中，把 eqnarray 等环境里的编号“补”出来。</li>
-<li><code>pandoc-tex-numbering</code>：这个过滤器就是处理从 LaTeX 转成 docx 时【自动编号】的问题。</li>
-<li><code>--filter</code> / <code>-F</code> (二者等价)：调用外部可执行程序作为过滤器（这里是 <code>pandoc-tex-numbering</code>，所以可以推测：<code>pip</code> 安装 <code>pandoc-tex-numbering</code> 插件后，提供了一个可执行程序）</li>
+<li>必须加一个专门的 pandoc 过滤器，在 LaTeX→Word 的转换过程中，把
+eqnarray 等环境里的编号“补”出来。</li>
+<li><code>pandoc-tex-numbering</code>：这个过滤器就是处理从 LaTeX 转成
+docx 时【自动编号】的问题。</li>
+<li><code>--filter</code> / <code>-F</code>
+(二者等价)：调用外部可执行程序作为过滤器（这里是
+<code>pandoc-tex-numbering</code>，所以可以推测：<code>pip</code> 安装
+<code>pandoc-tex-numbering</code> 插件后，提供了一个可执行程序）</li>
 </ul>
-<h3 id="eqnarray-环境慎用这里只是讲解-pandoc-转换-tex-文件时与-eqnarray-环境不兼容的解决方案eqnarray-与-pandoc-结合会有很多问题本节方案只能解决一部分问题不能都完美解决完美方案可以直接阅读-3.2.5-节">3.2 <code>eqnarray</code> 环境慎用（这里只是讲解 <code>Pandoc</code> 转换 tex 文件时与 <code>eqnarray</code> 环境不兼容的解决方案，<code>eqnarray</code> 与 <code>Pandoc</code> 结合会有很多问题，本节方案只能解决一部分问题，不能都完美解决，完美方案可以直接阅读 3.2.5 节）</h3>
-<h3 id="eqnarray-环境中-nonumber-失效">3.2.1 <code>eqnarray</code> 环境中 <code>\nonumber</code> 失效</h3>
+<h3
+id="eqnarray-环境慎用这里只是讲解-pandoc-转换-tex-文件时与-eqnarray-环境不兼容的解决方案eqnarray-与-pandoc-结合会有很多问题本节方案只能解决一部分问题不能都完美解决完美方案可以直接阅读-3.2.5-节">3.2
+<code>eqnarray</code> 环境慎用（这里只是讲解 <code>Pandoc</code> 转换
+tex 文件时与 <code>eqnarray</code>
+环境不兼容的解决方案，<code>eqnarray</code> 与 <code>Pandoc</code>
+结合会有很多问题，本节方案只能解决一部分问题，不能都完美解决，完美方案可以直接阅读
+3.2.5 节）</h3>
+<h3 id="eqnarray-环境中-nonumber-失效">3.2.1 <code>eqnarray</code>
+环境中 <code>\nonumber</code> 失效</h3>
 <div class="note note-danger">
-            <p>【问题描述】<code>Pandoc</code> 进行 <code>tex</code> → <code>docx</code> 转换时，直接使用<code>eqnarray</code> 环境主要有两个问题：</p><ul><li><code>Pandoc</code> 会将 <code>eqnarray</code> 环境中的公式整块处理，不能实现在最后一行添加自动编号</li><li><code>eqnarray</code> 环境中的 <code>\nonumber</code> 指令在 <code>Pandoc</code> 中失效</li></ul>
+            <p>【问题描述】<code>Pandoc</code> 进行 <code>tex</code> →<code>docx</code> 转换时，直接使用<code>eqnarray</code>环境主要有两个问题：</p><ul><li><code>Pandoc</code> 会将 <code>eqnarray</code>环境中的公式整块处理，不能实现在最后一行添加自动编号</li><li><code>eqnarray</code> 环境中的 <code>\nonumber</code> 指令在<code>Pandoc</code> 中失效</li></ul>
           </div>
-<p>具体见下图 <img src="Pandoc_2-2.png" srcset="/img/loading.gif" lazyload alt="eqnarray 环境中 \nonumber 指令不能正常工作" /></p>
+<p>具体见下图 <img src="Pandoc_2-2.png" srcset="/img/loading.gif" lazyload
+alt="eqnarray 环境中 \nonumber 指令不能正常工作" /></p>
 <p>根本原因：</p>
 <ul>
-<li><code>pandoc-tex-numbering</code> 只在<code>multiline-environments</code> 环境，才会识别 <code>\nonumber</code>。</li>
+<li><code>pandoc-tex-numbering</code>
+只在<code>multiline-environments</code> 环境，才会识别
+<code>\nonumber</code>。</li>
 <li><code>multiline-environments</code> 环境包括
 <ul>
 <li>cases</li>
@@ -856,49 +932,68 @@ info -->
 <li>multline</li>
 <li>flalign</li>
 </ul></li>
-<li><mark>注意：<code>multiline-environments</code> 环境不包括 <code>eqnarray</code> 环境</mark>。</li>
+<li><mark>注意：<code>multiline-environments</code> 环境不包括
+<code>eqnarray</code> 环境</mark>。</li>
 </ul>
 <div class="note note-info">
-            <p>【解决方案1】（<strong>☆推荐这种方案</strong>） Latex中 <code>eqnarray</code> 环境都替换为 <code>align</code> 环境，这样 <code>\nonumber</code> 指令才可以正常工作</p>
+            <p>【解决方案1】（<strong>☆推荐这种方案</strong>） Latex中<code>eqnarray</code> 环境都替换为 <code>align</code> 环境，这样<code>\nonumber</code> 指令才可以正常工作</p>
           </div>
 <div class="note note-info">
-            <p>【解决方案2】 把 <code>eqnarray</code> 环境加入 <code>multiline-environments</code>，具体操作有两种途径（以下方案二选一即可）</p><ul><li><p>直接命令行添加 <code>-M</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>-M multiline-environments=<span class="hljs-string">&quot;cases,align,aligned,gather,gathered,multline,flalign,eqnarray&quot;</span> \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li><li><p>用 meta.yaml：<code>tex</code> 文件同目录新建一个 <code>meta.yaml</code>： <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">multiline-environments:</span> <span class="hljs-string">&quot;cases,align,aligned,gather,gathered,multline,flalign,eqnarray&quot;</span><br></code></pre></td></tr></table></figure> 然后执行以下指令进行转换： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
+            <p>【解决方案2】 把 <code>eqnarray</code> 环境加入<code>multiline-environments</code>，具体操作有两种途径（以下方案二选一即可）</p><ul><li><p>直接命令行添加 <code>-M</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>-M multiline-environments=<span class="hljs-string">&quot;cases,align,aligned,gather,gathered,multline,flalign,eqnarray&quot;</span> \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li><li><p>用 meta.yaml：<code>tex</code> 文件同目录新建一个<code>meta.yaml</code>： <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">multiline-environments:</span> <span class="hljs-string">&quot;cases,align,aligned,gather,gathered,multline,flalign,eqnarray&quot;</span><br></code></pre></td></tr></table></figure> 然后执行以下指令进行转换：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
           </div>
 <ul>
-<li><p>配置好以后，<code>eqnarray</code> 就会像 <code>align</code> 一样按行处理，这一行末尾有 <code>\nonumber</code> 就不会编号。</p></li>
-<li><p>如果想整个 <code>eqnarray</code> 都不要编号，那就给每一行都加上 <code>\nonumber</code>（包括最后一行）。</p></li>
-<li><p>如果只想让中间几步不编号，就只在这些行后面写 <code>\nonumber</code></p></li>
-<li><p>进行上述操作后，<code>eqnarray</code> 环境中 <code>\nonumber</code> 指令就可以正常工作了，见下图。</p></li>
+<li><p>配置好以后，<code>eqnarray</code> 就会像 <code>align</code>
+一样按行处理，这一行末尾有 <code>\nonumber</code> 就不会编号。</p></li>
+<li><p>如果想整个 <code>eqnarray</code> 都不要编号，那就给每一行都加上
+<code>\nonumber</code>（包括最后一行）。</p></li>
+<li><p>如果只想让中间几步不编号，就只在这些行后面写
+<code>\nonumber</code></p></li>
+<li><p>进行上述操作后，<code>eqnarray</code> 环境中
+<code>\nonumber</code> 指令就可以正常工作了，见下图。</p></li>
 </ul>
 <figure>
-<img src="Pandoc_2-3.png" srcset="/img/loading.gif" lazyload alt="eqnarray 环境中 \nonumber 指令正常工作" /><figcaption aria-hidden="true">eqnarray 环境中 <code>\nonumber</code> 指令正常工作</figcaption>
+<img src="Pandoc_2-3.png" srcset="/img/loading.gif" lazyload
+alt="eqnarray 环境中 \nonumber 指令正常工作" />
+<figcaption aria-hidden="true">eqnarray 环境中 <code>\nonumber</code>
+指令正常工作</figcaption>
 </figure>
 <h3 id="行间公式环境默认强制编号">3.2.2 行间公式环境：默认强制编号</h3>
-<p>这里行间公式环境指的是 <code>$$...$$</code> 和 <code>\[...\]</code></p>
+<p>这里行间公式环境指的是 <code>$$...$$</code> 和
+<code>\[...\]</code></p>
 <ul>
-<li>Pandoc 就是会为 <code>$$...$$</code> 和 <code>\[...\]</code> 这些环境中的公式添加编号。</li>
-<li>Pandoc 没有办法彻底取消 <code>$$...$$</code> 和 <code>\[...\]</code> 这些环境中的编号</li>
+<li>Pandoc 就是会为 <code>$$...$$</code> 和 <code>\[...\]</code>
+这些环境中的公式添加编号。</li>
+<li>Pandoc 没有办法彻底取消 <code>$$...$$</code> 和 <code>\[...\]</code>
+这些环境中的编号</li>
 </ul>
 <div class="note note-info">
-            <p>【解决方案】</p><ul><li><p>Latex中 <code>$$...$$</code> 和 <code>\[...\]</code> 环境都替换为 <code>align</code> 环境（或者 <code>eqnarray</code> 环境，但是需要进行 3.3 节中的【解决方案2】操作）</p></li><li><p>然后添加 <code>\nonumber</code> 指令，即可取消编号。</p></li></ul>
+            <p>【解决方案】</p><ul><li><p>Latex中 <code>$$...$$</code> 和 <code>\[...\]</code> 环境都替换为<code>align</code> 环境（或者 <code>eqnarray</code> 环境，但是需要进行3.3 节中的【解决方案2】操作）</p></li><li><p>然后添加 <code>\nonumber</code> 指令，即可取消编号。</p></li></ul>
           </div>
-<h3 id="pandoc-进行-tex-docx-转换时支持用户自定义指令前提是用户自定义指令需要合法">3.2.3 <code>Pandoc</code> 进行 <code>tex</code> → <code>docx</code> 转换时，支持用户自定义指令，前提是用户自定义指令需要合法</h3>
-<p>下面这种自定义指令是可以的 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\rmd</span>&#125;&#123;&#123;<span class="hljs-keyword">\mathrm</span>&#123;d&#125;&#125;&#125;<br></code></pre></td></tr></table></figure> 下面这种自定义指令不可以（不可以的原因是因为<code>\rm</code>而不是因为自定义） <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\rmd</span>&#125;&#123;&#123;<span class="hljs-keyword">\rm</span>&#123;d&#125;&#125;&#125;<br></code></pre></td></tr></table></figure></p>
+<h3
+id="pandoc-进行-tex-docx-转换时支持用户自定义指令前提是用户自定义指令需要合法">3.2.3
+<code>Pandoc</code> 进行 <code>tex</code> → <code>docx</code>
+转换时，支持用户自定义指令，前提是用户自定义指令需要合法</h3>
+<p>下面这种自定义指令是可以的 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\rmd</span>&#125;&#123;&#123;<span class="hljs-keyword">\mathrm</span>&#123;d&#125;&#125;&#125;<br></code></pre></td></tr></table></figure>
+下面这种自定义指令不可以（不可以的原因是因为<code>\rm</code>而不是因为自定义）
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newcommand</span>&#123;<span class="hljs-keyword">\rmd</span>&#125;&#123;&#123;<span class="hljs-keyword">\rm</span>&#123;d&#125;&#125;&#125;<br></code></pre></td></tr></table></figure></p>
 <h3 id="公式编号含有章节编号">3.2.4 公式编号含有章节编号</h3>
 <div class="note note-danger">
-            <p>【问题描述】<code>pandoc-tex-numbering</code> 可以为章节和公式添加编号，但是公式编号包含章节编号，但是我们希望全文公式统一编号，不附带章节信息</p>
+            <p>【问题描述】<code>pandoc-tex-numbering</code>可以为章节和公式添加编号，但是公式编号包含章节编号，但是我们希望全文公式统一编号，不附带章节信息</p>
           </div>
-<p>上述问题具体见下图 <img src="Pandoc_2-1.png" srcset="/img/loading.gif" lazyload alt="公式编号含有章节编号" /></p>
+<p>上述问题具体见下图 <img src="Pandoc_2-1.png" srcset="/img/loading.gif" lazyload
+alt="公式编号含有章节编号" /></p>
 <div class="note note-info">
-            <p>【解决方案】</p><ul><li><p><code>pandoc-tex-numbering</code> 里有个总的参数 <code>number-reset-level</code>，意思是 <code>在哪一级 section 时把计数器归零</code>：</p></li><li><p>默认 <code>number-reset-level: 1</code>：在每个一级标题（section/chapter）处重置，所以会得到 (6.1)、(6.2) 这种风格；</p></li><li><p>如果想“永远不重置”，可以设成 <code>0</code> 或一个非常大的数。</p></li><li><p>具体操作：新建一个 meta.yaml，内容如下 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">number-reset-level:</span> <span class="hljs-number">0</span>        <span class="hljs-comment"># 不随 section 重置</span><br><span class="hljs-attr">equation-src-format:</span> <span class="hljs-string">&quot;\\qquad(&#123;this_num&#125;)&quot;</span><br><span class="hljs-attr">equation-ref-format:</span> <span class="hljs-string">&quot;&#123;this_num&#125;&quot;</span><br><span class="hljs-attr">equation-cref-format:</span> <span class="hljs-string">&quot;(&#123;this_num&#125;)&quot;</span><br></code></pre></td></tr></table></figure> 然后命令行： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
+            <p>【解决方案】</p><ul><li><p><code>pandoc-tex-numbering</code> 里有个总的参数<code>number-reset-level</code>，意思是<code>在哪一级 section 时把计数器归零</code>：</p></li><li><p>默认<code>number-reset-level: 1</code>：在每个一级标题（section/chapter）处重置，所以会得到(6.1)、(6.2) 这种风格；</p></li><li><p>如果想“永远不重置”，可以设成 <code>0</code>或一个非常大的数。</p></li><li><p>具体操作：新建一个 meta.yaml，内容如下 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">number-reset-level:</span> <span class="hljs-number">0</span>        <span class="hljs-comment"># 不随 section 重置</span><br><span class="hljs-attr">equation-src-format:</span> <span class="hljs-string">&quot;\\qquad(&#123;this_num&#125;)&quot;</span><br><span class="hljs-attr">equation-ref-format:</span> <span class="hljs-string">&quot;&#123;this_num&#125;&quot;</span><br><span class="hljs-attr">equation-cref-format:</span> <span class="hljs-string">&quot;(&#123;this_num&#125;)&quot;</span><br></code></pre></td></tr></table></figure>然后命令行： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
           </div>
-<p>上述方案效果如下 <img src="Pandoc_2-4.png" srcset="/img/loading.gif" lazyload alt="公式编号不包含章节编号" /></p>
-<h3 id="公式引用问题最好还是禁用-eqnarray">3.2.5 公式引用问题：最好还是禁用 eqnarray</h3>
+<p>上述方案效果如下 <img src="Pandoc_2-4.png" srcset="/img/loading.gif" lazyload
+alt="公式编号不包含章节编号" /></p>
+<h3 id="公式引用问题最好还是禁用-eqnarray">3.2.5
+公式引用问题：最好还是禁用 eqnarray</h3>
 <div class="note note-danger">
-            <p>【问题描述】<code>eqnarray</code> 环境经过前面的方案，可以解决一些问题，但在引用上还是会有很多奇怪的问题。比如</p><ul><li><code>eqnarray</code> 环境添加 <code>\label</code> 后，其他位置引用公式时用 <code>\eqref</code> 指令，虽然引用标号可以正确显示，但是引用不会自动添加括号</li><li>多个 <code>\eqref</code> 公式引用只能保证最后一个有显示，前面的 <code>\eqref</code> 都没有显示</li></ul>
+            <p>【问题描述】<code>eqnarray</code>环境经过前面的方案，可以解决一些问题，但在引用上还是会有很多奇怪的问题。比如</p><ul><li><code>eqnarray</code> 环境添加 <code>\label</code>后，其他位置引用公式时用 <code>\eqref</code>指令，虽然引用标号可以正确显示，但是引用不会自动添加括号</li><li>多个 <code>\eqref</code> 公式引用只能保证最后一个有显示，前面的<code>\eqref</code> 都没有显示</li></ul>
           </div>
 <div class="note note-info">
-            <p>【解决方案】</p><ul><li><p>彻底禁用 <code>eqnarray</code> 环境</p><ul><li>彻底放弃 <code>eqnarray</code>，只用 <code>amsmath</code> 的 <code>equation</code> / <code>align</code> / <code>split</code> / <code>aligned</code> 环境</li><li>多行只打一 个编号：用 <code>equation</code> + (<code>split</code> / <code>aligned</code>) 套娃写法 （<code>equation</code> 在外层） <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;equation&#125;<br><span class="hljs-keyword">\begin</span>&#123;aligned&#125;<br>    f(x) <span class="hljs-built_in">&amp;</span>= x<span class="hljs-built_in">^</span>2 + 2x + 1 <span class="hljs-keyword">\\</span><br>    g(x) <span class="hljs-built_in">&amp;</span>= <span class="hljs-keyword">\sin</span>(x)<br><span class="hljs-keyword">\end</span>&#123;aligned&#125;<br><span class="hljs-keyword">\label</span>&#123;eq:quadratic&#125;<br><span class="hljs-keyword">\end</span>&#123;equation&#125;<br><br><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>a <span class="hljs-built_in">&amp;</span>= b + c <span class="hljs-keyword">\label</span>&#123;eq:align1&#125; <span class="hljs-keyword">\\</span><br>d <span class="hljs-built_in">&amp;</span>= e - f <span class="hljs-keyword">\label</span>&#123;eq:align2&#125; <span class="hljs-keyword">\\</span><br>g <span class="hljs-built_in">&amp;</span>= h <span class="hljs-keyword">\nonumber</span> <span class="hljs-keyword">\\</span><br>i <span class="hljs-built_in">&amp;</span>= j + k <span class="hljs-keyword">\label</span>&#123;eq:align3&#125;<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></td></tr></table></figure></li><li>不想编号的多行：老老实实在每行加 <code>\nonumber</code></li><li>用 <code>\label</code> + <code>\eqref</code>，括号交给 <code>pandoc-tex-numbering</code> 的 <code>metadata</code> 控制</li></ul></li><li><p>创建 <code>meta.yaml</code> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Pandoc-TeX-Numbering 过滤器设置</span><br><span class="hljs-attr">number-reset-level:</span> <span class="hljs-number">1</span>           <span class="hljs-comment"># 编号随 section 重置，不重置设为 0</span><br><br><span class="hljs-comment"># 公式编号设置</span><br><span class="hljs-attr">number-equations:</span> <span class="hljs-literal">true</span>          <span class="hljs-comment"># 让过滤器接管所有公式编号</span><br><span class="hljs-attr">equation-src-format:</span> <span class="hljs-string">&quot;\\qquad(&#123;num&#125;)&quot;</span>   <span class="hljs-comment"># 公式右侧显示：(1)</span><br><span class="hljs-attr">equation-ref-format:</span> <span class="hljs-string">&quot;(&#123;num&#125;)&quot;</span>          <span class="hljs-comment"># \ref / \eqref 显示：(1)</span><br><span class="hljs-attr">equation-cref-format:</span> <span class="hljs-string">&quot;(&#123;num&#125;)&quot;</span>         <span class="hljs-comment"># 若将来用 \cref 也是加括号</span><br></code></pre></td></tr></table></figure></p></li><li><p>执行 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
+            <p>【解决方案】</p><ul><li><p>彻底禁用 <code>eqnarray</code> 环境</p><ul><li>彻底放弃 <code>eqnarray</code>，只用 <code>amsmath</code> 的<code>equation</code> / <code>align</code> / <code>split</code> /<code>aligned</code> 环境</li><li>多行只打一 个编号：用 <code>equation</code> + (<code>split</code> /<code>aligned</code>) 套娃写法 （<code>equation</code> 在外层）<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;equation&#125;<br><span class="hljs-keyword">\begin</span>&#123;aligned&#125;<br>    f(x) <span class="hljs-built_in">&amp;</span>= x<span class="hljs-built_in">^</span>2 + 2x + 1 <span class="hljs-keyword">\\</span><br>    g(x) <span class="hljs-built_in">&amp;</span>= <span class="hljs-keyword">\sin</span>(x)<br><span class="hljs-keyword">\end</span>&#123;aligned&#125;<br><span class="hljs-keyword">\label</span>&#123;eq:quadratic&#125;<br><span class="hljs-keyword">\end</span>&#123;equation&#125;<br><br><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>a <span class="hljs-built_in">&amp;</span>= b + c <span class="hljs-keyword">\label</span>&#123;eq:align1&#125; <span class="hljs-keyword">\\</span><br>d <span class="hljs-built_in">&amp;</span>= e - f <span class="hljs-keyword">\label</span>&#123;eq:align2&#125; <span class="hljs-keyword">\\</span><br>g <span class="hljs-built_in">&amp;</span>= h <span class="hljs-keyword">\nonumber</span> <span class="hljs-keyword">\\</span><br>i <span class="hljs-built_in">&amp;</span>= j + k <span class="hljs-keyword">\label</span>&#123;eq:align3&#125;<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></td></tr></table></figure></li><li>不想编号的多行：老老实实在每行加 <code>\nonumber</code></li><li>用 <code>\label</code> + <code>\eqref</code>，括号交给<code>pandoc-tex-numbering</code> 的 <code>metadata</code> 控制</li></ul></li><li><p>创建 <code>meta.yaml</code> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Pandoc-TeX-Numbering 过滤器设置</span><br><span class="hljs-attr">number-reset-level:</span> <span class="hljs-number">1</span>           <span class="hljs-comment"># 编号随 section 重置，不重置设为 0</span><br><br><span class="hljs-comment"># 公式编号设置</span><br><span class="hljs-attr">number-equations:</span> <span class="hljs-literal">true</span>          <span class="hljs-comment"># 让过滤器接管所有公式编号</span><br><span class="hljs-attr">equation-src-format:</span> <span class="hljs-string">&quot;\\qquad(&#123;num&#125;)&quot;</span>   <span class="hljs-comment"># 公式右侧显示：(1)</span><br><span class="hljs-attr">equation-ref-format:</span> <span class="hljs-string">&quot;(&#123;num&#125;)&quot;</span>          <span class="hljs-comment"># \ref / \eqref 显示：(1)</span><br><span class="hljs-attr">equation-cref-format:</span> <span class="hljs-string">&quot;(&#123;num&#125;)&quot;</span>         <span class="hljs-comment"># 若将来用 \cref 也是加括号</span><br></code></pre></td></tr></table></figure></p></li><li><p>执行 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p></li></ul>
           </div>
 <h2 id="交叉引用编号问题">4. 交叉引用编号问题</h2>
 <h3 id="公式引用">4.1 公式引用</h3>
@@ -910,7 +1005,8 @@ info -->
 </ul>
 <p>所以：</p>
 <ul>
-<li>要 3.1 这种编号 → 用 <code>number-reset-level: 1</code> 控制，按 section 重置</li>
+<li>要 3.1 这种编号 → 用 <code>number-reset-level: 1</code> 控制，按
+section 重置</li>
 <li>想在 中只要 “3.1” → {num}；</li>
 <li>“{prefix}{num}” → “3.1” （默认 “.” 连接）</li>
 <li>“{prefix}-{num}” → “3-1”</li>
@@ -923,10 +1019,13 @@ info -->
             <p>【Pandoc的局限】</p><ul><li>定理编号和引用强制从 1 开始</li><li><code>{parent_num}.{this_num}</code> 对于定理环境失效</li></ul>
           </div>
 <h3 id="图片引用">4.3 图片引用</h3>
-<p>创建 <code>meta.yaml</code> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 图片编号设置</span><br><span class="hljs-attr">number-figures:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">figure-prefix:</span> <span class="hljs-string">&quot;图&quot;</span><br><span class="hljs-attr">fig-src-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;parent_num&#125;-&#123;this_num&#125;&quot;</span>   <span class="hljs-comment"># “图 3-1”</span><br><span class="hljs-attr">fig-cref-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;parent_num&#125;-&#123;this_num&#125;&quot;</span>  <span class="hljs-comment"># \cref 同样样式</span><br><span class="hljs-attr">fig-ref-format:</span> <span class="hljs-string">&quot;&#123;parent_num&#125;-&#123;this_num&#125;&quot;</span>           <span class="hljs-comment"># \ref 只要数字</span><br></code></pre></td></tr></table></figure> 执行 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p>
+<p>创建 <code>meta.yaml</code> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 图片编号设置</span><br><span class="hljs-attr">number-figures:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">figure-prefix:</span> <span class="hljs-string">&quot;图&quot;</span><br><span class="hljs-attr">fig-src-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;parent_num&#125;-&#123;this_num&#125;&quot;</span>   <span class="hljs-comment"># “图 3-1”</span><br><span class="hljs-attr">fig-cref-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;parent_num&#125;-&#123;this_num&#125;&quot;</span>  <span class="hljs-comment"># \cref 同样样式</span><br><span class="hljs-attr">fig-ref-format:</span> <span class="hljs-string">&quot;&#123;parent_num&#125;-&#123;this_num&#125;&quot;</span>           <span class="hljs-comment"># \ref 只要数字</span><br></code></pre></td></tr></table></figure> 执行
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p>
 <h3 id="表格引用">4.4 表格引用</h3>
-<p>Latex 中表格建议这样写（因为下面方式与Pandoc兼容） <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;table&#125;[htbp]<br>	<span class="hljs-keyword">\centering</span><br>	<span class="hljs-keyword">\caption</span>&#123;控制器参数整定结果&#125;<br>	<span class="hljs-keyword">\label</span>&#123;tab:ctrl-params&#125;<br>	<span class="hljs-keyword">\begin</span>&#123;tabular&#125;&#123;ccc&#125;<br>		<span class="hljs-keyword">\hline</span><br>		参数 <span class="hljs-built_in">&amp;</span> 数值 <span class="hljs-built_in">&amp;</span> 说明 <span class="hljs-keyword">\\</span><br>		<span class="hljs-keyword">\hline</span><br>		<span class="hljs-built_in">$</span>K<span class="hljs-built_in">_</span>p<span class="hljs-built_in">$</span> <span class="hljs-built_in">&amp;</span> 1.2 <span class="hljs-built_in">&amp;</span> 比例系数 <span class="hljs-keyword">\\</span><br>		<span class="hljs-built_in">$</span>K<span class="hljs-built_in">_</span>i<span class="hljs-built_in">$</span> <span class="hljs-built_in">&amp;</span> 0.5 <span class="hljs-built_in">&amp;</span> 积分系数 <span class="hljs-keyword">\\</span><br>		<span class="hljs-built_in">$</span>K<span class="hljs-built_in">_</span>d<span class="hljs-built_in">$</span> <span class="hljs-built_in">&amp;</span> 0.01 <span class="hljs-built_in">&amp;</span> 微分系数 <span class="hljs-keyword">\\</span><br>		<span class="hljs-keyword">\hline</span><br>	<span class="hljs-keyword">\end</span>&#123;tabular&#125;<br><span class="hljs-keyword">\end</span>&#123;table&#125;<br></code></pre></td></tr></table></figure></p>
-<p>创建 <code>meta.yaml</code> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 表格编号设置</span><br><span class="hljs-attr">number-tables:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">table-prefix:</span> <span class="hljs-string">&quot;表&quot;</span><br><span class="hljs-attr">table-src-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;num&#125;&quot;</span> <span class="hljs-comment"># 出现在 caption 里的格式：表3.1 控制器参数整定结果</span><br><span class="hljs-attr">table-ref-format:</span> <span class="hljs-string">&quot;&#123;num&#125;&quot;</span>         <span class="hljs-comment"># \ref&#123;tab:...&#125; 输出：3.1</span><br><span class="hljs-attr">table-cref-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;num&#125;&quot;</span> <span class="hljs-comment"># \cref&#123;tab:...&#125; 输出：表3.1</span><br></code></pre></td></tr></table></figure> 执行 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p>
+<p>Latex 中表格建议这样写（因为下面方式与Pandoc兼容）
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;table&#125;[htbp]<br>	<span class="hljs-keyword">\centering</span><br>	<span class="hljs-keyword">\caption</span>&#123;控制器参数整定结果&#125;<br>	<span class="hljs-keyword">\label</span>&#123;tab:ctrl-params&#125;<br>	<span class="hljs-keyword">\begin</span>&#123;tabular&#125;&#123;ccc&#125;<br>		<span class="hljs-keyword">\hline</span><br>		参数 <span class="hljs-built_in">&amp;</span> 数值 <span class="hljs-built_in">&amp;</span> 说明 <span class="hljs-keyword">\\</span><br>		<span class="hljs-keyword">\hline</span><br>		<span class="hljs-built_in">$</span>K<span class="hljs-built_in">_</span>p<span class="hljs-built_in">$</span> <span class="hljs-built_in">&amp;</span> 1.2 <span class="hljs-built_in">&amp;</span> 比例系数 <span class="hljs-keyword">\\</span><br>		<span class="hljs-built_in">$</span>K<span class="hljs-built_in">_</span>i<span class="hljs-built_in">$</span> <span class="hljs-built_in">&amp;</span> 0.5 <span class="hljs-built_in">&amp;</span> 积分系数 <span class="hljs-keyword">\\</span><br>		<span class="hljs-built_in">$</span>K<span class="hljs-built_in">_</span>d<span class="hljs-built_in">$</span> <span class="hljs-built_in">&amp;</span> 0.01 <span class="hljs-built_in">&amp;</span> 微分系数 <span class="hljs-keyword">\\</span><br>		<span class="hljs-keyword">\hline</span><br>	<span class="hljs-keyword">\end</span>&#123;tabular&#125;<br><span class="hljs-keyword">\end</span>&#123;table&#125;<br></code></pre></td></tr></table></figure></p>
+<p>创建 <code>meta.yaml</code> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 表格编号设置</span><br><span class="hljs-attr">number-tables:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">table-prefix:</span> <span class="hljs-string">&quot;表&quot;</span><br><span class="hljs-attr">table-src-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;num&#125;&quot;</span> <span class="hljs-comment"># 出现在 caption 里的格式：表3.1 控制器参数整定结果</span><br><span class="hljs-attr">table-ref-format:</span> <span class="hljs-string">&quot;&#123;num&#125;&quot;</span>         <span class="hljs-comment"># \ref&#123;tab:...&#125; 输出：3.1</span><br><span class="hljs-attr">table-cref-format:</span> <span class="hljs-string">&quot;&#123;prefix&#125;&#123;num&#125;&quot;</span> <span class="hljs-comment"># \cref&#123;tab:...&#125; 输出：表3.1</span><br></code></pre></td></tr></table></figure> 执行
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">pandoc template.tex \<br>--citeproc --bibliography=template.bib \<br>-F pandoc-tex-numbering \<br>--metadata-file=meta.yaml \<br>-o template.docx<br></code></pre></td></tr></table></figure></p>
 
                 
               </div>

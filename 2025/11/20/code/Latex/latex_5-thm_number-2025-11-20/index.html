@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. 美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 – amsthm amsthm 是 美国数学学会 AMS 提供的 LaTeX 宏包，专门用来处理：  定理 &#x2F; 引理 &#x2F; 命题 &#x2F; 推论等 “定理类环境” 的定义和编号 proof（证明环境）的排版 不同风格的定理格式（斜体&#x2F;正常体&#x2F;备注型） 可以理解成：“让定理环境更好用、更好看”的官方标准包。  2. 定理环">
+    <meta name="description" content="1. 美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 – amsthm amsthm 是 美国数学学会 AMS 提供的 LaTeX 宏包，专门用来处理：  定理 &#x2F; 引理 &#x2F; 命题 &#x2F; 推论等 “定理类环境” 的定义和编号 proof（证明环境）的排版 不同风格的定理格式（斜体&#x2F;正常体&#x2F;备注型） 可以理解成：“让定理环境更好用、更好看”的官方标准包。  2.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTex 系列 - 5. &#96;amsthm&#96; 定理环境编号">
 <meta property="og:url" content="http://yylustb.github.io/2025/11/20/code/Latex/latex_5-thm_number-2025-11-20/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="1. 美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 – amsthm amsthm 是 美国数学学会 AMS 提供的 LaTeX 宏包，专门用来处理：  定理 &#x2F; 引理 &#x2F; 命题 &#x2F; 推论等 “定理类环境” 的定义和编号 proof（证明环境）的排版 不同风格的定理格式（斜体&#x2F;正常体&#x2F;备注型） 可以理解成：“让定理环境更好用、更好看”的官方标准包。  2. 定理环">
+<meta property="og:description" content="1. 美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 – amsthm amsthm 是 美国数学学会 AMS 提供的 LaTeX 宏包，专门用来处理：  定理 &#x2F; 引理 &#x2F; 命题 &#x2F; 推论等 “定理类环境” 的定义和编号 proof（证明环境）的排版 不同风格的定理格式（斜体&#x2F;正常体&#x2F;备注型） 可以理解成：“让定理环境更好用、更好看”的官方标准包。  2.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/latex.png">
 <meta property="article:published_time" content="2025-11-20T15:30:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T15:30:00.000Z">
+<meta property="article:modified_time" content="2025-11-20T15:30:00.450Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="LaTex">
 <meta property="article:tag" content="amsthm">
@@ -1084,8 +1084,11 @@
             
               <div class="markdown-body">
                 
-                <h2 id="美国数学学会-ams-提供的-定理类环境-latex-宏包-amsthm">1. 美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 – <code>amsthm</code></h2>
-<p><code>amsthm</code> 是 美国数学学会 <code>AMS</code> 提供的 <code>LaTeX</code> 宏包，专门用来处理：</p>
+                <h2 id="美国数学学会-ams-提供的-定理类环境-latex-宏包-amsthm">1.
+美国数学学会 AMS 提供的 “定理类环境” LaTeX 宏包 –
+<code>amsthm</code></h2>
+<p><code>amsthm</code> 是 美国数学学会 <code>AMS</code> 提供的
+<code>LaTeX</code> 宏包，专门用来处理：</p>
 <ul>
 <li><p>定理 / 引理 / 命题 / 推论等 “定理类环境” 的定义和编号</p></li>
 <li><p>proof（证明环境）的排版</p></li>
@@ -1104,21 +1107,28 @@
 <p>文中顺序是： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;<br><span class="hljs-keyword">\begin</span>&#123;lem&#125; ... <span class="hljs-keyword">\end</span>&#123;lem&#125;<br><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;<br><span class="hljs-keyword">\begin</span>&#123;lem&#125; ... <span class="hljs-keyword">\end</span>&#123;lem&#125;<br></code></pre></td></tr></table></figure> 编号会是： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">定理 1<br>引理 2<br>定理 3<br>引理 4<br></code></pre></td></tr></table></figure></p>
 <h3 id="case-5">2.5 case 5</h3>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newtheorem</span>&#123;thm&#125;&#123;定理&#125;[section]   <span class="hljs-comment">% 或者 \numberwithin&#123;thm&#125;&#123;section&#125;</span><br><span class="hljs-keyword">\newtheorem</span>&#123;lem&#125;[thm]&#123;引理&#125;<br></code></pre></td></tr></table></figure>
-<p><code>Section 3</code> 中顺序是： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;<br><span class="hljs-keyword">\begin</span>&#123;lem&#125; ... <span class="hljs-keyword">\end</span>&#123;lem&#125;<br><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;<br><span class="hljs-keyword">\begin</span>&#123;lem&#125; ... <span class="hljs-keyword">\end</span>&#123;lem&#125;<br></code></pre></td></tr></table></figure> 编号会是： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">定理 3.1<br>引理 3.2<br>定理 3.3<br>引理 3.4<br></code></pre></td></tr></table></figure></p>
-<h3 id="case-6-希望它们各自从-1-开始">2.6 case 6 希望它们“各自”从 1 开始</h3>
+<p><code>Section 3</code> 中顺序是： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;<br><span class="hljs-keyword">\begin</span>&#123;lem&#125; ... <span class="hljs-keyword">\end</span>&#123;lem&#125;<br><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;<br><span class="hljs-keyword">\begin</span>&#123;lem&#125; ... <span class="hljs-keyword">\end</span>&#123;lem&#125;<br></code></pre></td></tr></table></figure> 编号会是：
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">定理 3.1<br>引理 3.2<br>定理 3.3<br>引理 3.4<br></code></pre></td></tr></table></figure></p>
+<h3 id="case-6-希望它们各自从-1-开始">2.6 case 6 希望它们“各自”从 1
+开始</h3>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newtheorem</span>&#123;thm&#125;&#123;定理&#125;   <span class="hljs-comment">% 定理 1, 2, 3, ...</span><br><span class="hljs-keyword">\newtheorem</span>&#123;lem&#125;&#123;引理&#125;   <span class="hljs-comment">% 引理 1, 2, 3, ...</span><br></code></pre></td></tr></table></figure>
 <p>文中： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;    <span class="hljs-comment">% 定理 1</span><br><span class="hljs-keyword">\begin</span>&#123;lem&#125;  ... <span class="hljs-keyword">\end</span>&#123;lem&#125;   <span class="hljs-comment">% 引理 1</span><br><span class="hljs-keyword">\begin</span>&#123;thm&#125; ... <span class="hljs-keyword">\end</span>&#123;thm&#125;    <span class="hljs-comment">% 定理 2</span><br><span class="hljs-keyword">\begin</span>&#123;lem&#125;  ... <span class="hljs-keyword">\end</span>&#123;lem&#125;   <span class="hljs-comment">% 引理 2</span><br></code></pre></td></tr></table></figure> 编号会是： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">定理 1<br>引理 1<br>定理 2<br>引理 2<br></code></pre></td></tr></table></figure></p>
-<h3 id="case-7-按章节重置且各自从-1-开始">2.7 case 7 按章节重置且各自从 1 开始</h3>
+<h3 id="case-7-按章节重置且各自从-1-开始">2.7 case 7 按章节重置且各自从
+1 开始</h3>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\newtheorem</span>&#123;thm&#125;&#123;定理&#125;[section]   <span class="hljs-comment">% 定理 3.1, 3.2, 4.1, ...</span><br><span class="hljs-keyword">\newtheorem</span>&#123;lem&#125;&#123;引理&#125;[section]   <span class="hljs-comment">% 引理 3.1, 3.2, 4.1, ...</span><br></code></pre></td></tr></table></figure>
 <h2 id="证明-proof-环境">3. 证明 proof 环境</h2>
-<p>写证明时不用自己手敲 “证明.”，“□” 等： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;proof&#125;<br>这是证明内容……<br><span class="hljs-keyword">\end</span>&#123;proof&#125;<br></code></pre></td></tr></table></figure> 会自动排成类似： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">证明. 这是证明内容…… □<br></code></pre></td></tr></table></figure></p>
-<p>你也可以改成英文 “Proof.”，或者自定义名字： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;proof&#125;[定理3的证明]<br>这是证明内容…… □<br><span class="hljs-keyword">\end</span>&#123;proof&#125;<br><span class="hljs-keyword">\begin</span>&#123;proof&#125;[解]<br>这是求解过程…… □<br><span class="hljs-keyword">\end</span>&#123;proof&#125;<br></code></pre></td></tr></table></figure> 会自动排成类似： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">定理3的证明. 这是证明内容…… □<br>解. 这是求解过程…… □<br></code></pre></td></tr></table></figure></p>
+<p>写证明时不用自己手敲 “证明.”，“□” 等： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;proof&#125;<br>这是证明内容……<br><span class="hljs-keyword">\end</span>&#123;proof&#125;<br></code></pre></td></tr></table></figure>
+会自动排成类似： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">证明. 这是证明内容…… □<br></code></pre></td></tr></table></figure></p>
+<p>你也可以改成英文 “Proof.”，或者自定义名字： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;proof&#125;[定理3的证明]<br>这是证明内容…… □<br><span class="hljs-keyword">\end</span>&#123;proof&#125;<br><span class="hljs-keyword">\begin</span>&#123;proof&#125;[解]<br>这是求解过程…… □<br><span class="hljs-keyword">\end</span>&#123;proof&#125;<br></code></pre></td></tr></table></figure>
+会自动排成类似： <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">定理3的证明. 这是证明内容…… □<br>解. 这是求解过程…… □<br></code></pre></td></tr></table></figure></p>
 <h2 id="修改定理风格">4. 修改定理风格</h2>
 <p>三种常见风格： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs tex"><span class="hljs-keyword">\theoremstyle</span>&#123;plain&#125;       <span class="hljs-comment">% 粗体标题 + 斜体正文（默认，适合 Theorem/Lemma）</span><br><span class="hljs-keyword">\newtheorem</span>&#123;thm&#125;&#123;定理&#125;<br><br><span class="hljs-keyword">\theoremstyle</span>&#123;definition&#125;  <span class="hljs-comment">% 粗体标题 + 正文字体（适合 Definition）</span><br><span class="hljs-keyword">\newtheorem</span>&#123;defn&#125;&#123;定义&#125;<br><br><span class="hljs-keyword">\theoremstyle</span>&#123;remark&#125;      <span class="hljs-comment">% 斜体标题 + 正文字体（适合 Remark/Note）</span><br><span class="hljs-keyword">\newtheorem</span>&#123;rem&#125;&#123;注&#125;<br></code></pre></td></tr></table></figure></p>
 <p>这样可以轻松实现“定理是斜体、定义是正体、备注是小字”的常见数学排版规范。</p>
 <h2 id="拓展">5. 拓展</h2>
-<h3 id="amsthm-和-普通-latex-有什么关系">5.1 <code>amsthm</code> 和 <code>普通 LaTeX</code> 有什么关系？</h3>
-<p><code>LaTeX</code> 本身也有一个 <code>\newtheorem</code>，但功能比较简单。</p>
+<h3 id="amsthm-和-普通-latex-有什么关系">5.1 <code>amsthm</code> 和
+<code>普通 LaTeX</code> 有什么关系？</h3>
+<p><code>LaTeX</code> 本身也有一个
+<code>\newtheorem</code>，但功能比较简单。</p>
 <p>amsthm 在此基础上扩展了：</p>
 <ul>
 <li><p>多种 \theoremstyle</p></li>
@@ -1129,11 +1139,15 @@
 <h3 id="数学定理环境包汇总">5.2 数学定理环境包汇总</h3>
 <p>功能类似包</p>
 <ul>
-<li><p><code>amsthm</code>：<code>AMS</code> 官方，简洁、稳定、最常用；大部分期刊模板都会直接用它。</p></li>
+<li><p><code>amsthm</code>：<code>AMS</code>
+官方，简洁、稳定、最常用；大部分期刊模板都会直接用它。</p></li>
 <li><p><code>ntheorem</code>：功能更强，能统一定理/证明/脚注等样式，但略复杂，有时和其他宏包冲突。</p></li>
-<li><p><code>thmtools</code>：在 <code>amsthm</code> 上再封一层，提供更高级的接口（自动列表、<code>reference name</code> 等）。</p></li>
+<li><p><code>thmtools</code>：在 <code>amsthm</code>
+上再封一层，提供更高级的接口（自动列表、<code>reference name</code>
+等）。</p></li>
 </ul>
-<p>如果只是正常写数学讲义 / 论文，直接用 <code>amsthm</code> 就足够了。</p>
+<p>如果只是正常写数学讲义 / 论文，直接用 <code>amsthm</code>
+就足够了。</p>
 
                 
               </div>
