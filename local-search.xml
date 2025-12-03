@@ -8,7 +8,7 @@
     <link href="/2025/12/02/opt/opt_basics/opt_basics_1/"/>
     <url>/2025/12/02/opt/opt_basics/opt_basics_1/</url>
     
-    <content type="html"><![CDATA[<h1 id="问题描述">0. 问题描述</h1><p>这一讲关注以下三个问题：</p><ol type="1"><li>无约束优化问题： <span class="math display">\[\begin{align}\label{eq:pblm-1}\min_{x \in \mathbb{R}^n} f(x)\end{align}\]</span></li><li>等式约束优化问题 <span class="math display">\[\begin{align}\label{eq:pblm-2}&amp;\min_{x \in \mathbb{R}^n} f(x) \\&amp;\text{ s.t. } g_i(x) = 0, i = 1, 2, \ldots, m\nonumber\end{align}\]</span></li><li>不等式约束优化问题 <span class="math display">\[\begin{align}\label{eq:pblm-3}&amp;\min_{x \in \mathbb{R}^n} f(x) \nonumber\\&amp;\text{ s.t. } h_i(x) \leq 0, i = 1, 2, \ldots, m\end{align}\]</span></li></ol><p>接下来讨论这三个问题最优解需要满足的<mark><strong>必要条件</strong></mark>。</p><h1 id="无约束优化问题">1. 无约束优化问题</h1><p>没什么好说的，最优解（需要满足）的<mark><strong>必要条件</strong></mark>就是驻点条件： <span class="math display">\[\begin{align}\label{eq:sln-1}x = \arg\min_{x \in \mathbb{R}^n} f(x)\quad \Rightarrow \quad\nabla f(x) = 0\end{align}\]</span></p><h1 id="等式约束优化问题">2. 等式约束优化问题</h1><p>这里需要关注：</p><ul><li><p>引入了等式约束，问题就变了（从无约束优化问题变成了等式约束优化问题）</p></li><li><p>相应的，最优解需要满足的必要条件，也要发生改变（最优解不仅要满足驻点条件，还应该需要满足等式约束）</p></li><li><p><mark><strong>如何以一种更加本质并且更加统一的视角，将驻点条件和等式约束有机结合起来？</strong></mark>这是这一部分讨论的出发点</p></li></ul><h2 id="错误思路直接做问题转化">2.1 错误思路：直接做问题转化</h2><div class="note note-danger">            <p>教科书讲的是：</p><ul><li><p>引入 Lagrange 乘子，将等式约束引入到优化问题的目标函数中，将等式约束问题转化为以下无约束问题： <span class="math display">\[\begin{align}\label{eq:pblm-2-lagrange}\min_{x \in \mathbb{R}^n} f(x) + \sum_{i=1}^m \lambda_i g_i(x)\end{align}\]</span> 其中，<span class="math inline">\(\lambda_i\)</span> 是 Lagrange 乘子。</p></li><li><p>接下来，针对上述无约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2-lagrange}\)</span>，应用驻点条件，可以得到： <span class="math display">\[\begin{align}\label{eq:sln-2-lagrange}\nabla f(x) + \sum_{i=1}^m \lambda_i \nabla g_i(x) = 0\end{align}\]</span></p></li><li><p>最优解除了要满足 ，还应该满足等式约束 <span class="math display">\[\begin{align}\label{eq:sln-2-constraint}g_i(x) = 0, i = 1, 2, \ldots, m\end{align}\]</span> 最终，<span class="math inline">\(\eqref{eq:sln-2-lagrange}\)</span> + <span class="math inline">\(\eqref{eq:sln-2-constraint}\)</span> 就是<strong>等式约束优化问题的必要条件</strong></p></li></ul>          </div><div class="note note-warning">            <p>但这是反直觉的：</p><ul><li><p>为什么等式约束问题 <span class="math inline">\(\eqref{eq:pblm-2}\)</span> 可以转化为无约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2-lagrange}\)</span>？</p></li><li><p>Lagrange 乘子在这个问题转化过程中，扮演了什么角色？</p></li><li><p><strong>等式约束优化问题的必要条件</strong>  +  其实是关于 <span class="math inline">\(x_1,\cdots,x_n\)</span> 和 <span class="math inline">\(\lambda_1,\cdots,\lambda_m\)</span> 的方程组</p></li><li><p>也就是说<span style="background-color:rgb(100,200,200,0.5)"><strong>等式约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2}\)</span> 原本只需要求解 <span class="math inline">\(x\)</span>，转化为无约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2-lagrange}\)</span> 后需要求解 <span class="math inline">\(x\)</span> 和 Lagrange 乘子 <span class="math inline">\(\lambda\)</span></strong></span>，这就会导致 <span style="background-color:rgb(100,200,200,0.5)"><span class="math inline">\(x\)</span> 依赖 Lagrange 乘子 <span class="math inline">\(\lambda\)</span>，会产生以下问题</span>：</p><ul><li><p>Lagrange 乘子在这个问题转化过程中，扮演了什么角色？</p></li><li><p>Lagrange 乘子是否可以任意？如果不可以，Lagrange 乘子应该如何确定？</p></li><li><p>Lagrange 乘子与最优解有什么关系？</p></li></ul></li></ul>          </div><h2 id="正确思路等式约束必要条件-无约束问题优化目标函数">2.2 正确思路：等式约束必要条件 → 无约束问题优化目标函数</h2><p>这一部分的思路：</p><ul><li><p>先推导等式约束优化问题的必要条件（<code>**拉格朗日乘子条件**</code>）</p></li><li><p>再用必要条件反推无约束优化问题的目标函数</p></li><li><p>讨论一下<code>**拉格朗日乘子条件**</code>的几何解释</p></li></ul><p><strong>等式约束一阶必要条件</strong>就是<code>**拉格朗日乘子条件**</code>， 后面会指出，<code>**拉格朗日乘子条件**</code> 其实就是 <code>KKT条件</code> （只有等式约束情况下）的特例。</p><div class="note note-info">            <p>假设：</p><ol type="1"><li><span class="math inline">\(f,\, h_i\)</span> 在 <span class="math inline">\(x^*\)</span> 附近一阶可微；</li><li><span class="math inline">\(x^*\)</span> 是上面问题的局部极小点；</li><li><span class="math inline">\(\{\nabla h_i(x^*)\}_{i=1}^m\)</span> 线性无关（即 <span class="math inline">\(\nabla h(x^*)\)</span> 满秩，这个条件称为 <code>约束资格条件 / LICQ</code>）。</li></ol><p>则存在 <span class="math inline">\(\lambda^* \in \mathbb{R}^m\)</span>，使得 <span class="math display">\[\begin{align}\label{eq:lag-1}\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla h_i(x^*) &amp;= 0, \\\label{eq:lag-2}h_i(x^*) &amp;= 0, \qquad \qquad i = 1,\ldots,m.\end{align}\]</span></p>          </div><div class="note note-success">            <p>如果定义 <span class="math inline">\(L(x) = f(x) + \sum_{i=1}^m \lambda_i g_i(x)\)</span></p><ul><li><p><span class="math inline">\(\eqref{eq:lag-1}\)</span>： <span class="math inline">\(0 = \nabla_x L(x,\lambda) = \nabla f(x) + \sum_{i=1}^m \lambda_i \nabla h_i(x)\)</span></p></li><li><p><span class="math inline">\(\eqref{eq:lag-2}\)</span>： <span class="math inline">\(0 = \nabla_\lambda L(x, \lambda) = h(x)\)</span></p></li><li><p><span class="math inline">\(\eqref{eq:lag-1}\)</span> + <span class="math inline">\(\eqref{eq:lag-2}\)</span>：<span class="math inline">\(0 = \nabla_x L(x,\lambda)\)</span></p></li></ul><p>所以，拉格朗日乘子条件（等式<span class="math inline">\(\eqref{eq:lag-1}\)</span> 和 <span class="math inline">\(\eqref{eq:lag-2}\)</span>），是以下无约束优化问题目标函数的梯度： <span class="math display">\[\min_{x \in \mathbb{R}^n} L(x,\lambda) =  f(x) + \sum_{i=1}^m \lambda_i  h_i(x)\]</span> 也就是说，无约束优化问题是通过 <code>拉格朗日乘子条件</code> 反推出来的。</p>          </div><h2 id="拉格朗日乘子条件-的证明">2.3 <code>拉格朗日乘子条件</code> 的证明</h2><p><strong>证明思路概览</strong></p><ol type="1"><li><p>先只用“局部极小点”的定义 + “可行曲线”，推出：</p><blockquote><p>在所有可行方向 <span class="math inline">\(d\)</span> 上，有 <span class="math inline">\(\nabla f(x^*)^\top d = 0\)</span>。</p></blockquote></li><li><p>再用线性代数：<br />可行方向的集合 <span class="math display">\[\mathcal{T} = \{ d : \nabla h_i(x^*)^\top d = 0,\ i = 1,\ldots,m \}\]</span> “对所有 <span class="math inline">\(d \in \mathcal{T},\, \nabla f(x^*)^\top d = 0\)</span>” 等价于</p><blockquote><p><span class="math inline">\(\nabla f(x^*)\)</span> 垂直于 <span class="math inline">\(\mathcal{T}\)</span>，即 <span class="math inline">\(\nabla f(x^*) \in \mathcal{T}^\perp\)</span>。</p></blockquote></li><li><p>因为 <span class="math inline">\(\mathcal{T} = \operatorname{null}(\nabla h(x^*)^\top)\)</span>，所以 <span class="math inline">\(\mathcal{T}^\perp = \operatorname{range}(\nabla h(x^*))\)</span>，<br />这就意味着</p><p><span class="math display">\[\nabla f(x^*) = - \nabla h(x^*) \lambda^*\]</span></p><p>对某个 <span class="math inline">\(\lambda^*\)</span> 成立，即得证。</p></li></ol><p>下面把每一步写严一点。</p><h2 id="拉格朗日乘子条件的几何解释">2.4 拉格朗日乘子条件的几何解释</h2><div class="note note-primary">            <p>几何解释：</p><ul><li><p>无约束时：极小点要求 $ f(x^*)=0 $。</p></li><li><p>有等式约束时：你只能沿“可行方向”（即切空间）动，所以要求 <span class="math display">\[\nabla f(x^\ast)\ \perp\ \text{切空间}.\]</span></p></li><li><p>切空间是所有与 $ h_i(x^) $ 正交的方向集合。 因此“$ f(x^) $ 垂直于切空间”等价于： <span class="math display">\[\nabla f(x^\ast) \in \left\{ \nabla h_i(x^\ast) \right\} \]</span> 也就是 <span class="math display">\[\nabla f(x^\ast) = -\sum_{i=1}^m \lambda_i^\ast \nabla h_i(x^\ast).\]</span> $ f(x^) $ 落在 $ { h_i(x^) } $ 张成的线性空间里。</p></li></ul>          </div><h1 id="不等式约束优化问题">3. 不等式约束优化问题</h1><p>这一部分的思路：</p><ul><li><p>先推导不等式约束优化问题的必要条件（KKT条件）</p></li><li><p>再用必要条件反推无约束优化问题的目标函数</p></li><li><p>讨论一下KKT条件的几何解释</p></li><li><p>KKT条件在只有等式约束时会退化成什么形式</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="问题描述">0. 问题描述</h1><p>这一讲关注以下三个问题：</p><ol type="1"><li>无约束优化问题： <span class="math display">\[\begin{align}\label{eq:pblm-1}\min_{x \in \mathbb{R}^n} f(x)\end{align}\]</span></li><li>等式约束优化问题 <span class="math display">\[\begin{align}\label{eq:pblm-2}&amp;\min_{x \in \mathbb{R}^n} f(x) \\&amp;\text{ s.t. } g_i(x) = 0, i = 1, 2, \ldots, m\nonumber\end{align}\]</span></li><li>不等式约束优化问题 <span class="math display">\[\begin{align}\label{eq:pblm-3}&amp;\min_{x \in \mathbb{R}^n} f(x) \nonumber\\&amp;\text{ s.t. } h_i(x) \leq 0, i = 1, 2, \ldots, m\end{align}\]</span></li></ol><p>接下来讨论这三个问题最优解需要满足的<mark><strong>必要条件</strong></mark>。</p><h1 id="无约束优化问题">1. 无约束优化问题</h1><p>没什么好说的，最优解（需要满足）的<mark><strong>必要条件</strong></mark>就是驻点条件： <span class="math display">\[\begin{align}\label{eq:sln-1}x = \arg\min_{x \in \mathbb{R}^n} f(x)\quad \Rightarrow \quad\nabla f(x) = 0\end{align}\]</span></p><h1 id="等式约束优化问题">2. 等式约束优化问题</h1><p>这里需要关注：</p><ul><li><p>引入了等式约束，问题就变了（从无约束优化问题变成了等式约束优化问题）</p></li><li><p>相应的，最优解需要满足的必要条件，也要发生改变（最优解不仅要满足驻点条件，还应该需要满足等式约束）</p></li><li><p><mark><strong>如何以一种更加本质并且更加统一的视角，将驻点条件和等式约束有机结合起来？</strong></mark>这是这一部分讨论的出发点</p></li></ul><h2 id="错误思路直接做问题转化">2.1 错误思路：直接做问题转化</h2><div class="note note-danger">            <p>教科书讲的是：</p><ul><li><p>引入 Lagrange 乘子，将等式约束引入到优化问题的目标函数中，将等式约束问题转化为以下无约束问题： <span class="math display">\[\begin{align}\label{eq:pblm-2-lagrange}\min_{x \in \mathbb{R}^n} f(x) + \sum_{i=1}^m \lambda_i g_i(x)\end{align}\]</span> 其中，<span class="math inline">\(\lambda_i\)</span> 是 Lagrange 乘子。</p></li><li><p>接下来，针对上述无约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2-lagrange}\)</span>，应用驻点条件，可以得到： <span class="math display">\[\begin{align}\label{eq:sln-2-lagrange}\nabla f(x) + \sum_{i=1}^m \lambda_i \nabla g_i(x) = 0\end{align}\]</span></p></li><li><p>最优解除了要满足 ，还应该满足等式约束 <span class="math display">\[\begin{align}\label{eq:sln-2-constraint}g_i(x) = 0, i = 1, 2, \ldots, m\end{align}\]</span> 最终，<span class="math inline">\(\eqref{eq:sln-2-lagrange}\)</span> + <span class="math inline">\(\eqref{eq:sln-2-constraint}\)</span> 就是<strong>等式约束优化问题的必要条件</strong></p></li></ul>          </div><div class="note note-warning">            <p>但这是反直觉的：</p><ul><li><p>为什么等式约束问题 <span class="math inline">\(\eqref{eq:pblm-2}\)</span> 可以转化为无约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2-lagrange}\)</span>？</p></li><li><p>Lagrange 乘子在这个问题转化过程中，扮演了什么角色？</p></li><li><p><strong>等式约束优化问题的必要条件</strong>  +  其实是关于 <span class="math inline">\(x_1,\cdots,x_n\)</span> 和 <span class="math inline">\(\lambda_1,\cdots,\lambda_m\)</span> 的方程组</p></li><li><p>也就是说<span style="background-color:rgb(100,200,200,0.5)"><strong>等式约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2}\)</span> 原本只需要求解 <span class="math inline">\(x\)</span>，转化为无约束优化问题 <span class="math inline">\(\eqref{eq:pblm-2-lagrange}\)</span> 后需要求解 <span class="math inline">\(x\)</span> 和 Lagrange 乘子 <span class="math inline">\(\lambda\)</span></strong></span>，这就会导致 <span style="background-color:rgb(100,200,200,0.5)"><span class="math inline">\(x\)</span> 依赖 Lagrange 乘子 <span class="math inline">\(\lambda\)</span>，会产生以下问题</span>：</p><ul><li><p>Lagrange 乘子在这个问题转化过程中，扮演了什么角色？</p></li><li><p>Lagrange 乘子是否可以任意？如果不可以，Lagrange 乘子应该如何确定？</p></li><li><p>Lagrange 乘子与最优解有什么关系？</p></li></ul></li></ul>          </div><h2 id="正确思路等式约束必要条件-无约束问题优化目标函数">2.2 正确思路：等式约束必要条件 → 无约束问题优化目标函数</h2><p>这一部分的思路：</p><ul><li><p>先推导等式约束优化问题的必要条件（<code>**拉格朗日乘子条件**</code>）</p></li><li><p>再用必要条件反推无约束优化问题的目标函数</p></li><li><p>讨论一下<code>**拉格朗日乘子条件**</code>的几何解释</p></li></ul><p><strong>等式约束一阶必要条件</strong>就是<code>**拉格朗日乘子条件**</code>， 后面会指出，<code>**拉格朗日乘子条件**</code> 其实就是 <code>KKT条件</code> （只有等式约束情况下）的特例。</p><div class="note note-info">            <p><strong>定理 1（拉格朗日乘子条件）：</strong></p><p>假设：</p><ol type="1"><li><span class="math inline">\(f,\, h_i\)</span> 在 <span class="math inline">\(x^*\)</span> 附近一阶可微；</li><li><span class="math inline">\(x^*\)</span> 是上面问题的局部极小点；</li><li><span class="math inline">\(\{\nabla h_i(x^*)\}_{i=1}^m\)</span> 线性无关（即 <span class="math inline">\(\nabla h(x^*)\)</span> 满秩，这个条件称为 <code>约束资格条件 / LICQ</code>）。</li></ol><p>则存在 <span class="math inline">\(\lambda^* \in \mathbb{R}^m\)</span>，使得 <span class="math display">\[\begin{align}\label{eq:lag-1}\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla h_i(x^*) &amp;= 0, \\\label{eq:lag-2}h_i(x^*) &amp;= 0, \qquad \qquad i = 1,\ldots,m.\end{align}\]</span></p>          </div><div class="note note-success">            <p>如果定义 <span class="math inline">\(L(x) = f(x) + \sum_{i=1}^m \lambda_i g_i(x)\)</span></p><ul><li><p><span class="math inline">\(\eqref{eq:lag-1}\)</span>： <span class="math inline">\(0 = \nabla_x L(x,\lambda) = \nabla f(x) + \sum_{i=1}^m \lambda_i \nabla h_i(x)\)</span></p></li><li><p><span class="math inline">\(\eqref{eq:lag-2}\)</span>： <span class="math inline">\(0 = \nabla_\lambda L(x, \lambda) = h(x)\)</span></p></li><li><p><span class="math inline">\(\eqref{eq:lag-1}\)</span> + <span class="math inline">\(\eqref{eq:lag-2}\)</span>：<span class="math inline">\(0 = \nabla_x L(x,\lambda)\)</span></p></li></ul><p>所以，拉格朗日乘子条件（等式<span class="math inline">\(\eqref{eq:lag-1}\)</span> 和 <span class="math inline">\(\eqref{eq:lag-2}\)</span>），是以下无约束优化问题目标函数的梯度： <span class="math display">\[\min_{x \in \mathbb{R}^n} L(x,\lambda) =  f(x) + \sum_{i=1}^m \lambda_i  h_i(x)\]</span> 也就是说，无约束优化问题是通过 <code>拉格朗日乘子条件</code> 反推出来的。</p>          </div><h2 id="拉格朗日乘子条件-的证明">2.3 <code>拉格朗日乘子条件</code> 的证明</h2><p><strong>证明思路概览</strong></p><ol type="1"><li><p>先只用“局部极小点”的定义 + “可行曲线”，推出：</p><blockquote><p>在所有可行方向 <span class="math inline">\(d\)</span> 上，有 <span class="math inline">\(\nabla f(x^*)^\top d = 0\)</span>。</p></blockquote></li><li><p>再用线性代数：<br />可行方向的集合 <span class="math display">\[\mathcal{T} = \{ d : \nabla h_i(x^*)^\top d = 0,\ i = 1,\ldots,m \}\]</span> “对所有 <span class="math inline">\(d \in \mathcal{T},\, \nabla f(x^*)^\top d = 0\)</span>” 等价于</p><blockquote><p><span class="math inline">\(\nabla f(x^*)\)</span> 垂直于 <span class="math inline">\(\mathcal{T}\)</span>，即 <span class="math inline">\(\nabla f(x^*) \in \mathcal{T}^\perp\)</span>。</p></blockquote></li><li><p>因为 <span class="math inline">\(\mathcal{T} = \operatorname{null}(\nabla h(x^*)^\top)\)</span>，所以 <span class="math inline">\(\mathcal{T}^\perp = \operatorname{range}(\nabla h(x^*))\)</span>，<br />这就意味着</p><p><span class="math display">\[\nabla f(x^*) = - \nabla h(x^*) \lambda^*\]</span></p><p>对某个 <span class="math inline">\(\lambda^*\)</span> 成立，即得证。</p></li></ol><p>下面把每一步写严一点。</p><h2 id="拉格朗日乘子条件的几何解释">2.4 拉格朗日乘子条件的几何解释</h2><div class="note note-primary">            <p>几何解释：</p><ul><li><p>无约束时：极小点要求 $ f(x^*)=0 $。</p></li><li><p>有等式约束时：你只能沿“可行方向”（即切空间）动，所以要求 <span class="math display">\[\nabla f(x^\ast)\ \perp\ \text{切空间}.\]</span></p></li><li><p>切空间是所有与 $ h_i(x^) $ 正交的方向集合。 因此“$ f(x^) $ 垂直于切空间”等价于： <span class="math display">\[\nabla f(x^\ast) \in \left\{ \nabla h_i(x^\ast) \right\} \]</span> 也就是 <span class="math display">\[\nabla f(x^\ast) = -\sum_{i=1}^m \lambda_i^\ast \nabla h_i(x^\ast).\]</span> $ f(x^) $ 落在 $ { h_i(x^) } $ 张成的线性空间里。</p></li></ul>          </div><h1 id="不等式约束优化问题">3. 不等式约束优化问题</h1><p>这一部分的思路：</p><ul><li><p>先推导不等式约束优化问题的必要条件（KKT条件）</p></li><li><p>再用必要条件反推无约束优化问题的目标函数</p></li><li><p>讨论一下KKT条件的几何解释</p></li><li><p>KKT条件在只有等式约束时会退化成什么形式</p></li></ul>]]></content>
     
     
     <categories>
@@ -961,27 +961,27 @@
   
   
   <entry>
-    <title>自适应控制系列 - 1. test</title>
-    <link href="/2020/11/15/ctrl/adapt_ctrl/adap_ctrl_1/"/>
-    <url>/2020/11/15/ctrl/adapt_ctrl/adap_ctrl_1/</url>
+    <title>神经网络 - 1. test</title>
+    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
+    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>ctrl</category>
+      <category>ai</category>
       
-      <category>adapt-ctrl</category>
+      <category>nn</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>ctrl</tag>
+      <tag>ai</tag>
       
-      <tag>adaptive control</tag>
+      <tag>Neural Network</tag>
       
     </tags>
     
@@ -1019,56 +1019,27 @@
   
   
   <entry>
-    <title>神经网络 - 1. test</title>
-    <link href="/2020/11/15/ai/nn/NeuralNetwork_1/"/>
-    <url>/2020/11/15/ai/nn/NeuralNetwork_1/</url>
+    <title>李群与李代数 - 1. test</title>
+    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
+    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>ai</category>
+      <category>math</category>
       
-      <category>nn</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>ai</tag>
-      
-      <tag>Neural Network</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>鲁棒控制系列 - 1. test</title>
-    <link href="/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/"/>
-    <url>/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/</url>
-    
-    <content type="html"><![CDATA[<p>test</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>ctrl</category>
-      
-      <category>robust-ctrl</category>
+      <category>LieAlgebra</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>ctrl</tag>
+      <tag>math</tag>
       
-      <tag>robust control</tag>
+      <tag>LieAlgebra</tag>
       
     </tags>
     
@@ -1106,27 +1077,27 @@
   
   
   <entry>
-    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
-    <link href="/2020/11/15/opt/adp/adp_1/"/>
-    <url>/2020/11/15/opt/adp/adp_1/</url>
+    <title>自适应控制系列 - 1. test</title>
+    <link href="/2020/11/15/ctrl/adapt_ctrl/adap_ctrl_1/"/>
+    <url>/2020/11/15/ctrl/adapt_ctrl/adap_ctrl_1/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>opt</category>
+      <category>ctrl</category>
       
-      <category>adp</category>
+      <category>adapt-ctrl</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>opt</tag>
+      <tag>ctrl</tag>
       
-      <tag>ADP</tag>
+      <tag>adaptive control</tag>
       
     </tags>
     
@@ -1164,27 +1135,27 @@
   
   
   <entry>
-    <title>随机分析系列 - 1. 测试</title>
-    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
-    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    <title>鲁棒控制系列 - 1. test</title>
+    <link href="/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/"/>
+    <url>/2020/11/15/ctrl/robust_ctrl/robust_ctrl_1/</url>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
     
     <categories>
       
-      <category>math</category>
+      <category>ctrl</category>
       
-      <category>StoAnalysis</category>
+      <category>robust-ctrl</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>math</tag>
+      <tag>ctrl</tag>
       
-      <tag>Stochastic Analysis</tag>
+      <tag>robust control</tag>
       
     </tags>
     
@@ -1193,27 +1164,27 @@
   
   
   <entry>
-    <title>李群与李代数 - 1. test</title>
-    <link href="/2020/11/15/math/LieAlgebra/LieAlgebra_1/"/>
-    <url>/2020/11/15/math/LieAlgebra/LieAlgebra_1/</url>
+    <title>ADP 系列 - 1. 策略迭代（Policy Iteration）</title>
+    <link href="/2020/11/15/opt/adp/adp_1/"/>
+    <url>/2020/11/15/opt/adp/adp_1/</url>
     
-    <content type="html"><![CDATA[<p>test</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
-      <category>math</category>
+      <category>opt</category>
       
-      <category>LieAlgebra</category>
+      <category>adp</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>math</tag>
+      <tag>opt</tag>
       
-      <tag>LieAlgebra</tag>
+      <tag>ADP</tag>
       
     </tags>
     
@@ -1243,6 +1214,35 @@
       <tag>math</tag>
       
       <tag>Numeric Analysis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>随机分析系列 - 1. 测试</title>
+    <link href="/2020/11/15/math/Stochastic/Stochastic_1/"/>
+    <url>/2020/11/15/math/Stochastic/Stochastic_1/</url>
+    
+    <content type="html"><![CDATA[<p>test</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>math</category>
+      
+      <category>StoAnalysis</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>math</tag>
+      
+      <tag>Stochastic Analysis</tag>
       
     </tags>
     

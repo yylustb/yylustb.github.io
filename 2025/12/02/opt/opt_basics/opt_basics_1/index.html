@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/opt_basics.png">
 <meta property="article:published_time" content="2025-12-02T22:21:00.000Z">
-<meta property="article:modified_time" content="2025-12-03T00:42:34.899Z">
+<meta property="article:modified_time" content="2025-12-03T00:47:07.924Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="KKT conditions">
 <meta property="article:tag" content="Lagrange multiplier">
@@ -880,7 +880,7 @@ x = \arg\min_{x \in \mathbb{R}^n} f(x)
 </ul>
 <p><strong>等式约束一阶必要条件</strong>就是<code>**拉格朗日乘子条件**</code>， 后面会指出，<code>**拉格朗日乘子条件**</code> 其实就是 <code>KKT条件</code> （只有等式约束情况下）的特例。</p>
 <div class="note note-info">
-            <p>假设：</p><ol type="1"><li><span class="math inline">\(f,\, h_i\)</span> 在 <span class="math inline">\(x^*\)</span> 附近一阶可微；</li><li><span class="math inline">\(x^*\)</span> 是上面问题的局部极小点；</li><li><span class="math inline">\(\{\nabla h_i(x^*)\}_{i=1}^m\)</span> 线性无关（即 <span class="math inline">\(\nabla h(x^*)\)</span> 满秩，这个条件称为 <code>约束资格条件 / LICQ</code>）。</li></ol><p>则存在 <span class="math inline">\(\lambda^* \in \mathbb{R}^m\)</span>，使得 <span class="math display">\[\begin{align}\label{eq:lag-1}\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla h_i(x^*) &amp;= 0, \\\label{eq:lag-2}h_i(x^*) &amp;= 0, \qquad \qquad i = 1,\ldots,m.\end{align}\]</span></p>
+            <p><strong>定理 1（拉格朗日乘子条件）：</strong></p><p>假设：</p><ol type="1"><li><span class="math inline">\(f,\, h_i\)</span> 在 <span class="math inline">\(x^*\)</span> 附近一阶可微；</li><li><span class="math inline">\(x^*\)</span> 是上面问题的局部极小点；</li><li><span class="math inline">\(\{\nabla h_i(x^*)\}_{i=1}^m\)</span> 线性无关（即 <span class="math inline">\(\nabla h(x^*)\)</span> 满秩，这个条件称为 <code>约束资格条件 / LICQ</code>）。</li></ol><p>则存在 <span class="math inline">\(\lambda^* \in \mathbb{R}^m\)</span>，使得 <span class="math display">\[\begin{align}\label{eq:lag-1}\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla h_i(x^*) &amp;= 0, \\\label{eq:lag-2}h_i(x^*) &amp;= 0, \qquad \qquad i = 1,\ldots,m.\end{align}\]</span></p>
           </div>
 <div class="note note-success">
             <p>如果定义 <span class="math inline">\(L(x) = f(x) + \sum_{i=1}^m \lambda_i g_i(x)\)</span></p><ul><li><p><span class="math inline">\(\eqref{eq:lag-1}\)</span>： <span class="math inline">\(0 = \nabla_x L(x,\lambda) = \nabla f(x) + \sum_{i=1}^m \lambda_i \nabla h_i(x)\)</span></p></li><li><p><span class="math inline">\(\eqref{eq:lag-2}\)</span>： <span class="math inline">\(0 = \nabla_\lambda L(x, \lambda) = h(x)\)</span></p></li><li><p><span class="math inline">\(\eqref{eq:lag-1}\)</span> + <span class="math inline">\(\eqref{eq:lag-2}\)</span>：<span class="math inline">\(0 = \nabla_x L(x,\lambda)\)</span></p></li></ul><p>所以，拉格朗日乘子条件（等式<span class="math inline">\(\eqref{eq:lag-1}\)</span> 和 <span class="math inline">\(\eqref{eq:lag-2}\)</span>），是以下无约束优化问题目标函数的梯度： <span class="math display">\[\min_{x \in \mathbb{R}^n} L(x,\lambda) =  f(x) + \sum_{i=1}^m \lambda_i  h_i(x)\]</span> 也就是说，无约束优化问题是通过 <code>拉格朗日乘子条件</code> 反推出来的。</p>
