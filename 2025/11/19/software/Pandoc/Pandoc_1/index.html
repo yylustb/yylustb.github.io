@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. windows 系统安装 Pandoc  下载地址：Pandoc 下载 安装步骤：  双击下载的安装包，按照提示进行安装。 安装完成后，打开命令提示符（CMD）或 PowerShell，输入 pandoc -v 查看安装是否成功。   2 命令行使用 Pandoc  基本命令：  pandoc -s input.md -o output.pdf：将 input.md">
+    <meta name="description" content="1. windows 系统安装 Pandoc  下载地址：Pandoc 下载 安装步骤：  双击下载的安装包，按照提示进行安装。 安装完成后，打开命令提示符（CMD）或 PowerShell，输入 pandoc -v 查看安装是否成功。   2 命令行使用 Pandoc  基本命令：  pandoc -s input.md -o output.pdf：将 input">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandoc系列 - 1. 安装和基本语法">
 <meta property="og:url" content="http://yylustb.github.io/2025/11/19/software/Pandoc/Pandoc_1/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="1. windows 系统安装 Pandoc  下载地址：Pandoc 下载 安装步骤：  双击下载的安装包，按照提示进行安装。 安装完成后，打开命令提示符（CMD）或 PowerShell，输入 pandoc -v 查看安装是否成功。   2 命令行使用 Pandoc  基本命令：  pandoc -s input.md -o output.pdf：将 input.md">
+<meta property="og:description" content="1. windows 系统安装 Pandoc  下载地址：Pandoc 下载 安装步骤：  双击下载的安装包，按照提示进行安装。 安装完成后，打开命令提示符（CMD）或 PowerShell，输入 pandoc -v 查看安装是否成功。   2 命令行使用 Pandoc  基本命令：  pandoc -s input.md -o output.pdf：将 input">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/Pandoc.png">
 <meta property="article:published_time" content="2025-11-19T09:54:00.000Z">
-<meta property="article:modified_time" content="2025-11-19T22:13:37.000Z">
+<meta property="article:modified_time" content="2025-11-19T22:13:37.463Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="Pandoc">
 <meta property="article:tag" content="software">
@@ -250,6 +250,22 @@
                   <a class="dropdown-item" href="/categories/opt/opt-cvx/" target="_self">
                     
                     <span>凸优化</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/SoS/" target="_self">
+                    
+                    <span>平方和规划</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/Tensor/" target="_self">
+                    
+                    <span>张量计算</span>
                   </a>
                 
                   
@@ -793,33 +809,58 @@
                 
                 <h2 id="windows-系统安装-pandoc">1. windows 系统安装 Pandoc</h2>
 <ul>
-<li>下载地址：<a target="_blank" rel="noopener" href="https://pandoc.org/installing.html">Pandoc 下载</a></li>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://pandoc.org/installing.html">Pandoc
+下载</a></li>
 <li>安装步骤：
 <ul>
 <li>双击下载的安装包，按照提示进行安装。</li>
-<li>安装完成后，打开命令提示符（CMD）或 PowerShell，输入 <code>pandoc -v</code> 查看安装是否成功。</li>
+<li>安装完成后，打开命令提示符（CMD）或 PowerShell，输入
+<code>pandoc -v</code> 查看安装是否成功。</li>
 </ul></li>
 </ul>
 <h2 id="命令行使用-pandoc">2 命令行使用 Pandoc</h2>
 <ul>
 <li>基本命令：
 <ul>
-<li><code>pandoc -s input.md -o output.pdf</code>：将 <code>input.md</code> 转换为 <code>output.pdf</code>。</li>
-<li><code>pandoc -s input.md -o output.html</code>：将 <code>input.md</code> 转换为 <code>output.html</code>。</li>
-<li><code>pandoc -s input.tex -o output.docx</code>：将 <code>input.tex</code> 转换为 <code>output.docx</code>。</li>
+<li><code>pandoc -s input.md -o output.pdf</code>：将
+<code>input.md</code> 转换为 <code>output.pdf</code>。</li>
+<li><code>pandoc -s input.md -o output.html</code>：将
+<code>input.md</code> 转换为 <code>output.html</code>。</li>
+<li><code>pandoc -s input.tex -o output.docx</code>：将
+<code>input.tex</code> 转换为 <code>output.docx</code>。</li>
 </ul></li>
 </ul>
-<p>说明： - <code>-o output.pdf</code> 的作用：指定输出文件名和格式。 - 删掉 <code>-o output.pdf</code>，Pandoc 会把结果输出到命令行，不会自动生成 <code>output.pdf</code> - <code>-o</code> 不可以删除：<code>pandoc -s input.md output.pdf</code> 不会把 <code>output.pdf</code> 当成“输出文件名”，而是当成第二个输入文件来处理 - 如果当前目录下本来就有一个 <code>output.pdf</code> 文件，Pandoc 会把它当成一个要读取的 <code>md</code> 文件去解析（基本上会是乱码/报错） - 如果没有这个文件，会直接报错：<code>找不到文件 output.pdf</code>。 - <code>-s = --standalone</code> 的作用：生成一个完整的独立文档（有必要的前导、头部等），而不是一个“片段”。 - 必须使用 <code>-s</code> 或 <code>--standalone</code>：转换为 HTML 时，需要包含必要的 <code>&lt;head&gt;</code>、<code>&lt;body&gt;</code> 等标签。 - 可以删掉 <code>-s</code> 或 <code>--standalone</code>：转换为 PDF 或 DOCX 等格式时，通常会自动按“独立文档”处理，所以加不加 <code>-s</code> 多数情况下效果一样。例如 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">pandoc -s <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.md</span> -o output<span class="hljs-selector-class">.pdf</span><br>pandoc <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.md</span> -o output.pdf<br></code></pre></td></tr></table></figure> 很多时候效果是一样的，都能得到一个正常的 PDF。</p>
+<p>说明： - <code>-o output.pdf</code> 的作用：指定输出文件名和格式。 -
+删掉 <code>-o output.pdf</code>，Pandoc
+会把结果输出到命令行，不会自动生成 <code>output.pdf</code> -
+<code>-o</code> 不可以删除：<code>pandoc -s input.md output.pdf</code>
+不会把 <code>output.pdf</code>
+当成“输出文件名”，而是当成第二个输入文件来处理 -
+如果当前目录下本来就有一个 <code>output.pdf</code> 文件，Pandoc
+会把它当成一个要读取的 <code>md</code> 文件去解析（基本上会是乱码/报错）
+- 如果没有这个文件，会直接报错：<code>找不到文件 output.pdf</code>。 -
+<code>-s = --standalone</code>
+的作用：生成一个完整的独立文档（有必要的前导、头部等），而不是一个“片段”。
+- 必须使用 <code>-s</code> 或 <code>--standalone</code>：转换为 HTML
+时，需要包含必要的 <code>&lt;head&gt;</code>、<code>&lt;body&gt;</code>
+等标签。 - 可以删掉 <code>-s</code> 或 <code>--standalone</code>：转换为
+PDF 或 DOCX 等格式时，通常会自动按“独立文档”处理，所以加不加
+<code>-s</code> 多数情况下效果一样。例如 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">pandoc -s <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.md</span> -o output<span class="hljs-selector-class">.pdf</span><br>pandoc <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.md</span> -o output.pdf<br></code></pre></td></tr></table></figure>
+很多时候效果是一样的，都能得到一个正常的 PDF。</p>
 <p>总结</p>
 <ul>
-<li><code>-o output.pdf</code>：不建议删，否则不会自动生成 pdf 文件。</li>
+<li><code>-o output.pdf</code>：不建议删，否则不会自动生成 pdf
+文件。</li>
 <li><code>-o</code> 不可以删除</li>
-<li><code>-s</code>：在 md → pdf 这种用法中，多数情况下可以删，效果一样；保留也没坏处，是比较保险的写法。</li>
+<li><code>-s</code>：在 md → pdf
+这种用法中，多数情况下可以删，效果一样；保留也没坏处，是比较保险的写法。</li>
 </ul>
-<h2 id="conda-创建-python-环境">2. <code>conda</code> 创建 <code>python</code> 环境</h2>
+<h2 id="conda-创建-python-环境">2. <code>conda</code> 创建
+<code>python</code> 环境</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n pandoc_py310 python=3.10<br></code></pre></td></tr></table></figure>
 <p>激活环境 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate pandoc_py310<br></code></pre></td></tr></table></figure></p>
-<h3 id="pip-安装-pandoc-插件">2.1 <code>pip</code> 安装 <code>pandoc</code> 插件</h3>
+<h3 id="pip-安装-pandoc-插件">2.1 <code>pip</code> 安装
+<code>pandoc</code> 插件</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pandocfilters<br></code></pre></td></tr></table></figure>
 
                 

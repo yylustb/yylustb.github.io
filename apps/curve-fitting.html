@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/u2370219/Downloads/index.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交互式曲线拟合 - TensorFlow.js</title>
+    
+    <!-- TensorFlow.js -->
+    <script src="./交互式曲线拟合 - TensorFlow.js_files/tfjs@4.11.0"></script>
+    <!-- Chart.js -->
+    <script src="./交互式曲线拟合 - TensorFlow.js_files/chart.js@4.4.0"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 500px;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: crosshair;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .info-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-card h3 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .status {
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .status.idle {
+            background: #e7f3ff;
+            color: #0066cc;
+        }
+
+        .status.fitting {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .instructions {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .instructions h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #333;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+        }
+
+        .settings {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .settings h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .setting-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .setting-row label {
+            font-weight: 600;
+            color: #333;
+            min-width: 100px;
+        }
+
+        .setting-row input,
+        .setting-row select {
+            padding: 8px 12px;
+            border: 2px solid #ffc107;
+            border-radius: 5px;
+            font-size: 14px;
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            🎯 交互式曲线拟合系统
+            <span class="badge">GitHub Pages</span>
+        </h1>
+        <p class="subtitle">基于 TensorFlow.js | 完全在浏览器中运行，无需后端服务器</p>
+
+        <div class="instructions">
+            <h3>📖 使用说明</h3>
+            <ol>
+                <li>在下方图表区域点击鼠标添加数据点（蓝色圆点）</li>
+                <li>至少添加2个点后，点击"开始拟合"按钮</li>
+                <li>等待神经网络训练完成（在你的浏览器中运行）</li>
+                <li>查看拟合曲线（红色线）和训练进度</li>
+            </ol>
+        </div>
+
+        <div class="settings">
+            <h3>⚙️ 训练参数</h3>
+            <div class="setting-row">
+                <label>训练轮数:</label>
+                <input type="number" id="epochs" value="1000" min="100" max="5000" step="100">
+            </div>
+            <div class="setting-row">
+                <label>学习率:</label>
+                <input type="number" id="learningRate" value="0.01" min="0.001" max="0.1" step="0.001">
+            </div>
+            <div class="setting-row">
+                <label>隐藏层大小:</label>
+                <input type="number" id="hiddenSize" value="32" min="8" max="128" step="8">
+            </div>
+        </div>
+
+        <div class="status idle" id="status">已添加 5 个数据点，可以开始拟合</div>
+
+        <div class="info-panel">
+            <div class="info-card">
+                <h3>数据点数量</h3>
+                <p id="pointCount">5</p>
+            </div>
+            <div class="info-card">
+                <h3>训练进度</h3>
+                <p id="trainProgress">100.0%</p>
+            </div>
+            <div class="info-card">
+                <h3>当前损失</h3>
+                <p id="currentLoss">0.000523</p>
+            </div>
+            <div class="info-card">
+                <h3>训练时间</h3>
+                <p id="trainTime">10.8s</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart" width="1100" height="460" style="display: block; box-sizing: border-box; height: 460px; width: 1100px;"></canvas>
+        </div>
+
+        <div class="controls">
+            <button class="btn-primary" id="fitBtn">🚀 开始拟合</button>
+            <button class="btn-secondary" id="undoBtn">↩️ 撤销上一点</button>
+            <button class="btn-danger" id="clearBtn">🗑️ 清除数据</button>
+        </div>
+
+        <div class="footer">
+            💡 提示：所有计算都在你的浏览器中完成，数据不会上传到服务器<br>
+            使用 TensorFlow.js 实现 | 
+            <a href="https://github.com/" target="_blank">GitHub</a> | 
+            <a href="https://www.tensorflow.org/js" target="_blank">TensorFlow.js文档</a>
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let dataPoints = [];
+        let chart = null;
+        let model = null;
+        let isFitting = false;
+
+        // 初始化图表
+        function initChart() {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            
+            chart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [
+                        {
+                            label: '用户数据点',
+                            data: [],
+                            backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            pointRadius: 8,
+                            pointHoverRadius: 10
+                        },
+                        {
+                            label: '拟合曲线',
+                            data: [],
+                            type: 'line',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            fill: false,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: handleChartClick,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom',
+                            title: {
+                                display: true,
+                                text: 'X 轴'
+                            },
+                            min: 0,
+                            max: 100
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Y 轴'
+                            },
+                            min: 0,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+
+        // 处理图表点击
+        function handleChartClick(event) {
+            if (isFitting) return;
+
+            const canvasPosition = Chart.helpers.getRelativePosition(event, chart);
+            const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
+            const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
+
+            addDataPoint(dataX, dataY);
+        }
+
+        // 添加数据点
+        function addDataPoint(x, y) {
+            dataPoints.push({ x, y });
+            updateChart();
+            updateUI();
+        }
+
+        // 更新图表
+        function updateChart() {
+            chart.data.datasets[0].data = dataPoints;
+            chart.update();
+        }
+
+        // 更新UI
+        function updateUI() {
+            const pointCount = dataPoints.length;
+            document.getElementById('pointCount').textContent = pointCount;
+            
+            document.getElementById('fitBtn').disabled = pointCount < 2 || isFitting;
+            document.getElementById('undoBtn').disabled = pointCount === 0 || isFitting;
+            document.getElementById('clearBtn').disabled = pointCount === 0 || isFitting;
+
+            const statusEl = document.getElementById('status');
+            if (pointCount === 0) {
+                statusEl.className = 'status idle';
+                statusEl.textContent = '等待添加数据点...';
+            } else if (pointCount === 1) {
+                statusEl.className = 'status idle';
+                statusEl.textContent = '请至少添加2个数据点';
+            } else {
+                statusEl.className = 'status idle';
+                statusEl.textContent = `已添加 ${pointCount} 个数据点，可以开始拟合`;
+            }
+        }
+
+        // 创建TensorFlow.js模型
+        function createModel() {
+            const hiddenSize = parseInt(document.getElementById('hiddenSize').value);
+            
+            const model = tf.sequential();
+            
+            // 输入层 -> 隐藏层1
+            model.add(tf.layers.dense({
+                inputShape: [1],
+                units: hiddenSize,
+                activation: 'relu'
+            }));
+            
+            // 隐藏层2
+            model.add(tf.layers.dense({
+                units: hiddenSize,
+                activation: 'relu'
+            }));
+            
+            // 输出层
+            model.add(tf.layers.dense({
+                units: 1
+            }));
+            
+            return model;
+        }
+
+        // 开始拟合
+        async function startFitting() {
+            isFitting = true;
+            updateUI();
+
+            const statusEl = document.getElementById('status');
+            statusEl.className = 'status fitting';
+            statusEl.textContent = '正在训练神经网络...';
+
+            const startTime = Date.now();
+
+            try {
+                // 获取参数
+                const epochs = parseInt(document.getElementById('epochs').value);
+                const learningRate = parseFloat(document.getElementById('learningRate').value);
+
+                // 准备数据
+                const xs = dataPoints.map(p => p.x);
+                const ys = dataPoints.map(p => p.y);
+
+                // 数据归一化
+                const xMean = xs.reduce((a, b) => a + b) / xs.length;
+                const xStd = Math.sqrt(xs.reduce((a, b) => a + Math.pow(b - xMean, 2), 0) / xs.length) || 1;
+                const yMean = ys.reduce((a, b) => a + b) / ys.length;
+                const yStd = Math.sqrt(ys.reduce((a, b) => a + Math.pow(b - yMean, 2), 0) / ys.length) || 1;
+
+                const xsNorm = xs.map(x => (x - xMean) / xStd);
+                const ysNorm = ys.map(y => (y - yMean) / yStd);
+
+                // 转换为Tensor
+                const xsTensor = tf.tensor2d(xsNorm, [xsNorm.length, 1]);
+                const ysTensor = tf.tensor2d(ysNorm, [ysNorm.length, 1]);
+
+                // 创建模型
+                model = createModel();
+                
+                // 编译模型
+                model.compile({
+                    optimizer: tf.train.adam(learningRate),
+                    loss: 'meanSquaredError'
+                });
+
+                // 训练模型
+                await model.fit(xsTensor, ysTensor, {
+                    epochs: epochs,
+                    callbacks: {
+                        onEpochEnd: (epoch, logs) => {
+                            const progress = ((epoch + 1) / epochs * 100).toFixed(1);
+                            document.getElementById('trainProgress').textContent = `${progress}%`;
+                            document.getElementById('currentLoss').textContent = logs.loss.toFixed(6);
+                            
+                            const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+                            document.getElementById('trainTime').textContent = `${elapsed}s`;
+                        }
+                    }
+                });
+
+                // 生成拟合曲线
+                const xMin = Math.min(...xs);
+                const xMax = Math.max(...xs);
+                const xRange = xMax - xMin;
+                
+                const xFit = [];
+                for (let i = 0; i <= 200; i++) {
+                    xFit.push(xMin - 0.1 * xRange + (xMax - xMin + 0.2 * xRange) * i / 200);
+                }
+
+                const xFitNorm = xFit.map(x => (x - xMean) / xStd);
+                const xFitTensor = tf.tensor2d(xFitNorm, [xFitNorm.length, 1]);
+                
+                const yFitNormTensor = model.predict(xFitTensor);
+                const yFitNorm = await yFitNormTensor.data();
+                
+                const yFit = Array.from(yFitNorm).map(y => y * yStd + yMean);
+
+                // 更新图表
+                const fittedData = xFit.map((x, i) => ({ x, y: yFit[i] }));
+                chart.data.datasets[1].data = fittedData;
+                chart.update();
+
+                // 清理Tensor
+                xsTensor.dispose();
+                ysTensor.dispose();
+                xFitTensor.dispose();
+                yFitNormTensor.dispose();
+
+                statusEl.className = 'status success';
+                statusEl.textContent = '✅ 拟合完成！';
+                
+            } catch (error) {
+                console.error('拟合错误:', error);
+                statusEl.className = 'status error';
+                statusEl.textContent = `❌ 错误: ${error.message}`;
+                alert(`拟合失败: ${error.message}`);
+            } finally {
+                isFitting = false;
+                updateUI();
+            }
+        }
+
+        // 撤销上一点
+        function undoLastPoint() {
+            if (dataPoints.length > 0) {
+                dataPoints.pop();
+                updateChart();
+                updateUI();
+            }
+        }
+
+        // 清除所有数据
+        function clearAll() {
+            dataPoints = [];
+            chart.data.datasets[1].data = [];
+            updateChart();
+            updateUI();
+            
+            document.getElementById('trainProgress').textContent = '0%';
+            document.getElementById('currentLoss').textContent = '-';
+            document.getElementById('trainTime').textContent = '-';
+            
+            if (model) {
+                model.dispose();
+                model = null;
+            }
+        }
+
+        // 绑定事件
+        document.getElementById('fitBtn').addEventListener('click', startFitting);
+        document.getElementById('undoBtn').addEventListener('click', undoLastPoint);
+        document.getElementById('clearBtn').addEventListener('click', clearAll);
+
+        // 初始化
+        window.addEventListener('load', () => {
+            console.log('TensorFlow.js版本:', tf.version.tfjs);
+            initChart();
+            updateUI();
+        });
+    </script>
+
+
+</body></html>
