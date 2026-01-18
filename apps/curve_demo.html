@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)file:///C:/Users/u2370219/Downloads/index.html -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>交互式曲线拟合 - TensorFlow.js</title>
     
     <!-- TensorFlow.js -->
-    <script src="./交互式曲线拟合 - TensorFlow.js_files/tfjs@4.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0"></script>
     <!-- Chart.js -->
-    <script src="./交互式曲线拟合 - TensorFlow.js_files/chart.js@4.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
     
     <style>
         * {
@@ -298,41 +298,43 @@
             </div>
         </div>
 
-        <div class="status idle" id="status">已添加 5 个数据点，可以开始拟合</div>
+        <div class="status idle" id="status">
+            等待添加数据点...
+        </div>
 
         <div class="info-panel">
             <div class="info-card">
                 <h3>数据点数量</h3>
-                <p id="pointCount">5</p>
+                <p id="pointCount">0</p>
             </div>
             <div class="info-card">
                 <h3>训练进度</h3>
-                <p id="trainProgress">100.0%</p>
+                <p id="trainProgress">0%</p>
             </div>
             <div class="info-card">
                 <h3>当前损失</h3>
-                <p id="currentLoss">0.000523</p>
+                <p id="currentLoss">-</p>
             </div>
             <div class="info-card">
                 <h3>训练时间</h3>
-                <p id="trainTime">10.8s</p>
+                <p id="trainTime">-</p>
             </div>
         </div>
 
         <div class="chart-container">
-            <canvas id="myChart" width="1100" height="460" style="display: block; box-sizing: border-box; height: 460px; width: 1100px;"></canvas>
+            <canvas id="myChart"></canvas>
         </div>
 
         <div class="controls">
-            <button class="btn-primary" id="fitBtn">🚀 开始拟合</button>
-            <button class="btn-secondary" id="undoBtn">↩️ 撤销上一点</button>
-            <button class="btn-danger" id="clearBtn">🗑️ 清除数据</button>
+            <button class="btn-primary" id="fitBtn" disabled>🚀 开始拟合</button>
+            <button class="btn-secondary" id="undoBtn" disabled>↩️ 撤销上一点</button>
+            <button class="btn-danger" id="clearBtn" disabled>🗑️ 清除数据</button>
         </div>
 
         <div class="footer">
             💡 提示：所有计算都在你的浏览器中完成，数据不会上传到服务器<br>
             使用 TensorFlow.js 实现 | 
-            <a href="https://github.com/" target="_blank">GitHub</a> | 
+            <a href="https://github.com" target="_blank">GitHub</a> | 
             <a href="https://www.tensorflow.org/js" target="_blank">TensorFlow.js文档</a>
         </div>
     </div>
@@ -618,6 +620,5 @@
             updateUI();
         });
     </script>
-
-
-</body></html>
+</body>
+</html>
