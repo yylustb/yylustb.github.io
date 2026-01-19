@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="定义：逐元素幂（component-wise power）对于向量 \(x \in \mathbb{R}^n\)，用\(x_i\) 表示它的各个分量，向量 \(x \in \mathbb{R}^n\) 的逐元素幂 记为 \(x^{[m]}\in\mathbb{R}^n\)，其第 \(i\) 个分量满足\[\left( x^{[m]} \right) _i &#x3D;">
+    <meta name="description" content="定义：逐元素幂（component-wise power）对于向量 \(x \in \mathbb{R}^n\)，用 \(x_i\) 表示它的各个分量，向量 \(x \in \mathbb{R}^n\) 的 逐元素幂 记为 \(x^{[m]}\in\mathbb{R}^n\)，其第 \(i\) 个分量满足\[\left( x^{[m]} \right) _i &#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="张量计算系列 - 1. 基础">
 <meta property="og:url" content="http://yylustb.github.io/2025/12/07/opt/Tensor/tensor_1/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="定义：逐元素幂（component-wise power）对于向量 \(x \in \mathbb{R}^n\)，用\(x_i\) 表示它的各个分量，向量 \(x \in \mathbb{R}^n\) 的逐元素幂 记为 \(x^{[m]}\in\mathbb{R}^n\)，其第 \(i\) 个分量满足\[\left( x^{[m]} \right) _i &#x3D;">
+<meta property="og:description" content="定义：逐元素幂（component-wise power）对于向量 \(x \in \mathbb{R}^n\)，用 \(x_i\) 表示它的各个分量，向量 \(x \in \mathbb{R}^n\) 的 逐元素幂 记为 \(x^{[m]}\in\mathbb{R}^n\)，其第 \(i\) 个分量满足\[\left( x^{[m]} \right) _i &#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/tensor.png">
 <meta property="article:published_time" content="2025-12-07T19:15:38.000Z">
-<meta property="article:modified_time" content="2025-12-07T23:08:46.000Z">
+<meta property="article:modified_time" content="2025-12-07T23:08:46.491Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="opt">
 <meta property="article:tag" content="张量计算">
@@ -649,7 +649,7 @@
         aria-expanded="true"
       >
         opt
-        <span class="list-group-count">(10)</span>
+        <span class="list-group-count">(11)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -796,7 +796,7 @@
         aria-expanded="false"
       >
         opt-basics
-        <span class="list-group-count">(4)</span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -807,6 +807,15 @@
           
   <div class="category-post-list">
     
+    
+      
+      
+        <a href="/2026/01/19/opt/opt_basics/opt_basics_0/" title="优化基础系列 - 0. 基本问题和底层逻辑"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">优化基础系列 - 0. 基本问题和底层逻辑</span>
+        </a>
+      
     
       
       
@@ -946,53 +955,37 @@
               <div class="markdown-body">
                 
                 <div class="note note-success">
-            <p>定义：<strong>逐元素幂（component-wise power）</strong></p><ul><li>对于向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span>，用<span class="math inline">\(x_i\)</span> 表示它的各个分量，</li><li>向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span> 的<code>逐元素幂</code> 记为 <spanclass="math inline">\(x^{[m]}\in\mathbb{R}^n\)</span>，其第 <spanclass="math inline">\(i\)</span> 个分量满足<br /><span class="math display">\[\left( x^{[m]} \right) _i = x_i^{\,m}, \qquad \forall \;i\in\left\{1,\ldots,n\right\}.\]</span> 此外 <span class="math inline">\(x^{[m]}\)</span> 可以表示为Hadamard 乘积： <span class="math display">\[\begin{align}x^{[m]} = x \odot x \odot \cdots \odot x,\end{align}\]</span></li></ul>
+            <p>定义：<strong>逐元素幂（component-wise power）</strong></p><ul><li>对于向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span>，用 <span class="math inline">\(x_i\)</span> 表示它的各个分量，</li><li>向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span> 的 <code>逐元素幂</code> 记为 <span class="math inline">\(x^{[m]}\in\mathbb{R}^n\)</span>，其第 <span class="math inline">\(i\)</span> 个分量满足<br /><span class="math display">\[\left( x^{[m]} \right) _i = x_i^{\,m}, \qquad \forall \; i\in\left\{1,\ldots,n\right\}.\]</span> 此外 <span class="math inline">\(x^{[m]}\)</span> 可以表示为 Hadamard 乘积： <span class="math display">\[\begin{align}x^{[m]} = x \odot x \odot \cdots \odot x,\end{align}\]</span></li></ul>
           </div>
 <div class="note note-success">
-            <p>定义：<strong>张量（矩阵的升维）</strong></p><p>一个实的 <span class="math inline">\(m\)</span> 阶 <spanclass="math inline">\(n\)</span> 维张量 <spanclass="math inline">\(A\)</span> 由 <spanclass="math inline">\(n^m\)</span> 个实数分量构成： <spanclass="math display">\[A_{i_1,\ldots,i_m} \in \mathbb{R},\]</span> 其中 <span class="math inline">\(i_j =1,\ldots,n\)</span>，<span class="math inline">\(j =1,\ldots,m\)</span>。</p>
+            <p>定义：<strong>张量（矩阵的升维）</strong></p><p>一个实的 <span class="math inline">\(m\)</span> 阶 <span class="math inline">\(n\)</span> 维张量 <span class="math inline">\(A\)</span> 由 <span class="math inline">\(n^m\)</span> 个实数分量构成： <span class="math display">\[A_{i_1,\ldots,i_m} \in \mathbb{R},\]</span> 其中 <span class="math inline">\(i_j = 1,\ldots,n\)</span>，<span class="math inline">\(j = 1,\ldots,m\)</span>。</p>
           </div>
 <div class="note note-success">
-            <p>定义：<strong>超对称（supersymmetric）张量（对称矩阵的升维）</strong></p><p>若在指标的任意排列下 <span class="math inline">\(A\)</span>的各个分量都保持不变， 则称张量 <span class="math inline">\(A\)</span>为 <code>超对称张量</code>（Kofidis and Regalia, 2002）。</p>
+            <p>定义：<strong>超对称（supersymmetric）张量（对称矩阵的升维）</strong></p><p>若在指标的任意排列下 <span class="math inline">\(A\)</span> 的各个分量都保持不变， 则称张量 <span class="math inline">\(A\)</span> 为 <code>超对称张量</code>（Kofidis and Regalia, 2002）。</p>
           </div>
 <div class="note note-info">
-            <p>例：<strong>张量与向量的乘法（矩阵二次型的升维）</strong></p><ul><li>矩阵二次型： <code>2 阶张量</code> + <code>2 个向量</code><ul><li>矩阵只是 2 阶张量；</li><li>二次型 $ x^A x $ 其实就是最终得到的标量二次多项式。</li></ul></li><li>张量的高阶乘法： <code>m 阶张量</code> + <code>m 个向量</code><ul><li>高阶张量也是一样：用张量乘法做 <code>内积/收缩/降维</code>，</li><li>最后可以得到一个标量 <span class="math inline">\(m\)</span>次齐次多项式。</li></ul></li></ul><p>这里讨论 <code>三阶二维张量</code> 与 <spanclass="math inline">\(Ax,Ax^2,Ax^3\)</span> 的计算示例</p><p>取 <span class="math inline">\(m=3,n=2\)</span>。张量 <spanclass="math inline">\(A\)</span> 的索引为 <span class="math display">\[A_{i_1 i_2 i_3},\qquad i_1,i_2,i_3\in\{1,2\},\]</span> 共有 <span class="math inline">\(2^3=8\)</span>个分量。我们取一个超对称（supersymmetric）张量 <spanclass="math inline">\(A\)</span>，其非零分量为 <spanclass="math display">\[\begin{align*}&amp;A_{111}=1,\qquad A_{222}=3,\\&amp;A_{112}=A_{121}=A_{211}=2,\\&amp;A_{122}=A_{212}=A_{221}=-1,\end{align*}\]</span> 其余分量均为零。记向量 <span class="math display">\[x=\begin{pmatrix}x_1\\[0.2em]x_2\end{pmatrix}.\]</span></p><p>一般地，对于三阶张量 <span class="math inline">\(A_{ijk}\)</span>与向量 <span class="math inline">\(x\)</span>，我们定义 <spanclass="math display">\[\begin{align*}(Ax)_{ij} &amp;= \sum_{k=1}^2 A_{ijk}x_k,\\(Ax^2)_i &amp;= \sum_{j,k=1}^2 A_{ijk}x_jx_k,\\Ax^3      &amp;= \sum_{i,j,k=1}^2 A_{ijk}x_ix_jx_k.\end{align*}\]</span> 可以看到，每与 <span class="math inline">\(x\)</span>收缩一次，张量的阶数就降低 <span class="math inline">\(1\)</span>：<spanclass="math inline">\(A\)</span> 是三阶张量，<spanclass="math inline">\(Ax\)</span> 是二阶张量（矩阵），<spanclass="math inline">\(Ax^2\)</span> 是一阶张量（向量），<spanclass="math inline">\(Ax^3\)</span>则是零阶张量（标量，即一个多项式）。</p><ul><li><p><span class="math inline">\(Ax\)</span> 的计算（得到矩阵）根据定义 <span class="math display">\[(Ax)_{ij}=\sum_{k=1}^2 A_{ijk}x_k,\]</span> 分别计算四个分量： <span class="math display">\[\begin{align*}(Ax)_{11} &amp;= A_{111}x_1 + A_{112}x_2        = 1\cdot x_1 + 2\cdot x_2        = x_1 + 2x_2,\\(Ax)_{12} &amp;= A_{121}x_1 + A_{122}x_2        = 2x_1 + (-1)x_2        = 2x_1 - x_2,\\(Ax)_{21} &amp;= A_{211}x_1 + A_{212}x_2        = 2x_1 + (-1)x_2        = 2x_1 - x_2,\\(Ax)_{22} &amp;= A_{221}x_1 + A_{222}x_2        = (-1)x_1 + 3x_2        = -x_1 + 3x_2.\end{align*}\]</span> 因此 <span class="math display">\[Ax=\begin{pmatrix}x_1+2x_2 &amp; 2x_1-x_2\\[0.3em]2x_1-x_2 &amp; -x_1+3x_2\end{pmatrix}.\]</span></p></li><li><p><span class="math inline">\(Ax^2\)</span> 的计算（得到向量）由定义 <span class="math display">\[(Ax^2)_i=\sum_{j,k=1}^2 A_{ijk}x_jx_k,\]</span> 对 <span class="math inline">\(i=1,2\)</span> 分别计算：</p><ul><li><p>第一个分量 <span class="math inline">\(i=1\)</span> <spanclass="math display">\[\begin{align*}(Ax^2)_1&amp;=A_{111}x_1x_1+A_{112}x_1x_2+A_{121}x_2x_1+A_{122}x_2x_2\\&amp;=1\cdot x_1^2+2x_1x_2+2x_2x_1+(-1)x_2^2\\&amp;=x_1^2+4x_1x_2-x_2^2.\end{align*}\]</span></p></li><li><p>第二个分量 <span class="math inline">\(i=2\)</span> <spanclass="math display">\[\begin{align*}(Ax^2)_2&amp;=A_{211}x_1x_1+A_{212}x_1x_2+A_{221}x_2x_1+A_{222}x_2x_2\\&amp;=2x_1^2+(-1)x_1x_2+(-1)x_2x_1+3x_2^2\\&amp;=2x_1^2-2x_1x_2+3x_2^2.\end{align*}\]</span> 于是 <span class="math display">\[Ax^2=\begin{pmatrix}x_1^2+4x_1x_2-x_2^2\\[0.3em]2x_1^2-2x_1x_2+3x_2^2\end{pmatrix}.\]</span> 注意到也可以写成 <span class="math display">\[(Ax^2)_i=\sum_{j=1}^2 (Ax)_{ij}x_j,\]</span> 即 <span class="math display">\[Ax^2=(Ax)\,x,\]</span> 与上面的直接计算完全一致。</p></li></ul></li><li><p><span class="math inline">\(Ax^3\)</span>的计算（得到标量多项式） 按定义 <span class="math display">\[Ax^3=\sum_{i,j,k=1}^2 A_{ijk}x_ix_jx_k,\]</span> 将 8 项按「出现的下标组合」分类：</p><ul><li><p>纯 1： <span class="math display">\[A_{111}x_1x_1x_1 = x_1^3.\]</span></p></li><li><p>纯 2： <span class="math display">\[A_{222}x_2x_2x_2 = 3x_2^3.\]</span></p></li><li><p>两个 1 一个 2 的三种排列： <span class="math display">\[\begin{align*}&amp;A_{112}x_1^2x_2+A_{121}x_1x_2x_1+A_{211}x_2x_1^2 \\&amp;=2x_1^2x_2+2x_1^2x_2+2x_1^2x_2=6x_1^2x_2.\end{align*}\]</span></p></li><li><p>一个 1 两个 2 的三种排列： <span class="math display">\[\begin{align*}&amp;A_{122}x_1x_2^2+A_{212}x_2x_1x_2+A_{221}x_2^2x_1\\&amp;=(-1-1-1)x_1x_2^2=-3x_1x_2^2.\end{align*}\]</span> 综合得到 <span class="math display">\[Ax^3=x_1^3+6x_1^2x_2-3x_1x_2^2+3x_2^3.\]</span> 同样地，也可以利用 <span class="math display">\[Ax^3 = x^\mathsf{T}(Ax^2)    = x_1(Ax^2)_1 + x_2(Ax^2)_2,\]</span> 代入上面求得的 <spanclass="math inline">\((Ax^2)_1,(Ax^2)_2\)</span>，可以验证得到的结果与直接展开完全一致。</p></li></ul></li></ul><p>从这个例子可以清楚地看到： <span class="math display">\[A\;\xrightarrow{\ \cdot x\ }\; Ax\;\xrightarrow{\ \cdot x\ }\; Ax^2\;\xrightarrow{\ x^\mathsf{T}\cdot\ }\; Ax^3,\]</span> 每收缩一次，张量的阶数降 <spanclass="math inline">\(1\)</span>，最终得到一个仅由 <spanclass="math inline">\(x_1,x_2\)</span> 和张量系数 <spanclass="math inline">\(A_{ijk}\)</span> 决定的三次齐次多项式。</p>
+            <p>例：<strong>张量与向量的乘法（矩阵二次型的升维）</strong></p><ul><li>矩阵二次型： <code>2 阶张量</code> + <code>2 个向量</code><ul><li>矩阵只是 2 阶张量；</li><li>二次型 $ x^A x $ 其实就是最终得到的标量二次多项式。</li></ul></li><li>张量的高阶乘法： <code>m 阶张量</code> + <code>m 个向量</code><ul><li>高阶张量也是一样：用张量乘法做 <code>内积/收缩/降维</code>，</li><li>最后可以得到一个标量 <span class="math inline">\(m\)</span> 次齐次多项式。</li></ul></li></ul><p>这里讨论 <code>三阶二维张量</code> 与 <span class="math inline">\(Ax,Ax^2,Ax^3\)</span> 的计算示例</p><p>取 <span class="math inline">\(m=3,n=2\)</span>。张量 <span class="math inline">\(A\)</span> 的索引为 <span class="math display">\[A_{i_1 i_2 i_3},\qquad i_1,i_2,i_3\in\{1,2\},\]</span> 共有 <span class="math inline">\(2^3=8\)</span> 个分量。我们取一个超对称（supersymmetric）张量 <span class="math inline">\(A\)</span>，其非零分量为 <span class="math display">\[\begin{align*}&amp;A_{111}=1,\qquad A_{222}=3,\\&amp;A_{112}=A_{121}=A_{211}=2,\\&amp;A_{122}=A_{212}=A_{221}=-1,\end{align*}\]</span> 其余分量均为零。记向量 <span class="math display">\[x=\begin{pmatrix}x_1\\[0.2em]x_2\end{pmatrix}.\]</span></p><p>一般地，对于三阶张量 <span class="math inline">\(A_{ijk}\)</span> 与向量 <span class="math inline">\(x\)</span>，我们定义 <span class="math display">\[\begin{align*}(Ax)_{ij} &amp;= \sum_{k=1}^2 A_{ijk}x_k,\\(Ax^2)_i &amp;= \sum_{j,k=1}^2 A_{ijk}x_jx_k,\\Ax^3      &amp;= \sum_{i,j,k=1}^2 A_{ijk}x_ix_jx_k.\end{align*}\]</span> 可以看到，每与 <span class="math inline">\(x\)</span> 收缩一次，张量的阶数就降低 <span class="math inline">\(1\)</span>：<span class="math inline">\(A\)</span> 是三阶张量，<span class="math inline">\(Ax\)</span> 是二阶张量（矩阵），<span class="math inline">\(Ax^2\)</span> 是一阶张量（向量），<span class="math inline">\(Ax^3\)</span> 则是零阶张量（标量，即一个多项式）。</p><ul><li><p><span class="math inline">\(Ax\)</span> 的计算（得到矩阵） 根据定义 <span class="math display">\[(Ax)_{ij}=\sum_{k=1}^2 A_{ijk}x_k,\]</span> 分别计算四个分量： <span class="math display">\[\begin{align*}(Ax)_{11} &amp;= A_{111}x_1 + A_{112}x_2        = 1\cdot x_1 + 2\cdot x_2        = x_1 + 2x_2,\\(Ax)_{12} &amp;= A_{121}x_1 + A_{122}x_2        = 2x_1 + (-1)x_2        = 2x_1 - x_2,\\(Ax)_{21} &amp;= A_{211}x_1 + A_{212}x_2        = 2x_1 + (-1)x_2        = 2x_1 - x_2,\\(Ax)_{22} &amp;= A_{221}x_1 + A_{222}x_2        = (-1)x_1 + 3x_2        = -x_1 + 3x_2.\end{align*}\]</span> 因此 <span class="math display">\[Ax=\begin{pmatrix}x_1+2x_2 &amp; 2x_1-x_2\\[0.3em]2x_1-x_2 &amp; -x_1+3x_2\end{pmatrix}.\]</span></p></li><li><p><span class="math inline">\(Ax^2\)</span> 的计算（得到向量） 由定义 <span class="math display">\[(Ax^2)_i=\sum_{j,k=1}^2 A_{ijk}x_jx_k,\]</span> 对 <span class="math inline">\(i=1,2\)</span> 分别计算：</p><ul><li><p>第一个分量 <span class="math inline">\(i=1\)</span> <span class="math display">\[\begin{align*}(Ax^2)_1&amp;=A_{111}x_1x_1 +A_{112}x_1x_2 +A_{121}x_2x_1 +A_{122}x_2x_2\\&amp;=1\cdot x_1^2+2x_1x_2+2x_2x_1+(-1)x_2^2\\&amp;=x_1^2+4x_1x_2-x_2^2.\end{align*}\]</span></p></li><li><p>第二个分量 <span class="math inline">\(i=2\)</span> <span class="math display">\[\begin{align*}(Ax^2)_2&amp;=A_{211}x_1x_1 +A_{212}x_1x_2 +A_{221}x_2x_1 +A_{222}x_2x_2\\&amp;=2x_1^2 +(-1)x_1x_2 +(-1)x_2x_1 +3x_2^2\\&amp;=2x_1^2-2x_1x_2+3x_2^2.\end{align*}\]</span> 于是 <span class="math display">\[Ax^2=\begin{pmatrix}x_1^2+4x_1x_2-x_2^2\\[0.3em]2x_1^2-2x_1x_2+3x_2^2\end{pmatrix}.\]</span> 注意到也可以写成 <span class="math display">\[(Ax^2)_i=\sum_{j=1}^2 (Ax)_{ij}x_j,\]</span> 即 <span class="math display">\[Ax^2=(Ax)\,x,\]</span> 与上面的直接计算完全一致。</p></li></ul></li><li><p><span class="math inline">\(Ax^3\)</span> 的计算（得到标量多项式） 按定义 <span class="math display">\[Ax^3=\sum_{i,j,k=1}^2 A_{ijk}x_ix_jx_k,\]</span> 将 8 项按「出现的下标组合」分类：</p><ul><li><p>纯 1： <span class="math display">\[A_{111}x_1x_1x_1 = x_1^3.\]</span></p></li><li><p>纯 2： <span class="math display">\[A_{222}x_2x_2x_2 = 3x_2^3.\]</span></p></li><li><p>两个 1 一个 2 的三种排列： <span class="math display">\[\begin{align*}&amp;A_{112}x_1^2x_2+A_{121}x_1x_2x_1+A_{211}x_2x_1^2 \\&amp;=2x_1^2x_2+2x_1^2x_2+2x_1^2x_2 =6x_1^2x_2.\end{align*}\]</span></p></li><li><p>一个 1 两个 2 的三种排列： <span class="math display">\[\begin{align*}&amp;A_{122}x_1x_2^2+A_{212}x_2x_1x_2+A_{221}x_2^2x_1\\&amp;=(-1-1-1)x_1x_2^2=-3x_1x_2^2.\end{align*}\]</span> 综合得到 <span class="math display">\[Ax^3=x_1^3+6x_1^2x_2-3x_1x_2^2+3x_2^3.\]</span> 同样地，也可以利用 <span class="math display">\[Ax^3 = x^\mathsf{T}(Ax^2)    = x_1(Ax^2)_1 + x_2(Ax^2)_2,\]</span> 代入上面求得的 <span class="math inline">\((Ax^2)_1,(Ax^2)_2\)</span>，可以验证得到的结果与直接展开完全一致。</p></li></ul></li></ul><p>从这个例子可以清楚地看到： <span class="math display">\[A\;\xrightarrow{\ \cdot x\ }\; Ax\;\xrightarrow{\ \cdot x\ }\; Ax^2\;\xrightarrow{\ x^\mathsf{T}\cdot\ }\; Ax^3,\]</span> 每收缩一次，张量的阶数降 <span class="math inline">\(1\)</span>，最终得到一个仅由 <span class="math inline">\(x_1,x_2\)</span> 和张量系数 <span class="math inline">\(A_{ijk}\)</span> 决定的三次齐次多项式。</p>
           </div>
 <div class="note note-success">
-            <p>定义：<strong>齐次多项式</strong></p><p>在 <span class="math inline">\(\mathbb{R}^n\)</span> 上的多项式 <spanclass="math display">\[f(x) = f(x_1,\ldots,x_n)\]</span> 叫作 <span class="math inline">\(m\)</span>次齐次多项式（<span class="math inline">\(m\)</span>-homogeneouspolynomial），如果对任意实数 <span class="math inline">\(t\)</span> 都有<span class="math display">\[f(tx) = t^m f(x).\]</span></p><p>也就是说：<strong>齐次多项式</strong>中每个单项式的次幂都是 <spanclass="math inline">\(m\)</span>。</p>
+            <p>定义：<strong>齐次多项式</strong></p><p>在 <span class="math inline">\(\mathbb{R}^n\)</span> 上的多项式 <span class="math display">\[f(x) = f(x_1,\ldots,x_n)\]</span> 叫作 <span class="math inline">\(m\)</span> 次齐次多项式（<span class="math inline">\(m\)</span>-homogeneous polynomial），如果对任意实数 <span class="math inline">\(t\)</span> 都有 <span class="math display">\[f(tx) = t^m f(x).\]</span></p><p>也就是说：<strong>齐次多项式</strong>中每个单项式的次幂都是 <span class="math inline">\(m\)</span>。</p>
           </div>
 <div class="note note-primary">
             <p>例子：<strong>齐次多项式</strong>举例</p><ul><li>二次： <span class="math display">\[f(x,y) = 3x^2 + 2xy + 5y^2.\]</span></li><li>三次： <span class="math display">\[f(x,y,z) = x^3 + 2xyz - 5y^2 z.\]</span> \end{itemize}</li></ul>
           </div>
 <div class="note note-success">
-            <p>定义：<strong>张量诱导齐次多项式</strong></p><p>张量 <span class="math inline">\(A\)</span> 诱导出一个 <spanclass="math inline">\(m\)</span> 次齐次多项式 <spanclass="math inline">\(f(x)\in\mathbb{R}[x_1,\ldots,x_n]\)</span>，其中<span class="math inline">\(x=(x_1,\ldots,x_n)\)</span>，定义为 <spanclass="math display">\[\begin{equation}f(x)\equiv A x^m:= \sum_{i_1,\ldots,i_m=1}^n A_{i_1,\ldots,i_m}\,x_{i_1}\cdots x_{i_m}.\label{eq:Axm-def}\end{equation}\]</span> 其中，<span class="math inline">\(x^m\)</span> 可以看作一个<span class="math inline">\(m\)</span> 阶 <spanclass="math inline">\(n\)</span> 维的秩一张量，其分量为 <spanclass="math inline">\(x_{i_1}\cdots x_{i_m}\)</span>（Kofidis andRegalia, 2002），而 <span class="math inline">\(A x^m\)</span> 是 <spanclass="math inline">\(A\)</span> 与 <spanclass="math inline">\(x^m\)</span> 的张量积。</p><p>显然，如果 <span class="math inline">\(A\)</span>不是超对称的，我们可以用一个 超对称张量 <spanclass="math inline">\(\bar{A}\)</span> 代替 <spanclass="math inline">\(A\)</span>，使得 <span class="math display">\[f(x)\equiv \bar{A}x^m \equiv A x^m.\]</span> 我们把这个超对称张量 <spanclass="math inline">\(\bar{A}\)</span> 记作 <spanclass="math inline">\(\operatorname{sym}(A)\)</span>。</p>
+            <p>定义：<strong>张量诱导齐次多项式</strong></p><p>张量 <span class="math inline">\(A\)</span> 诱导出一个 <span class="math inline">\(m\)</span> 次齐次多项式 <span class="math inline">\(f(x)\in\mathbb{R}[x_1,\ldots,x_n]\)</span>，其中 <span class="math inline">\(x=(x_1,\ldots,x_n)\)</span>，定义为 <span class="math display">\[\begin{equation}f(x)\equiv A x^m:= \sum_{i_1,\ldots,i_m=1}^n A_{i_1,\ldots,i_m}\,x_{i_1}\cdots x_{i_m}.\label{eq:Axm-def}\end{equation}\]</span> 其中，<span class="math inline">\(x^m\)</span> 可以看作一个 <span class="math inline">\(m\)</span> 阶 <span class="math inline">\(n\)</span> 维的秩一张量，其分量为 <span class="math inline">\(x_{i_1}\cdots x_{i_m}\)</span>（Kofidis and Regalia, 2002），而 <span class="math inline">\(A x^m\)</span> 是 <span class="math inline">\(A\)</span> 与 <span class="math inline">\(x^m\)</span> 的张量积。</p><p>显然，如果 <span class="math inline">\(A\)</span> 不是超对称的，我们可以用一个 超对称张量 <span class="math inline">\(\bar{A}\)</span> 代替 <span class="math inline">\(A\)</span>，使得 <span class="math display">\[f(x)\equiv \bar{A}x^m \equiv A x^m.\]</span> 我们把这个超对称张量 <span class="math inline">\(\bar{A}\)</span> 记作 <span class="math inline">\(\operatorname{sym}(A)\)</span>。</p>
           </div>
-<p>利用张量积（Qi and Teo, 2003），对向量 <span class="math inline">\(x
-\in \mathbb{R}^n\)</span>，<span class="math inline">\(A
-x^{m-1}\)</span> 表示 <span class="math inline">\(\mathbb{R}^n\)</span>
-中的一个向量，其第 <span class="math inline">\(i\)</span> 个分量为 <span
-class="math display">\[
+<p>利用张量积（Qi and Teo, 2003），对向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span>，<span class="math inline">\(A x^{m-1}\)</span> 表示 <span class="math inline">\(\mathbb{R}^n\)</span> 中的一个向量，其第 <span class="math inline">\(i\)</span> 个分量为 <span class="math display">\[
 \bigl(A x^{m-1}\bigr)_i
-   = \sum_{i_2,\ldots,i_m=1}^n A_{i,i_2,\ldots,i_m}\,x_{i_2}\cdots
-x_{i_m}.
+   = \sum_{i_2,\ldots,i_m=1}^n A_{i,i_2,\ldots,i_m}\,x_{i_2}\cdots x_{i_m}.
 \]</span></p>
-<p>Qi (2004) 称实数 <span class="math inline">\(\lambda\)</span> 为张量
-<span class="math inline">\(A\)</span> 的一个 （H-eigenvalue），
-如果它与某个非零实向量 <span class="math inline">\(x\)</span>
-一起是下列齐次多项式方程的解： <span class="math display">\[
+<p>Qi (2004) 称实数 <span class="math inline">\(\lambda\)</span> 为张量 <span class="math inline">\(A\)</span> 的一个 （H-eigenvalue）， 如果它与某个非零实向量 <span class="math inline">\(x\)</span> 一起是下列齐次多项式方程的解： <span class="math display">\[
 \begin{equation}
 A x^{m-1} = \lambda x^{[m-1]},
 \label{eq:H-eig}
 \end{equation}
-\]</span> 并将该解 <span class="math inline">\(x\)</span> 称为与
-H-特征值 <span class="math inline">\(\lambda\)</span> 相对应的
-（H-eigenvector）。</p>
-<p>Qi (2004) 还称实数 <span class="math inline">\(\lambda\)</span>
-以及实向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span>
-分别为张量 <span class="math inline">\(A\)</span> 的
-（Z-eigenvalue）和与该 Z-特征值 <span
-class="math inline">\(\lambda\)</span> 相联系的
-（Z-eigenvector），如果它们满足下面的方程组： <span
-class="math display">\[
+\]</span> 并将该解 <span class="math inline">\(x\)</span> 称为与 H-特征值 <span class="math inline">\(\lambda\)</span> 相对应的  （H-eigenvector）。</p>
+<p>Qi (2004) 还称实数 <span class="math inline">\(\lambda\)</span> 以及实向量 <span class="math inline">\(x \in \mathbb{R}^n\)</span> 分别为张量 <span class="math inline">\(A\)</span> 的 （Z-eigenvalue）和与该 Z-特征值 <span class="math inline">\(\lambda\)</span> 相联系的 （Z-eigenvector），如果它们满足下面的方程组： <span class="math display">\[
 \begin{equation}
 \begin{cases}
 A x^{m-1} = \lambda x,\\[0.3em]
@@ -1100,9 +1093,9 @@ x^\mathsf{T} x = 1.
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/12/07/opt/SoS/sos_1/" title="Sum-of-Squares 系列 - 1. 基础">
+                      <a href="/2025/12/07/opt/Tensor/tensor_2/" title="张量计算系列 - 2. 基础">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Sum-of-Squares 系列 - 1. 基础</span>
+                        <span class="hidden-mobile">张量计算系列 - 2. 基础</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1110,8 +1103,8 @@ x^\mathsf{T} x = 1.
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/12/07/opt/Tensor/tensor_2/" title="张量计算系列 - 2. 基础">
-                        <span class="hidden-mobile">张量计算系列 - 2. 基础</span>
+                      <a href="/2025/12/05/opt/opt_basics/opt_basics_4/" title="优化基础系列 - 4. 不等式约束优化问题 -- 锥条件、对偶、KKT 条件、Lagrange 乘子">
+                        <span class="hidden-mobile">优化基础系列 - 4. 不等式约束优化问题 -- 锥条件、对偶、KKT 条件、Lagrange 乘子</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

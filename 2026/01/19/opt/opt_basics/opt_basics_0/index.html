@@ -1,0 +1,1632 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="yylustb">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="0. 动机 这一系列的 blog 讨论优化问题的重要概念和相关求解方法。 在开始之前，我们需要梳理清楚优化问题中的  基本问题 基础概念 数学工具 求解方法 重要结论  What：什么是优化问题              优化问题的组成三要素：优化变量目标函数约束条件            Why：优化问题的目的是什么              优化问题的目的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化基础系列 - 0. 基本问题和底层逻辑">
+<meta property="og:url" content="http://yylustb.github.io/2026/01/19/opt/opt_basics/opt_basics_0/index.html">
+<meta property="og:site_name" content="远大前程">
+<meta property="og:description" content="0. 动机 这一系列的 blog 讨论优化问题的重要概念和相关求解方法。 在开始之前，我们需要梳理清楚优化问题中的  基本问题 基础概念 数学工具 求解方法 重要结论  What：什么是优化问题              优化问题的组成三要素：优化变量目标函数约束条件            Why：优化问题的目的是什么              优化问题的目的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yylustb.github.io/img/index/opt_basics.png">
+<meta property="article:published_time" content="2026-01-19T17:48:00.000Z">
+<meta property="article:modified_time" content="2026-01-19T20:43:22.350Z">
+<meta property="article:author" content="yylustb">
+<meta property="article:tag" content="KKT conditions">
+<meta property="article:tag" content="Lagrange multiplier">
+<meta property="article:tag" content="opt">
+<meta property="article:tag" content="optimization basics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yylustb.github.io/img/index/opt_basics.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>优化基础系列 - 0. 基本问题和底层逻辑 - 远大前程</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/nav-wrap.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yylustb.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>远大前程</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>数学基础</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/NumAnalysis/" target="_self">
+                    
+                    <span>数值计算</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/StoAnalysis/" target="_self">
+                    
+                    <span>随机分析</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/DiffEqn/" target="_self">
+                    
+                    <span>微分方程</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/LinAlgebra/" target="_self">
+                    
+                    <span>线性代数</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/math/LieAlgebra/" target="_self">
+                    
+                    <span>李群与李代数</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>优化方法</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/opt-basics/" target="_self">
+                    
+                    <span>优化基础</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/opt-cvx/" target="_self">
+                    
+                    <span>凸优化</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/SoS/" target="_self">
+                    
+                    <span>平方和规划</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/Tensor/" target="_self">
+                    
+                    <span>张量计算</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/adp/" target="_self">
+                    
+                    <span>自适应动态规划</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/opt/opt-ctrl/" target="_self">
+                    
+                    <span>最优控制</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>控制理论</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ctrl/adapt-ctrl/" target="_self">
+                    
+                    <span>自适应控制</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ctrl/robust-ctrl/" target="_self">
+                    
+                    <span>鲁棒控制</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>操作系统</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/os/Windows/" target="_self">
+                    
+                    <span>Windows</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/os/Ubuntu/" target="_self">
+                    
+                    <span>Ubuntu</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>编程语言</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Cpp/" target="_self">
+                    
+                    <span>C++</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Python/" target="_self">
+                    
+                    <span>Python</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/GPU/" target="_self">
+                    
+                    <span>GPU</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/LaTex/" target="_self">
+                    
+                    <span>LaTex</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Pytorch/" target="_self">
+                    
+                    <span>Pytorch</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/TensorFlow/" target="_self">
+                    
+                    <span>TensorFlow</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Git/" target="_self">
+                    
+                    <span>Git</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/code/Hexo/" target="_self">
+                    
+                    <span>Hexo Fluid</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>人工智能</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/ml/" target="_self">
+                    
+                    <span>机器学习</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/nn/" target="_self">
+                    
+                    <span>神经网络</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/dl/" target="_self">
+                    
+                    <span>深度学习</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/ai/rl/" target="_self">
+                    
+                    <span>强化学习</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>实用软件</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/software/Pandoc/" target="_self">
+                    
+                    <span>Pandoc</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/software/VS-Code/" target="_self">
+                    
+                    <span>VS Code</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont book icon-book"></i>
+                <span>工程应用</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/application/DistriNet/" target="_self">
+                    
+                    <span>配电网</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg-sky.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="优化基础系列 - 0. 基本问题和底层逻辑"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-19 17:48" pubdate>
+          2026年1月19日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          34 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="opt"
+        id="heading-4d29ea5f748c4cfda37434ce76a5e788" role="tab" data-toggle="collapse" href="#collapse-4d29ea5f748c4cfda37434ce76a5e788"
+        aria-expanded="true"
+      >
+        opt
+        <span class="list-group-count">(11)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-4d29ea5f748c4cfda37434ce76a5e788"
+           role="tabpanel" aria-labelledby="heading-4d29ea5f748c4cfda37434ce76a5e788">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="SoS"
+        id="heading-8fa8ec74757a38220a00ed32d4a8e6c5" role="tab" data-toggle="collapse" href="#collapse-8fa8ec74757a38220a00ed32d4a8e6c5"
+        aria-expanded="false"
+      >
+        SoS
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-8fa8ec74757a38220a00ed32d4a8e6c5"
+           role="tabpanel" aria-labelledby="heading-8fa8ec74757a38220a00ed32d4a8e6c5">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/12/07/opt/SoS/sos_1/" title="Sum-of-Squares 系列 - 1. 基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Sum-of-Squares 系列 - 1. 基础</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Tensor"
+        id="heading-f20fc369b14cb5d40e695dab98bcb742" role="tab" data-toggle="collapse" href="#collapse-f20fc369b14cb5d40e695dab98bcb742"
+        aria-expanded="false"
+      >
+        Tensor
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-f20fc369b14cb5d40e695dab98bcb742"
+           role="tabpanel" aria-labelledby="heading-f20fc369b14cb5d40e695dab98bcb742">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/12/07/opt/Tensor/tensor_1/" title="张量计算系列 - 1. 基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">张量计算系列 - 1. 基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/12/07/opt/Tensor/tensor_2/" title="张量计算系列 - 2. 基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">张量计算系列 - 2. 基础</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="adp"
+        id="heading-e219be8994730c07d8d6cafdbe9b6468" role="tab" data-toggle="collapse" href="#collapse-e219be8994730c07d8d6cafdbe9b6468"
+        aria-expanded="false"
+      >
+        adp
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-e219be8994730c07d8d6cafdbe9b6468"
+           role="tabpanel" aria-labelledby="heading-e219be8994730c07d8d6cafdbe9b6468">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2020/11/15/opt/adp/adp_1/" title="ADP 系列 - 1. 策略迭代（Policy Iteration）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">ADP 系列 - 1. 策略迭代（Policy Iteration）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="opt-basics"
+        id="heading-b1818b8878d4b3d3b13b808fe922ee7b" role="tab" data-toggle="collapse" href="#collapse-b1818b8878d4b3d3b13b808fe922ee7b"
+        aria-expanded="true"
+      >
+        opt-basics
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-b1818b8878d4b3d3b13b808fe922ee7b"
+           role="tabpanel" aria-labelledby="heading-b1818b8878d4b3d3b13b808fe922ee7b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2026/01/19/opt/opt_basics/opt_basics_0/" title="优化基础系列 - 0. 基本问题和底层逻辑"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">优化基础系列 - 0. 基本问题和底层逻辑</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/12/03/opt/opt_basics/opt_basics_1/" title="优化基础系列 - 1. 优化问题基础 -- 基础定义"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">优化基础系列 - 1. 优化问题基础 -- 基础定义</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/12/04/opt/opt_basics/opt_basics_2/" title="优化基础系列 - 2. 无约束优化问题：一阶必要条件"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">优化基础系列 - 2. 无约束优化问题：一阶必要条件</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/12/05/opt/opt_basics/opt_basics_3/" title="优化基础系列 - 3. 等式约束优化问题 -- Lagrange 乘子初探"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">优化基础系列 - 3. 等式约束优化问题 -- Lagrange 乘子初探</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2025/12/05/opt/opt_basics/opt_basics_4/" title="优化基础系列 - 4. 不等式约束优化问题 -- 锥条件、对偶、KKT 条件、Lagrange 乘子"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">优化基础系列 - 4. 不等式约束优化问题 -- 锥条件、对偶、KKT 条件、Lagrange 乘子</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="opt-ctrl"
+        id="heading-14bc801c6acf787f0a2447cf559bd8d1" role="tab" data-toggle="collapse" href="#collapse-14bc801c6acf787f0a2447cf559bd8d1"
+        aria-expanded="false"
+      >
+        opt-ctrl
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-14bc801c6acf787f0a2447cf559bd8d1"
+           role="tabpanel" aria-labelledby="heading-14bc801c6acf787f0a2447cf559bd8d1">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2020/11/15/opt/opt_ctrl/opt_ctrl_1/" title="最优控制系列 - 1. test"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">最优控制系列 - 1. test</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="opt-cvx"
+        id="heading-26f189f0e977c93df499fdb121d6610f" role="tab" data-toggle="collapse" href="#collapse-26f189f0e977c93df499fdb121d6610f"
+        aria-expanded="false"
+      >
+        opt-cvx
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-26f189f0e977c93df499fdb121d6610f"
+           role="tabpanel" aria-labelledby="heading-26f189f0e977c93df499fdb121d6610f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2020/11/15/opt/opt_cvx/opt_cvx_1/" title="凸优化系列 - 1. test"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">凸优化系列 - 1. test</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">优化基础系列 - 0. 基本问题和底层逻辑</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="动机">0. 动机</h1>
+<p>这一系列的 blog 讨论优化问题的重要概念和相关求解方法。 在开始之前，我们需要梳理清楚优化问题中的</p>
+<ul>
+<li>基本问题</li>
+<li>基础概念</li>
+<li>数学工具</li>
+<li>求解方法</li>
+<li>重要结论</li>
+</ul>
+<h2 id="what什么是优化问题">What：什么是优化问题</h2>
+<div class="note note-success">
+            <p>优化问题的组成三要素：</p><ul><li>优化变量</li><li>目标函数</li><li>约束条件</li></ul>
+          </div>
+<h2 id="why优化问题的目的是什么">Why：优化问题的目的是什么</h2>
+<div class="note note-success">
+            <p>优化问题的目的</p><ul><li>在满足约束条件前提下</li><li>寻找可以使得目标函数最小化（或最大化）的变量，</li><li>目标函数最小化（或最大化）的数值</li></ul>
+          </div>
+<h2 id="how如何求解优化问题">How：如何求解优化问题</h2>
+<div class="note note-success">
+            <p>优化问题的求解手段</p><ul><li>直接求解：如果最优解满足一个方程，推导出这个方程，直接求解这个方程</li><li>迭代求解：通过迭代的方式，逐步逼近最优解</li><li>转化求解：将原问题转化为等价问题（这种问题转换要保证等价问题的最优解与原问题的最优解相同，并且转化后的问题更加易于求解，这样问题转化才有意义）</li></ul>
+          </div>
+<h2 id="优化理论的基本问题">优化理论的基本问题</h2>
+<div class="note note-warning">
+            <p>优化理论的基本问题：</p><ul><li>基本问题 1：关于最优解本身的描述，怎么更加科学的描述优化问题的最优解（几何、代数、对偶）</li><li>基本问题 2：描述优化问题的最优解时，需要考虑哪些因素</li><li>基本问题 3：如何将最优解与所有非最优解进行比较</li><li>基本问题 4：关于最优解的性质<ul><li>是否可以直接找到优化问题的最优解满足某个方程</li><li>是否可以通过求解该方程来得到最优解</li></ul></li><li>基本问题 5：优化问题的求解方法<ul><li>是否可以通过迭代的方式寻找优化问题的最优解</li><li>如何证明这种迭代方法的有效性</li></ul></li><li>基本问题 6：优化问题的转换方法<ul><li>是否可以将原始优化问题转换为一个新的优化问题</li><li>并且这种问题转换是有意义的：<ul><li>新问题更加易于求解</li><li>新问题与原始问题等价（二者的最优解相同）</li></ul></li></ul></li></ul>
+          </div>
+<h2 id="优化理论的底层逻辑">优化理论的底层逻辑</h2>
+<div class="note note-danger">
+            <p>优化的核心是把 <code>在可行集上比所有点都好</code> 转化为 <code>可计算、可证明的条件</code></p><ul><li>切锥：定义“所有可行方向”；</li><li>法锥：把无穷多方向条件压缩成一条包含；</li><li>CQ：保证法锥能用约束梯度生成；</li><li>乘子：生成系数（坐标），从而得到 KKT；</li><li>激活集+互补松弛：解决不等式的单边性与分段性；</li><li>对偶：提供全局下界、误差证书与影子价格，使“比较所有非最优解”变得可操作。</li></ul>
+          </div>
+<h2 id="优化理论的数学工具">优化理论的数学工具</h2>
+<div class="note note-info">
+            <p>顺着 <strong><code>定义最优 → 切/法几何 → KKT/乘子/CQ → 对偶/证书 → 迭代算法与收敛证明 → 等价变换</code></strong> 这条逻辑链，优化理论所需要的数学工具，大致可以分成 8 组。每一组都对应它在链条里解决的“基本问题”。</p><hr /><h2 id="分析学与微积分把比较变成导数条件">1) 分析学与微积分（把“比较”变成“导数条件”）</h2><p><strong>用来做什么：</strong> 从<span class="math inline">\(f(x^*)\le f(x)\)</span>转成“一阶/二阶必要条件”、方向导数、泰勒展开。</p><p><strong>典型工具：</strong></p><ul><li>方向导数、梯度、Hessian、泰勒定理与余项</li><li>隐函数定理（等式约束形成流形时）</li><li>Lipschitz 连续、光滑性（L-smooth）、强凸性等正则性</li><li>不等式估计（用于收敛率、步长条件）</li></ul><h2 id="线性代数把几何对象写成可计算表达">2) 线性代数（把几何对象写成可计算表达）</h2><p><strong>用来做什么：</strong> 约束梯度的线性无关/秩条件（LICQ），投影、正交分解、谱性质（强凸、条件数、收敛速度）。</p><p><strong>典型工具：</strong></p><ul><li>子空间、正交补、投影算子</li><li>矩阵秩、伪逆、QR/SVD</li><li>正定性、特征值界、条件数</li><li>Schur 补（尤其在 LMI/控制优化里）</li></ul><h2 id="凸分析把局部条件升级为全局最优-证书">3) 凸分析（把“局部条件”升级为“全局最优 + 证书”）</h2><p><strong>用来做什么：</strong> 解释为什么凸问题 KKT 常充分、为什么对偶是下界、强对偶何时成立。</p><p><strong>典型工具：</strong></p><ul><li>凸集、凸函数、严格凸/强凸</li><li>次梯度、次微分 <span class="math inline">\(\partial f\)</span>、支撑超平面</li><li>共轭函数（Fenchel conjugate）、Fenchel–Young 不等式</li><li>分离定理、Hahn–Banach（对偶与证书背后的核心）</li><li>单调算子与 resolvent（prox 的理论底座）</li></ul><h2 id="变分分析与广义导数处理不光滑与约束几何切锥法锥">4) 变分分析与广义导数（处理不光滑与约束几何：切锥/法锥）</h2><p><strong>用来做什么：</strong> 把“可行方向集合”与“法锥包含”严谨化；处理不光滑、边界、激活集切换。</p><p><strong>典型工具：</strong></p><ul><li>切锥/切空间（Bouligand tangent cone 等）</li><li>法锥/正规锥（normal cone）、极锥关系</li><li>指示函数 <span class="math inline">\(\delta_{\mathcal F}\)</span>（把约束写进目标）</li><li>Clarke 次微分、广义梯度（非光滑情形）</li><li>变分不等式（VI）：<span class="math inline">\(0\in \nabla f(x)+N_{\mathcal F}(x)\)</span></li></ul><h2 id="约束资格条件与最优性系统让乘子存在并形成-kkt">5) 约束资格条件与最优性系统（让“乘子存在”并形成 KKT）</h2><p><strong>用来做什么：</strong> 解释为什么能用“约束梯度线性组合”刻画法锥；保证乘子存在、KKT 有意义。</p><p><strong>典型工具：</strong></p><ul><li>LICQ / MFCQ / CRCQ / Slater（各类 CQ）</li><li>Farkas 引理（线性约束的核心“存在性”工具）</li><li>二阶必要/充分条件（临界锥、关键锥、约化 Hessian）</li><li>互补系统（complementarity system）与活跃集理论</li></ul><h2 id="对偶理论把原问题变成最好下界鞍点证书">6) 对偶理论（把原问题变成“最好下界/鞍点/证书”）</h2><p><strong>用来做什么：</strong> 解释“为什么要最好下界”“强对偶/弱对偶”“影子价格/敏感性”。</p><p><strong>典型工具：</strong></p><ul><li>拉格朗日对偶：(q(,)=_x L(x,,))</li><li>KKT ↔︎ 鞍点（saddle point）理论</li><li>强对偶条件（Slater、闭性/约束资格等）</li><li>敏感性分析、包络定理（影子价格公式）</li><li>Fenchel 对偶、锥对偶（conic duality：LP/SOCP/SDP）</li></ul><h2 id="数值算法与收敛证明工具迭代法为什么有效">7) 数值算法与收敛证明工具（迭代法“为什么有效”）</h2><p><strong>用来做什么：</strong> 把最优性系统变成可迭代的算子/不动点；证明下降性、收敛性、速率。</p><p><strong>典型工具：</strong></p><ul><li>不动点理论：Banach 压缩映射、平均算子、非扩张映射</li><li>Lyapunov/势函数（descent lemma、三点不等式）</li><li>单调性与 cocoercivity（梯度法/前向后向分裂的底座）</li><li>误差界（error bound）、KL 性质（非凸收敛分析常用）</li><li>原始-对偶间隙（gap）作为证书与停止准则</li></ul><h2 id="概率与统计随机优化与学习中的优化">8) 概率与统计（随机优化与学习中的优化）</h2><p><strong>用来做什么：</strong> SGD、随机近似、样本平均逼近（SAA）、泛化误差与收敛率。</p><p><strong>典型工具：</strong></p><ul><li>条件期望、马氏差分、浓度不等式（Hoeffding/Bernstein）</li><li>随机逼近（Robbins–Monro）</li><li>随机梯度噪声模型与收敛分析</li><li>统计学习理论的一些界（泛化/复杂度）</li></ul><h2 id="逻辑链-数学工具">逻辑链 ↔︎ 数学工具</h2><ul><li><strong>最优的科学描述（比较所有点）</strong> → 分析学 + 凸分析</li><li><strong>切锥/法锥（局部几何）</strong> → 变分分析</li><li><strong>线性组合/乘子/KKT</strong> → 线性代数 + CQ + Farkas + 二阶理论</li><li><strong>对偶/最好下界/影子价格</strong> → 凸分析 + 分离定理 + 对偶理论 + 敏感性</li><li><strong>迭代求解与有效性证明</strong> → 不动点/单调算子/势函数/误差界</li><li><strong>新问题更易解且等价</strong> → 对偶、分裂、增广拉格朗日、锥优化等结构化理论</li></ul><h2 id="最小闭环工具集">最小闭环工具集</h2><ul><li>只学一套最核心的数学（例如：凸分析 + 变分不等式 + 单调算子），</li><li>就能把切/法锥、KKT、对偶、prox/ADMM/原始对偶算法串起来；</li><li>再在需要时补二阶与非凸。</li></ul><hr />
+          </div>
+<hr />
+<h1 id="基本问题-1---最优解的描述">1. 基本问题 1 - 最优解的描述</h1>
+<h2 id="最优解的-几何描述没有可行下降方向">1.1 最优解的 <code>几何描述</code>：没有可行下降方向</h2>
+<p>最优点 <span class="math inline">\(x^\ast\)</span> 的本质：</p>
+<ul>
+<li>在可行集 <span class="math inline">\(\cal{F}\)</span> 里，不存在 <code>可行方向</code> 使得
+<ul>
+<li>目标函数（的一阶）<code>下降</code></li>
+<li>目标函数（的一阶）<code>下降</code>后，约束条件仍<code>保持可行</code></li>
+</ul></li>
+<li><code>可行方向</code>→ 切空间/切锥</li>
+<li><code>不能下降</code>→ 梯度与这些方向的内积条件</li>
+</ul>
+<h2 id="最优解的-代数描述把所有方向压缩成一个条件">1.2 最优解的 <code>代数描述</code>：把“所有方向”压缩成一个条件</h2>
+<p>“对所有可行方向 <span class="math inline">\(d\)</span>”是无限多个条件，不好验证。于是引入</p>
+<ul>
+<li>法空间/法锥：把“所有切方向”的正交/对偶对象集中表示；</li>
+<li>简洁的数学表述 (<code>负梯度必须属于可行集的法锥</code>)： <span class="math inline">\(0\in\nabla f(x^\ast) + N_\cal{F}(x^\ast)\)</span>， 其中 <span class="math inline">\(N_\cal{F}(x^\ast)\)</span> 为 <span class="math inline">\(\cal{F}\)</span> 的法锥</li>
+</ul>
+<h2 id="最优解的-全局描述是不是全局最优距离全局最优还有多远">1.3 最优解的 <code>全局描述</code>：是不是全局最优？距离全局最优还有多远？</h2>
+<p>这就需要对偶：提供“最优值的下界”和“误差证书”</p>
+<hr />
+<h1 id="基本问题-2---描述最优解需要考虑的因素">2. 基本问题 2 - 描述最优解需要考虑的因素</h1>
+<ul>
+<li>可行性：<span class="math inline">\(x^\ast\in\cal{F}\)</span></li>
+<li>局部几何：<span class="math inline">\(\cal{F}\)</span> 在 <span class="math inline">\(x^\ast\)</span> 附近长什么样？
+<ul>
+<li>用 <code>切空间/切锥</code> 表示“允许动的方向”</li>
+<li>用 <code>法空间/法锥</code> 表示“阻止你出界的方向”</li>
+</ul></li>
+<li>约束是否起作用：哪些约束真的“顶住了”
+<ul>
+<li>用 <code>激活集</code>（active set）刻画。</li>
+</ul></li>
+<li>正则性：把几何变成梯度线性组合是否可靠
+<ul>
+<li>需要 <code>约束正则性</code>（constraint qualification, CQ）</li>
+<li>否则“梯度生成法锥”可能失败，乘子可能不存在</li>
+</ul></li>
+<li>全局性
+<ul>
+<li>用 <code>对偶</code> 给出下界、gap、敏感性（影子价格）</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="基本问题-3---如何把最优解与所有非最优解比较">3. 基本问题 3 - 如何把最优解与所有非最优解比较？</h1>
+<p>这是你列的最核心“科学性”问题：不是只找到一个点，而是能说“它比所有别的点好”。</p>
+<p>原始域比较：</p>
+<ul>
+<li>直接用定义 <span class="math inline">\(f(x^*)\le f(x), \forall x\in\cal{F}\)</span></li>
+<li>注意：这是最强但最难用的比较，因为要比较所有可行点。</li>
+</ul>
+<p>局部比较：用切锥上的“一阶不能下降”</p>
+<ul>
+<li>把“所有点”降维成“所有方向”：<span class="math display">\[ \nabla f (x^\ast)^\top d \ge 0, \forall d\in T_{\mathcal{F}}(x^\ast) \]</span> 其中 <span class="math inline">\(T_{\cal{F}}(x^*)\)</span> 是切锥/切空间</li>
+<li>意义：你不用枚举所有 <span class="math inline">\(x\)</span>，只看局部能走的方向。</li>
+</ul>
+<p>再压缩：用法锥的一条包含关系</p>
+<ul>
+<li>把“所有方向”再压缩成：<span class="math inline">\(-\nabla f (x^\ast)^\top \in N_\cal{F}(x^\ast)\)</span>，其中 <span class="math inline">\(N_\cal{F}(x^\ast)\)</span> 是法锥</li>
+<li>这一步就是从切锥到法锥的“对偶化”：切锥与法锥互为极锥</li>
+<li>切锥与法锥的解释：一个描述“能走哪儿”，一个描述“会被哪儿挡住”</li>
+</ul>
+<p>全局数值比较：对偶下界</p>
+<ul>
+<li>对偶构造 <span class="math inline">\(d^\ast\)</span> 使得： <span class="math display">\[d^\ast\le f(x), \forall x\in \cal{F}\]</span></li>
+<li>只要找到一个可行解 <span class="math inline">\(x\)</span> 和一个对偶可行解（下界） <span class="math inline">\(d(\lambda,ν)\)</span>，就有 <span class="math display">\[
+d(\lambda,v) \le f(x^\ast) \le f(x), \forall x\in \cal{F}
+\]</span></li>
+<li>两边夹住，中间差距就是可证明误差（primal-dual gap）。</li>
+<li>这就是对偶“最好下界”的意义：它给出一个能比较所有非最优解的统一标尺。</li>
+</ul>
+<hr />
+<h1 id="基本问题-4---能否直接找到最优解满足某个方程通过解方程得到最优解">4. 基本问题 4 - 能否“直接找到最优解满足某个方程”，通过解方程得到最优解？</h1>
+<p>可以，但要讲清“方程”是什么层级：</p>
+<h2 id="最底层法锥包含这是个-变分不等式">4.1 最底层：<code>法锥包含</code>（这是个 <code>变分不等式</code>）</h2>
+<p>最“科学”也最统一的方程形式（严格说是包含关系） [ 0f(x) + N_{F}(x) ]</p>
+<h2 id="光滑约束-cq条件-kkt-方程">4.2 <code>光滑约束</code> + <code>CQ条件</code> = <code>KKT 方程</code></h2>
+<p>若 - <span class="math inline">\(\mathcal{F}=\{x|h(x)=0,\ g(x)\le 0\}\)</span> - 并且约束 <span class="math inline">\(h(x)\)</span> 和 <span class="math inline">\(g(x)\)</span> 满足 CQ 条件，</p>
+<p>则 - 法锥可由约束梯度生成 - 于是可以得到 <code>KKT方程</code>：<strong><code>KKT方程</code>不是凭空出现，而是法锥表示被“梯度生成”之后的坐标化表达</strong> <span class="math display">\[
+\begin{align}
+    \nabla f(x^\star)+\nabla h(x^\star)\lambda^\star+\nabla g(x^\star)\nu^\star=&amp;0, \\ 
+    \nu^\star\ge&amp; 0,\\ 
+    \nu^\star\circ g(x^\star)=&amp;0 
+\end{align}
+\]</span></p>
+<h2 id="重要提醒解-kkt-一定得到全局最优">4.3 重要提醒：<code>解 KKT</code> ≠ <code>一定得到全局最优</code></h2>
+<ul>
+<li>非凸：KKT 多是必要非充分，解 KKT 可能只是鞍点/局部极值；</li>
+<li>凸 + Slater：KKT 才与全局最优等价。</li>
+</ul>
+<hr />
+<h1 id="基本问题-5---能否用迭代方式找最优解如何证明有效性">5. 基本问题 5 - 能否用迭代方式找最优解？如何证明有效性？</h1>
+<p>迭代法要“有效”，通常要回答三件事（这恰好对应前面概念）：</p>
+<h2 id="迭代逼近依据的是什么刻画方式">5.1 迭代逼近依据的是什么“刻画方式”？</h2>
+<ul>
+<li>逼近原始问题：<strong>KKT方程/法锥包含</strong>（一阶最优性）</li>
+<li>逼近对偶问题：<strong>对偶最优</strong>（最好下界）</li>
+<li>同时逼近：（原始-对偶算法）</li>
+</ul>
+<h2 id="为什么会收敛典型证明套路">5.2 为什么会收敛？典型证明套路</h2>
+<ul>
+<li><strong>下降性</strong>：构造一个量（目标值、拉格朗日、Lyapunov）单调下降/上升；</li>
+<li><strong>可行性/残差收敛</strong>：约束违背趋于 0；</li>
+<li><strong>不动点/非扩张/收缩</strong>：把最优性写成 (x=T(x))，证明 (T) 是（平均/非扩张/收缩），或在某域内是压缩；</li>
+<li><strong>对偶间隙</strong>：用 gap 作为误差证书，证明 gap → 0。</li>
+</ul>
+<h2 id="这些套路与概念的对应关系">5.3 这些套路与概念的对应关系</h2>
+<ul>
+<li><strong>切/法锥</strong>：定义“残差应该朝哪儿消失”（比如投影梯度、镜像下降）；</li>
+<li><strong>激活集/互补松弛</strong>：解释为什么边界会“切换”，以及算法为何可能分段；</li>
+<li><strong>对偶</strong>：给出收敛证书（gap）、给出乘子更新意义（价格调整）；</li>
+<li><strong>CQ</strong>：保证你收敛到的点真的满足 KKT（而不是几何退化导致的“假驻点”）。</li>
+</ul>
+<hr />
+<h1 id="基本问题-6---能否把原问题转换成一个新问题为什么这种转换有意义">6. 基本问题 6 - 能否把原问题转换成一个新问题？为什么这种转换有意义？</h1>
+<p>优化里最常见的“有意义转换”，本质上都在做一件事：</p>
+<ul>
+<li>把 <code>难比较、难处理的可行集几何</code> 换成 <code>更好处理的代数结构</code>，并保留 <code>最优性信息</code>。</li>
+</ul>
+<p>下面把你提到的“等价/更易解”对应到三种经典转换：</p>
+<h2 id="对偶从找最小变成找最好下界">6.1 对偶：从“找最小”变成“找最好下界”</h2>
+<ul>
+<li><p>新问题：(q(,))</p></li>
+<li><p>意义：</p>
+<ul>
+<li>给出下界证书；</li>
+<li>有时更易分解、更易计算；</li>
+<li>强对偶时与原问题等价（同最优值，KKT 连接原始与对偶解）。</li>
+</ul></li>
+</ul>
+<h2 id="鞍点把约束问题变成-而不是">6.2 鞍点：把约束问题变成 ()（而不是 ()）</h2>
+<ul>
+<li>关键点：<strong>不是“变无约束最小化”，而是“变成鞍点问题”</strong>；</li>
+<li>意义：鞍点的一阶条件就是 KKT；算法上可用原始-对偶迭代。</li>
+</ul>
+<h2 id="罚函数增广拉格朗日把硬约束变成软惩罚-乘子迭代">6.3 罚函数/增广拉格朗日：把“硬约束”变成“软惩罚 + 乘子迭代”</h2>
+<ul>
+<li>新问题序列往往更易解；</li>
+<li>但逻辑上它们服务的是“逼近 KKT/鞍点”，不是替代 KKT。</li>
+</ul>
+<hr />
+<h1 id="总结上述概念都在回答什么问题">7 总结：上述概念都在回答什么问题</h1>
+<p>下面按“每个概念回答什么基本问题”来梳理（这比定义更有用）：</p>
+<h3 id="切空间-切锥回答可行集允许往哪儿动">7.1 切空间 / 切锥：回答“可行集允许往哪儿动？”</h3>
+<ul>
+<li><strong>动机</strong>：最优性来自“没有可行下降方向”；你必须先定义“可行方向集合”。</li>
+<li>等式 → 切空间（线性子空间）；不等式 → 切锥（因为单边边界）。</li>
+</ul>
+<h3 id="法空间-法锥回答什么力量阻止你出界一阶最优性可否压缩成一句话">7.2 法空间 / 法锥：回答“什么力量阻止你出界？一阶最优性可否压缩成一句话？”</h3>
+<ul>
+<li><strong>动机</strong>：把“对所有切方向的条件”压缩成一个包含关系。</li>
+<li>法锥是切锥的对偶对象：切描述“能走”，法描述“会被挡”。</li>
+</ul>
+<h2 id="拉格朗日乘子线性组合回答如何把法锥用有限个梯度坐标化">7.3 拉格朗日乘子（线性组合）：回答“如何把法锥用有限个梯度坐标化？”</h2>
+<ul>
+<li><strong>动机</strong>：法锥是几何对象，不好算；若它能由约束梯度生成，就能写成“梯度线性组合=0”。</li>
+<li><strong>乘子就是这个生成/坐标化的系数</strong>。</li>
+</ul>
+<h2 id="约束正则性cq回答梯度生成法锥这件事靠不靠谱乘子是否存在">7.4 约束正则性（CQ）：回答“梯度生成法锥这件事靠不靠谱？乘子是否存在？”</h2>
+<ul>
+<li><strong>动机</strong>：没有 CQ，几何法锥可能比“梯度生成的锥”更大/更怪，导致 KKT 可能失败。</li>
+<li><strong>CQ 是把几何真实与线性化模型对齐的条件</strong>。</li>
+</ul>
+<h2 id="激活集回答哪些不等式约束真的在最优点处起作用">7.5 激活集：回答“哪些不等式约束真的在最优点处起作用？”</h2>
+<ul>
+<li><strong>动机</strong>：不等式并非都重要；真正决定局部几何的是边界上那几条。</li>
+<li>激活集让问题“降维/分段”：只需考虑激活约束的梯度。</li>
+</ul>
+<h2 id="互补松弛回答约束是否起作用-与-价格是否非零-的逻辑对应">7.6 互补松弛：回答“<code>约束是否起作用</code> 与 <code>价格是否非零</code> 的逻辑对应”</h2>
+<ul>
+<li><p><strong>动机</strong>：不等式是单边的，乘子必须非负；于是自然得到</p>
+<ul>
+<li>约束松 ⇒ 价格 0</li>
+<li>价格正 ⇒ 约束紧</li>
+</ul></li>
+<li><p>它把“几何激活”与“代数乘子”精确绑定。</p></li>
+</ul>
+<h2 id="对偶回答如何把最优与所有非最优进行全局比较如何给出误差证书影子价格从哪来">7.7 对偶：回答“如何把最优与所有非最优进行全局比较？如何给出误差证书？影子价格从哪来？”</h2>
+<ul>
+<li><strong>动机</strong>：原始问题直接比较所有点困难；对偶用下界做全局比较，并给出 gap。</li>
+<li><strong>影子价格</strong>从对偶的敏感性解释自然出现（最优值对约束右端的导数）。</li>
+</ul>
+<hr />
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/opt/" class="category-chain-item">opt</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/opt/opt-basics/" class="category-chain-item">opt-basics</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/opt/" class="print-no-link">#opt</a>
+      
+        <a href="/tags/optimization-basics/" class="print-no-link">#optimization basics</a>
+      
+        <a href="/tags/Lagrange-multiplier/" class="print-no-link">#Lagrange multiplier</a>
+      
+        <a href="/tags/KKT-conditions/" class="print-no-link">#KKT conditions</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>优化基础系列 - 0. 基本问题和底层逻辑</div>
+      <div>http://yylustb.github.io/2026/01/19/opt/opt_basics/opt_basics_0/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>yylustb</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年1月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/12/07/opt/SoS/sos_1/" title="Sum-of-Squares 系列 - 1. 基础">
+                        <span class="hidden-mobile">Sum-of-Squares 系列 - 1. 基础</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      <div class="footer-info" style="line-height:1.6; text-align:center;">
+  <div>
+    <strong>© 2025–2026</strong> · <strong>远大前程</strong> · <strong>个人学习笔记</strong>
+  </div>
+  <div>
+    站点已稳定运行
+    <span id="timeDate">0 天</span>
+    <span id="times">00 小时 00 分 00 秒</span>
+  </div>
+  <div>
+    Powered by
+    <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+    &amp;
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">Fluid</a>
+  </div>
+  <script src="/js/duration.js"></script>
+</div>
+
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        站点累计浏览 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        累计服务访客 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] },
+              tags: 'ams'
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } 
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

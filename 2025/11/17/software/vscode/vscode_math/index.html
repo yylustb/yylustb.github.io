@@ -19,16 +19,16 @@
   <meta name="author" content="yylustb">
   <meta name="keywords" content="">
   
-    <meta name="description" content="VSCode 系列 - LaTex 公式渲染配置 数学引擎介绍  MathJax &#x2F; KaTeX 都是浏览器端的 LaTeX 数学公式渲染库 MathJax &#x2F; KaTeX 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统 简单说：MathJax 更像 LaTeX，KaTeX 更快、更轻。 如果最关心 LaTe">
+    <meta name="description" content="VSCode 系列 - LaTex 公式渲染配置 数学引擎介绍  MathJax &#x2F; KaTeX 都是浏览器端的 LaTeX 数学公式渲染库 MathJax &#x2F; KaTeX 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统 简单说：MathJax 更像 LaTeX，KaTeX 更快、更轻。 如果最关心 LaTeX 语法兼">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VSCode 系列 - LaTex 公式渲染配置">
 <meta property="og:url" content="http://yylustb.github.io/2025/11/17/software/vscode/vscode_math/index.html">
 <meta property="og:site_name" content="远大前程">
-<meta property="og:description" content="VSCode 系列 - LaTex 公式渲染配置 数学引擎介绍  MathJax &#x2F; KaTeX 都是浏览器端的 LaTeX 数学公式渲染库 MathJax &#x2F; KaTeX 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统 简单说：MathJax 更像 LaTeX，KaTeX 更快、更轻。 如果最关心 LaTe">
+<meta property="og:description" content="VSCode 系列 - LaTex 公式渲染配置 数学引擎介绍  MathJax &#x2F; KaTeX 都是浏览器端的 LaTeX 数学公式渲染库 MathJax &#x2F; KaTeX 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统 简单说：MathJax 更像 LaTeX，KaTeX 更快、更轻。 如果最关心 LaTeX 语法兼">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yylustb.github.io/img/index/vscode.png">
 <meta property="article:published_time" content="2025-11-17T09:36:00.000Z">
-<meta property="article:modified_time" content="2025-11-20T23:05:50.000Z">
+<meta property="article:modified_time" content="2025-11-20T23:05:50.922Z">
 <meta property="article:author" content="yylustb">
 <meta property="article:tag" content="KaTex">
 <meta property="article:tag" content="MathJax">
@@ -808,31 +808,21 @@
             
               <div class="markdown-body">
                 
-                <h1 id="vscode-系列---latex-公式渲染配置">VSCode 系列 - LaTex
-公式渲染配置</h1>
+                <h1 id="vscode-系列---latex-公式渲染配置">VSCode 系列 - LaTex 公式渲染配置</h1>
 <h2 id="数学引擎介绍">数学引擎介绍</h2>
 <ul>
-<li><code>MathJax</code> / <code>KaTeX</code>
-都是<strong>浏览器端</strong>的 <code>LaTeX</code> 数学公式渲染库</li>
-<li><code>MathJax</code> / <code>KaTeX</code> 都不是完整的 LaTeX
-编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX
-宏包系统</li>
-<li>简单说：<code>MathJax</code> 更像
-<code>LaTeX</code>，<code>KaTeX</code> 更快、更轻。</li>
-<li>如果最关心 <code>LaTeX</code> 语法兼容性，一般推荐
-<code>MathJax</code>。</li>
-<li><code>MathJax</code>: 目标是尽可能完整地支持 TeX / LaTeX
-中的数学命令, <code>MathJax</code>
-兼容性更完整，但体积更大、渲染相对更重。</li>
-<li><code>KaTeX</code>: 官方维护了一个“支持的 TeX
-函数列表”，兼容了相当大一部分常用 LaTeX 数学命令。
+<li><code>MathJax</code> / <code>KaTeX</code> 都是<strong>浏览器端</strong>的 <code>LaTeX</code> 数学公式渲染库</li>
+<li><code>MathJax</code> / <code>KaTeX</code> 都不是完整的 LaTeX 编译器，只实现了一部分“类似 LaTeX 的数学命令”，而不是整套 LaTeX 宏包系统</li>
+<li>简单说：<code>MathJax</code> 更像 <code>LaTeX</code>，<code>KaTeX</code> 更快、更轻。</li>
+<li>如果最关心 <code>LaTeX</code> 语法兼容性，一般推荐 <code>MathJax</code>。</li>
+<li><code>MathJax</code>: 目标是尽可能完整地支持 TeX / LaTeX 中的数学命令, <code>MathJax</code> 兼容性更完整，但体积更大、渲染相对更重。</li>
+<li><code>KaTeX</code>: 官方维护了一个“支持的 TeX 函数列表”，兼容了相当大一部分常用 LaTeX 数学命令。
 <ul>
 <li>只能保证常规符号/环境没有问题（分数、根号、矩阵、积分、求和、cases、对齐环境等），</li>
 <li>一些冷门命令、特殊宏包、自定义命令需要手工改写或者会直接报错</li>
 </ul></li>
 </ul>
-<p>👉 <code>LaTeX</code> 兼容性: <code>MathJax</code> &gt;
-<code>KaTe</code>X</p>
+<p>👉 <code>LaTeX</code> 兼容性: <code>MathJax</code> &gt; <code>KaTe</code>X</p>
 <h2 id="markdown-的渲染机制">markdown 的渲染机制</h2>
 <ul>
 <li><p>.md → .pdf <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.md</span><br>└─(Pandoc 解析 Markdown)<br>    └─ 生成一个 <span class="hljs-selector-class">.tex</span> 中间文件（包含公式的 LaTeX）<br>        └─ 调用 pdflatex / xelatex / lualatex<br>            └─ 得到 out.pdf<br></code></pre></td></tr></table></figure></p></li>
@@ -841,9 +831,8 @@
 <p><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs gams">input.md (在 VSCode 里打开)<br>└─ 内置 markdown-it 解析 Markdown<br>    └─ 内置 KaTeX 渲染 <span class="hljs-symbol">$</span>...<span class="hljs-symbol">$</span> / <span class="hljs-symbol">$</span><span class="hljs-symbol">$</span>...<span class="hljs-symbol">$</span><span class="hljs-symbol">$</span><br>        └─ 在侧边的 WebView 里显示预览<br></code></pre></td></tr></table></figure></p></li>
 </ul>
 <table>
-
 <thead>
-<tr>
+<tr class="header">
 <th>流程</th>
 <th>典型实现方式</th>
 <th>是否用 LaTeX 编译器</th>
@@ -851,31 +840,31 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>md → PDF（LaTeX 路线）</strong></td>
 <td>Pandoc → <code>.tex</code> → <code>xelatex</code></td>
 <td>✅ 是</td>
 <td>❌ 否</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>md → PDF（HTML 路线）</strong></td>
 <td>md → HTML → 浏览器打印/Chromium</td>
 <td>❌ 否</td>
 <td>✅ 一般用 MathJax/KaTeX</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>md → HTML</strong></td>
 <td>Hexo/Hugo/MkDocs/Jekyll + 插件</td>
 <td>❌ 否</td>
 <td>✅ 通常 MathJax 或 KaTeX</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>md 在 VSCode 预览</strong></td>
 <td>内置 Markdown 预览 + KaTeX</td>
 <td>❌ 否</td>
 <td>✅（默认 KaTeX）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>md 在 VSCode + MPE 等</strong></td>
 <td>扩展自己加载 MathJax/KaTeX</td>
 <td>❌ 否（除非扩展特意调用 LaTeX）</td>
@@ -888,56 +877,30 @@
 <li><p>安装 <code>Markdown Preview Enhanced（MPE）</code> 插件</p></li>
 <li><p>使用 <code>MPE插件预览</code>:</p>
 <ul>
-<li><code>Ctrl+Shift+P</code> →
-<code>Markdown Preview Enhanced: Open Preview to the Side</code> →
-回车</li>
-<li>或者 <code>右键编辑区</code> →
-<code>Markdown Preview Enhanced: Open Preview to the Side</code></li>
-<li><mark>注意：<code>MPE</code> 默认用 <code>KaTeX</code>
-渲染公式，不支持 LaTex 语言的 <code>align</code> 等公式环境和
-<code>\label</code>、<code>\eqref</code> 等公式引用命令。</mark>
-<code>KaTeX</code> 的具体渲染情况见下图。</li>
+<li><code>Ctrl+Shift+P</code> → <code>Markdown Preview Enhanced: Open Preview to the Side</code> → 回车</li>
+<li>或者 <code>右键编辑区</code> → <code>Markdown Preview Enhanced: Open Preview to the Side</code></li>
+<li><mark>注意：<code>MPE</code> 默认用 <code>KaTeX</code> 渲染公式，不支持 LaTex 语言的 <code>align</code> 等公式环境和 <code>\label</code>、<code>\eqref</code> 等公式引用命令。</mark> <code>KaTeX</code> 的具体渲染情况见下图。</li>
 </ul></li>
 </ol>
 <figure>
-<img src="vscode-math-1.png" srcset="/img/loading.gif" lazyload alt="图1.错误渲染" />
-<figcaption aria-hidden="true">图1.错误渲染</figcaption>
+<img src="vscode-math-1.png" srcset="/img/loading.gif" lazyload alt="图1.错误渲染" /><figcaption aria-hidden="true">图1.错误渲染</figcaption>
 </figure>
-<h2 id="vs-code-配置-mpe-的数学引擎为-mathjax"><code>VS Code</code> 配置
-<code>MPE</code> 的数学引擎为 <code>MathJax</code></h2>
+<h2 id="vs-code-配置-mpe-的数学引擎为-mathjax"><code>VS Code</code> 配置 <code>MPE</code> 的数学引擎为 <code>MathJax</code></h2>
 <ol type="1">
-<li><strong>修改 MPE 插件的数学引擎为
-<code>MathJax</code></strong>：<mark>因为 <code>MPE</code> 默认用
-<code>KaTeX</code> 渲染公式，需要把 MPE 的数学引擎改成
-<code>MathJax</code></mark>，具体操作如下
+<li><p><strong>修改 MPE 插件的数学引擎为 <code>MathJax</code></strong>：<mark>因为 <code>MPE</code> 默认用 <code>KaTeX</code> 渲染公式，需要把 MPE 的数学引擎改成 <code>MathJax</code></mark>，具体操作如下</p>
 <ul>
-<li><code>ctrl + ,</code> → <code>Settings</code> 页面 →
-<code>Code Actions on Save</code> 选项 → 点击
-<code>Edit in settings.json</code> <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;editor.fontSize&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">20</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;terminal.integrated.commandsToSkipShell&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;language-julia.interrupt&quot;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;julia.symbolCacheDownload&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;editor.codeActionsOnSave&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <br><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-comment">// 添加下面这一行</span><br>    <span class="hljs-attr">&quot;markdown-preview-enhanced.mathRenderingOption&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;MathJax&quot;</span><span class="hljs-punctuation">,</span>  <br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure></li>
-<li>做完上述操作后，重新预览 Markdown
-文件，公式应该就能正确渲染了，但是引用公式的编号会错误，例如
-<code>\eqref{eq:exp}</code> 等都不能正常显示。</li>
+<li><code>ctrl + ,</code> → <code>Settings</code> 页面 → <code>Code Actions on Save</code> 选项 → 点击 <code>Edit in settings.json</code> <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;editor.fontSize&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">20</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;terminal.integrated.commandsToSkipShell&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;language-julia.interrupt&quot;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;julia.symbolCacheDownload&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;editor.codeActionsOnSave&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <br><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-comment">// 添加下面这一行</span><br>    <span class="hljs-attr">&quot;markdown-preview-enhanced.mathRenderingOption&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;MathJax&quot;</span><span class="hljs-punctuation">,</span>  <br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure></li>
+<li>做完上述操作后，重新预览 Markdown 文件，公式应该就能正确渲染了，但是引用公式的编号会错误，例如 <code>\eqref{eq:exp}</code> 等都不能正常显示。</li>
 </ul>
 <figure>
-<img src="vscode-math-2.png" srcset="/img/loading.gif" lazyload alt="图2.正确渲染但引用错误" />
-<figcaption aria-hidden="true">图2.正确渲染但引用错误</figcaption>
+<img src="vscode-math-2.png" srcset="/img/loading.gif" lazyload alt="图2.正确渲染但引用错误" /><figcaption aria-hidden="true">图2.正确渲染但引用错误</figcaption>
 </figure></li>
-<li><mark>修改 <code>MPE</code> 的设置文件 <code>config.js</code>
-开启公式自动编号和引用</mark>：<code>Ctrl + Shift + P</code> → 输入
-<code>Markdown Preview Enhanced: Open Config Script (Global)</code> →
-回车 → 弹出 <code>config.js</code>文件，进行如下修改： <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs json">(<span class="hljs-punctuation">&#123;</span><br>katexConfig<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;macros&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><br>mathjaxConfig<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    tex<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span> tags<span class="hljs-punctuation">:</span> &#x27;all&#x27; <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">// ★关键：给所有行间公式自动编号，支持 \label / \eqref</span><br>    options<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    loader<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><br>mermaidConfig<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;startOnLoad&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><span class="hljs-punctuation">&#125;</span>)<br></code></pre></td></tr></table></figure>
-<code>tags: 'all'</code> 是 <code>MathJax v3</code> 推荐的写法，实测在
-<code>MPE</code> 里可以让所有 <code>display</code> 公式自动编号，并且
-<code>\label</code> / <code>\eqref</code> 生效。</li>
+<li><p><mark>修改 <code>MPE</code> 的设置文件 <code>config.js</code> 开启公式自动编号和引用</mark>：<code>Ctrl + Shift + P</code> → 输入 <code>Markdown Preview Enhanced: Open Config Script (Global)</code> → 回车 → 弹出 <code>config.js</code>文件，进行如下修改： <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs json">(<span class="hljs-punctuation">&#123;</span><br>katexConfig<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;macros&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><br>mathjaxConfig<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    tex<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span> tags<span class="hljs-punctuation">:</span> &#x27;all&#x27; <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">// ★关键：给所有行间公式自动编号，支持 \label / \eqref</span><br>    options<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    loader<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><br>mermaidConfig<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;startOnLoad&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><span class="hljs-punctuation">&#125;</span>)<br></code></pre></td></tr></table></figure> <code>tags: 'all'</code> 是 <code>MathJax v3</code> 推荐的写法，实测在 <code>MPE</code> 里可以让所有 <code>display</code> 公式自动编号，并且 <code>\label</code> / <code>\eqref</code> 生效。</p></li>
 </ol>
 <figure>
-<img src="vscode-math-3.png" srcset="/img/loading.gif" lazyload alt="图3.正确渲染且正确错误" />
-<figcaption aria-hidden="true">图3.正确渲染且正确错误</figcaption>
+<img src="vscode-math-3.png" srcset="/img/loading.gif" lazyload alt="图3.正确渲染且正确错误" /><figcaption aria-hidden="true">图3.正确渲染且正确错误</figcaption>
 </figure>
-<p>如果同时装了 <code>Markdown All in One</code> 等其他
-<code>Markdown</code> 插件，预览冲突的话，可以把其他插件的
-<code>自动打开预览</code> 功能关掉，只保留 <code>MPE</code> 的
-<code>自动打开预览</code> 功能即可。</p>
+<p>如果同时装了 <code>Markdown All in One</code> 等其他 <code>Markdown</code> 插件，预览冲突的话，可以把其他插件的 <code>自动打开预览</code> 功能关掉，只保留 <code>MPE</code> 的 <code>自动打开预览</code> 功能即可。</p>
 
                 
               </div>
